@@ -1,0 +1,357 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * CITI VIEW design tokens
+ * Brand: "Citi Indigo" (trust, depth — the city at dusk) + "Skyline Copper"
+ * (warmth — lights coming on). Neutrals are a cool ink scale.
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Brand scales */
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+  --color-copper-50: var(--copper-50);
+  --color-copper-100: var(--copper-100);
+  --color-copper-200: var(--copper-200);
+  --color-copper-300: var(--copper-300);
+  --color-copper-400: var(--copper-400);
+  --color-copper-500: var(--copper-500);
+  --color-copper-600: var(--copper-600);
+  --color-copper-700: var(--copper-700);
+  --color-copper-800: var(--copper-800);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+
+  /* Type */
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-heading: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --text-display-xl: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);
+  --text-display-xl--line-height: 1.02;
+  --text-display-lg: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  --text-display-lg--line-height: 1.08;
+  --text-display-md: clamp(1.625rem, 1.3rem + 1.3vw, 2.25rem);
+  --text-display-md--line-height: 1.15;
+
+  /* Radii */
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.33);
+  --radius-2xl: calc(var(--radius) * 1.66);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px oklch(0.2 0.03 270 / 6%), 0 2px 8px oklch(0.2 0.03 270 / 5%);
+  --shadow-raised: 0 2px 4px oklch(0.2 0.03 270 / 6%), 0 10px 28px -6px oklch(0.2 0.03 270 / 14%);
+  --shadow-float: 0 12px 48px -12px oklch(0.2 0.05 270 / 28%), 0 4px 12px oklch(0.2 0.03 270 / 8%);
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes shimmer {
+    from {
+      background-position: -200% 0;
+    }
+    to {
+      background-position: 200% 0;
+    }
+  }
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Citi Indigo */
+  --brand-50: oklch(0.972 0.014 274);
+  --brand-100: oklch(0.938 0.032 274);
+  --brand-200: oklch(0.872 0.066 274);
+  --brand-300: oklch(0.775 0.11 274);
+  --brand-400: oklch(0.652 0.155 274);
+  --brand-500: oklch(0.552 0.185 273);
+  --brand-600: oklch(0.478 0.19 272);
+  --brand-700: oklch(0.408 0.168 271);
+  --brand-800: oklch(0.336 0.135 270);
+  --brand-900: oklch(0.268 0.096 270);
+  --brand-950: oklch(0.198 0.068 270);
+
+  /* Skyline Copper */
+  --copper-50: oklch(0.977 0.016 72);
+  --copper-100: oklch(0.948 0.04 70);
+  --copper-200: oklch(0.9 0.075 66);
+  --copper-300: oklch(0.838 0.11 62);
+  --copper-400: oklch(0.768 0.138 57);
+  --copper-500: oklch(0.703 0.15 52);
+  --copper-600: oklch(0.625 0.148 47);
+  --copper-700: oklch(0.535 0.13 43);
+  --copper-800: oklch(0.445 0.105 41);
+
+  --ink: oklch(0.208 0.032 271);
+  --background: oklch(0.986 0.004 274);
+  --foreground: var(--ink);
+  --surface: oklch(0.975 0.006 274);
+  --surface-raised: oklch(1 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+  --primary: var(--brand-700);
+  --primary-foreground: oklch(0.99 0.004 274);
+  --secondary: oklch(0.952 0.016 274);
+  --secondary-foreground: var(--brand-900);
+  --muted: oklch(0.962 0.007 274);
+  --muted-foreground: oklch(0.488 0.024 271);
+  --accent: oklch(0.948 0.024 274);
+  --accent-foreground: var(--brand-800);
+  --destructive: oklch(0.565 0.205 27);
+  --success: oklch(0.552 0.13 156);
+  --success-foreground: oklch(0.99 0.01 156);
+  --warning: oklch(0.795 0.15 78);
+  --warning-foreground: oklch(0.29 0.06 60);
+  --info: var(--brand-600);
+  --border: oklch(0.908 0.009 274);
+  --input: oklch(0.875 0.012 274);
+  --ring: var(--brand-500);
+  --chart-1: var(--brand-600);
+  --chart-2: var(--copper-500);
+  --chart-3: oklch(0.64 0.11 190);
+  --chart-4: oklch(0.62 0.14 150);
+  --chart-5: oklch(0.58 0.17 320);
+  --sidebar: oklch(0.975 0.006 274);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--brand-700);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.948 0.024 274);
+  --sidebar-accent-foreground: var(--brand-800);
+  --sidebar-border: oklch(0.908 0.009 274);
+  --sidebar-ring: var(--brand-500);
+}
+
+.dark {
+  --brand-50: oklch(0.24 0.06 272);
+  --brand-100: oklch(0.29 0.08 272);
+  --brand-200: oklch(0.36 0.11 272);
+  --brand-300: oklch(0.47 0.14 272);
+  --brand-400: oklch(0.58 0.16 273);
+  --brand-500: oklch(0.67 0.15 274);
+  --brand-600: oklch(0.74 0.13 274);
+  --brand-700: oklch(0.8 0.1 274);
+  --brand-800: oklch(0.87 0.065 274);
+  --brand-900: oklch(0.93 0.035 274);
+  --brand-950: oklch(0.97 0.015 274);
+
+  --copper-50: oklch(0.26 0.04 55);
+  --copper-100: oklch(0.32 0.06 55);
+  --copper-200: oklch(0.42 0.09 55);
+  --copper-300: oklch(0.55 0.12 55);
+  --copper-400: oklch(0.66 0.14 55);
+  --copper-500: oklch(0.74 0.14 57);
+  --copper-600: oklch(0.8 0.12 62);
+  --copper-700: oklch(0.86 0.09 66);
+  --copper-800: oklch(0.92 0.05 70);
+
+  --ink: oklch(0.955 0.006 274);
+  --background: oklch(0.158 0.022 272);
+  --foreground: var(--ink);
+  --surface: oklch(0.19 0.025 272);
+  --surface-raised: oklch(0.215 0.027 272);
+  --card: oklch(0.2 0.026 272);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.215 0.027 272);
+  --popover-foreground: var(--ink);
+  --primary: oklch(0.74 0.13 274);
+  --primary-foreground: oklch(0.17 0.03 272);
+  --secondary: oklch(0.26 0.035 272);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.24 0.025 272);
+  --muted-foreground: oklch(0.73 0.022 272);
+  --accent: oklch(0.28 0.04 272);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.68 0.19 24);
+  --success: oklch(0.72 0.14 156);
+  --success-foreground: oklch(0.17 0.03 156);
+  --warning: oklch(0.82 0.14 80);
+  --warning-foreground: oklch(0.22 0.05 60);
+  --info: oklch(0.74 0.13 274);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.67 0.15 274);
+  --chart-1: oklch(0.74 0.13 274);
+  --chart-2: oklch(0.76 0.14 57);
+  --chart-3: oklch(0.74 0.1 190);
+  --chart-4: oklch(0.74 0.13 150);
+  --chart-5: oklch(0.72 0.15 320);
+  --sidebar: oklch(0.19 0.025 272);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: oklch(0.74 0.13 274);
+  --sidebar-primary-foreground: oklch(0.17 0.03 272);
+  --sidebar-accent: oklch(0.28 0.04 272);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.67 0.15 274);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  /* WCAG 2.2 focus-visible: always visible, never obscured */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.14em] text-copper-700 uppercase dark:text-copper-500;
+  }
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, var(--muted) 0%, color-mix(in oklch, var(--muted), var(--foreground) 6%) 50%, var(--muted) 100%);
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .snap-carousel {
+    @apply flex snap-x snap-mandatory overflow-x-auto scroll-smooth;
+    scrollbar-width: none;
+  }
+  .snap-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .prose-cv {
+    @apply text-[0.975rem] leading-7 text-foreground/90;
+  }
+  .prose-cv h2 {
+    @apply mt-10 mb-3 font-display text-2xl font-semibold text-foreground;
+  }
+  .prose-cv h3 {
+    @apply mt-8 mb-2 text-lg font-semibold text-foreground;
+  }
+  .prose-cv p {
+    @apply my-4;
+  }
+  .prose-cv ul {
+    @apply my-4 list-disc space-y-1.5 pl-6;
+  }
+  .prose-cv ol {
+    @apply my-4 list-decimal space-y-1.5 pl-6;
+  }
+  .prose-cv a {
+    @apply font-medium text-primary underline underline-offset-4;
+  }
+  .prose-cv blockquote {
+    @apply my-6 border-l-4 border-copper-400 pl-4 text-muted-foreground italic;
+  }
+  .prose-cv table {
+    @apply my-6 w-full border-collapse text-sm;
+  }
+  .prose-cv th,
+  .prose-cv td {
+    @apply border border-border px-3 py-2 text-left;
+  }
+}
+
+/* Map libraries: keep controls legible in both themes */
+.maplibregl-ctrl-group,
+.mapboxgl-ctrl-group {
+  border-radius: 0.75rem !important;
+  box-shadow: var(--shadow-raised) !important;
+}
+.dark .maplibregl-ctrl-group button,
+.dark .mapboxgl-ctrl-group button {
+  filter: invert(0.9);
+}
