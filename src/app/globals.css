@@ -179,6 +179,13 @@
   --sidebar-accent-foreground: var(--brand-800);
   --sidebar-border: oklch(0.908 0.009 274);
   --sidebar-ring: var(--brand-500);
+
+  /* Chart tokens — validated with the dataviz palette checker against the card surface
+     (lightness band, CVD ΔE ≥ 16, normal-vision ΔE ≥ 17, contrast ≥ 3:1). The de-emphasis
+     gray is intentionally neutral (stat-tile sparklines), so the categorical chroma floor doesn't apply. */
+  --chart-deemph: #7c808d;
+  --chart-accent: #5262dc;
+  --chart-grid: oklch(0.93 0.006 274);
 }
 
 .dark {
@@ -243,6 +250,10 @@
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.67 0.15 274);
+
+  --chart-deemph: #707481;
+  --chart-accent: #7788ed;
+  --chart-grid: oklch(0.28 0.02 272);
 }
 
 @layer base {
@@ -354,4 +365,20 @@
 .dark .maplibregl-ctrl-group button,
 .dark .mapboxgl-ctrl-group button {
   filter: invert(0.9);
+}
+.cv-popup .maplibregl-popup-content,
+.cv-popup .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: var(--popover);
+  box-shadow: var(--shadow-float);
+}
+.cv-popup .maplibregl-popup-tip,
+.cv-popup .mapboxgl-popup-tip {
+  border-top-color: var(--popover) !important;
+}
+.maplibregl-ctrl-attrib,
+.mapboxgl-ctrl-attrib {
+  font-size: 10px;
 }

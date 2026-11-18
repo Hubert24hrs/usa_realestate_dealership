@@ -19,9 +19,9 @@ export function Logo({ className, compact = false }: { className?: string; compa
     <Link href="/" className={cn("group inline-flex items-center gap-2.5 rounded-lg", className)} aria-label="CITI VIEW Real Estate — home">
       <LogoMark className="transition-transform duration-300 group-hover:-rotate-3" />
       {!compact && (
-        <span className="flex flex-col leading-none">
-          <span className="font-display text-[1.15rem] font-semibold tracking-[0.04em] text-foreground">CITI VIEW</span>
-          <span className="mt-0.5 text-[0.58rem] font-semibold tracking-[0.32em] text-muted-foreground">REAL ESTATE</span>
+        <span className="flex flex-col leading-none whitespace-nowrap">
+          <span className="font-display text-[1.05rem] font-semibold tracking-[0.04em] text-foreground sm:text-[1.15rem]">CITI VIEW</span>
+          <span className="mt-0.5 text-[0.55rem] font-semibold tracking-[0.3em] text-muted-foreground sm:text-[0.58rem] sm:tracking-[0.32em]">REAL ESTATE</span>
         </span>
       )}
     </Link>
