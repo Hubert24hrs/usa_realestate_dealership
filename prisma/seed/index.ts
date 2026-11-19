@@ -13,7 +13,7 @@ import { applyPostgis } from "../../scripts/lib/postgis";
 import { POSTS } from "./content";
 import { CITIES, STATES, citySlug, stateSlug, type CitySeed } from "./geo-data";
 import { buildListingSpecs, materialise } from "./listings";
-import { MediaAssigner, altFor, loadMediaPool } from "./media";
+import { MediaAssigner, aiImage, altFor, loadAiPhotos, loadMediaPool } from "./media";
 import {
   AGENT_TITLES,
   AMENITY_NAMES,
@@ -337,6 +337,8 @@ async function seedListings(
   const specs = buildListingSpecs();
   const pool = loadMediaPool();
   const assigner = new MediaAssigner(pool);
+  const aiPhotos = loadAiPhotos();
+  let aiUsed = 0;
   const unsplash = new UnsplashProvider();
   const unsplashUses: Array<Promise<void>> = [];
   const created: Array<{ id: string; citySlug: string; lat: number; lng: number; agentId: string | null; status: string; category: string }> = [];
@@ -366,7 +368,14 @@ async function seedListings(
     const plan = mediaPlan({ category: spec.category, propertyType: spec.propertyType, isCommunity: spec.community }, new Rng(`${spec.key}:media`));
     const label = `${m.data.streetAddress as string}, ${city.seed.name}`;
     const commercialVariant = spec.variant === "mixed" ? "mixed" : spec.variant === "industrial" ? "industrial" : spec.variant === "retail" ? "retail" : "office";
-    const images = plan.map((poolKey, k) => assigner.take(poolKey, `${spec.key}-${k}`, { label, variant: poolKey === "EXTERIOR_COMMERCIAL" ? commercialVariant : undefined }));
+    const images = plan.map((poolKey, k) => {
+      const ai = aiImage(aiPhotos, `${spec.key}-${k}`);
+      if (ai) {
+        aiUsed++;
+        return ai;
+      }
+      return assigner.take(poolKey, `${spec.key}-${k}`, { label, variant: poolKey === "EXTERIOR_COMMERCIAL" ? commercialVariant : undefined });
+    });
     images.push(
       spec.category === "LAND"
         ? generatedProvider.image("topography", `${spec.key}-topo`, `Topography and parcel map for ${label} (illustrative)`, m.floorPlanParams)
@@ -435,7 +444,7 @@ async function seedListings(
     await prisma.listingSchool.createMany({ data: links, skipDuplicates: true });
   }
   await Promise.allSettled(unsplashUses);
-  return { created, stats: assigner.stats, poolProviders: pool?.providers ?? [] };
+  return { created, stats: { ...assigner.stats, ai: aiUsed }, poolProviders: pool?.providers ?? [] };
 }
 
 async function seedMarket(cities: Map<string, CityRecord>) {
@@ -723,8 +732,8 @@ async function main() {
   await applyPostgis(prisma);
 
   const mediaCount = await prisma.listingMedia.count();
-  console.log(`\n✔ Seeded ${created.length} demo listings with ${mediaCount} images (${stats.pool} stock photos from ${poolProviders.join(", ") || "no pool"}, ${stats.generated + created.length} generated illustrations/plans).`);
-  if (!poolProviders.length) {
+  console.log(`\n✔ Seeded ${created.length} demo listings with ${mediaCount} images (${stats.ai} AI photos, ${stats.pool} stock photos from ${poolProviders.join(", ") || "no pool"}, ${stats.generated + created.length} generated illustrations/plans).`);
+  if (!poolProviders.length && stats.generated > 0) {
     console.log("  Tip: add PEXELS_API_KEY to .env.local, run `npm run media:fetch`, then `npm run db:seed` to use real photos.");
   }
   console.log(`  Demo logins: buyer@ / renter@ / seller@ / agent@ / manager@ / admin@citiview.test (one-click on /sign-in in demo mode)`);

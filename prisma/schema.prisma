@@ -110,6 +110,7 @@ enum MediaProvider {
   GENERATED
   FEED
   UPLOAD
+  AI // AI-generated photo (see scripts/ai-photos)
 }
 
 enum PriceEvent {

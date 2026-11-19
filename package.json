@@ -26,7 +26,10 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "postinstall": "prisma generate && node scripts/copy-vendor.mjs",
-    "push:keys": "node scripts/generate-vapid.mjs"
+    "push:keys": "node scripts/generate-vapid.mjs",
+    "photos:plan": "dotenv run -q -f .env.local -- tsx scripts/ai-photos/plan.ts",
+    "photos:process": "tsx scripts/ai-photos/process.ts",
+    "photos:apply": "dotenv run -q -f .env.local -- tsx scripts/ai-photos/apply.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.10.0",

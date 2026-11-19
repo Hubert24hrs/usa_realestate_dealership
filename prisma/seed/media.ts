@@ -7,6 +7,41 @@ import type { MediaPoolFile } from "../../src/lib/media/seed-provider";
 import type { ProviderImage } from "../../src/lib/media/types";
 
 export const MEDIA_POOL_PATH = path.resolve("data/media-pool.json");
+export const AI_MANIFEST_PATH = path.resolve("data/ai-photos/manifest.json");
+
+interface AiManifest {
+  license: string;
+  photos: Record<string, { url: string; width: number; height: number; blurDataUrl: string; color: string; alt: string; category: string; scene: string }>;
+}
+
+/** AI-generated listing photos (scripts/ai-photos), keyed by the seed's slot key `<listing key>-<k>`. */
+export function loadAiPhotos(): AiManifest | null {
+  if (!fs.existsSync(AI_MANIFEST_PATH)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(AI_MANIFEST_PATH, "utf8")) as AiManifest;
+  } catch {
+    return null;
+  }
+}
+
+/** The AI photo planned for a slot, as a ProviderImage — or null to fall back to the pools. */
+export function aiImage(manifest: AiManifest | null, slotKey: string): ProviderImage | null {
+  const key = slotKey.toLowerCase().replace(/[^a-z0-9-]/g, "-").slice(0, 64);
+  const p = manifest?.photos[key];
+  if (!p) return null;
+  return {
+    provider: "AI",
+    providerId: `ai:${p.scene}:${key}`,
+    category: p.category as ProviderImage["category"],
+    url: p.url,
+    width: p.width,
+    height: p.height,
+    alt: p.alt,
+    color: p.color,
+    blurDataUrl: p.blurDataUrl,
+    license: manifest!.license,
+  };
+}
 
 export function loadMediaPool(): MediaPoolFile | null {
   if (!fs.existsSync(MEDIA_POOL_PATH)) return null;
@@ -54,6 +89,7 @@ export class MediaAssigner {
 export function altFor(image: ProviderImage, label: string): string {
   const category = MEDIA_CATEGORY_LABELS[image.category];
   if (image.provider === "GENERATED") return image.alt || `${category} — illustration for ${label}`;
+  if (image.provider === "AI") return image.alt || category;
   const alt = image.alt?.trim() || category;
   return alt.toLowerCase().startsWith(category.toLowerCase()) ? alt : `${category}: ${alt}`;
 }

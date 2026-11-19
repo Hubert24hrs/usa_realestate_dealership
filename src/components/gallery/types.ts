@@ -31,6 +31,8 @@ export function creditLine(item: GalleryItem): { text: string; href?: string; vi
       return { text: "Listing photo provided by the MLS" };
     case "UPLOAD":
       return { text: "Photo provided by the lister" };
+    case "AI":
+      return { text: "AI-generated image" };
     default:
       return { text: "Original illustration · CITI VIEW (demo)" };
   }

@@ -128,7 +128,7 @@ export const MEDIA_CATEGORY_LABELS: Record<MediaCategoryKey, string> = {
   OTHER: "Other",
 };
 
-export type MediaProviderKey = "PEXELS" | "UNSPLASH" | "GENERATED" | "FEED" | "UPLOAD";
+export type MediaProviderKey = "PEXELS" | "UNSPLASH" | "GENERATED" | "FEED" | "UPLOAD" | "AI";
 
 /** Search "modes" map to the hero tabs: Buy | Rent | New Build | Sold | Commercial | Land */
 export const SEARCH_MODES = ["buy", "rent", "new", "sold", "commercial", "land"] as const;
