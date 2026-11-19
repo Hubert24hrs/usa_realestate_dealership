@@ -16,6 +16,8 @@ export const LeadBaseSchema = z.object({
   phone,
   message: z.string().trim().max(2000).optional().or(z.literal("")),
   consent: z.literal(true, { message: "Please agree to be contacted" }),
+  /** Market for routing non-listing leads (home value, seller consult, pre-approval). */
+  citySlug: z.string().regex(/^[a-z0-9-]{2,60}$/).optional(),
   /** Honeypot: real users never fill this hidden field. */
   website: z.string().max(0).optional().or(z.literal("")),
   source: z.string().max(200).optional(),

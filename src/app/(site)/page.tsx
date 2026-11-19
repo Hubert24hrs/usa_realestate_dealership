@@ -1,14 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, BadgePercent, Building2, Calculator, Home, KeyRound, Landmark, MapPinned, Star, Trees } from "lucide-react";
+import { ArrowRight, BadgePercent, Building2, Calculator, Home, KeyRound, Landmark, Star, Trees } from "lucide-react";
 import { AgentAvatar } from "@/components/agents/agent-avatar";
 import { SkylineBackdrop } from "@/components/brand/skyline";
+import { PostCard } from "@/components/learn/post-card";
 import { ListingImage } from "@/components/media/listing-image";
 import { MarketSnapshot } from "@/components/home/market-snapshot";
 import { PersonalRails } from "@/components/home/personal-rails";
 import { ListingRail } from "@/components/home/rail";
 import { HeroSearch } from "@/components/search/hero-search";
 import { Button } from "@/components/ui/button";
-import { formatCompactPrice, formatDate } from "@/lib/format";
+import { formatCompactPrice } from "@/lib/format";
 import { POPULAR_MARKETS, site } from "@/lib/site";
 import { getHomeData } from "@/server/home";
 
@@ -177,17 +178,7 @@ export default async function HomePage() {
         <ul className="grid gap-4 md:grid-cols-3">
           {data.posts.slice(0, 3).map((p) => (
             <li key={p.slug}>
-              <Link href={`/learn/${p.slug}`} className="group flex h-full flex-col overflow-hidden rounded-2xl border bg-card shadow-[var(--shadow-card)]">
-                <div className="relative h-28 overflow-hidden" style={{ background: `linear-gradient(135deg, ${p.coverColor ?? "#3b3fa8"}, color-mix(in oklch, ${p.coverColor ?? "#3b3fa8"}, black 35%))` }}>
-                  <MapPinned className="absolute right-4 bottom-3 size-14 text-white/15" aria-hidden />
-                  <span className="absolute top-3 left-3 rounded-full bg-white/90 px-2 py-0.5 text-[0.7rem] font-semibold text-ink">{p.type === "GUIDE" ? "Guide" : p.type === "NEWS" ? "News" : p.type === "LEARN" ? "Learn" : "Blog"}</span>
-                </div>
-                <div className="flex flex-1 flex-col p-4">
-                  <h3 className="font-semibold group-hover:text-primary">{p.title}</h3>
-                  <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">{p.excerpt}</p>
-                  <p className="mt-auto pt-3 text-xs text-muted-foreground">{p.publishedAt ? formatDate(p.publishedAt) : ""} · {p.readingMinutes} min read</p>
-                </div>
-              </Link>
+              <PostCard post={p} />
             </li>
           ))}
         </ul>

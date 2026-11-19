@@ -61,6 +61,42 @@ export interface AmortizationRow {
   balance: number;
 }
 
+export interface PayoffSummary {
+  months: number;
+  totalInterest: number;
+  /** Ending balance after each loan year (index 0 = end of year 1). */
+  yearlyBalance: number[];
+  yearly: Array<{ year: number; principal: number; interest: number; balance: number }>;
+}
+
+/** Amortize with an optional extra principal payment every month. */
+export function payoffWithExtra(principal: number, annualRatePct: number, years: number, extraMonthly = 0): PayoffSummary {
+  const pay = monthlyPayment(principal, annualRatePct, years);
+  const r = annualRatePct / 100 / 12;
+  const maxMonths = Math.round(years * 12);
+  let balance = principal;
+  let months = 0;
+  let totalInterest = 0;
+  const yearly: PayoffSummary["yearly"] = [];
+  let yp = 0;
+  let yi = 0;
+  while (balance > 0.005 && months < maxMonths) {
+    const interest = balance * r;
+    const principalPart = Math.min(balance, pay - interest + Math.max(0, extraMonthly));
+    balance = Math.max(0, balance - principalPart);
+    totalInterest += interest;
+    yp += principalPart;
+    yi += interest;
+    months++;
+    if (months % 12 === 0 || balance <= 0.005) {
+      yearly.push({ year: Math.ceil(months / 12), principal: yp, interest: yi, balance });
+      yp = 0;
+      yi = 0;
+    }
+  }
+  return { months, totalInterest, yearlyBalance: yearly.map((y) => y.balance), yearly };
+}
+
 export function amortization(principal: number, annualRatePct: number, years: number): AmortizationRow[] {
   const pay = monthlyPayment(principal, annualRatePct, years);
   const r = annualRatePct / 100 / 12;

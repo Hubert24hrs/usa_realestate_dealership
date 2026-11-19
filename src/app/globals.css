@@ -339,10 +339,10 @@
     @apply text-[0.975rem] leading-7 text-foreground/90;
   }
   .prose-cv h2 {
-    @apply mt-10 mb-3 font-display text-2xl font-semibold text-foreground;
+    @apply mt-10 mb-3 scroll-mt-28 font-display text-2xl font-semibold text-foreground;
   }
   .prose-cv h3 {
-    @apply mt-8 mb-2 text-lg font-semibold text-foreground;
+    @apply mt-8 mb-2 scroll-mt-28 text-lg font-semibold text-foreground;
   }
   .prose-cv p {
     @apply my-4;

@@ -647,7 +647,8 @@ async function seedActivity(
       },
     });
     for (let p = 1; p >= 0; p--) {
-      const period = new Date(now.getFullYear(), now.getMonth() - p, 1);
+      // Rent periods are the 1st of the month at 00:00 UTC (see server/rentals.ts).
+      const period = new Date(Date.UTC(now.getFullYear(), now.getMonth() - p, 1));
       await prisma.rentPayment.create({ data: { leaseId: lease.id, userId: renter.id, amountCents: unit.rent * 100, periodStart: period, status: "PAID", method: "simulated", paidAt: new Date(period.getTime() + 2 * DAY) } });
     }
   }
