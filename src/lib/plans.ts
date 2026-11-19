@@ -20,7 +20,7 @@ export const PLANS: Record<PlanKey, { name: string; monthly: number; leadWeight:
     name: "Premier",
     monthly: 149,
     leadWeight: 3,
-    tagline: "Top placement for agents who want to scale.",
+    tagline: "Top placement and the largest share of leads.",
     features: ["Everything in Pro", "3× weight in area lead routing", "Featured placement in agent search (clearly labelled)", "Featured badge on your profile and listings"],
   },
 };

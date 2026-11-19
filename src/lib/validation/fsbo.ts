@@ -6,7 +6,7 @@ export const FSBO_PROPERTY_TYPES = [
   ["SINGLE_FAMILY", "House"],
   ["TOWNHOUSE", "Townhouse"],
   ["CONDO", "Condo"],
-  ["MULTI_FAMILY", "Multi-family (2–4 units)"],
+  ["MULTI_FAMILY", "Multifamily (2 to 4 units)"],
   ["MANUFACTURED", "Manufactured home"],
 ] as const;
 export const FSBO_FEATURES = [
@@ -48,7 +48,7 @@ export const LocationSchema = z.object({
   streetAddress: z.string().trim().min(5, "Enter the street address").max(120).regex(/^\d+[A-Za-z]?\s+\S+/, "Start with the street number, e.g. 123 Main St"),
   unit: z.string().trim().max(20).optional().or(z.literal("")),
   citySlug: z.string().regex(/^[a-z0-9-]{2,60}$/, "Choose a city"),
-  zip: z.string().trim().regex(/^\d{5}$/, "Enter a 5-digit ZIP code"),
+  zip: z.string().trim().regex(/^\d{5}$/, "Enter a 5 digit ZIP code"),
   hideAddress: z.boolean(),
 });
 

@@ -9,8 +9,8 @@ import { formatDate, formatMoney } from "@/lib/format";
 import { getRates } from "@/server/rates";
 
 export const metadata: Metadata = {
-  title: "Today's sample mortgage rates: 30-year, 15-year, ARM, FHA, VA and jumbo",
-  description: "Compare sample mortgage rates and APRs by loan type, see the 12-week trend and what a rate means for your monthly payment.",
+  title: "Today's sample mortgage rates: 30 year, 15 year, ARM, FHA, VA and jumbo",
+  description: "Compare sample mortgage rates and APRs by loan type, see the 12 week trend and what a rate means for your monthly payment.",
   alternates: { canonical: "/mortgage/rates" },
 };
 
@@ -18,11 +18,11 @@ const LOAN = 400_000;
 const TERM: Record<string, number> = { "15-year-fixed": 15 };
 
 const FACTORS = [
-  ["Credit score", "Higher scores qualify for lower rates and cheaper mortgage insurance. Pricing often steps at 20-point bands."],
-  ["Down payment", "More equity (a lower loan-to-value) lowers lender risk, and at 20% down conventional loans drop PMI."],
-  ["Loan type & term", "15-year loans and ARMs usually price below 30-year fixed; FHA, VA and jumbo loans have their own pricing."],
-  ["Points", "Paying discount points upfront buys a lower rate — worth it if you'll keep the loan long enough to recoup the cost."],
-  ["Lock period", "Longer rate locks (for new construction, say) cost a little more than a standard 30–45 day lock."],
+  ["Credit score", "Higher scores qualify for lower rates and cheaper mortgage insurance. Pricing often steps at 20 point bands."],
+  ["Down payment", "More equity (a lower loan to value) lowers lender risk, and at 20% down conventional loans drop PMI."],
+  ["Loan type & term", "15 year loans and ARMs usually price below 30 year fixed; FHA, VA and jumbo loans have their own pricing."],
+  ["Points", "Paying discount points upfront buys a lower rate, which pays off if you keep the loan long enough to recoup the cost."],
+  ["Lock period", "Longer rate locks (for new construction, say) cost a little more than a standard 30 to 45 day lock."],
   ["Property & occupancy", "Primary homes price best; second homes, investment properties and some condos cost more."],
 ] as const;
 
@@ -34,7 +34,7 @@ export default async function RatesPage() {
         crumbs={[{ name: "Home", href: "/" }, { name: "Mortgage", href: "/mortgage" }, { name: "Rates", href: "/mortgage/rates" }]}
         eyebrow="Mortgage rates"
         title="Today's sample mortgage rates"
-        description={asOf ? `Sample rates for the week of ${formatDate(asOf)}. Demo data for illustration — not an offer to lend or a rate lock.` : "Sample rates for illustration — not an offer to lend."}
+        description={asOf ? `Sample rates for the week of ${formatDate(asOf)}, for illustration only. Not an offer to lend or a rate lock.` : "Sample rates for illustration only. Not an offer to lend."}
       />
       <div className="container-page space-y-10 py-10">
         <section aria-labelledby="rates-table-title" className="overflow-hidden rounded-3xl border bg-card">
@@ -48,7 +48,7 @@ export default async function RatesPage() {
                   <th scope="col" className="px-4 py-3 font-medium">Rate</th>
                   <th scope="col" className="px-4 py-3 font-medium">APR</th>
                   <th scope="col" className="px-4 py-3 font-medium">Points</th>
-                  <th scope="col" className="px-4 py-3 font-medium">1-week change</th>
+                  <th scope="col" className="px-4 py-3 font-medium">1 week change</th>
                   <th scope="col" className="px-4 py-3 font-medium">P&amp;I on {formatMoney(LOAN)}</th>
                 </tr>
               </thead>
@@ -78,7 +78,7 @@ export default async function RatesPage() {
         </section>
 
         <section aria-labelledby="trend-title" className="rounded-3xl border bg-card p-5 sm:p-6">
-          <h2 id="trend-title" className="font-semibold">12-week trend</h2>
+          <h2 id="trend-title" className="font-semibold">12 week trend</h2>
           <p className="text-sm text-muted-foreground">Weekly sample rates for the four most common loan types.</p>
           <div className="mt-4">
             <RatesChart history={history} />
@@ -100,15 +100,15 @@ export default async function RatesPage() {
         <div className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-primary/20 bg-primary/5 p-6">
           <div>
             <p className="font-semibold">Get a rate quote based on your profile</p>
-            <p className="text-sm text-muted-foreground">A partner lender follows up with a personalized rate and pre-approval.</p>
+            <p className="text-sm text-muted-foreground">A partner lender follows up with a personalized rate and preapproval.</p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Button asChild><Link href="/mortgage/preapproval">Get pre-approved</Link></Button>
+            <Button asChild><Link href="/mortgage/preapproval">Get preapproved</Link></Button>
             <Button asChild variant="outline"><Link href="/mortgage/calculator">Calculate a payment</Link></Button>
           </div>
         </div>
         <ToolDisclaimer>
-          Rates, APRs and points are sample demo values for a well-qualified primary-residence borrower and are not quotes. APR includes estimated lender fees. Payment examples show principal and interest only (30-year terms unless noted).
+          Rates, APRs and points are sample values for a well qualified borrower buying a primary residence and are not quotes. APR includes estimated lender fees. Payment examples show principal and interest only (30 year terms unless noted).
         </ToolDisclaimer>
       </div>
     </>

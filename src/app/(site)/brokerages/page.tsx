@@ -5,7 +5,7 @@ import { listOrganizations } from "@/server/agents";
 
 export const metadata: Metadata = {
   title: "Real estate brokerages",
-  description: "Browse real estate brokerages on CITI VIEW — their agents, active listings and the markets they serve.",
+  description: "Browse real estate brokerages on CITI VIEW, with their agents, active listings and the markets they serve.",
   alternates: { canonical: "/brokerages" },
 };
 

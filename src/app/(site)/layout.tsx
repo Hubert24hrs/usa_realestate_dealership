@@ -1,6 +1,6 @@
 import { ConsentBanner } from "@/components/compliance/consent-banner";
-import { DemoBanner } from "@/components/compliance/demo-banner";
-import { DEMO_BANNER_SCRIPT } from "@/components/compliance/demo-banner-script";
+import { SiteNotice } from "@/components/compliance/site-notice";
+import { SITE_NOTICE_SCRIPT } from "@/components/compliance/site-notice-script";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { site } from "@/lib/site";
@@ -15,8 +15,8 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       </a>
       {site.demoMode && (
         <>
-          <script dangerouslySetInnerHTML={{ __html: DEMO_BANNER_SCRIPT }} />
-          <DemoBanner text={settings.demoBanner} />
+          <script dangerouslySetInnerHTML={{ __html: SITE_NOTICE_SCRIPT }} />
+          <SiteNotice text={settings.demoBanner} />
         </>
       )}
       <SiteHeader />

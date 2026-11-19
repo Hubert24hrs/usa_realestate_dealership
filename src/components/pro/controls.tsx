@@ -85,7 +85,7 @@ export function ListingControls({ id, status, price, rental }: { id: string; sta
             e.preventDefault();
             const n = Number(value.replace(/[^\d]/g, ""));
             if (!n) return toast.error("Enter a price");
-            if (await run(`/api/listings/${id}/manage`, "PATCH", { price: n }, n < price ? "Price reduced — saved-search alerts will notify followers" : "Price updated")) setEditing(false);
+            if (await run(`/api/listings/${id}/manage`, "PATCH", { price: n }, n < price ? "Price reduced. Saved search alerts will notify followers" : "Price updated")) setEditing(false);
           }}
         >
           <label className="sr-only" htmlFor={`listing-price-${id}`}>New price</label>

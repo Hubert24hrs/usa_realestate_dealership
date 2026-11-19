@@ -30,7 +30,7 @@ export const POST = withUser<{ id: string }>(
         kind: "application_fee",
         referenceId: app.id,
         amountCents: fee * 100,
-        description: `Rental application fee — ${place}`,
+        description: `Rental application fee for ${place}`,
         customerEmail: user.email,
         successPath: "/account/rentals?submitted=1",
         cancelPath: `/rent/apply/${app.listing.slug}?app=${app.id}&canceled=1`,

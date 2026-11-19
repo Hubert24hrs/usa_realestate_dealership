@@ -14,7 +14,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Renting: apartments, houses for rent and renter tools",
-  description: "Find apartments and houses for rent, check what rent fits your budget, compare cost of living and rent trends, apply online and pay rent — all in one place.",
+  description: "Find apartments and houses for rent, check what rent fits your budget, compare cost of living and rent trends, apply online and pay rent.",
   alternates: { canonical: "/rent" },
 };
 
@@ -22,7 +22,7 @@ const RENT_TOOLS = ["rent-affordability", "cost-of-living", "rent-trends", "rent
 const SEARCHES = [
   { href: "/apartments-for-rent", label: "Apartments for rent", icon: Building2 },
   { href: "/houses-for-rent", label: "Houses for rent", icon: Home },
-  { href: "/pet-friendly-rentals", label: "Pet-friendly rentals", icon: PawPrint },
+  { href: "/pet-friendly-rentals", label: "Pet friendly rentals", icon: PawPrint },
   { href: "/account/rentals", label: "Renter dashboard", icon: KeyRound },
 ];
 
@@ -40,7 +40,7 @@ export default async function RentHubPage() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Rent", href: "/rent" }]}
         eyebrow="Rent"
-        title="Find a place you'll love to come home to"
+        title="Apartments and houses for rent"
         description="Search verified rentals, see what fits your budget, apply once and pay rent online. No deposits before you've toured and signed."
       >
         <ul className="mt-6 grid max-w-3xl gap-3 sm:grid-cols-2">

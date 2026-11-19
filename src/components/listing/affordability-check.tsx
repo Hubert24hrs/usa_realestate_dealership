@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const VERDICTS: Record<AffordabilityVerdict, { label: string; tone: string; icon: React.ComponentType<{ className?: string }>; text: string }> = {
   comfortable: { label: "Comfortable", tone: "text-success", icon: CheckCircle2, text: "This price leaves room in your budget." },
   within: { label: "Within budget", tone: "text-success", icon: ThumbsUp, text: "This price fits the common 28/36 guideline." },
-  stretch: { label: "A stretch", tone: "text-warning-foreground dark:text-warning", icon: AlertTriangle, text: "Slightly above the 28/36 guideline — consider a larger down payment or lower rate." },
+  stretch: { label: "A stretch", tone: "text-warning-foreground dark:text-warning", icon: AlertTriangle, text: "Slightly above the 28/36 guideline. Consider a larger down payment or lower rate." },
   over: { label: "Over budget", tone: "text-destructive", icon: CircleAlert, text: "This home is above what these inputs comfortably support." },
 };
 
@@ -64,7 +64,7 @@ export function AffordabilityCheck({ price, taxAnnual, hoaMonthly, defaultRate }
           <p className="text-xs text-muted-foreground">≈ {formatMoney(maxHousingPayment)}/mo housing</p>
         </div>
       </div>
-      <p className="text-xs text-muted-foreground">Uses a 28% housing / 36% total debt-to-income guideline at {defaultRate.toFixed(2)}% for 30 years. Lenders may approve more or less.</p>
+      <p className="text-xs text-muted-foreground">Uses a 28% housing / 36% total debt to income guideline at {defaultRate.toFixed(2)}% for 30 years. Lenders may approve more or less.</p>
     </div>
   );
 }

@@ -90,8 +90,8 @@ async function seedGeography(): Promise<Map<string, CityRecord>> {
           childcare: clamp(c.col + r.int(-5, 12), 80, 150),
         },
         isRural: Boolean(c.rural),
-        seoTitle: `${c.name}, ${c.state} Real Estate — Homes for Sale & Rent`,
-        seoDescription: `Search ${c.name}, ${c.state} homes for sale, rentals, new construction and land on CITI VIEW. Demo data.`,
+        seoTitle: `${c.name}, ${c.state} Real Estate: Homes for Sale & Rent`,
+        seoDescription: `Search ${c.name}, ${c.state} homes for sale, rentals, new construction and land on CITI VIEW.`,
       },
     });
     const record: CityRecord = { id: city.id, seed: c, slug, hoods: [], schools: [] };
@@ -103,7 +103,7 @@ async function seedGeography(): Promise<Map<string, CityRecord>> {
           cityId: city.id,
           name: h.name,
           slug: slugify(h.name),
-          description: `${h.name} is a ${c.rural ? "rural area" : "neighborhood"} in ${c.name}, ${c.state} known for ${h.highlights.join(", ").toLowerCase()}. Scores and statistics shown are demo data.`,
+          description: `${h.name} is a ${c.rural ? "rural area" : "neighborhood"} in ${c.name}, ${c.state} known for ${h.highlights.join(", ").toLowerCase()}. Scores and statistics shown are illustrative.`,
           boundary: { type: "Polygon", coordinates: [boundary] },
           centerLat: h.lat,
           centerLng: h.lng,
@@ -117,7 +117,7 @@ async function seedGeography(): Promise<Map<string, CityRecord>> {
           medianPrice: roundTo(c.medianHome * h.premium, 5000),
           highlights: h.highlights,
           seoTitle: `${h.name}, ${c.name} ${c.state} homes for sale`,
-          seoDescription: `Homes for sale and rent in ${h.name}, ${c.name}. Demo listings, schools and neighborhood stats.`,
+          seoDescription: `Homes for sale and rent in ${h.name}, ${c.name}, with listings, schools and neighborhood stats.`,
         },
       });
       record.hoods.push({ id: created.id, name: h.name, lat: h.lat, lng: h.lng });
@@ -234,8 +234,8 @@ async function seedOrganizations() {
         description: `${b.name} is a ${b.kind === "BROKERAGE" ? `${b.focus ?? "residential"} brokerage` : "property management company"} serving ${b.cities
           .map((s) => CITIES.find((c) => citySlug(c) === s)?.name)
           .filter(Boolean)
-          .join(", ")}. ${b.tagline} This is a fictional demo company created for CITI VIEW.`,
-        licenseNumber: `${home.state} Lic. #${r.int(100000, 999999)} (demo)`,
+          .join(", ")}. ${b.tagline} This is a fictional company created for CITI VIEW.`,
+        licenseNumber: `${home.state} Lic. #${r.int(100000, 999999)}`,
         licenseState: home.state,
         phone: fakePhone(b.cities[0]!, r),
         email: `hello@${b.key}.example`,
@@ -285,9 +285,9 @@ async function seedOrganizations() {
           phone: fakePhone(cities[0]!, ar),
           bio: `${name.split(" ")[0]} has helped clients ${focus === "commercial" ? "lease and acquire commercial property" : focus === "land" ? "buy and sell ranches, recreational land and timber" : focus === "rentals" ? "find and lease apartment homes" : "buy and sell homes"} for ${years} years across ${cities
             .map((s) => CITIES.find((c) => citySlug(c) === s)?.name)
-            .join(" and ")}. Known for clear communication and careful negotiation, ${name.split(" ")[0]} specializes in ${specialties.join(", ").toLowerCase()}. Demo agent profile — not a real person.`,
+            .join(" and ")}. Known for clear communication and careful negotiation, ${name.split(" ")[0]} specializes in ${specialties.join(", ").toLowerCase()}. Sample agent profile, not a real person.`,
           brandColor: ar.pick(["#3b3fa8", "#2f6f73", "#b5543c", "#8e5572", "#4a6b8a", "#6b8f71", "#c98d4a"]),
-          licenseNumber: `${CITIES.find((c) => citySlug(c) === cities[0])?.state ?? "TX"} #${ar.int(100000, 999999)} (demo)`,
+          licenseNumber: `${CITIES.find((c) => citySlug(c) === cities[0])?.state ?? "TX"} #${ar.int(100000, 999999)}`,
           licenseState: CITIES.find((c) => citySlug(c) === cities[0])?.state ?? "TX",
           yearsExperience: years,
           specialties,
@@ -474,12 +474,12 @@ async function seedMarket(cities: Map<string, CityRecord>) {
   await prisma.marketStat.createMany({ data: stats });
 
   const products = [
-    { product: "30-year fixed", slug: "30-year-fixed", base: 6.18 },
-    { product: "15-year fixed", slug: "15-year-fixed", base: 5.52 },
+    { product: "30 year fixed", slug: "30-year-fixed", base: 6.18 },
+    { product: "15 year fixed", slug: "15-year-fixed", base: 5.52 },
     { product: "5/1 ARM", slug: "5-1-arm", base: 5.94 },
-    { product: "30-year FHA", slug: "30-year-fha", base: 5.86 },
-    { product: "30-year VA", slug: "30-year-va", base: 5.71 },
-    { product: "30-year jumbo", slug: "30-year-jumbo", base: 6.39 },
+    { product: "30 year FHA", slug: "30-year-fha", base: 5.86 },
+    { product: "30 year VA", slug: "30-year-va", base: 5.71 },
+    { product: "30 year jumbo", slug: "30-year-jumbo", base: 6.39 },
   ];
   const rates: Prisma.MortgageRateCreateManyInput[] = [];
   const rr = new Rng("rates");
@@ -504,7 +504,7 @@ async function seedContent() {
         excerpt: p.excerpt,
         body: p.body,
         coverColor: p.coverColor,
-        authorName: "CITI VIEW Editorial (demo)",
+        authorName: "CITI VIEW Editorial",
         tags: p.tags,
         citySlug: p.citySlug ?? null,
         readingMinutes: Math.max(2, Math.round(p.body.split(/\s+/).length / 220)),
@@ -515,15 +515,15 @@ async function seedContent() {
     });
   }
   await prisma.post.create({
-    data: { type: "BLOG", status: "DRAFT", title: "Draft: winterizing checklist", slug: "draft-winterizing-checklist", excerpt: "Unpublished draft for the CMS demo.", body: "Work in progress.", tags: ["Maintenance"], authorName: "CITI VIEW Editorial (demo)" },
+    data: { type: "BLOG", status: "DRAFT", title: "Draft: winterizing checklist", slug: "draft-winterizing-checklist", excerpt: "Unpublished draft for testing the CMS.", body: "Work in progress.", tags: ["Maintenance"], authorName: "CITI VIEW Editorial" },
   });
 
   const settings: Array<[string, Prisma.InputJsonValue]> = [
-    ["compliance.idxDisclaimer", "IDX information is provided exclusively for consumers' personal, non-commercial use and may not be used for any purpose other than to identify prospective properties consumers may be interested in purchasing. Information is deemed reliable but is not guaranteed. DEMO NOTICE: every listing, agent, review and statistic on this site is fictional demo data created for the CITI VIEW platform."],
-    ["compliance.listingDisclaimer", "Listing information is provided by the listing brokerage via the Demo MLS and is deemed reliable but not guaranteed. Square footage, acreage and school assignments should be independently verified. Demo data — not an offer to sell or lease."],
+    ["compliance.idxDisclaimer", "IDX information is provided exclusively for consumers' personal, noncommercial use and may not be used for any purpose other than to identify prospective properties consumers may be interested in purchasing. Information is deemed reliable but is not guaranteed. SAMPLE DATA NOTICE: every listing, agent, review and statistic on this site is fictional and was created for the CITI VIEW platform."],
+    ["compliance.listingDisclaimer", "Listing information is provided by the listing brokerage via the MLS and is deemed reliable but not guaranteed. Square footage, acreage and school assignments should be independently verified. Sample data, not an offer to sell or lease."],
     ["compliance.brokerage", { name: "CITI VIEW Realty, LLC (placeholder)", licenses: ["TX TREC #0000000 (placeholder)", "CA DRE #00000000 (placeholder)", "FL #BK0000000 (placeholder)"], address: "100 Example Plaza, Suite 100, Austin, TX 78701 (placeholder)", phone: "(512) 555-0100" }],
     ["compliance.fairHousing", "CITI VIEW is committed to compliance with all federal, state and local fair housing laws. We do not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, national origin, familial status, disability or any other protected characteristic. Equal Housing Opportunity."],
-    ["site.demoBanner", "You're exploring CITI VIEW demo data — listings, agents and statistics are fictional."],
+    ["site.demoBanner", "You're browsing sample data. Listings, agents and statistics on CITI VIEW are fictional."],
     ["leads.routing", { strategy: "weighted-round-robin", preferListingAgent: true, slaMinutes: 15 }],
   ];
   for (const [key, value] of settings) await prisma.siteSetting.create({ data: { key, value } });
@@ -542,9 +542,9 @@ async function seedActivity(
 
   const collection = await prisma.collection.create({ data: { ownerId: buyer.id, name: "Austin shortlist", description: "Homes to tour with my agent" } });
   for (const [k, l] of austin.slice(0, 3).entries()) {
-    await prisma.collectionItem.create({ data: { collectionId: collection.id, listingId: l.id, addedById: buyer.id, sharedNote: ["Love the yard — check the roof age.", "Great location; HOA seems high.", null][k] ?? null } });
+    await prisma.collectionItem.create({ data: { collectionId: collection.id, listingId: l.id, addedById: buyer.id, sharedNote: ["Love the yard. Check the roof age.", "Great location; HOA seems high.", null][k] ?? null } });
   }
-  await prisma.collectionMember.create({ data: { collectionId: collection.id, userId: agentUser.id, email: agentUser.email!, role: "EDITOR", isAgent: true, inviteToken: `demo-invite-${collection.id}`, acceptedAt: now } });
+  await prisma.collectionMember.create({ data: { collectionId: collection.id, userId: agentUser.id, email: agentUser.email!, role: "EDITOR", isAgent: true, inviteToken: `invite-${collection.id}`, acceptedAt: now } });
   await prisma.collection.create({ data: { ownerId: buyer.id, name: "Weekend ideas", description: "Places to see if we expand the search" } });
 
   await prisma.savedSearch.createMany({
@@ -575,7 +575,7 @@ async function seedActivity(
   await prisma.message.createMany({
     data: [
       { conversationId: convo.id, senderId: buyer.id, body: "Hi! Is the home still available for a tour this Saturday morning?", createdAt: new Date(now.getTime() - 26 * 3_600_000) },
-      { conversationId: convo.id, senderId: agentUser.id, body: "Yes — I've booked 10:00 AM. I'll send the disclosures beforehand.", createdAt: new Date(now.getTime() - 25 * 3_600_000) },
+      { conversationId: convo.id, senderId: agentUser.id, body: "Yes, I've booked 10:00 AM. I'll send the disclosures beforehand.", createdAt: new Date(now.getTime() - 25 * 3_600_000) },
       { conversationId: convo.id, senderId: buyer.id, body: "Perfect, thank you. Could you also pull comps for the street?", createdAt: new Date(now.getTime() - 2 * 3_600_000) },
     ],
   });
@@ -598,7 +598,7 @@ async function seedActivity(
       phone: `(512) 555-01${String(r.int(0, 99)).padStart(2, "0")}`,
       message: r.pick(["Is this still available?", "Can I see it this weekend?", "What are the HOA dues?", "Interested in making an offer.", "Is the seller flexible on closing date?"]),
       source: "/property",
-      routingReason: k < 9 ? "Listing agent" : "Weighted round-robin (demo)",
+      routingReason: k < 9 ? "Listing agent" : "Weighted round robin",
       assignedAt: new Date(now.getTime() - k * 9 * 3_600_000),
       createdAt: new Date(now.getTime() - k * 9 * 3_600_000),
     });
@@ -618,7 +618,7 @@ async function seedActivity(
         moveInDate: new Date(now.getTime() - 40 * DAY),
         leaseTermMonths: 12,
         applicant: { firstName: "Sam", lastName: "Rivera", email: renter.email, phone: renter.phone, currentAddress: "1200 Example Ave, Austin, TX", monthsAtAddress: 26, currentRent: 1650 },
-        employment: { employer: "Demo Analytics Co.", position: "Product designer", monthlyIncome: 7800, startDate: "2022-03-01" },
+        employment: { employer: "Lakeview Analytics Co.", position: "Product designer", monthlyIncome: 7800, startDate: "2022-03-01" },
         occupants: 1,
         consentScreening: true,
         consentAt: new Date(now.getTime() - 55 * DAY),
@@ -626,7 +626,7 @@ async function seedActivity(
         feePaid: true,
         submittedAt: new Date(now.getTime() - 55 * DAY),
         decidedAt: new Date(now.getTime() - 52 * DAY),
-        decisionNote: "Approved — welcome home!",
+        decisionNote: "Approved. Welcome home!",
       },
     });
     const lease = await prisma.lease.create({
@@ -640,8 +640,8 @@ async function seedActivity(
         monthlyRent: unit.rent,
         securityDeposit: unit.deposit ?? 500,
         status: "ACTIVE",
-        terms: `Residential lease (DEMO) for Unit ${unit.unitNumber} at ${community.communityName ?? community.streetAddress}. Monthly rent $${unit.rent}. This demo lease is not a legal document.`,
-        landlordName: "Keystone Residential Management (demo)",
+        terms: `Residential lease (sample) for Unit ${unit.unitNumber} at ${community.communityName ?? community.streetAddress}. Monthly rent $${unit.rent}. This sample lease is not a legal document.`,
+        landlordName: "Keystone Residential Management",
         signatureName: "Sam Rivera",
         signedAt: new Date(now.getTime() - 48 * DAY),
       },
@@ -663,7 +663,7 @@ async function seedActivity(
         moveInDate: new Date(now.getTime() + 30 * DAY),
         leaseTermMonths: 12,
         applicant: { firstName: "Sam", lastName: "Rivera", email: renter.email, phone: renter.phone },
-        employment: { employer: "Demo Analytics Co.", position: "Product designer", monthlyIncome: 7800 },
+        employment: { employer: "Lakeview Analytics Co.", position: "Product designer", monthlyIncome: 7800 },
         consentScreening: true,
         consentAt: new Date(now.getTime() - 2 * DAY),
         feeAmount: 50,
@@ -692,7 +692,7 @@ async function seedActivity(
     data: [
       { listingId: rentals[0]!.id, reason: "SCAM_OR_FRAUD", details: "Someone texted me claiming to be the owner and asked for a deposit via gift cards.", email: "concerned.renter@example.com" },
       { listingId: forSale[3]!.id, reason: "INACCURATE_INFO", details: "Square footage looks wrong compared with county records.", userId: buyer.id },
-      { listingId: forSale[5]!.id, reason: "DUPLICATE", details: "Same home appears twice.", status: "RESOLVED", resolution: "Verified unique listing — no action.", resolvedById: admin.id, resolvedAt: new Date(now.getTime() - 5 * DAY) },
+      { listingId: forSale[5]!.id, reason: "DUPLICATE", details: "Same home appears twice.", status: "RESOLVED", resolution: "Verified unique listing. No action needed.", resolvedById: admin.id, resolvedAt: new Date(now.getTime() - 5 * DAY) },
     ],
   });
 
@@ -728,16 +728,16 @@ async function main() {
   console.log("Seeding market stats, rates, CMS and settings …");
   await seedMarket(cities);
   await seedContent();
-  console.log("Seeding demo user activity …");
+  console.log("Seeding sample user activity …");
   await seedActivity(users, created);
   await applyPostgis(prisma);
 
   const mediaCount = await prisma.listingMedia.count();
-  console.log(`\n✔ Seeded ${created.length} demo listings with ${mediaCount} images (${stats.ai} AI photos, ${stats.pool} stock photos from ${poolProviders.join(", ") || "no pool"}, ${stats.generated + created.length} generated illustrations/plans).`);
+  console.log(`\n✔ Seeded ${created.length} sample listings with ${mediaCount} images (${stats.ai} AI photos, ${stats.pool} stock photos from ${poolProviders.join(", ") || "no pool"}, ${stats.generated + created.length} generated illustrations/plans).`);
   if (!poolProviders.length && stats.generated > 0) {
     console.log("  Tip: add PEXELS_API_KEY to .env.local, run `npm run media:fetch`, then `npm run db:seed` to use real photos.");
   }
-  console.log(`  Demo logins: buyer@ / renter@ / seller@ / agent@ / manager@ / admin@citiview.test (one-click on /sign-in in demo mode)`);
+  console.log(`  Guest logins: buyer@ / renter@ / seller@ / agent@ / manager@ / admin@citiview.test (one click on /sign-in while sample data is on)`);
   console.log(`  Done in ${((Date.now() - started) / 1000).toFixed(1)}s`);
 }
 

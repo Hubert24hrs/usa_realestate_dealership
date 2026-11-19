@@ -70,7 +70,7 @@ export function AddToCollectionButton({ listingId, className, variant = "outline
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Save to a collection</DialogTitle>
-          <DialogDescription>Group homes by trip, budget or partner — and share collections with co-shoppers or your agent.</DialogDescription>
+          <DialogDescription>Group homes by trip, budget or partner, and share collections with shopping partners or your agent.</DialogDescription>
         </DialogHeader>
         {needsAuth ? (
           <div className="space-y-3 rounded-xl border bg-muted/50 p-4 text-sm">
@@ -81,7 +81,7 @@ export function AddToCollectionButton({ listingId, className, variant = "outline
           <>
             <div className="max-h-72 space-y-1.5 overflow-y-auto" aria-busy={query.isLoading}>
               {query.isLoading && [0, 1].map((i) => <div key={i} className="h-14 animate-pulse rounded-xl bg-muted" />)}
-              {query.data?.length === 0 && <p className="rounded-xl bg-muted/60 p-4 text-sm text-muted-foreground">No collections yet — create your first below.</p>}
+              {query.data?.length === 0 && <p className="rounded-xl bg-muted/60 p-4 text-sm text-muted-foreground">No collections yet. Create your first below.</p>}
               {query.data?.map((c) => {
                 const viewOnly = c.access === "VIEWER";
                 return (
@@ -100,7 +100,7 @@ export function AddToCollectionButton({ listingId, className, variant = "outline
                       <span className="block truncate text-sm font-medium">{c.name}</span>
                       <span className="block text-xs text-muted-foreground">
                         {c.itemCount} {c.itemCount === 1 ? "home" : "homes"}
-                        {c.access !== "OWNER" && ` · shared by ${c.ownerName ?? "a co-shopper"}`}
+                        {c.access !== "OWNER" && ` · shared by ${c.ownerName ?? "a shopping partner"}`}
                       </span>
                     </span>
                     {viewOnly && <Lock className="size-4 text-muted-foreground" aria-label="View only" />}
@@ -111,7 +111,7 @@ export function AddToCollectionButton({ listingId, className, variant = "outline
             <form onSubmit={create} className="flex items-end gap-2 border-t pt-4">
               <div className="flex-1 space-y-1.5">
                 <Label htmlFor={`new-collection-${listingId}`}>New collection</Label>
-                <Input id={`new-collection-${listingId}`} value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Must-sees near the lake" maxLength={80} />
+                <Input id={`new-collection-${listingId}`} value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Favorites near the lake" maxLength={80} />
               </div>
               <Button type="submit" disabled={!name.trim() || busy === "new"}>
                 {busy === "new" ? <Loader2 className="size-4 animate-spin" aria-hidden /> : <Plus className="size-4" aria-hidden />} Create

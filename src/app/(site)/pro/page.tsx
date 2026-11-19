@@ -33,7 +33,7 @@ export default async function ProPage({ searchParams }: PageProps) {
         description="Every agent gets a free profile and the leads from their own listings. Upgrade for a bigger share of buyer and seller leads in your markets."
       />
       <div className="container-page py-10">
-        {sp.canceled === "1" && <p role="status" className="mb-6 rounded-2xl bg-warning/15 p-4 text-sm">Checkout canceled — your plan hasn&apos;t changed.</p>}
+        {sp.canceled === "1" && <p role="status" className="mb-6 rounded-2xl bg-warning/15 p-4 text-sm">Checkout canceled. Your plan hasn&apos;t changed.</p>}
         <ul className="grid gap-4 lg:grid-cols-3">
           {order.map((key) => {
             const p = PLANS[key];
@@ -69,7 +69,7 @@ export default async function ProPage({ searchParams }: PageProps) {
         </ul>
         <p className="mt-6 max-w-3xl text-xs text-muted-foreground">
           Plans renew monthly; cancel anytime. Featured placement is always labelled as such, and plans never affect ratings or reviews. Lead weighting applies to inquiries not tied to a specific agent&apos;s listing.{" "}
-          {stripeEnabled() ? "Payments are processed securely by Stripe." : "Demo mode: upgrades use a simulated checkout — no card is charged."}
+          {stripeEnabled() ? "Payments are processed securely by Stripe." : "Payments are switched off, so upgrades use a simulated checkout. No card is charged."}
         </p>
       </div>
     </>

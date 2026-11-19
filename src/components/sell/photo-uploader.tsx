@@ -65,7 +65,7 @@ function upload(file: File, onProgress: (p: number) => void): Promise<{ id: stri
       if (xhr.status >= 200 && xhr.status < 300 && data.id && data.url) resolve({ id: data.id, url: data.url });
       else reject(new Error(data.error ?? (xhr.status === 401 ? "Please sign in again." : "Upload failed")));
     };
-    xhr.onerror = () => reject(new Error("Network error — check your connection"));
+    xhr.onerror = () => reject(new Error("Network error. Check your connection"));
     const form = new FormData();
     form.append("file", file);
     xhr.send(form);
@@ -120,7 +120,7 @@ export function PhotoUploader({ initial, onChange }: { initial: UploadedPhoto[];
     const images = Array.from(incoming).filter((f) => f.type.startsWith("image/"));
     const room = MAX_PHOTOS - items.length;
     if (!images.length) return setNotice("Choose image files (JPEG, PNG, WebP or AVIF).");
-    setNotice(images.length > room ? `Only ${room} more photo${room === 1 ? "" : "s"} fit — the rest were skipped.` : null);
+    setNotice(images.length > room ? `Only ${room} more photo${room === 1 ? "" : "s"} fit. The rest were skipped.` : null);
     const fresh = images.slice(0, Math.max(0, room)).map((file, i): Item => {
       const category = guessCategory(items.length + i);
       const key = `${Date.now()}-${i}-${file.name}`;
@@ -207,13 +207,13 @@ export function PhotoUploader({ initial, onChange }: { initial: UploadedPhoto[];
       </div>
 
       <p role="status" className="text-sm text-muted-foreground">
-        {done} of {items.length} photo{items.length === 1 ? "" : "s"} uploaded{busy ? " — uploading…" : ""}
+        {done} of {items.length} photo{items.length === 1 ? "" : "s"} uploaded{busy ? " (uploading…)" : ""}
         {items.length > 0 && items.length < 8 ? " · listings with 8+ photos get far more views" : ""}
       </p>
       {notice && <p className="rounded-xl bg-warning/15 p-3 text-sm">{notice}</p>}
 
       {items.length > 0 && (
-        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Photos in display order — the first is the cover">
+        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3" aria-label="Photos in display order. The first is the cover">
           {items.map((it, i) => (
             <li
               key={it.key}

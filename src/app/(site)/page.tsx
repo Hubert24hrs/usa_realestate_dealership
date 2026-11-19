@@ -43,8 +43,8 @@ export default async function HomePage() {
         <div className="container-page relative pt-16 pb-28 sm:pt-24 sm:pb-36">
           {/* Two lines reserved on phones: the letter-spaced line can wrap differently before the web font loads. */}
           <p className="min-h-8 text-xs font-semibold tracking-[0.18em] text-copper-300 uppercase sm:min-h-0">Buy · Rent · New builds · Commercial · Land</p>
-          <h1 className="mt-4 max-w-3xl font-display text-display-xl font-semibold tracking-tight text-balance">Find the place that fits your next chapter.</h1>
-          <p className="mt-5 max-w-2xl text-lg text-white/75">Search every home, rental, building and acre on one map — with schools, commute, price history and the tools to make a confident move.</p>
+          <h1 className="mt-4 max-w-3xl font-display text-display-xl font-semibold tracking-tight text-balance">Find your next home.</h1>
+          <p className="mt-5 max-w-2xl text-lg text-white/75">Search homes, rentals, commercial buildings and land on one map, with schools, commute times and price history for every listing.</p>
           <div className="mt-8 text-foreground">
             <HeroSearch />
           </div>
@@ -69,7 +69,7 @@ export default async function HomePage() {
                 <span className="grid size-11 place-items-center rounded-xl bg-brand-50 text-primary dark:bg-brand-100"><Icon className="size-5" aria-hidden /></span>
                 <span>
                   <span className="block text-sm font-semibold">{label}</span>
-                  <span className="block text-xs text-muted-foreground">{(data.counts[key] ?? 0).toLocaleString("en-US")} demo listings</span>
+                  <span className="block text-xs text-muted-foreground">{(data.counts[key] ?? 0).toLocaleString("en-US")} listings</span>
                 </span>
                 <ArrowRight className="ml-auto size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden />
               </Link>
@@ -79,7 +79,7 @@ export default async function HomePage() {
       </section>
 
       <div className="pt-6">
-        <StaticListingRail id="new" title="New to market" subtitle="The freshest listings across CITI VIEW" href="/homes-for-sale?sort=newest" listings={data.rails.newest} />
+        <StaticListingRail id="new" title="New to market" subtitle="The newest listings on CITI VIEW" href="/homes-for-sale?sort=newest" listings={data.rails.newest} />
         {/* Below the fold: rails mount as they approach the viewport (headings + skeletons render first). */}
         <DeferUntilVisible>
           <LazyPersonalRails fallback={data.rails.luxury.slice(0, 8)} />
@@ -90,8 +90,8 @@ export default async function HomePage() {
         <DeferUntilVisible fallback={<ListingRail id="open" title="Open houses this weekend" subtitle="Tour in person or join a virtual open house" listings={[]} loading />}>
           <StaticListingRail id="open" title="Open houses this weekend" subtitle="Tour in person or join a virtual open house" href="/open-houses" listings={data.rails.openHouses} />
         </DeferUntilVisible>
-        <DeferUntilVisible fallback={<ListingRail id="luxury" title="Luxury collection" subtitle="Estates, penthouses and design-forward homes" listings={[]} loading />}>
-          <StaticListingRail id="luxury" title="Luxury collection" subtitle="Estates, penthouses and design-forward homes" href="/luxury-homes" listings={data.rails.luxury} />
+        <DeferUntilVisible fallback={<ListingRail id="luxury" title="Luxury collection" subtitle="Estates, penthouses and architect designed homes" listings={[]} loading />}>
+          <StaticListingRail id="luxury" title="Luxury collection" subtitle="Estates, penthouses and architect designed homes" href="/luxury-homes" listings={data.rails.luxury} />
         </DeferUntilVisible>
         <DeferUntilVisible fallback={<ListingRail id="rentals" title="Featured rentals" subtitle="Apartment communities with live availability and online applications" listings={[]} loading />}>
           <StaticListingRail id="rentals" title="Featured rentals" subtitle="Apartment communities with live availability and online applications" href="/apartments-for-rent" listings={data.rails.rentals} />
@@ -168,13 +168,13 @@ export default async function HomePage() {
           <h2 id="mortgage-title" className="mt-1 font-display text-[1.6rem] font-semibold">Know your numbers before you tour</h2>
           {data.thirtyRate && (
             <p className="mt-4 text-sm text-white/80">
-              Today&apos;s sample 30-year fixed rate is <strong className="text-white">{data.thirtyRate.toFixed(2)}%</strong>. On a $400K loan that&apos;s about{" "}
+              Today&apos;s sample 30 year fixed rate is <strong className="text-white">{data.thirtyRate.toFixed(2)}%</strong>. On a $400K loan that&apos;s about{" "}
               <strong className="text-white">${data.examplePayment?.toLocaleString("en-US")}/mo</strong> in principal and interest.
             </p>
           )}
-          <p className="mt-1 text-xs text-white/60">Sample rates for demonstration only — not an offer of credit.</p>
+          <p className="mt-1 text-xs text-white/60">Sample rates for illustration only. Not an offer of credit.</p>
           <div className="mt-6 grid gap-2">
-            <Button asChild size="lg" className="h-11 bg-white text-brand-900 hover:bg-white/90 dark:text-brand-50"><Link href="/mortgage/preapproval"><Landmark className="size-4" aria-hidden /> Get pre-approved</Link></Button>
+            <Button asChild size="lg" className="h-11 bg-white text-brand-900 hover:bg-white/90 dark:text-brand-50"><Link href="/mortgage/preapproval"><Landmark className="size-4" aria-hidden /> Get preapproved</Link></Button>
             <Button asChild size="lg" variant="outline" className="h-11 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"><Link href="/mortgage/calculator"><Calculator className="size-4" aria-hidden /> Mortgage calculator</Link></Button>
             <Link href="/mortgage/rates" className="mt-1 text-center text-sm text-white/80 underline-offset-4 hover:underline">Compare today&apos;s rates</Link>
           </div>
@@ -186,7 +186,7 @@ export default async function HomePage() {
         <div className="mb-5 flex items-end justify-between">
           <div>
             <p className="eyebrow">News & learn</p>
-            <h2 id="learn-title" className="mt-1 font-display text-[1.75rem] font-semibold tracking-tight">Guides for every step</h2>
+            <h2 id="learn-title" className="mt-1 font-display text-[1.75rem] font-semibold tracking-tight">Guides for buyers, sellers and renters</h2>
           </div>
           <Link href="/learn" className="text-sm font-semibold text-primary hover:underline">All articles</Link>
         </div>

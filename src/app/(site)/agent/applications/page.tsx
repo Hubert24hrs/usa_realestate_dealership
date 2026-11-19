@@ -34,7 +34,7 @@ export default async function AgentApplicationsPage() {
 
   return (
     <>
-      <AccountPageHeader title="Rental applications" description="Review applicants consistently and in line with fair housing law; approving sends the lease for e-signature." />
+      <AccountPageHeader title="Rental applications" description="Review applicants consistently and in line with fair housing law; approving sends the lease for electronic signature." />
       {apps.length === 0 ? (
         <EmptyState icon={ClipboardList} title="No applications yet">Applications for rentals you manage will appear here.</EmptyState>
       ) : (
@@ -54,14 +54,14 @@ export default async function AgentApplicationsPage() {
                   </div>
                   <p className="text-muted-foreground">
                     <Link href={`/property/${a.listing.slug}`} className="hover:underline">{a.listing.communityName ?? a.listing.streetAddress}</Link>
-                    {a.unit ? ` · Unit ${a.unit.unitNumber}` : ""} · {formatMoney(rent)}/mo · submitted {a.submittedAt ? formatDate(a.submittedAt) : "—"}
+                    {a.unit ? ` · Unit ${a.unit.unitNumber}` : ""} · {formatMoney(rent)}/mo · submitted {a.submittedAt ? formatDate(a.submittedAt) : "not yet"}
                   </p>
                   <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-3">
-                    <div><dt className="text-xs text-muted-foreground">Move-in</dt><dd>{a.moveInDate ? formatDate(a.moveInDate) : "—"} · {a.leaseTermMonths ?? "—"} mo</dd></div>
-                    <div><dt className="text-xs text-muted-foreground">Income</dt><dd>{income ? `${formatMoney(income)}/mo` : "—"}{ratio ? ` (${ratio.toFixed(1)}× rent)` : ""}</dd></div>
-                    <div><dt className="text-xs text-muted-foreground">Employment</dt><dd className="truncate">{[emp.status, emp.employer].filter(Boolean).join(" · ") || "—"}</dd></div>
+                    <div><dt className="text-xs text-muted-foreground">Move in</dt><dd>{a.moveInDate ? formatDate(a.moveInDate) : "Date not set"} · {a.leaseTermMonths ? `${a.leaseTermMonths} mo` : "term not set"}</dd></div>
+                    <div><dt className="text-xs text-muted-foreground">Income</dt><dd>{income ? `${formatMoney(income)}/mo` : "Not provided"}{ratio ? ` (${ratio.toFixed(1)}× rent)` : ""}</dd></div>
+                    <div><dt className="text-xs text-muted-foreground">Employment</dt><dd className="truncate">{[emp.status, emp.employer].filter(Boolean).join(" · ") || "Not provided"}</dd></div>
                     <div><dt className="text-xs text-muted-foreground">Household</dt><dd>{a.occupants} occupant{a.occupants === 1 ? "" : "s"}{a.hasPets ? " · pets" : ""}</dd></div>
-                    <div><dt className="text-xs text-muted-foreground">Current address</dt><dd className="truncate">{ap.currentAddress ?? "—"}</dd></div>
+                    <div><dt className="text-xs text-muted-foreground">Current address</dt><dd className="truncate">{ap.currentAddress ?? "Not provided"}</dd></div>
                     <div><dt className="text-xs text-muted-foreground">Fee</dt><dd>{a.feeAmount ? `${formatMoney(a.feeAmount)} ${a.feePaid ? "paid" : "unpaid"}` : "None"}</dd></div>
                   </dl>
                   {a.hasPets && a.petDetails && <p className="mt-1 text-xs text-muted-foreground">Pets: {a.petDetails}</p>}

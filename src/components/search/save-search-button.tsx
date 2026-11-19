@@ -42,7 +42,7 @@ export function SaveSearchButton({ filters, href, defaultName }: { filters: Sear
         return;
       }
       if (!res.ok) throw new Error();
-      toast.success("Search saved", { description: frequency === "NONE" ? "No alerts — you can turn them on any time." : "We'll email you when new homes match.", action: { label: "Manage", onClick: () => (window.location.href = "/account/saved-searches") } });
+      toast.success("Search saved", { description: frequency === "NONE" ? "No alerts. You can turn them on any time." : "We'll email you when new homes match.", action: { label: "Manage", onClick: () => (window.location.href = "/account/saved-searches") } });
       setOpen(false);
     } catch {
       toast.error("Couldn't save this search. Please try again.");

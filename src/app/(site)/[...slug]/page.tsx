@@ -43,8 +43,8 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const hasFilters = Object.keys(sp).some((k) => k !== "page");
   const where = route.place ? route.place.label : "the USA";
   return {
-    title: `${heading.charAt(0).toUpperCase()}${heading.slice(1)}${page > 1 ? ` — page ${page}` : ""}`,
-    description: `Browse ${route.vertical.title.toLowerCase()} in ${where} on CITI VIEW with photos, maps, schools, price history and market data.${site.demoMode ? " Demo listings." : ""}`,
+    title: `${heading.charAt(0).toUpperCase()}${heading.slice(1)}${page > 1 ? ` (page ${page})` : ""}`,
+    description: `Browse ${route.vertical.title.toLowerCase()} in ${where} on CITI VIEW with photos, maps, schools, price history and market data.`,
     alternates: { canonical: canonicalPath },
     // Filtered permutations stay crawlable but defer ranking to the canonical page.
     robots: hasFilters ? { index: false, follow: true } : { index: true, follow: true },
@@ -85,7 +85,7 @@ export default async function SearchPage({ params, searchParams }: PageProps) {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-xs text-muted-foreground">Listing data is demo data provided for the CITI VIEW platform and is deemed reliable but not guaranteed. See the IDX disclaimer below.</p>
+        <p className="mt-4 text-xs text-muted-foreground">Listing data is provided for the CITI VIEW platform and is deemed reliable but not guaranteed. See the IDX disclaimer below.</p>
       </aside>
     </SearchExperience>
   );

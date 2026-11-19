@@ -36,7 +36,7 @@ export function ShopTogetherCard({ agentSlug, agentName }: { agentSlug: string; 
   return (
     <div className="rounded-3xl border bg-card p-5">
       <p className="flex items-center gap-2 font-semibold"><Users className="size-4 text-primary" aria-hidden /> Shop together</p>
-      <p className="mt-1 text-sm text-muted-foreground">Invite {first} to a collection — you&apos;ll both see the same saved homes, shared notes and tour plans.</p>
+      <p className="mt-1 text-sm text-muted-foreground">Invite {first} to a collection. You&apos;ll both see the same saved homes, shared notes and tour plans.</p>
       {!signedIn ? (
         <Button asChild variant="outline" className="mt-3 w-full"><Link href={`/sign-in?callbackUrl=${encodeURIComponent(`/agents/${agentSlug}`)}`}>Sign in to invite {first}</Link></Button>
       ) : isLoading ? (

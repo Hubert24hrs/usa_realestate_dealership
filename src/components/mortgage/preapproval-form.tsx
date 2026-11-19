@@ -25,7 +25,7 @@ const money = (label: string) =>
     .refine((v) => /^\$?[\d,]+(\.\d{0,2})?$/.test(v), `Enter ${label} as a number`);
 
 const CREDIT = ["740+", "680-739", "620-679", "Below 620", "Not sure"] as const;
-const TIMELINE = ["Within 30 days", "1–3 months", "3–6 months", "6+ months / exploring"] as const;
+const TIMELINE = ["Within 30 days", "1 to 3 months", "3 to 6 months", "6+ months / exploring"] as const;
 
 const FormSchema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(80),
@@ -55,7 +55,7 @@ export function PreapprovalForm() {
   const [error, setError] = useState<string | null>(null);
   const form = useForm<FormValues>({
     resolver: zodResolver(FormSchema),
-    defaultValues: { name: "", email: "", phone: "", annualIncome: "", purchasePrice: "", downPayment: "", creditRange: "Not sure", timeline: "1–3 months", message: "", consent: false, website: "" },
+    defaultValues: { name: "", email: "", phone: "", annualIncome: "", purchasePrice: "", downPayment: "", creditRange: "Not sure", timeline: "1 to 3 months", message: "", consent: false, website: "" },
   });
   const { register, handleSubmit, formState, setValue, watch, getValues } = form;
 
@@ -161,10 +161,10 @@ export function PreapprovalForm() {
             </Select>
           </div>
         </div>
-        {field("message", "Anything else? (optional)", <Textarea rows={3} placeholder="e.g. first-time buyer, self-employed, interested in FHA or VA" {...aria("message")} {...register("message")} />)}
+        {field("message", "Anything else? (optional)", <Textarea rows={3} placeholder="e.g. first time buyer, self employed, interested in FHA or VA" {...aria("message")} {...register("message")} />)}
         {watch("purchasePrice") && watch("downPayment") && toNumber(watch("purchasePrice")) > 0 && (
           <p className="text-xs text-muted-foreground">
-            That&apos;s {Math.round((toNumber(watch("downPayment")) / toNumber(watch("purchasePrice"))) * 1000) / 10}% down — a loan of about {formatMoney(Math.max(0, toNumber(watch("purchasePrice")) - toNumber(watch("downPayment"))))}.
+            That&apos;s {Math.round((toNumber(watch("downPayment")) / toNumber(watch("purchasePrice"))) * 1000) / 10}% down, a loan of about {formatMoney(Math.max(0, toNumber(watch("purchasePrice")) - toNumber(watch("downPayment"))))}.
           </p>
         )}
       </fieldset>
@@ -172,14 +172,14 @@ export function PreapprovalForm() {
       <div className="space-y-1.5">
         <label htmlFor="pa-consent" className="flex items-start gap-2.5 text-xs text-muted-foreground">
           <Checkbox id="pa-consent" checked={watch("consent")} onCheckedChange={(v) => setValue("consent", v === true, { shouldValidate: formState.isSubmitted })} aria-invalid={Boolean(err.consent)} className="mt-0.5" />
-          <span>{TCPA_TEXT} Requesting a pre-approval doesn&apos;t affect your credit; the lender asks permission before any credit check.</span>
+          <span>{TCPA_TEXT} Requesting a preapproval doesn&apos;t affect your credit; the lender asks permission before any credit check.</span>
         </label>
         {err.consent && <p className="text-xs text-destructive">{err.consent.message}</p>}
       </div>
       {error && <p role="alert" className="rounded-xl bg-destructive/10 p-3 text-sm text-destructive">{error}</p>}
       <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={formState.isSubmitting}>
         {formState.isSubmitting && <Loader2 className="size-4 animate-spin" aria-hidden />}
-        Request pre-approval
+        Request preapproval
       </Button>
     </form>
   );

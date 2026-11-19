@@ -6,7 +6,7 @@ import { getCityMarkets } from "@/server/markets";
 
 export const metadata: Metadata = {
   title: "Rent affordability calculator: how much rent can I afford?",
-  description: "See what rent fits your income using the 30% rule, landlord income screening and your debts — plus the cash you'll need to move in.",
+  description: "See what rent fits your income using the 30% rule, landlord income screening and your debts, plus the cash you'll need to move in.",
   alternates: { canonical: "/rent/affordability" },
 };
 
@@ -30,7 +30,7 @@ export default async function RentAffordabilityPage({ searchParams }: PageProps)
         <RentAffordabilityCalculator cities={cities} initialCity={initialCity} />
         <ScamCallout />
         <ToolDisclaimer>
-          Estimates only. Screening rules vary — some managers use 3× monthly rent, consider co-signers, or count savings. Median rents are demo market data.
+          Estimates only. Screening rules vary. Some managers use 3× monthly rent, consider cosigners, or count savings. Median rents come from CITI VIEW market data.
         </ToolDisclaimer>
       </div>
     </>

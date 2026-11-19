@@ -65,7 +65,7 @@ function NotesButton({ listingId }: { listingId: string }) {
     if (r.status === 401) return setState("auth");
     setState("idle");
     if (r.ok) {
-      toast.success("Note saved — only you can see it");
+      toast.success("Note saved. Only you can see it.");
       setOpen(false);
     } else toast.error("Couldn't save your note");
   };
@@ -77,7 +77,7 @@ function NotesButton({ listingId }: { listingId: string }) {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Private notes</DialogTitle>
-          <DialogDescription>Only you can see these. Shared notes for co-shoppers live in collections.</DialogDescription>
+          <DialogDescription>Only you can see these. Shared notes for shopping partners live in collections.</DialogDescription>
         </DialogHeader>
         {state === "auth" ? (
           <div className="space-y-3 rounded-xl border bg-muted/50 p-4 text-sm">
@@ -109,10 +109,10 @@ function ReportButton({ listingId }: { listingId: string }) {
     const r = await fetch("/api/reports", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ listingId, reason, details, email }) });
     setPending(false);
     if (r.ok) {
-      toast.success("Thanks — our moderation team will review this listing.");
+      toast.success("Thanks. Our moderation team will review this listing.");
       setOpen(false);
       setDetails("");
-    } else toast.error(r.status === 429 ? "You've sent several reports — try again later." : "Couldn't send the report.");
+    } else toast.error(r.status === 429 ? "You've sent several reports. Try again later." : "Couldn't send the report.");
   };
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -137,7 +137,7 @@ function ReportButton({ listingId }: { listingId: string }) {
           <Textarea id="rr-details" rows={3} value={details} onChange={(e) => setDetails(e.target.value)} maxLength={2000} />
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="rr-email">Your email (optional, for follow-up)</Label>
+          <Label htmlFor="rr-email">Your email (optional, for follow up)</Label>
           <Input id="rr-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <DialogFooter>

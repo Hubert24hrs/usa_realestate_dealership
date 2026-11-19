@@ -10,8 +10,8 @@ import { emailLayout, sendEmail } from "@/server/email";
 
 export type AppRole = "USER" | "AGENT" | "BROKER" | "PROPERTY_MANAGER" | "ADMIN";
 
-/** One-click demo accounts (seeded, isDemo = true). Enabled only when NEXT_PUBLIC_DEMO_MODE is on. */
-export const DEMO_ACCOUNTS = [
+/** One click guest accounts (seeded, isDemo = true). Enabled only while the site runs on sample data. */
+export const GUEST_ACCOUNTS = [
   { email: "buyer@citiview.test", label: "Home buyer", description: "Saved homes, collections, tours, messages" },
   { email: "renter@citiview.test", label: "Renter", description: "Applications, lease and rent payments" },
   { email: "seller@citiview.test", label: "FSBO seller", description: "Owner listings and inquiries" },
@@ -32,7 +32,7 @@ const providers: Provider[] = [
     async sendVerificationRequest({ identifier, url }) {
       await sendEmail({
         to: identifier,
-        subject: "Your CITI VIEW sign-in link",
+        subject: "Your CITI VIEW sign in link",
         text: `Sign in to CITI VIEW: ${url}\nThis link expires in 1 hour. If you didn't request it, ignore this email.`,
         html: emailLayout({
           title: "Sign in to CITI VIEW",
@@ -50,12 +50,12 @@ if (googleEnabled) providers.push(Google({ allowDangerousEmailAccountLinking: fa
 if (site.demoMode) {
   providers.push(
     Credentials({
-      id: "demo",
-      name: "Demo account",
-      credentials: { email: { label: "Demo account", type: "email" } },
+      id: "guest",
+      name: "Guest account",
+      credentials: { email: { label: "Guest account", type: "email" } },
       async authorize(credentials) {
         const email = String(credentials?.email ?? "").toLowerCase();
-        if (!DEMO_ACCOUNTS.some((a) => a.email === email)) return null;
+        if (!GUEST_ACCOUNTS.some((a) => a.email === email)) return null;
         const user = await db.user.findUnique({ where: { email } });
         if (!user?.isDemo) return null;
         return { id: user.id, email: user.email, name: user.name, image: user.image, role: user.role };

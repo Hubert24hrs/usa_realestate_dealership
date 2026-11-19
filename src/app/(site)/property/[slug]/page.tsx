@@ -39,7 +39,7 @@ function titleOf(l: ListingDetail) {
 function priceLabel(l: ListingDetail) {
   if (l.status === "SOLD" && l.soldPrice) return formatPrice(l.soldPrice);
   if (l.transactionType === "LEASE" && l.leaseRate) return `$${l.leaseRate.toFixed(2)}/SF/yr`;
-  if (l.transactionType === "RENT") return l.priceMax && l.priceMax !== l.price ? `${formatPrice(l.price)}–${formatPrice(l.priceMax)}/mo` : `${formatPrice(l.price)}/mo`;
+  if (l.transactionType === "RENT") return l.priceMax && l.priceMax !== l.price ? `${formatPrice(l.price)} to ${formatPrice(l.priceMax)}/mo` : `${formatPrice(l.price)}/mo`;
   return formatPrice(l.price);
 }
 
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : l.category === "COMMERCIAL"
         ? `${formatNumber(l.sqft)} SF ${PROPERTY_TYPE_LABELS[l.propertyType]}`
         : l.isCommunity && unitBeds.length
-          ? `${Math.min(...unitBeds) === 0 ? "Studio" : `${Math.min(...unitBeds)} bd`}–${Math.max(...unitBeds)} bd apartments`
+          ? `${Math.min(...unitBeds) === 0 ? "Studio" : `${Math.min(...unitBeds)} bd`} to ${Math.max(...unitBeds)} bd apartments`
           : `${l.beds === 0 ? "Studio" : `${l.beds} bd`}, ${formatBaths(l.baths)} ba${l.sqft ? `, ${formatNumber(l.sqft)} sqft` : ""}`;
   const title = `${formatAddressLine(l)} | ${priceLabel(l)} | ${facts}`;
   const photo = l.media.find((m) => !m.url.includes(".svg"));
@@ -220,7 +220,7 @@ export default async function PropertyPage({ params }: Props) {
           </ol>
         </nav>
 
-        <HeroGallery items={galleryItems} extras={{ tourUrl: l.has3dTour ? (l.virtualTourUrl?.startsWith("https://") ? l.virtualTourUrl : "demo:3d") : null, videoUrl: l.hasVideo ? (l.videoUrl?.startsWith("https://") ? l.videoUrl : "demo:video") : null, title }} />
+        <HeroGallery items={galleryItems} extras={{ tourUrl: l.has3dTour ? (l.virtualTourUrl?.startsWith("https://") ? l.virtualTourUrl : "placeholder:3d") : null, videoUrl: l.hasVideo ? (l.videoUrl?.startsWith("https://") ? l.videoUrl : "placeholder:video") : null, title }} />
 
         <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px]">
           <div className="min-w-0">
@@ -228,7 +228,7 @@ export default async function PropertyPage({ params }: Props) {
               <div className="flex flex-wrap items-center gap-2">
                 <span className={cn("rounded-full px-2.5 py-1 text-xs font-semibold", l.status === "SOLD" ? "bg-ink text-background" : l.status === "PENDING" ? "bg-warning text-warning-foreground" : l.status === "COMING_SOON" ? "bg-copper-500 text-white" : "bg-success text-success-foreground")}>{statusBadge}</span>
                 {l.isNewConstruction && <span className="rounded-full bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-800 dark:bg-brand-100 dark:text-brand-900">New construction{l.builderName ? ` · ${l.builderName}` : ""}</span>}
-                {l.isForeclosure && <span className="rounded-full bg-warning/20 px-2.5 py-1 text-xs font-semibold">Foreclosure · sold as-is</span>}
+                {l.isForeclosure && <span className="rounded-full bg-warning/20 px-2.5 py-1 text-xs font-semibold">Foreclosure · sold as is</span>}
                 {l.isFsbo && <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-semibold">For sale by owner</span>}
               </div>
               <div className="flex flex-wrap items-end justify-between gap-4">
@@ -244,7 +244,7 @@ export default async function PropertyPage({ params }: Props) {
                   ) : variant === "commercial" ? (
                     <><li><strong className="text-lg">{formatNumber(l.buildingSqft)}</strong> SF</li>{l.capRate && <li><strong className="text-lg">{l.capRate.toFixed(2)}%</strong> cap rate</li>}<li><strong className="text-lg">{PROPERTY_TYPE_LABELS[l.propertyType]}</strong></li></>
                   ) : l.isCommunity ? (
-                    <><li><strong className="text-lg">{l.units.length}</strong> floor plans</li><li><strong className="text-lg">{Math.min(...l.units.map((u) => u.beds)) === 0 ? "Studio" : Math.min(...l.units.map((u) => u.beds))}–{Math.max(...l.units.map((u) => u.beds))}</strong> bd</li></>
+                    <><li><strong className="text-lg">{l.units.length}</strong> floor plans</li><li><strong className="text-lg">{Math.min(...l.units.map((u) => u.beds)) === 0 ? "Studio" : Math.min(...l.units.map((u) => u.beds))} to {Math.max(...l.units.map((u) => u.beds))}</strong> bd</li></>
                   ) : (
                     <><li><strong className="text-lg">{l.beds}</strong> bd</li><li><strong className="text-lg">{formatBaths(l.baths)}</strong> ba</li><li><strong className="text-lg">{formatNumber(l.sqft)}</strong> sqft</li></>
                   )}
@@ -261,7 +261,7 @@ export default async function PropertyPage({ params }: Props) {
             </nav>
 
             {l.moveInSpecial && (
-              <p className="mt-6 flex items-center gap-2 rounded-2xl border border-copper-300 bg-copper-50 p-4 text-sm font-medium text-copper-800 dark:bg-copper-50/10 dark:text-copper-700"><Gift className="size-5 shrink-0" aria-hidden /> Move-in special: {l.moveInSpecial}</p>
+              <p className="mt-6 flex items-center gap-2 rounded-2xl border border-copper-300 bg-copper-50 p-4 text-sm font-medium text-copper-800 dark:bg-copper-50/10 dark:text-copper-700"><Gift className="size-5 shrink-0" aria-hidden /> Move in special: {l.moveInSpecial}</p>
             )}
 
             <Section id="overview" title={l.headline ?? "Overview"}>
@@ -273,7 +273,7 @@ export default async function PropertyPage({ params }: Props) {
                     {l.openHouses.map((o) => (
                       <li key={o.id} className="rounded-xl border bg-card p-3 text-sm">
                         <p className="font-medium">{o.startsAt.toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })}</p>
-                        <p className="text-muted-foreground">{formatTime(o.startsAt)} – {formatTime(o.endsAt)} · {o.type === "VIRTUAL" ? "Virtual" : "In person"}</p>
+                        <p className="text-muted-foreground">{formatTime(o.startsAt)} to {formatTime(o.endsAt)} · {o.type === "VIRTUAL" ? "Virtual" : "In person"}</p>
                       </li>
                     ))}
                   </ul>
@@ -331,7 +331,7 @@ export default async function PropertyPage({ params }: Props) {
                 <Section id="investment" title={l.transactionType === "LEASE" ? "Lease terms & availability" : "Investment summary"}>
                   {l.transactionType === "SALE" ? (
                     <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                      {[["Asking price", formatPrice(l.price)], ["Cap rate", l.capRate ? `${l.capRate.toFixed(2)}%` : "—"], ["NOI", formatPrice(l.noi)], ["Price / SF", l.pricePerSqft ? `$${l.pricePerSqft}` : "—"]].map(([k, v]) => (
+                      {[["Asking price", formatPrice(l.price)], ["Cap rate", l.capRate ? `${l.capRate.toFixed(2)}%` : "N/A"], ["NOI", formatPrice(l.noi)], ["Price / SF", l.pricePerSqft ? `$${l.pricePerSqft}` : "N/A"]].map(([k, v]) => (
                         <div key={k} className="rounded-2xl border bg-surface p-4"><dt className="text-xs text-muted-foreground">{k}</dt><dd className="mt-1 text-xl font-semibold">{v}</dd></div>
                       ))}
                     </dl>
@@ -372,7 +372,7 @@ export default async function PropertyPage({ params }: Props) {
                 {l.countyData && (
                   <div className="mt-6 overflow-x-auto rounded-2xl border">
                     <table className="w-full text-sm">
-                      <caption className="px-3 pt-3 text-left text-sm font-semibold">County data (demo)</caption>
+                      <caption className="px-3 pt-3 text-left text-sm font-semibold">County records</caption>
                       <tbody>
                         {Object.entries(l.countyData as Record<string, unknown>).map(([k, v]) => (
                           <tr key={k} className="border-t">
@@ -408,7 +408,7 @@ export default async function PropertyPage({ params }: Props) {
 
             {variant === "sale" && (
               <>
-                <Section id="payment" title="Monthly payment" subtitle={`Based on a ${thirty.toFixed(2)}% sample 30-year fixed rate`}>
+                <Section id="payment" title="Monthly payment" subtitle={`Based on a ${thirty.toFixed(2)}% sample 30 year fixed rate`}>
                   <DeferUntilVisible minHeight={360} fallback={<div className="skeleton-shimmer rounded-2xl" style={{ height: 360 }} aria-hidden />}>
                     <LazyPaymentCalculator price={l.price} taxAnnual={l.propertyTaxAnnual} hoaMonthly={l.hoaFee} defaultRate={thirty} />
                   </DeferUntilVisible>
@@ -427,7 +427,7 @@ export default async function PropertyPage({ params }: Props) {
                 <ScoreMeter label="Transit" value={l.transitScore} descriptor={scoreDescriptor(l.transitScore)} />
                 <ScoreMeter label="Bikeability" value={l.bikeScore} descriptor={scoreDescriptor(l.bikeScore)} />
               </div>
-              <p className="mt-2 text-xs text-muted-foreground">CITI VIEW demo mobility scores (0–100).</p>
+              <p className="mt-2 text-xs text-muted-foreground">CITI VIEW mobility scores, from 0 to 100.</p>
               <div className="mt-8 grid gap-8 2xl:grid-cols-2">
                 <div>
                   <h3 className="mb-3 font-semibold">Nearby amenities</h3>
@@ -451,7 +451,7 @@ export default async function PropertyPage({ params }: Props) {
                 <div className="mt-8">
                   <h3 className="mb-3 font-semibold">Schools</h3>
                   <SchoolList schools={schools} />
-                  <p className="mt-2 text-xs text-muted-foreground">School names, ratings and assignments are demo data. Always confirm enrollment boundaries with the school district.</p>
+                  <p className="mt-2 text-xs text-muted-foreground">School ratings and assignments here are for illustration. Always confirm enrollment boundaries with the school district.</p>
                 </div>
               )}
               <div className="mt-8">
@@ -460,7 +460,7 @@ export default async function PropertyPage({ params }: Props) {
               </div>
             </Section>
 
-            <ListingDisclaimers listingDisclaimer={settings.listingDisclaimer} idxDisclaimer={settings.idxDisclaimer} fairHousing={settings.fairHousing} attribution={l.isFsbo ? "Listed by owner (FSBO)" : `Listing courtesy of ${l.brokerageName ?? "Demo Brokerage"}`} mlsNumber={l.mlsNumber} updatedAt={l.updatedAt} />
+            <ListingDisclaimers listingDisclaimer={settings.listingDisclaimer} idxDisclaimer={settings.idxDisclaimer} fairHousing={settings.fairHousing} attribution={l.isFsbo ? "Listed by owner (FSBO)" : `Listing courtesy of ${l.brokerageName ?? "the listing brokerage"}`} mlsNumber={l.mlsNumber} updatedAt={l.updatedAt} />
           </div>
 
           <div className="lg:sticky lg:top-20 lg:self-start print:hidden">

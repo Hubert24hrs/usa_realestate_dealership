@@ -109,7 +109,7 @@ export function RentVsBuyCalculator({ defaultRate, defaultRent, defaultPrice }: 
             ]}
             format={(v) => formatMoney(v)}
             axisFormat={(v) => formatCompactPrice(v)}
-            marker={r.breakEvenYear ? { index: r.breakEvenYear - 1, label: `Break-even · yr ${r.breakEvenYear}` } : null}
+            marker={r.breakEvenYear ? { index: r.breakEvenYear - 1, label: `Breakeven · yr ${r.breakEvenYear}` } : null}
             ariaLabel="Net worth by year if you buy versus if you rent"
             caption="Net worth by year: buying vs renting"
           />
@@ -122,7 +122,7 @@ export function RentVsBuyCalculator({ defaultRate, defaultRent, defaultPrice }: 
         <div className="rounded-2xl border bg-surface p-4 text-xs leading-relaxed text-muted-foreground">
           <p className="font-medium text-foreground">How this works</p>
           <p className="mt-1">
-            Both paths start with the same cash. Whichever is cheaper each month invests the difference at your investment return. Buying&apos;s net worth is the home&apos;s value after selling costs, minus the loan balance, plus any invested savings. PMI applies until the loan falls below 80% of the price. Income-tax effects and capital-gains taxes are ignored.
+            Both paths start with the same cash. Whichever is cheaper each month invests the difference at your investment return. Buying&apos;s net worth is the home&apos;s value after selling costs, minus the loan balance, plus any invested savings. PMI applies until the loan falls below 80% of the price. Income tax effects and capital gains taxes are ignored.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">

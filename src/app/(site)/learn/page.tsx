@@ -18,10 +18,10 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   const sp = await searchParams;
   const type = parseType(first(sp.type));
   const tag = first(sp.tag);
-  const label = type ? `${POST_TYPE_LABEL[type]}s` : "Guides, how-tos and market news";
+  const label = type ? `${POST_TYPE_LABEL[type]}s` : "Guides, how to guides and market news";
   return {
-    title: type ? `Real estate ${label.toLowerCase()}` : "Learn: real estate guides, how-tos and market news",
-    description: "Plain-English guides to buying, selling and renting, mortgage how-tos, neighborhood guides and market updates from CITI VIEW.",
+    title: type ? `Real estate ${label.toLowerCase()}` : "Learn: real estate guides, how to guides and market news",
+    description: "Plain English guides to buying, selling and renting, mortgage how to guides, neighborhood guides and market updates from CITI VIEW.",
     alternates: { canonical: type ? `/learn?type=${type}` : "/learn" },
     robots: tag ? { index: false, follow: true } : undefined,
   };
@@ -55,8 +55,8 @@ export default async function LearnPage({ searchParams }: PageProps) {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Learn", href: "/learn" }]}
         eyebrow="Learn"
-        title="Guides, how-tos and market news"
-        description="Straightforward help for every step — buying, selling, renting and financing — plus neighborhood guides and market updates."
+        title="Guides, how to guides and market news"
+        description="Guides to buying, selling, renting and financing, plus neighborhood guides and market updates."
       >
         <nav aria-label="Filter articles by type" className="mt-6 flex flex-wrap gap-1.5">
           {[undefined, ...TYPES].map((t) => {

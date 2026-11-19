@@ -65,7 +65,7 @@ export function PaymentCalculator({ price, taxAnnual, hoaMonthly, defaultRate, c
         <NumberField id="pc-hoa" label="HOA (per month)" kind="money" value={hoa} onChange={setHoa} max={50_000} />
       </div>
       <p className="text-xs text-muted-foreground">
-        PMI is estimated at 0.6% of the loan per year while your down payment is under 20%. Estimates only — not a loan offer. <Link href="/mortgage/preapproval" className="font-medium text-primary hover:underline">Get pre-approved</Link> for an exact rate.
+        PMI is estimated at 0.6% of the loan per year while your down payment is under 20%. Estimates only, not a loan offer. <Link href="/mortgage/preapproval" className="font-medium text-primary hover:underline">Get preapproved</Link> for an exact rate.
       </p>
     </div>
   );

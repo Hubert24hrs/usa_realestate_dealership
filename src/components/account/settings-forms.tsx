@@ -20,7 +20,7 @@ import { signOutAction } from "@/server/actions/auth";
 
 const ProfileSchema = z.object({
   name: z.string().trim().min(1, "Enter your name").max(80),
-  phone: z.string().trim().max(30).regex(/^[0-9+().\-\s]*$/, "Use digits and + ( ) - only"),
+  phone: z.string().trim().max(30).regex(/^[0-9+().\-\s]*$/, "Enter a valid phone number"),
 });
 type ProfileValues = z.infer<typeof ProfileSchema>;
 
@@ -52,7 +52,7 @@ export function ProfileForm({ defaults, email }: { defaults: ProfileValues; emai
       <div className="space-y-1.5 sm:col-span-2">
         <Label htmlFor="pf-email">Email</Label>
         <Input id="pf-email" value={email ?? ""} readOnly disabled />
-        <p className="text-xs text-muted-foreground">Your email is your sign-in. Contact support to change it.</p>
+        <p className="text-xs text-muted-foreground">Your email is your sign in. Contact support to change it.</p>
       </div>
       <div className="sm:col-span-2">
         <Button type="submit" disabled={isSubmitting || !isDirty}>{isSubmitting && <Loader2 className="size-4 animate-spin" aria-hidden />} Save profile</Button>
@@ -164,7 +164,7 @@ export function PushDeviceCard() {
   );
 }
 
-export function DataControls({ isDemo }: { isDemo: boolean }) {
+export function DataControls({ isGuest }: { isGuest: boolean }) {
   const [open, setOpen] = useState(false);
   const [confirm, setConfirm] = useState("");
   const [pending, setPending] = useState(false);
@@ -194,8 +194,8 @@ export function DataControls({ isDemo }: { isDemo: boolean }) {
               This permanently deletes your profile, saved homes, collections, searches, notes, messages and rental applications. It can&apos;t be undone.
             </DialogDescription>
           </DialogHeader>
-          {isDemo ? (
-            <p className="rounded-xl bg-muted p-3 text-sm">Demo accounts are shared by everyone trying CITI VIEW, so they can&apos;t be deleted. Sign in with your own email to try this.</p>
+          {isGuest ? (
+            <p className="rounded-xl bg-muted p-3 text-sm">Guest accounts are shared by everyone trying CITI VIEW, so they can&apos;t be deleted. Sign in with your own email to try this.</p>
           ) : (
             <div className="space-y-1.5">
               <Label htmlFor="del-confirm">Type DELETE to confirm</Label>
@@ -204,7 +204,7 @@ export function DataControls({ isDemo }: { isDemo: boolean }) {
           )}
           <DialogFooter>
             <Button variant="ghost" onClick={() => setOpen(false)}>Cancel</Button>
-            <Button variant="destructive" onClick={remove} disabled={isDemo || confirm !== "DELETE" || pending}>{pending && <Loader2 className="size-4 animate-spin" aria-hidden />} Delete forever</Button>
+            <Button variant="destructive" onClick={remove} disabled={isGuest || confirm !== "DELETE" || pending}>{pending && <Loader2 className="size-4 animate-spin" aria-hidden />} Delete forever</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

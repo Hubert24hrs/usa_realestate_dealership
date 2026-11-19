@@ -16,7 +16,7 @@ interface ParseResponse {
 
 const EXAMPLES = [
   "3 bed under $600k near good schools with a yard",
-  "dog-friendly 2 bedroom apartment in Denver under $2,500 a month",
+  "dog friendly 2 bedroom apartment in Denver under $2,500 a month",
   "new construction townhome in Raleigh with a 2 car garage",
   "100+ acres in Texas for hunting with a creek",
 ];
@@ -38,7 +38,7 @@ export function AiSearch({ mode, className, compact = false }: { mode: SearchMod
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: text, mode }),
       });
-      if (!res.ok) throw new Error(res.status === 429 ? "You're searching quickly — try again in a moment." : "Couldn't understand that search.");
+      if (!res.ok) throw new Error(res.status === 429 ? "You're searching quickly. Try again in a moment." : "Couldn't understand that search.");
       setResult((await res.json()) as ParseResponse);
     } catch (e) {
       setError((e as Error).message);
@@ -94,7 +94,7 @@ export function AiSearch({ mode, className, compact = false }: { mode: SearchMod
                   </span>
                 ))
               ) : (
-                <span className="text-xs text-muted-foreground">no specific filters — we&apos;ll show everything nearby</span>
+                <span className="text-xs text-muted-foreground">no specific filters, so we&apos;ll show everything nearby</span>
               )}
             </div>
             {result.notices.map((n) => (

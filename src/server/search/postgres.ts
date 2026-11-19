@@ -106,7 +106,7 @@ export async function suggestFromDb(raw: string, limit = 10): Promise<Suggestion
   if (q.length < 2) return [];
   const contains = { contains: q, mode: "insensitive" as const };
   const isZip = /^\d{2,5}$/.test(q);
-  const looksMls = /^(demo-?)?\d{3,}$/i.test(q);
+  const looksMls = /^(cv|demo-?)?\d{3,}$/i.test(q);
 
   const [cities, hoods, states, schools, listings, agents, zips] = await Promise.all([
     db.city.findMany({ where: { name: contains }, take: 5, select: { name: true, stateCode: true, slug: true, _count: { select: { listings: true } } } }),
@@ -114,7 +114,7 @@ export async function suggestFromDb(raw: string, limit = 10): Promise<Suggestion
     db.state.findMany({ where: { name: { startsWith: q, mode: "insensitive" } }, take: 2, select: { name: true, slug: true } }),
     db.school.findMany({ where: { name: contains }, take: 3, select: { name: true, slug: true, rating: true, grades: true, city: { select: { name: true, stateCode: true, slug: true } } } }),
     db.listing.findMany({
-      where: looksMls ? { mlsNumber: { contains: q.replace(/^demo-?/i, ""), mode: "insensitive" } } : { OR: [{ streetAddress: contains }, { communityName: contains }] },
+      where: looksMls ? { mlsNumber: { contains: q.replace(/^(cv|demo-?)/i, ""), mode: "insensitive" } } : { OR: [{ streetAddress: contains }, { communityName: contains }] },
       take: 4,
       select: { slug: true, streetAddress: true, city: true, state: true, zip: true, mlsNumber: true, communityName: true, hideAddress: true },
     }),

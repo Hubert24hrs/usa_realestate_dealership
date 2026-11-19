@@ -122,7 +122,7 @@ function HomeStep({ listing, defaults, onNext, busy }: { listing: WizardListing;
         </Field>
       )}
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field id="ap-move" label="Desired move-in date" error={e.moveInDate?.message} hint={listing.availableDate ? `Available ${formatDate(listing.availableDate)}` : undefined}>
+        <Field id="ap-move" label="Desired move in date" error={e.moveInDate?.message} hint={listing.availableDate ? `Available ${formatDate(listing.availableDate)}` : undefined}>
           <Input type="date" min={today()} {...inv("ap-move", e.moveInDate)} {...register("moveInDate")} />
         </Field>
         <Field id="ap-term" label="Lease term" error={e.leaseTermMonths?.message}>
@@ -195,7 +195,7 @@ function IncomeStep({ defaults, rent, onNext, onBack, busy }: { defaults: Partia
           )}
         />
       </Field>
-      {(status === "Employed" || status === "Self-employed") && (
+      {(status === "Employed" || status === "Self employed") && (
         <div className="grid gap-4 sm:grid-cols-2">
           <Field id="ap-emp" label={status === "Employed" ? "Employer" : "Business name"} error={e.employer?.message}><Input autoComplete="organization" {...inv("ap-emp", e.employer)} {...register("employer")} /></Field>
           <Field id="ap-pos" label="Position (optional)" error={e.position?.message}><Input autoComplete="organization-title" {...inv("ap-pos", e.position)} {...register("position")} /></Field>
@@ -212,7 +212,7 @@ function IncomeStep({ defaults, rent, onNext, onBack, busy }: { defaults: Partia
           {ratio >= 3 ? <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden /> : <CircleAlert className="mt-0.5 size-4 shrink-0" aria-hidden />}
           <span>
             Your income is <strong>{ratio.toFixed(1)}×</strong> the {formatMoney(rent)} rent.{" "}
-            {ratio >= 3 ? "That meets the usual 3× guideline." : "Many managers look for about 3× — a co-signer or extra deposit can help."}
+            {ratio >= 3 ? "That meets the usual 3× guideline." : "Many managers look for about 3×. A cosigner or extra deposit can help."}
           </span>
         </p>
       )}
@@ -241,7 +241,7 @@ function HouseholdStep({ defaults, petsNote, onNext, onBack, busy }: { defaults:
         </Field>
       )}
       <p className="rounded-xl bg-surface p-3 text-xs text-muted-foreground">
-        Assistance animals (service and support animals) are not pets and aren&apos;t subject to pet fees or restrictions — you can request a reasonable accommodation from the property manager at any time.
+        Assistance animals (service and support animals) are not pets and aren&apos;t subject to pet fees or restrictions. You can request a reasonable accommodation from the property manager at any time.
       </p>
       <StepNav onBack={onBack} busy={busy} />
     </form>
@@ -254,7 +254,7 @@ function ReferencesStep({ defaults, onNext, onBack, busy }: { defaults: Referenc
   const { fields, append, remove } = useFieldArray({ control, name: "references" });
   return (
     <form onSubmit={handleSubmit((v) => onNext(v.references))} noValidate className="space-y-5">
-      <p className="text-sm text-muted-foreground">Optional — a past landlord or employer helps your application stand out.</p>
+      <p className="text-sm text-muted-foreground">Optional. A past landlord or employer helps your application stand out.</p>
       {fields.map((f, i) => (
         <fieldset key={f.id} className="grid gap-3 rounded-2xl border p-4 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
           <legend className="sr-only">Reference {i + 1}</legend>
@@ -290,7 +290,7 @@ function ReviewStep({ listing, data, unit, onEdit, onBack, onSubmit, busy }: {
   const emp = data.employment;
   const h = data.household;
   const rows: Array<{ step: number; title: string; lines: string[] }> = [
-    { step: 0, title: "Home", lines: [unit ? `Unit ${unit.unitNumber} · ${formatMoney(unit.rent)}/mo` : `${formatMoney(listing.rent)}/mo`, data.home?.moveInDate ? `Move in ${formatDate(data.home.moveInDate)}` : "Move-in date missing", data.home?.leaseTermMonths ? `${data.home.leaseTermMonths}-month lease` : ""] },
+    { step: 0, title: "Home", lines: [unit ? `Unit ${unit.unitNumber} · ${formatMoney(unit.rent)}/mo` : `${formatMoney(listing.rent)}/mo`, data.home?.moveInDate ? `Move in ${formatDate(data.home.moveInDate)}` : "Move in date missing", data.home?.leaseTermMonths ? `${data.home.leaseTermMonths}-month lease` : ""] },
     { step: 1, title: "About you", lines: [[a.firstName, a.lastName].filter(Boolean).join(" ") || "Name missing", a.email ?? "", a.currentAddress ?? ""] },
     { step: 2, title: "Income", lines: emp ? [`${emp.status ?? ""}${emp.employer ? ` · ${emp.employer}` : ""}`, `${formatMoney(Number(emp.monthlyIncome) || 0)}/mo${Number(emp.otherIncome) ? ` + ${formatMoney(Number(emp.otherIncome))} other` : ""}`] : ["Income missing"] },
     { step: 3, title: "Household", lines: h ? [`${h.occupants} occupant${h.occupants === 1 ? "" : "s"} · ${h.vehicles} vehicle${h.vehicles === 1 ? "" : "s"}`, h.hasPets ? `Pets: ${h.petDetails}` : "No pets"] : ["Household missing"] },
@@ -317,8 +317,8 @@ function ReviewStep({ listing, data, unit, onEdit, onBack, onSubmit, busy }: {
             <label htmlFor="ap-consent" className="flex items-start gap-2.5 text-sm">
               <Checkbox id="ap-consent" checked={field.value === true} onCheckedChange={(v) => field.onChange(v === true)} aria-invalid={Boolean(e.consentScreening)} aria-describedby={e.consentScreening ? "ap-consent-err" : undefined} className="mt-0.5" />
               <span>
-                I authorize the property manager to verify the information I provided and obtain tenant-screening reports (credit, rental history and, where permitted, background) to evaluate this application.{" "}
-                <span className="text-muted-foreground">In this demo no reports are pulled and we never ask for your Social Security number.</span>
+                I authorize the property manager to verify the information I provided and obtain tenant screening reports (credit, rental history and, where permitted, background) to evaluate this application.{" "}
+                <span className="text-muted-foreground">No reports are pulled here, and we never ask for your Social Security number.</span>
               </span>
             </label>
           )}
@@ -467,7 +467,7 @@ export function ApplicationWizard({ listing, draft, initialUnitId, profile, canc
       </nav>
 
       {canceled && !savedAt && (
-        <p role="status" className="rounded-xl bg-warning/15 p-3 text-sm">Payment canceled — your application is saved as a draft. Submit whenever you&apos;re ready.</p>
+        <p role="status" className="rounded-xl bg-warning/15 p-3 text-sm">Payment canceled. Your application is saved as a draft. Submit whenever you&apos;re ready.</p>
       )}
 
       <section aria-labelledby="step-title" className="rounded-3xl border bg-card p-5 sm:p-6">

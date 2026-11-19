@@ -118,7 +118,7 @@ export function valueHome(subject: Subject, candidates: Comp[], marketPpsf: numb
     if (subject.garageSpaces !== undefined) add("Garage", Math.max(-3, Math.min(3, subject.garageSpaces - c.garageSpaces)) * 8_000);
     const months = Math.max(0, (now.getTime() - c.date.getTime()) / (30.44 * 86_400_000));
     if (c.status === "SOLD") add("Market change since sale", c.price * 0.003 * Math.min(18, months));
-    else add("List-to-sale", -c.price * 0.02);
+    else add("List to sale", -c.price * 0.02);
     const base = c.price + adj.reduce((s, a) => s + a.amount, 0);
     const conditionAmt = base * CONDITION_FACTOR[subject.condition];
     if (Math.abs(conditionAmt) >= 500) adj.push({ label: "Condition", amount: Math.round(conditionAmt) });

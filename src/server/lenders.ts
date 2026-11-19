@@ -32,10 +32,10 @@ export interface LenderPartner {
   submit(request: PreapprovalRequest): Promise<PreapprovalReceipt>;
 }
 
-/** Demo partner: no network calls, deterministic reference, clearly labelled. */
-class DemoLenderPartner implements LenderPartner {
-  id = "demo-lender";
-  name = "Keystone Home Lending (demo partner)";
+/** Sample partner: no network calls, deterministic reference, clearly labelled. */
+class SampleLenderPartner implements LenderPartner {
+  id = "sample-lender";
+  name = "Keystone Home Lending (sample partner)";
 
   async submit(request: PreapprovalRequest): Promise<PreapprovalReceipt> {
     const digest = createHash("sha256").update(`${this.id}:${request.leadId}`).digest("hex").slice(0, 8).toUpperCase();
@@ -45,15 +45,15 @@ class DemoLenderPartner implements LenderPartner {
       reference: `CV-PA-${digest}`,
       status: "RECEIVED",
       nextSteps: [
-        "A loan officer reviews your details — in a live integration they would reach out within one business day.",
-        "Gather two recent pay stubs, two years of W-2s or tax returns, two months of bank statements and a photo ID.",
-        "The lender verifies income and assets and runs a credit check with your permission, then issues a pre-approval letter.",
+        "A loan officer reviews your details and would reach out within one business day once a live lender is connected.",
+        "Gather two recent pay stubs, two years of W2s or tax returns, two months of bank statements and a photo ID.",
+        "The lender verifies income and assets and runs a credit check with your permission, then issues a preapproval letter.",
       ],
     };
   }
 }
 
 export function getLenderPartner(): LenderPartner {
-  // Only the demo partner ships today; add real partners behind LENDER_PARTNER=<id>.
-  return new DemoLenderPartner();
+  // Only the sample partner ships today; add real partners behind LENDER_PARTNER=<id>.
+  return new SampleLenderPartner();
 }

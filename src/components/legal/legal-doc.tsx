@@ -45,7 +45,7 @@ export function LegalDoc({ path, title, description, children }: { path: string;
         <article className="prose-cv max-w-3xl min-w-0">
           {site.demoMode && (
             <p className="rounded-2xl border border-copper-300 bg-copper-50 p-4 text-sm not-italic">
-              <strong>Template notice:</strong> this page is starter copy for the {site.name} platform, written for its demo. Bracketed items are placeholders. Have a licensed attorney in
+              <strong>Template notice:</strong> this page is starter copy for the {site.name} platform. Bracketed items are placeholders. Have a licensed attorney in
               your state review and adapt it before you accept real users or payments.
             </p>
           )}

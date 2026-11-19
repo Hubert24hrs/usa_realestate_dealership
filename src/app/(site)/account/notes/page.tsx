@@ -26,7 +26,7 @@ export default async function NotesPage() {
   });
   return (
     <>
-      <AccountPageHeader title="Private notes" description="Notes you've kept on listings. Only you can see them — shared notes live in collections." />
+      <AccountPageHeader title="Private notes" description="Notes you've kept on listings. Only you can see them. Shared notes live in collections." />
       {notes.length ? (
         <ul className="grid gap-4 lg:grid-cols-2">
           {notes.map((n) => {

@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono"
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "CITI VIEW Real Estate — Homes for Sale, Rentals, Commercial & Land",
+    default: "CITI VIEW Real Estate: Homes for Sale, Rentals, Commercial & Land",
     template: "%s | CITI VIEW",
   },
   description: site.description,

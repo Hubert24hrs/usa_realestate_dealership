@@ -30,7 +30,7 @@ export interface CheckoutRequest {
 }
 
 export async function createCheckout(req: CheckoutRequest): Promise<{ url: string; sessionId: string | null; simulated: boolean }> {
-  if (!stripeEnabled()) return { url: `/pay/demo/${req.kind}/${req.referenceId}`, sessionId: null, simulated: true };
+  if (!stripeEnabled()) return { url: `/pay/checkout/${req.kind}/${req.referenceId}`, sessionId: null, simulated: true };
   const sep = req.successPath.includes("?") ? "&" : "?";
   const session = await stripe().checkout.sessions.create({
     mode: "payment",

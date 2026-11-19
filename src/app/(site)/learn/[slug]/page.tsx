@@ -123,8 +123,8 @@ export default async function LearnPostPage({ params }: PageProps) {
             </div>
           )}
           <p className="mt-10 border-t pt-4 text-xs leading-relaxed text-muted-foreground">
-            Educational content only — not legal, tax or financial advice. Rules vary by state and change over time; confirm details with a licensed professional.
-            {site.demoMode ? " Statistics and examples on this demo site are illustrative." : ""}
+            Educational content only, not legal, tax or financial advice. Rules vary by state and change over time; confirm details with a licensed professional.
+            {site.demoMode ? " Statistics and examples on this site are illustrative." : ""}
           </p>
         </div>
 

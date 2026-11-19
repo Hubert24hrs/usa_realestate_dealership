@@ -38,9 +38,9 @@ export async function inviteMember(opts: {
   isAgent?: boolean;
 }) {
   const email = opts.email.trim().toLowerCase();
-  if (email === opts.inviter.email?.toLowerCase()) throw new InviteError("That's your own email — you already own this collection.");
+  if (email === opts.inviter.email?.toLowerCase()) throw new InviteError("That's your own email. You already own this collection.");
   const existing = await db.collectionMember.findUnique({ where: { collectionId_email: { collectionId: opts.collection.id, email } } });
-  if (!existing && (await db.collectionMember.count({ where: { collectionId: opts.collection.id } })) >= 10) throw new InviteError("A collection can have up to 10 co-shoppers.");
+  if (!existing && (await db.collectionMember.count({ where: { collectionId: opts.collection.id } })) >= 10) throw new InviteError("A collection can have up to 10 shopping partners.");
   const member = existing
     ? await db.collectionMember.update({ where: { id: existing.id }, data: { role: opts.role, isAgent: opts.isAgent ?? existing.isAgent } })
     : await db.collectionMember.create({ data: { collectionId: opts.collection.id, email, role: opts.role, isAgent: opts.isAgent ?? false, inviteToken: newInviteToken() } });
@@ -56,7 +56,7 @@ export async function inviteMember(opts: {
         intro: `${inviter} invited you to the collection “${opts.collection.name}”. Save homes side by side, leave shared notes and plan tours together.`,
         rows: [["Your access", opts.role === "VIEWER" ? "Can view" : "Can add homes and notes"]],
         cta: { label: "Open the collection", url },
-        footnote: "Not expecting this? You can ignore this email — nothing happens unless you accept.",
+        footnote: "Not expecting this? You can ignore this email. Nothing happens unless you accept.",
       }),
       text: `${inviter} invited you to "${opts.collection.name}" on CITI VIEW: ${url}`,
     });

@@ -15,7 +15,7 @@ export const PATCH = withUser<Params>(async ({ request, user, params }) => {
   if (!ID_RE.test(params.id) || !ID_RE.test(params.listingId)) return notFound();
   const found = await getCollectionAccess(params.id, user.id);
   if (!found) return notFound();
-  if (!canEdit(found.access)) return forbidden("You have view-only access to this collection");
+  if (!canEdit(found.access)) return forbidden("You have view only access to this collection");
   const parsed = await readJson(request, Patch, 4_000);
   if (!parsed.ok) return parsed.response;
   const note = parsed.data.sharedNote || null;
@@ -28,7 +28,7 @@ export const PATCH = withUser<Params>(async ({ request, user, params }) => {
         data: audience.map((userId) => ({
           userId,
           type: "COLLECTION" as const,
-          title: `${user.name ?? "A co-shopper"} left a note in “${found.collection.name}”`,
+          title: `${user.name ?? "A shopping partner"} left a note in “${found.collection.name}”`,
           body: note.slice(0, 140),
           url: `/account/collections/${params.id}`,
         })),
@@ -42,7 +42,7 @@ export const DELETE = withUser<Params>(async ({ user, params }) => {
   if (!ID_RE.test(params.id) || !ID_RE.test(params.listingId)) return notFound();
   const found = await getCollectionAccess(params.id, user.id);
   if (!found) return notFound();
-  if (!canEdit(found.access)) return forbidden("You have view-only access to this collection");
+  if (!canEdit(found.access)) return forbidden("You have view only access to this collection");
   const result = await db.collectionItem.deleteMany({ where: { collectionId: params.id, listingId: params.listingId } });
   return result.count ? Response.json({ ok: true }) : notFound();
 });

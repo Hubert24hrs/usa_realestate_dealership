@@ -31,8 +31,7 @@ export default async function TermsPage() {
       </p>
       {site.demoMode && (
         <p>
-          <strong>Demo data.</strong> While demo mode is on, every listing, agent, review, rate, payment and statistic on the Service is fictional and created for
-          demonstration. Nothing shown is an offer to sell, lease or lend.
+          <strong>Sample data.</strong> While the Service runs on sample data, every listing, agent, review, rate, payment and statistic on it is fictional and created for illustration. Nothing shown is an offer to sell, lease or lend.
         </p>
       )}
 
@@ -58,14 +57,14 @@ export default async function TermsPage() {
         <li>the content complies with fair housing and advertising laws: it describes the property, not who should live there (see our <Link href="/legal/fair-housing">fair housing policy</Link>).</li>
       </ul>
       <p>
-        You keep ownership of your content and give us a non-exclusive, worldwide, royalty-free license to host, display, adapt (for example resize or crop photos) and
+        You keep ownership of your content and give us a nonexclusive, worldwide, royalty free license to host, display, adapt (for example resize or crop photos) and
         distribute it to operate and promote the Service while it&apos;s posted. We may review, decline, edit for format, or remove content that breaks these terms or the law.
       </p>
 
       <h2 id="acceptable-use">6. Acceptable use</h2>
       <p>Don&apos;t use the Service to:</p>
       <ul>
-        <li>scrape, crawl, bulk-download or copy listings, photos or data, or use them to build a competing database or train models, except through tools we provide;</li>
+        <li>scrape, crawl, bulk download or copy listings, photos or data, or use them to build a competing database or train models, except through tools we provide;</li>
         <li>post false, misleading, duplicate or bait listings, or ask anyone to pay a deposit before they&apos;ve seen a property and signed a lease;</li>
         <li>harass, threaten or discriminate against anyone, or send spam or unsolicited commercial messages;</li>
         <li>probe, scan or test the Service&apos;s security, bypass rate limits or access controls, or interfere with its operation;</li>
@@ -74,7 +73,7 @@ export default async function TermsPage() {
 
       <h2 id="contacting-professionals">7. Contacting agents, owners and lenders</h2>
       <p>
-        When you request a tour, ask a question, apply for a rental or request pre-approval, we send your contact details and message to the agent, owner, property
+        When you request a tour, ask a question, apply for a rental or request preapproval, we send your contact details and message to the agent, owner, property
         manager or lending partner responsible, so they can reply. They may contact you by email, phone or text as permitted by law. Professionals receiving leads agree
         to respond promptly and to treat every consumer equally.
       </p>
@@ -82,21 +81,21 @@ export default async function TermsPage() {
       <h2 id="payments">8. Payments, fees and plans</h2>
       <ul>
         <li>Payments are processed by our payment provider (Stripe). We don&apos;t store full card numbers.</li>
-        <li>Rental application fees are set by the property and are generally non-refundable once an application is submitted, except where state law requires otherwise.</li>
+        <li>Rental application fees are set by the property and are generally nonrefundable once an application is submitted, except where state law requires otherwise.</li>
         <li>Rent paid through the Service is credited to the lease when the payment succeeds. Questions about charges go to the property manager first; we&apos;ll help resolve payment errors.</li>
         <li>Agent plans renew monthly until cancelled. You can cancel any time in billing settings; the plan stays active through the paid period. Featured placement bought through a plan is labelled “Featured”.</li>
       </ul>
 
-      <h2 id="third-parties">9. Third-party services</h2>
+      <h2 id="third-parties">9. Third party services</h2>
       <p>
-        The Service links to or embeds services we don&apos;t control, such as maps, lenders, e-signature and payment providers. Their terms and privacy policies apply to your
+        The Service links to or embeds services we don&apos;t control, such as maps, lenders, electronic signature and payment providers. Their terms and privacy policies apply to your
         use of them.
       </p>
 
       <h2 id="copyright">10. Copyright complaints</h2>
       <p>
         If you believe content on the Service infringes your copyright, send a notice to our designated agent at [copyright agent name, address and email] that includes:
-        your signature; identification of the work; the URL of the material; your contact details; a statement that you have a good-faith belief the use is not authorized;
+        your signature; identification of the work; the URL of the material; your contact details; a statement that you have a good faith belief the use is not authorized;
         and a statement, under penalty of perjury, that the notice is accurate and you&apos;re authorized to act. We remove material that is the subject of a valid notice and
         terminate repeat infringers.
       </p>
@@ -104,7 +103,7 @@ export default async function TermsPage() {
       <h2 id="disclaimers">11. Disclaimers and limits of liability</h2>
       <p>
         The Service is provided “as is” and “as available”. To the fullest extent the law allows, we disclaim implied warranties of merchantability, fitness for a particular
-        purpose, accuracy and non-infringement, and we aren&apos;t liable for indirect, incidental, special or consequential damages, or for lost profits, data or
+        purpose, accuracy and noninfringement, and we aren&apos;t liable for indirect, incidental, special or consequential damages, or for lost profits, data or
         opportunities. Our total liability for any claim is limited to the greater of the amount you paid us in the 12 months before the claim or $100. Some states don&apos;t
         allow these limits, so they may not apply to you.
       </p>
@@ -123,7 +122,7 @@ export default async function TermsPage() {
 
       <h2 id="law">14. Governing law and disputes</h2>
       <p>
-        These terms are governed by the laws of [State], without regard to conflict-of-law rules. Disputes will be resolved in the state or federal courts located in [County,
+        These terms are governed by the laws of [State], without regard to conflict of law rules. Disputes will be resolved in the state or federal courts located in [County,
         State], unless an arbitration agreement you&apos;ve accepted says otherwise.
       </p>
 

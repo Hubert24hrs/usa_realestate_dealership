@@ -19,7 +19,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   const filtered = Boolean(f.q || f.specialty || f.language || f.minRating || f.sort !== "recommended" || f.page > 1);
   return {
     title: city ? `Real estate agents in ${city.name}, ${city.stateCode}` : "Find a real estate agent",
-    description: `Compare ${city ? `${city.name} ` : ""}real estate agents by reviews, recent sales, specialties and languages — then contact them directly.`,
+    description: `Compare ${city ? `${city.name} ` : ""}real estate agents by reviews, recent sales, specialties and languages, then contact them directly.`,
     alternates: { canonical: city ? `/agents?city=${city.slug}` : "/agents" },
     robots: filtered ? { index: false, follow: true } : undefined,
   };
@@ -45,7 +45,7 @@ export default async function AgentsPage({ searchParams }: PageProps) {
         crumbs={[{ name: "Home", href: "/" }, { name: "Agents", href: "/agents" }]}
         eyebrow="Agents"
         title={city ? `Real estate agents in ${city.name}` : "Find the right agent"}
-        description="Compare local agents by reviews, recent sales and specialties. Contact them directly — or invite one to shop alongside you."
+        description="Compare local agents by reviews, recent sales and specialties. Contact them directly, or invite one to shop alongside you."
       >
         <AutoSubmitForm action="/agents" className="mt-6 grid gap-3 rounded-3xl border bg-card p-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(5,minmax(0,1fr))_auto] lg:items-end">
           <div className="space-y-1.5 sm:col-span-2 lg:col-span-1">
@@ -139,7 +139,7 @@ export default async function AgentsPage({ searchParams }: PageProps) {
           </div>
         </div>
         <p className="mt-6 text-xs text-muted-foreground">
-          &ldquo;Featured&rdquo; agents are paid Premier members and appear first in the recommended sort. Ratings and reviews are never paid for. All agents, brokerages and reviews on this demo site are fictional.
+          &ldquo;Featured&rdquo; agents are paid Premier members and appear first in the recommended sort. Ratings and reviews are never paid for. All agents, brokerages and reviews on this site are fictional samples.
         </p>
       </div>
     </>

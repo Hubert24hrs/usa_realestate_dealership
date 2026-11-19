@@ -67,7 +67,7 @@ export function mapResoMedia(media: ResoMedia): ProviderImage {
     width: media.ImageWidth ?? 1600,
     height: media.ImageHeight ?? 1067,
     alt: media.ShortDescription?.trim() || media.LongDescription?.trim() || MEDIA_CATEGORY_LABELS[category],
-    license: "Licensed via MLS/IDX feed — display subject to the MLS's IDX rules",
+    license: "Licensed via MLS/IDX feed. Display subject to the MLS's IDX rules",
   };
 }
 
@@ -110,7 +110,7 @@ export class FeedProvider implements ImageProvider {
   /** Fetch every photo for one listing, ordered as the listing agent arranged them. */
   async getListingMedia(listingKey: string): Promise<ProviderImage[]> {
     if (!this.isConfigured()) {
-      throw new Error("FeedProvider is not configured — set the RESO_* variables (see README).");
+      throw new Error("FeedProvider is not configured. Set the RESO_* variables (see README).");
     }
     const url = new URL(`${this.config.baseUrl!.replace(/\/$/, "")}/Media`);
     const safeKey = listingKey.replace(/'/g, "''");

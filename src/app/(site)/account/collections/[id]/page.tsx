@@ -42,7 +42,7 @@ export default async function CollectionPage({ params }: Props) {
   const members: MemberRow[] = collection.members.map((m) => ({
     id: m.id,
     // Owners see who they invited; co-shoppers see names, not each other's email addresses.
-    label: m.user?.name ?? (isOwner ? m.email : "Invited co-shopper"),
+    label: m.user?.name ?? (isOwner ? m.email : "Invited shopping partner"),
     sublabel: isOwner ? m.email : null,
     role: m.role === "VIEWER" ? "VIEWER" : "EDITOR",
     isAgent: m.isAgent,
@@ -61,7 +61,7 @@ export default async function CollectionPage({ params }: Props) {
           <>
             {collection.description && <span className="block">{collection.description}</span>}
             <span>
-              {collection.items.length} {collection.items.length === 1 ? "home" : "homes"} · {isOwner ? "You own this collection" : `Shared by ${collection.owner.name ?? "a co-shopper"}`}
+              {collection.items.length} {collection.items.length === 1 ? "home" : "homes"} · {isOwner ? "You own this collection" : `Shared by ${collection.owner.name ?? "a shopping partner"}`}
               {!editable && " · View only"}
             </span>
           </>

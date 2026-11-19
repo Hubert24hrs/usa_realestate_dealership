@@ -52,7 +52,7 @@ export default async function AdminReportsPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <AccountPageHeader eyebrow="Admin" title="Reports & moderation" description="Shopper reports on listings, oldest first. Scam and discriminatory-language reports should be reviewed the same day." />
+      <AccountPageHeader eyebrow="Admin" title="Reports & moderation" description="Shopper reports on listings, oldest first. Scam and discriminatory language reports should be reviewed the same day." />
       <nav aria-label="Report status" className="mb-5 flex gap-1 rounded-xl bg-muted p-1 sm:inline-flex">
         {TABS.map(([s, label]) => (
           <Link
@@ -93,7 +93,7 @@ export default async function AdminReportsPage({ searchParams }: PageProps) {
 
       <section aria-labelledby="fsbo-review" className="mt-12">
         <SectionTitle id="fsbo-review">New owner listings · last 14 days</SectionTitle>
-        <p className="-mt-1 mb-3 text-sm text-muted-foreground">Spot-check owner-posted listings for scams, copied photos and Fair Housing language. Publishing already blocks the clearest violations.</p>
+        <p className="-mt-1 mb-3 text-sm text-muted-foreground">Spot check owner posted listings for scams, copied photos and Fair Housing language. Publishing already blocks the clearest violations.</p>
         {fsbo.length === 0 ? (
           <p className="rounded-3xl border border-dashed p-6 text-sm text-muted-foreground">No new owner listings.</p>
         ) : (

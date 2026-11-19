@@ -42,7 +42,7 @@ export default async function FairHousingPage() {
         </li>
         <li>
           <strong>Rentals.</strong> Applications on {site.name} ask every applicant the same questions. Property managers must apply the same written criteria to everyone,
-          consider reasonable accommodation and modification requests from people with disabilities, and follow source-of-income laws where they apply.
+          consider reasonable accommodation and modification requests from people with disabilities, and follow source of income laws where they apply.
         </li>
         <li>
           <strong>Moderation.</strong> Shoppers can report any listing. Reports of discriminatory language are reviewed the same day, and listings that violate this policy

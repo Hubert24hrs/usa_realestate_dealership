@@ -21,7 +21,7 @@ export const metadata: Metadata = { title: "Listings" };
 type PageProps = { searchParams: Promise<Record<string, string | string[] | undefined>> };
 const PER_PAGE = 25;
 const SOURCES = ["SEED", "FEED", "FSBO", "AGENT", "ADMIN"] as const;
-const SOURCE_LABEL: Record<string, string> = { SEED: "Demo seed", FEED: "MLS feed", FSBO: "Owner (FSBO)", AGENT: "Agent", ADMIN: "Staff" };
+const SOURCE_LABEL: Record<string, string> = { SEED: "Sample data", FEED: "MLS feed", FSBO: "Owner (FSBO)", AGENT: "Agent", ADMIN: "Staff" };
 const one = (v: string | string[] | undefined) => (typeof v === "string" ? v.trim() : "");
 const selectCls = "h-9 rounded-md border bg-background px-2 text-sm";
 

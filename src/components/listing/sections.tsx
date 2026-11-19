@@ -63,8 +63,8 @@ export function PriceHistoryTable({ rows }: { rows: Array<{ id: string; date: Da
                 <td className="px-3 py-2">{formatDate(r.date)}</td>
                 <td className="px-3 py-2">{label[r.event] ?? r.event}</td>
                 <td className="px-3 py-2 font-medium">{formatPrice(r.price)}</td>
-                <td className={cn("px-3 py-2", change && change < 0 ? "text-success" : "text-muted-foreground")}>{change ? `${change > 0 ? "+" : ""}${(change * 100).toFixed(1)}%` : "—"}</td>
-                <td className="px-3 py-2 text-muted-foreground">{r.source ?? "—"}</td>
+                <td className={cn("px-3 py-2", change && change < 0 ? "text-success" : "text-muted-foreground")}>{change ? `${change > 0 ? "+" : ""}${(change * 100).toFixed(1)}%` : ""}</td>
+                <td className="px-3 py-2 text-muted-foreground">{r.source ?? "N/A"}</td>
               </tr>
             );
           })}
@@ -121,15 +121,15 @@ export function EstimatePanel({ estimate, low, high, listPrice, rentEstimate }: 
       </div>
       <div className="rounded-2xl border p-5">
         <p className="text-sm text-muted-foreground">Rent estimate</p>
-        <p className="mt-1 text-2xl font-semibold">{rentEstimate ? `${formatMoney(rentEstimate)}/mo` : "—"}</p>
-        <p className="mt-3 text-xs text-muted-foreground">Comps-based demo model using recent sales, list prices and home characteristics nearby. Not an appraisal.</p>
+        <p className="mt-1 text-2xl font-semibold">{rentEstimate ? `${formatMoney(rentEstimate)}/mo` : "N/A"}</p>
+        <p className="mt-3 text-xs text-muted-foreground">Estimated from recent nearby sales, list prices and home features. Not an appraisal.</p>
       </div>
     </div>
   );
 }
 
 export function SchoolList({ schools }: { schools: Array<{ id: string; name: string; rating: number; level: string; type: string; grades: string; distanceMiles: number; isAssigned: boolean; district: string | null }> }) {
-  if (!schools.length) return <p className="text-sm text-muted-foreground">No nearby schools in our demo dataset.</p>;
+  if (!schools.length) return <p className="text-sm text-muted-foreground">No nearby schools on record.</p>;
   const band = (r: number) => (r >= 8 ? "Above average" : r >= 5 ? "Average" : "Below average");
   return (
     <ul className="divide-y rounded-2xl border">
@@ -164,7 +164,7 @@ export function RiskPanel({ risks }: { risks: { flood: number | null; fire: numb
       <ScoreMeter label="Air quality concern" value={risks.air} max={10} tone="risk" descriptor={riskDescriptor(risks.air)} />
       <ScoreMeter label="Ambient noise" value={risks.noise} max={100} tone="risk" descriptor={riskDescriptor(risks.noise, 100)} />
       <ScoreMeter label="Reported crime (relative)" value={risks.crime} max={100} tone="risk" descriptor={riskDescriptor(risks.crime, 100)} />
-      <p className="text-xs text-muted-foreground sm:col-span-2">Environmental and crime figures are illustrative demo data. Check FEMA flood maps, local fire authorities and official crime statistics before deciding. Perceptions of neighborhood safety can reflect bias — consider the data, not reputations.</p>
+      <p className="text-xs text-muted-foreground sm:col-span-2">Environmental and crime figures are illustrative. Check FEMA flood maps, local fire authorities and official crime statistics before deciding. Perceptions of neighborhood safety can reflect bias. Consider the data, not reputations.</p>
     </div>
   );
 }

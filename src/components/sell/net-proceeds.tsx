@@ -46,7 +46,7 @@ export function NetProceedsCalculator({ defaultPrice }: { defaultPrice: number }
             ]}
           />
           <p className="mt-4 text-xs text-muted-foreground">
-            Commissions are negotiable and aren&apos;t set by law. Since 2024, buyer-agent compensation is negotiated separately and isn&apos;t offered through the MLS — you can choose whether to offer it. Selling FSBO avoids the listing commission.
+            Commissions are negotiable and aren&apos;t set by law. Since 2024, buyer agent compensation is negotiated separately and isn&apos;t offered through the MLS. You can choose whether to offer it. Selling FSBO avoids the listing commission.
           </p>
         </div>
       </div>

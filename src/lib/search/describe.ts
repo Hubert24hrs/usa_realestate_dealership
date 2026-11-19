@@ -14,7 +14,7 @@ function money(n: number): string {
 }
 
 function rangeLabel(r: { min?: number; max?: number }, fmt: (n: number) => string, unit = ""): string {
-  if (r.min != null && r.max != null) return `${fmt(r.min)}–${fmt(r.max)}${unit}`;
+  if (r.min != null && r.max != null) return `${fmt(r.min)} to ${fmt(r.max)}${unit}`;
   if (r.max != null) return `Under ${fmt(r.max)}${unit}`;
   return `${fmt(r.min!)}+${unit}`;
 }
@@ -30,7 +30,7 @@ export function describeFilters(f: Partial<SearchFilters>, mode: SearchMode = f.
   if (f.sqft && (f.sqft.min != null || f.sqft.max != null)) push(["sqft"], rangeLabel(f.sqft, (n) => n.toLocaleString("en-US"), " sqft"));
   if (f.lotSqft && (f.lotSqft.min != null || f.lotSqft.max != null)) push(["lotSqft"], rangeLabel(f.lotSqft, (n) => (n >= 43560 ? `${(n / 43560).toFixed(1).replace(/\.0$/, "")} ac` : `${n.toLocaleString("en-US")} sqft`), " lot"));
   if (f.acres && (f.acres.min != null || f.acres.max != null)) push(["acres"], rangeLabel(f.acres, (n) => String(n), " acres"));
-  if (f.yearBuilt && (f.yearBuilt.min != null || f.yearBuilt.max != null)) push(["yearBuilt"], f.yearBuilt.min != null && f.yearBuilt.max == null ? `Built ${f.yearBuilt.min}+` : f.yearBuilt.max != null && f.yearBuilt.min == null ? `Built before ${f.yearBuilt.max}` : `Built ${f.yearBuilt.min}–${f.yearBuilt.max}`);
+  if (f.yearBuilt && (f.yearBuilt.min != null || f.yearBuilt.max != null)) push(["yearBuilt"], f.yearBuilt.min != null && f.yearBuilt.max == null ? `Built ${f.yearBuilt.min}+` : f.yearBuilt.max != null && f.yearBuilt.min == null ? `Built before ${f.yearBuilt.max}` : `Built ${f.yearBuilt.min} to ${f.yearBuilt.max}`);
   if (f.hoaMax != null) push(["hoaMax"], f.hoaMax === 0 ? "No HOA" : `HOA ≤ ${money(f.hoaMax)}/mo`);
   if (f.garageMin) push(["garageMin"], `${f.garageMin}+ garage`);
   if (f.singleStory) push(["singleStory"], "Single story");

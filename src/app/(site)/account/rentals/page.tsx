@@ -23,10 +23,10 @@ const APP_STATUS: Record<string, [string, string]> = {
 };
 
 const BANNERS: Record<string, { tone: "ok" | "warn"; text: string }> = {
-  paid: { tone: "ok", text: "Payment received — thank you. A receipt is on its way to your inbox." },
+  paid: { tone: "ok", text: "Payment received. Thank you. A receipt is on its way to your inbox." },
   submitted: { tone: "ok", text: "Application submitted. We'll notify you as soon as the property manager decides." },
-  signed: { tone: "ok", text: "Lease signed — welcome home! Your rent payments live below." },
-  canceled: { tone: "warn", text: "Payment canceled. Nothing was charged — you can try again any time." },
+  signed: { tone: "ok", text: "Lease signed. Welcome home! Your rent payments live below." },
+  canceled: { tone: "warn", text: "Payment canceled. Nothing was charged. You can try again any time." },
 };
 
 type PageProps = { searchParams: Promise<Record<string, string | string[] | undefined>> };
@@ -73,7 +73,7 @@ export default async function RentalsPage({ searchParams }: PageProps) {
         <AccountPageHeader title="Rentals" description="Applications, leases and rent payments." />
         {Banner}
         <EmptyState icon={KeyRound} title="No rental activity yet" action={<Button asChild><Link href="/apartments-for-rent">Find a rental</Link></Button>}>
-          Apply online to any CITI VIEW rental — your applications, lease and rent payments will live here.
+          Apply online to any CITI VIEW rental. Your applications, lease and rent payments will live here.
         </EmptyState>
       </>
     );
@@ -81,7 +81,7 @@ export default async function RentalsPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <AccountPageHeader title="Rentals" description="Applications, leases and rent payments in one place." />
+      <AccountPageHeader title="Rentals" description="Your applications, leases and rent payments." />
       {Banner}
       {active && (
         <section aria-labelledby="lease-title" className="mb-8 rounded-3xl border bg-surface p-5 sm:p-6">
@@ -100,7 +100,7 @@ export default async function RentalsPage({ searchParams }: PageProps) {
           </div>
           <dl className="mt-4 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
             <div><dt className="text-muted-foreground">Monthly rent</dt><dd className="mt-0.5 font-semibold">{formatMoney(active.monthlyRent)}</dd></div>
-            <div><dt className="text-muted-foreground">Lease term</dt><dd className="mt-0.5 font-semibold">{formatDate(active.startDate)} – {formatDate(active.endDate)}</dd></div>
+            <div><dt className="text-muted-foreground">Lease term</dt><dd className="mt-0.5 font-semibold">{formatDate(active.startDate)} to {formatDate(active.endDate)}</dd></div>
             <div><dt className="text-muted-foreground">Deposit</dt><dd className="mt-0.5 font-semibold">{formatMoney(active.securityDeposit)}</dd></div>
             <div><dt className="text-muted-foreground">Signed</dt><dd className="mt-0.5 font-semibold">{active.signedAt ? formatDate(active.signedAt) : "Not yet"}</dd></div>
           </dl>
@@ -118,7 +118,7 @@ export default async function RentalsPage({ searchParams }: PageProps) {
                 </p>
                 <p className="text-2xl font-semibold tabular-nums">{formatMoney(due.amountCents / 100, true)}</p>
                 <p className={cn("text-xs", due.overdue ? "text-destructive" : "text-muted-foreground")}>
-                  {due.overdue ? `Was due ${formatDate(due.dueDate)} — pay now to avoid a late fee.` : `Due ${formatDate(due.dueDate)}`}
+                  {due.overdue ? `Was due ${formatDate(due.dueDate)}. Pay now to avoid a late fee.` : `Due ${formatDate(due.dueDate)}`}
                 </p>
               </div>
               <PayRentButton leaseId={active.id} label={`Pay ${formatMoney(due.amountCents / 100, due.amountCents % 100 !== 0)}`} />
@@ -144,8 +144,8 @@ export default async function RentalsPage({ searchParams }: PageProps) {
                     <td className="p-3">{periodLabel(p.periodStart)}</td>
                     <td className="p-3 tabular-nums">{formatMoney(p.amountCents / 100, true)}</td>
                     <td className="p-3"><span className={cn("inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium", p.status === "PAID" ? "bg-success/15 text-success" : "bg-muted")}><Receipt className="size-3" aria-hidden /> {p.status === "PAID" ? "Paid" : p.status.toLowerCase()}</span></td>
-                    <td className="p-3 text-muted-foreground">{p.paidAt ? formatDate(p.paidAt) : "—"}</td>
-                    <td className="p-3 text-muted-foreground">{p.method === "demo" ? "Simulated" : p.method === "card" ? "Card" : p.method === "simulated" ? "Demo history" : (p.method ?? "—")}</td>
+                    <td className="p-3 text-muted-foreground">{p.paidAt ? formatDate(p.paidAt) : "Not paid"}</td>
+                    <td className="p-3 text-muted-foreground">{p.method === "demo" ? "Simulated" : p.method === "card" ? "Card" : p.method === "simulated" ? "Sample record" : (p.method ?? "N/A")}</td>
                   </tr>
                 ))}
               </tbody>
@@ -171,7 +171,7 @@ export default async function RentalsPage({ searchParams }: PageProps) {
                       <p className="text-xs text-muted-foreground">
                         {a.listing.city}, {a.listing.state}
                         {a.submittedAt ? ` · submitted ${formatDate(a.submittedAt)}` : ` · started ${formatDate(a.createdAt)}`}
-                        {a.moveInDate ? ` · move-in ${formatDate(a.moveInDate)}` : ""}
+                        {a.moveInDate ? ` · move in ${formatDate(a.moveInDate)}` : ""}
                         {a.feeAmount ? ` · fee ${formatMoney(a.feeAmount)} ${a.feePaid ? "paid" : "unpaid"}` : ""}
                       </p>
                     </div>
@@ -193,7 +193,7 @@ export default async function RentalsPage({ searchParams }: PageProps) {
               );
             })}
           </ul>
-          {site.demoMode && <p className="mt-3 text-xs text-muted-foreground">Demo mode: &ldquo;Simulate approval&rdquo; stands in for the property manager so you can try the lease and payment steps.</p>}
+          {site.demoMode && <p className="mt-3 text-xs text-muted-foreground">&ldquo;Simulate approval&rdquo; stands in for the property manager so you can try the lease and payment steps.</p>}
         </section>
       )}
     </>

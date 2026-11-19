@@ -12,7 +12,7 @@ import { selectCls, useMutate } from "./controls";
 
 type Flag = (typeof FLAG_FIELDS)[number];
 const FLAG_LABEL: Record<Flag, string> = {
-  isFeatured: "Featured (paid placement — shown with a “Featured” label)",
+  isFeatured: "Featured (paid placement, shown with a “Featured” label)",
   isLuxury: "Luxury",
   isNewConstruction: "New construction",
   hideAddress: "Hide street address",
@@ -89,7 +89,7 @@ export function ListingEditor({ listing, agents }: { listing: EditableListing; a
       <div className="grid gap-4 sm:grid-cols-[1fr_200px_200px]">
         <div>
           <label htmlFor="ed-headline" className="mb-1.5 block text-sm font-medium">Headline</label>
-          <Input id="ed-headline" value={form.headline} onChange={set("headline")} maxLength={120} placeholder="Optional — e.g. Corner lot with a renovated kitchen" />
+          <Input id="ed-headline" value={form.headline} onChange={set("headline")} maxLength={120} placeholder="Optional. Example: Corner lot with a renovated kitchen" />
         </div>
         <div>
           <label htmlFor="ed-price" className="mb-1.5 block text-sm font-medium">{listing.rental ? "Rent ($/mo)" : "Price ($)"}</label>
@@ -110,7 +110,7 @@ export function ListingEditor({ listing, agents }: { listing: EditableListing; a
             {findings.map((f, i) => (
               <p key={i} className="flex gap-2">
                 <AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber-600" aria-hidden />
-                <span><strong>“{f.phrase}”</strong> — {f.reason}{f.suggestion ? ` ${f.suggestion}` : ""}{f.severity === "block" ? " (must be fixed to save)" : ""}</span>
+                <span><strong>“{f.phrase}”</strong>: {f.reason}{f.suggestion ? ` ${f.suggestion}` : ""}{f.severity === "block" ? " (must be fixed to save)" : ""}</span>
               </p>
             ))}
           </div>

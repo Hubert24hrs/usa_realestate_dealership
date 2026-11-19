@@ -35,7 +35,7 @@ export function ContactAgentForm({ agentId, agentName }: { agentId: string; agen
       <div role="status" className="rounded-3xl border bg-card p-5">
         <CheckCircle2 className="size-7 text-success" aria-hidden />
         <p className="mt-2 font-semibold">Message sent to {first}</p>
-        <p className="mt-1 text-sm text-muted-foreground">You&apos;ll get a reply by email{conversationId ? " — and you can continue the conversation in Messages" : ""}.</p>
+        <p className="mt-1 text-sm text-muted-foreground">You&apos;ll get a reply by email{conversationId ? ", and you can continue the conversation in Messages" : ""}.</p>
         {conversationId && <Button asChild size="sm" className="mt-3"><Link href="/account/messages">Open Messages</Link></Button>}
       </div>
     );

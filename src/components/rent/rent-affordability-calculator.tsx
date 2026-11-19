@@ -83,7 +83,7 @@ export function RentAffordabilityCalculator({ cities, initialCity }: { cities: R
         <div className="rounded-3xl border bg-card p-5 sm:p-6">
           <h3 className="font-semibold">Cash to move in</h3>
           <table className="mt-3 w-full text-sm">
-            <caption className="sr-only">Estimated move-in costs at {formatMoney(target)} per month</caption>
+            <caption className="sr-only">Estimated move in costs at {formatMoney(target)} per month</caption>
             <tbody className="divide-y">
               {lines.map((l) => (
                 <tr key={l.label}>
@@ -99,7 +99,7 @@ export function RentAffordabilityCalculator({ cities, initialCity }: { cities: R
           </table>
           <p role="status" className={`mt-4 flex items-start gap-2 rounded-xl p-3 text-sm ${short > 0 ? "bg-warning/15" : "bg-success/10"}`}>
             {short > 0 ? <CircleAlert className="mt-0.5 size-4 shrink-0 text-warning-foreground dark:text-warning" aria-hidden /> : <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden />}
-            {short > 0 ? `You're about ${formatMoney(short)} short. Look for move-in specials or a lower deposit, or save a little longer.` : `Your savings cover it, with ${formatMoney(-short)} to spare.`}
+            {short > 0 ? `You're about ${formatMoney(short)} short. Look for move in specials or a lower deposit, or save a little longer.` : `Your savings cover it, with ${formatMoney(-short)} to spare.`}
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export function RentAffordabilityCalculator({ cities, initialCity }: { cities: R
           <div className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-primary/20 bg-primary/5 p-5">
             <p className="text-sm">
               Median rent in <span className="font-semibold">{c.name}</span> is {formatMoney(c.medianRent)}/mo
-              {share != null && <> — your budget is {Math.round(share * 100)}% of that.</>}
+              {share != null && <>. Your budget is {Math.round(share * 100)}% of that.</>}
             </p>
             <Link href={`/apartments-for-rent/${c.slug}?price=-${target}`} className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90">
               Rentals up to {formatMoney(target)}

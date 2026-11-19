@@ -5,7 +5,7 @@ import { getCityMarkets } from "@/server/markets";
 
 export const metadata: Metadata = {
   title: "Cost of living calculator: compare cities",
-  description: "Compare the cost of living between cities — housing, groceries, transportation, utilities, healthcare and childcare — and the salary you'd need to keep your lifestyle.",
+  description: "Compare the cost of living between cities (housing, groceries, transportation, utilities, healthcare and childcare) and the salary you'd need to keep your lifestyle.",
   alternates: { canonical: "/rent/cost-of-living" },
 };
 
@@ -30,7 +30,7 @@ export default async function CostOfLivingPage({ searchParams }: PageProps) {
       <div className="container-page py-10">
         {cities.length >= 2 ? <CostOfLivingCalculator cities={cities} initialFrom={from} initialTo={to} /> : <p>Market data is not available yet.</p>}
         <ToolDisclaimer>
-          Cost-of-living indexes, rents and home values are illustrative demo data (U.S. average = 100) and don&apos;t include income taxes, which vary by state. Use them to compare cities, not to budget to the dollar.
+          Cost of living indexes, rents and home values are illustrative (U.S. average = 100) and don&apos;t include income taxes, which vary by state. Use them to compare cities, not to budget to the dollar.
         </ToolDisclaimer>
       </div>
     </>

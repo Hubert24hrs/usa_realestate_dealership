@@ -22,10 +22,10 @@ export const PATCH = withUser<{ id: string }>(
     const d = body.data;
     const data: Prisma.RentalApplicationUncheckedUpdateInput = {};
     if (d.home) {
-      if (d.home.unitId && !app.listing.units.some((u) => u.id === d.home!.unitId)) return badRequest("That unit is no longer available — pick another.");
+      if (d.home.unitId && !app.listing.units.some((u) => u.id === d.home!.unitId)) return badRequest("That unit is no longer available. Pick another.");
       const moveIn = new Date(`${d.home.moveInDate}T12:00:00Z`);
-      if (Number.isNaN(+moveIn) || +moveIn < Date.now() - 2 * 86_400_000) return badRequest("Move-in date can't be in the past.");
-      if (+moveIn > Date.now() + 400 * 86_400_000) return badRequest("Move-in date must be within the next year.");
+      if (Number.isNaN(+moveIn) || +moveIn < Date.now() - 2 * 86_400_000) return badRequest("Move in date can't be in the past.");
+      if (+moveIn > Date.now() + 400 * 86_400_000) return badRequest("Move in date must be within the next year.");
       data.unitId = d.home.unitId ?? null;
       data.moveInDate = moveIn;
       data.leaseTermMonths = d.home.leaseTermMonths;

@@ -36,14 +36,14 @@ export function ApplicationActions({ id, status, slug, demoMode }: { id: string;
   const [busy, setBusy] = useState<string | null>(null);
   const [confirming, setConfirming] = useState(false);
 
-  const run = async (action: "withdraw" | "demo-approve") => {
+  const run = async (action: "withdraw" | "simulate-approval") => {
     setBusy(action);
     const res = await api<{ leaseId?: string | null }>(`/api/rent/applications/${id}/${action}`, { method: "POST" });
     setBusy(null);
     setConfirming(false);
     if (!res.ok) return toast.error(apiError(res));
-    if (action === "demo-approve" && res.data.leaseId) {
-      toast.success("Approved — review and sign your lease");
+    if (action === "simulate-approval" && res.data.leaseId) {
+      toast.success("Approved. Review and sign your lease");
       router.push(`/account/rentals/lease/${res.data.leaseId}`);
       return;
     }
@@ -58,8 +58,8 @@ export function ApplicationActions({ id, status, slug, demoMode }: { id: string;
         <Button asChild size="sm"><Link href={`/rent/apply/${slug}?app=${id}`}>Continue application</Link></Button>
       )}
       {demoMode && (status === "SUBMITTED" || status === "UNDER_REVIEW") && (
-        <Button size="sm" variant="outline" disabled={busy !== null} onClick={() => run("demo-approve")}>
-          {busy === "demo-approve" ? <Loader2 className="size-4 animate-spin" aria-hidden /> : <FlaskConical className="size-4" aria-hidden />}
+        <Button size="sm" variant="outline" disabled={busy !== null} onClick={() => run("simulate-approval")}>
+          {busy === "simulate-approval" ? <Loader2 className="size-4 animate-spin" aria-hidden /> : <FlaskConical className="size-4" aria-hidden />}
           Simulate approval
         </Button>
       )}

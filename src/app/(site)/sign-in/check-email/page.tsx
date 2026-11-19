@@ -11,7 +11,7 @@ export default function CheckEmailPage() {
       <div className="max-w-md">
         <MailCheck className="mx-auto size-12 text-primary" aria-hidden />
         <h1 className="mt-4 font-display text-display-md font-semibold">Check your email</h1>
-        <p className="mt-2 text-muted-foreground">We sent a sign-in link. It expires in one hour and works once.</p>
+        <p className="mt-2 text-muted-foreground">We sent a sign in link. It expires in one hour and works once.</p>
         {devOutbox && (
           <p className="mt-6 rounded-xl border border-dashed p-4 text-sm">
             Email delivery isn&apos;t configured (no <code>RESEND_API_KEY</code>), so messages go to the{" "}

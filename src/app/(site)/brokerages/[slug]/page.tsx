@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = await getOrganization(slug, "BROKERAGE");
   if (!data) return {};
   return {
-    title: `${data.org.name} — real estate brokerage`,
+    title: `${data.org.name}: real estate brokerage`,
     description: data.org.tagline ?? `Agents, listings and markets served by ${data.org.name}.`,
     alternates: { canonical: `/brokerages/${data.org.slug}` },
   };

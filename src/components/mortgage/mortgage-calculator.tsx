@@ -93,7 +93,7 @@ export function MortgageCalculator({ initial }: { initial: MortgageInitial }) {
           <NumberField label="Insurance / yr" kind="money" value={insurance} onChange={setInsurance} max={500_000} />
         </div>
         <NumberField label="HOA dues / mo" kind="money" value={hoa} onChange={setHoa} max={50_000} />
-        <NumberField label="Extra principal / mo" kind="money" value={extra} onChange={setExtra} max={100_000} help="Optional — see how much interest and time you save." />
+        <NumberField label="Extra principal / mo" kind="money" value={extra} onChange={setExtra} max={100_000} help="Optional. See how much interest and time you save." />
       </section>
 
       <section aria-labelledby="mc-results" className="min-w-0 space-y-6">
@@ -147,7 +147,7 @@ export function MortgageCalculator({ initial }: { initial: MortgageInitial }) {
 
         <div className="rounded-3xl border bg-card">
           <button type="button" onClick={() => setShowSchedule((v) => !v)} aria-expanded={showSchedule} aria-controls="mc-schedule" className="flex w-full items-center justify-between gap-2 p-5 text-left font-semibold sm:px-6">
-            Year-by-year amortization schedule
+            Year by year amortization schedule
             <ChevronDown className={`size-4 transition-transform ${showSchedule ? "rotate-180" : ""}`} aria-hidden />
           </button>
           {showSchedule && (
@@ -178,9 +178,9 @@ export function MortgageCalculator({ initial }: { initial: MortgageInitial }) {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-3xl border border-primary/20 bg-primary/5 p-5">
-          <p className="text-sm"><span className="font-semibold">Ready for a real number?</span> A pre-approval locks in what you can borrow.</p>
+          <p className="text-sm"><span className="font-semibold">Ready for a real number?</span> A preapproval locks in what you can borrow.</p>
           <div className="flex flex-wrap gap-2">
-            <Link href="/mortgage/preapproval" className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Get pre-approved</Link>
+            <Link href="/mortgage/preapproval" className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Get preapproved</Link>
             <Link href={`/homes-for-sale?price=-${Math.round(price)}`} className="rounded-full border bg-card px-4 py-2 text-sm font-semibold hover:bg-accent">Homes up to {formatCompactPrice(price)}</Link>
           </div>
         </div>

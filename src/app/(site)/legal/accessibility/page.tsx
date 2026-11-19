@@ -31,14 +31,14 @@ export default async function AccessibilityPage() {
         <li>Charts can be explored with arrow keys and switched to a data table.</li>
         <li>Listing photos have text descriptions; owners and agents must describe each photo they upload.</li>
         <li>Forms have visible labels, clear error messages tied to their fields, and don&apos;t time out while you&apos;re typing.</li>
-        <li>Motion and auto-advancing carousels respect your “reduce motion” setting.</li>
+        <li>Motion and automatically advancing carousels respect your “reduce motion” setting.</li>
       </ul>
 
       <h2 id="limitations">Known limitations</h2>
       <ul>
-        <li>The interactive map itself has limited screen-reader support. Use the results list, which contains the same homes.</li>
+        <li>The interactive map itself has limited screen reader support. Use the results list, which contains the same homes.</li>
         <li>Some documents uploaded by agents or property managers (for example HOA disclosures) may not be fully accessible. Ask us for an alternative format.</li>
-        <li>Third-party content such as 3D tours or partner pages is outside our direct control; we ask partners to meet the same standard.</li>
+        <li>Third party content such as 3D tours or partner pages is outside our direct control; we ask partners to meet the same standard.</li>
       </ul>
 
       <h2 id="testing">How we test</h2>

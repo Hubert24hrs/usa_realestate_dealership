@@ -29,7 +29,7 @@ export default async function BillingPage({ searchParams }: PageProps) {
   return (
     <>
       <AccountPageHeader title="Plan & billing" description="Your CITI VIEW plan and payment history." />
-      {sp.upgraded === "1" && <p role="status" className="mb-6 flex items-center gap-2 rounded-2xl bg-success/10 p-4 text-sm"><CheckCircle2 className="size-4 text-success" aria-hidden /> Your plan is updated — new benefits are live.</p>}
+      {sp.upgraded === "1" && <p role="status" className="mb-6 flex items-center gap-2 rounded-2xl bg-success/10 p-4 text-sm"><CheckCircle2 className="size-4 text-success" aria-hidden /> Your plan is updated. New benefits are live.</p>}
       {sp.downgraded === "1" && <p role="status" className="mb-6 rounded-2xl bg-muted p-4 text-sm">You&apos;re on the Free plan.</p>}
       <section className="rounded-3xl border bg-card p-6">
         <p className="eyebrow">Current plan</p>

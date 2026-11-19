@@ -7,7 +7,7 @@ import { defaultRate } from "@/server/rates";
 
 export const metadata: Metadata = {
   title: "Closing cost calculator: estimate your cash to close",
-  description: "Estimate buyer closing costs — lender fees, title and settlement, transfer taxes, prepaid interest and escrow deposits — and your total cash to close, by state.",
+  description: "Estimate buyer closing costs (lender fees, title and settlement, transfer taxes, prepaid interest and escrow deposits) and your total cash to close, by state.",
   alternates: { canonical: "/mortgage/closing-costs" },
 };
 
@@ -24,7 +24,7 @@ export default async function ClosingCostsPage({ searchParams }: PageProps) {
         crumbs={[{ name: "Home", href: "/" }, { name: "Mortgage", href: "/mortgage" }, { name: "Closing costs", href: "/mortgage/closing-costs" }]}
         eyebrow="Closing costs"
         title="How much cash will I need to close?"
-        description="Buyers typically pay 2–5% of the price in closing costs on top of the down payment. Estimate yours line by line."
+        description="Buyers typically pay 2 to 5% of the price in closing costs on top of the down payment. Estimate yours line by line."
       />
       <div className="container-page py-10">
         <ClosingCostCalculator defaultRate={rate} initialState={initialState} />

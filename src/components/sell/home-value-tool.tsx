@@ -27,7 +27,7 @@ const year = new Date().getFullYear();
 const FormSchema = z.object({
   address: z.string().trim().max(160),
   citySlug: z.string().min(1, "Choose a city"),
-  zip: z.string().trim().regex(/^(\d{5})?$/, "Enter a 5-digit ZIP"),
+  zip: z.string().trim().regex(/^(\d{5})?$/, "Enter a 5 digit ZIP"),
   propertyType: z.enum(["SINGLE_FAMILY", "TOWNHOUSE", "CONDO", "MULTI_FAMILY", "MANUFACTURED"]),
   beds: z.coerce.number().int().min(0).max(12),
   baths: z.coerce.number().min(0).max(12),
@@ -59,7 +59,7 @@ function ValuationLead({ result, address, citySlug }: { result: Result; address:
   const [error, setError] = useState<string | null>(null);
   const [consent, setConsent] = useState(false);
   return state === "sent" ? (
-    <p role="status" className="flex items-center gap-2 rounded-2xl bg-success/10 p-4 text-sm"><CheckCircle2 className="size-4 text-success" aria-hidden /> Thanks — a local listing agent will follow up with a free, in-depth valuation.</p>
+    <p role="status" className="flex items-center gap-2 rounded-2xl bg-success/10 p-4 text-sm"><CheckCircle2 className="size-4 text-success" aria-hidden /> Thanks. A local listing agent will follow up with a free, detailed valuation.</p>
   ) : (
     <form
       className="space-y-3 rounded-3xl border bg-card p-5"
@@ -81,7 +81,7 @@ function ValuationLead({ result, address, citySlug }: { result: Result; address:
       }}
     >
       <p className="font-semibold">Want a precise number? Get a free expert valuation</p>
-      <p className="text-sm text-muted-foreground">A local listing agent reviews your home&apos;s upgrades and condition in person or by video — no obligation.</p>
+      <p className="text-sm text-muted-foreground">A local listing agent reviews your home&apos;s upgrades and condition in person or by video, no obligation.</p>
       <div className="grid gap-3 sm:grid-cols-3">
         <div className="space-y-1.5"><Label htmlFor="hv-name">Name</Label><Input id="hv-name" name="name" required minLength={2} autoComplete="name" /></div>
         <div className="space-y-1.5"><Label htmlFor="hv-email">Email</Label><Input id="hv-email" name="email" type="email" required autoComplete="email" /></div>
@@ -144,7 +144,7 @@ export function HomeValueTool({ cities, initialCity }: { cities: ValueCity[]; in
               <option value="SINGLE_FAMILY">House</option>
               <option value="TOWNHOUSE">Townhouse</option>
               <option value="CONDO">Condo</option>
-              <option value="MULTI_FAMILY">Multi-family</option>
+              <option value="MULTI_FAMILY">Multifamily</option>
               <option value="MANUFACTURED">Manufactured</option>
             </select>
           </div>
@@ -205,7 +205,7 @@ export function HomeValueTool({ cities, initialCity }: { cities: ValueCity[]; in
               <Info className="mt-0.5 size-3.5 shrink-0" aria-hidden />
               {result.compsUsed
                 ? `Based on ${result.compsUsed} comparable home${result.compsUsed === 1 ? "" : "s"}${result.usedMarketData ? ` and ${result.market.name} market trends` : ""}, adjusted for size, layout, age and condition.`
-                : `No close comparable sales nearby — this estimate uses ${result.market.name} market trends, so treat it as a rough guide.`}
+                : `No close comparable sales nearby. This estimate uses ${result.market.name} market trends, so treat it as a rough guide.`}
             </p>
           </div>
 

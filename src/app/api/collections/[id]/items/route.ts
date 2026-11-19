@@ -17,7 +17,7 @@ export const POST = withUser<{ id: string }>(
     if (!ID_RE.test(params.id)) return notFound();
     const found = await getCollectionAccess(params.id, user.id);
     if (!found) return notFound();
-    if (!canEdit(found.access)) return forbidden("You have view-only access to this collection");
+    if (!canEdit(found.access)) return forbidden("You have view only access to this collection");
     const parsed = await readJson(request, Add, 4_000);
     if (!parsed.ok) return parsed.response;
     const { listingId, sharedNote } = parsed.data;
@@ -38,7 +38,7 @@ export const POST = withUser<{ id: string }>(
           data: audience.map((userId) => ({
             userId,
             type: "COLLECTION" as const,
-            title: `${user.name ?? "A co-shopper"} added a home to “${found.collection.name}”`,
+            title: `${user.name ?? "A shopping partner"} added a home to “${found.collection.name}”`,
             body: listing.communityName ?? listing.streetAddress,
             url: `/account/collections/${params.id}`,
           })),

@@ -40,7 +40,7 @@ export default async function AdminListingEditPage({ params }: PageProps) {
     <>
       <Link href="/admin/listings" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" aria-hidden /> All listings</Link>
       <AccountPageHeader
-        eyebrow={`${STATUS_LABELS[listing.status]} · ${listing.source === "FSBO" ? "Owner listing" : listing.source === "SEED" ? "Demo listing" : listing.source === "FEED" ? "MLS feed" : "Staff listing"}`}
+        eyebrow={`${STATUS_LABELS[listing.status]} · ${listing.source === "FSBO" ? "Owner listing" : listing.source === "SEED" ? "Sample listing" : listing.source === "FEED" ? "MLS feed" : "Staff listing"}`}
         title={address}
         description={`${formatPrice(listing.price)}${listing.transactionType !== "SALE" ? "/mo" : ""} · ${listing._count.leads} leads · ${listing._count.favorites} saves${listing.mlsNumber ? ` · MLS # ${listing.mlsNumber}` : ""}${listing.owner ? ` · Owner: ${listing.owner.name ?? listing.owner.email}` : ""}`}
         actions={
@@ -56,7 +56,7 @@ export default async function AdminListingEditPage({ params }: PageProps) {
         </p>
       )}
       {listing.status === "DRAFT" && (
-        <p className="mb-6 rounded-2xl border bg-muted/40 p-4 text-sm">This is a <strong>draft</strong> — shoppers can&apos;t see it. Add photos below, then set the status to Active (or Coming soon) and save to publish.</p>
+        <p className="mb-6 rounded-2xl border bg-muted/40 p-4 text-sm">This is a <strong>draft</strong>, so shoppers can&apos;t see it. Add photos below, then set the status to Active (or Coming soon) and save to publish.</p>
       )}
 
       <section aria-labelledby="details-title" className="rounded-3xl border bg-card p-5">

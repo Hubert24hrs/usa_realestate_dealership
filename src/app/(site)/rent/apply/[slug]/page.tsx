@@ -72,7 +72,7 @@ export default async function ApplyPage({ params, searchParams }: PageProps) {
   const profileRow = await db.user.findUnique({ where: { id: user.id }, select: { phone: true } });
   const profile = { firstName: fullName.split(/\s+/)[0] ?? "", lastName: fullName.split(/\s+/).slice(1).join(" "), email: user.email ?? "", phone: profileRow?.phone ?? "" };
   const petsNote = !listing.petsAllowed
-    ? "This home doesn't allow pets — assistance animals are always welcome."
+    ? "This home doesn't allow pets. Assistance animals are always welcome."
     : [listing.petPolicy, listing.petDeposit ? `Pet deposit ${formatMoney(listing.petDeposit)}` : null, listing.petRent ? `pet rent ${formatMoney(listing.petRent)}/mo` : null].filter(Boolean).join(" · ");
   const photo = listing.media[0];
 

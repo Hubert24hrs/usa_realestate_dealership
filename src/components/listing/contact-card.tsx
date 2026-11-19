@@ -186,7 +186,7 @@ export function ContactCard({
                   </Select>
                 </div>
                 <div className="space-y-1.5">
-                  <Label htmlFor="cc-pre">Pre-approved?</Label>
+                  <Label htmlFor="cc-pre">Preapproved?</Label>
                   <Select value={watch("preApproved")} onValueChange={(v) => setValue("preApproved", v)}>
                     <SelectTrigger id="cc-pre" className="w-full"><SelectValue /></SelectTrigger>
                     <SelectContent><SelectItem value="yes">Yes</SelectItem><SelectItem value="in-progress">In progress</SelectItem><SelectItem value="no">Not yet</SelectItem></SelectContent>
@@ -199,7 +199,7 @@ export function ContactCard({
                     <SelectContent>{["ASAP", "30 days", "60 days", "90+ days"].map((v) => <SelectItem key={v} value={v}>{v}</SelectItem>)}</SelectContent>
                   </Select>
                 </div>
-                <p className="col-span-2 text-xs text-muted-foreground">This shares your interest — it isn&apos;t a binding offer. {contactName === "the owner" ? "The owner" : "Your agent"} will follow up on next steps.</p>
+                <p className="col-span-2 text-xs text-muted-foreground">This shares your interest. It isn&apos;t a binding offer. {contactName === "the owner" ? "The owner" : "Your agent"} will follow up on next steps.</p>
               </div>
             )}
 

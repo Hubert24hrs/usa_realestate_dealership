@@ -46,7 +46,6 @@ export function cardSelect(now = new Date()) {
     moveInSpecial: true,
     has3dTour: true,
     hasVideo: true,
-    isDemo: true,
     hideAddress: true,
     brokerageName: true,
     listingAgentName: true,
@@ -113,7 +112,6 @@ export function toCardData(row: CardRow): ListingCardData {
     moveInSpecial: row.moveInSpecial,
     has3dTour: row.has3dTour,
     hasVideo: row.hasVideo,
-    isDemo: row.isDemo,
     brokerageName: row.brokerageName,
     listingAgentName: row.listingAgentName,
     openHouse: row.openHouses[0]

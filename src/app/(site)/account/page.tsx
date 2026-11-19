@@ -54,7 +54,7 @@ export default async function AccountOverviewPage({ searchParams }: Props) {
           <AlertDescription>It&apos;s reserved for agents, property managers or administrators.</AlertDescription>
         </Alert>
       )}
-      <AccountPageHeader eyebrow="Your account" title={`Welcome back, ${firstName}`} description="Everything you've saved, scheduled and shared — in one place." />
+      <AccountPageHeader eyebrow="Your account" title={`Welcome back, ${firstName}`} description="Your saved homes, scheduled tours and shared collections." />
 
       <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         {tiles.map((t) => (
@@ -125,7 +125,7 @@ export default async function AccountOverviewPage({ searchParams }: Props) {
               ))}
             </ul>
           ) : (
-            <p className="rounded-3xl border border-dashed p-6 text-sm text-muted-foreground">No tours scheduled. Request one from any listing — in person or by video.</p>
+            <p className="rounded-3xl border border-dashed p-6 text-sm text-muted-foreground">No tours scheduled. Request one from any listing, in person or by video.</p>
           )}
         </section>
 

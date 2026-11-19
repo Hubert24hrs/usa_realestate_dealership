@@ -51,7 +51,7 @@ export async function fulfillAgentPlan(purchaseId: string, opts: { method: strin
     }),
   ]);
   if (purchase.userId) {
-    await db.notification.create({ data: { userId: purchase.userId, type: "SYSTEM", title: `You're on ${PLANS[plan].name}`, body: opts.method === "demo" ? "Simulated upgrade (demo) — no charge." : "Thanks for upgrading — your new benefits are live.", url: "/agent/billing" } });
+    await db.notification.create({ data: { userId: purchase.userId, type: "SYSTEM", title: `You're on ${PLANS[plan].name}`, body: opts.method === "demo" ? "Simulated upgrade. No charge." : "Thanks for upgrading. Your new benefits are live.", url: "/agent/billing" } });
   }
 }
 

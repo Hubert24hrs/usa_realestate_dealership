@@ -6,8 +6,8 @@ import { GLOSSARY } from "@/lib/content/glossary";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Real estate glossary: plain-English definitions",
-  description: "From APR and appraisal gaps to zoning and triple-net leases — clear definitions of the real estate and mortgage terms you'll hear while buying, selling or renting.",
+  title: "Real estate glossary: plain English definitions",
+  description: "Plain definitions of the real estate and mortgage terms you'll hear while buying, selling or renting, including APR, appraisal gaps, zoning and triple net leases.",
   alternates: { canonical: "/learn/glossary" },
 };
 
@@ -27,7 +27,7 @@ export default function GlossaryPage() {
         crumbs={[{ name: "Home", href: "/" }, { name: "Learn", href: "/learn" }, { name: "Glossary", href: "/learn/glossary" }]}
         eyebrow="Learn"
         title="Real estate glossary"
-        description={`${terms.length} terms you'll hear from agents, lenders and landlords — explained in plain English.`}
+        description={`${terms.length} terms you'll hear from agents, lenders and landlords, explained in plain English.`}
       />
       <div className="container-page py-10">
         <GlossaryBrowser terms={terms} />

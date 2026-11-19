@@ -55,13 +55,13 @@ export function ConsentBanner() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <Cookie className="hidden size-8 shrink-0 text-copper-600 sm:block" aria-hidden />
             <p className="text-sm text-muted-foreground">
-              We use essential cookies to run CITI VIEW, and — only with your permission — analytics and marketing cookies.{" "}
+              We use essential cookies to run CITI VIEW. With your permission, we also use analytics and marketing cookies.{" "}
               {gpc && <span className="font-medium text-foreground">Your browser&apos;s Global Privacy Control signal is on, so we won&apos;t sell or share your data. </span>}
               See our <Link href="/legal/privacy" prefetch={false} className="font-medium text-primary underline underline-offset-4">Privacy Policy</Link>.
             </p>
             <div className="flex shrink-0 flex-wrap gap-2">
               <Button variant="ghost" size="lg" onClick={() => setOpen(true)}>Customize</Button>
-              <Button variant="outline" size="lg" onClick={() => save({ analytics: false, marketing: false, doNotSell: true })}>Reject non-essential</Button>
+              <Button variant="outline" size="lg" onClick={() => save({ analytics: false, marketing: false, doNotSell: true })}>Reject nonessential</Button>
               <Button size="lg" onClick={() => save({ analytics: true, marketing: !gpc, doNotSell: gpc })}>Accept all</Button>
             </div>
           </div>

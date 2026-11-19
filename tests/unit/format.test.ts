@@ -13,8 +13,8 @@ describe("number formatting matches Intl en-US", () => {
   it.each(SAMPLES)("formatNumber(%d)", (n) => expect(formatNumber(n)).toBe(int.format(n)));
 
   it("keeps the placeholder for missing values and compact/acre helpers working", () => {
-    expect(formatPrice(null)).toBe("—");
-    expect(formatMoney(Number.NaN)).toBe("—");
+    expect(formatPrice(null)).toBe("N/A");
+    expect(formatMoney(Number.NaN)).toBe("N/A");
     expect(formatCompactPrice(1_250_000)).toBe("$1.25M");
     expect(formatCompactPrice(850_000)).toBe("$850K");
     expect(formatCompactPrice(2_450)).toBe("$2,450");

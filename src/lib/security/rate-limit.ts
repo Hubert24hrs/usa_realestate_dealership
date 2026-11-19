@@ -74,5 +74,5 @@ export function rateLimitHeaders(r: LimitResult): Record<string, string> {
 }
 
 export function tooManyRequests(r: LimitResult): Response {
-  return Response.json({ error: "Too many requests — please slow down." }, { status: 429, headers: rateLimitHeaders(r) });
+  return Response.json({ error: "Too many requests. Please slow down." }, { status: 429, headers: rateLimitHeaders(r) });
 }

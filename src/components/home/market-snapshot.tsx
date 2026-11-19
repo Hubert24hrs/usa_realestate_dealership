@@ -31,7 +31,7 @@ export function MarketSnapshot({ markets }: { markets: MarketSeries[] }) {
         <div>
           <p className="eyebrow">Market snapshot</p>
           <h2 id="market-title" className="mt-1 font-display text-[1.75rem] font-semibold tracking-tight">How the market is moving</h2>
-          <p className="mt-1 text-sm text-muted-foreground">Last 12 months · year-over-year change · demo market data</p>
+          <p className="mt-1 text-sm text-muted-foreground">Last 12 months · change from a year earlier</p>
         </div>
         <button type="button" onClick={() => setAsTable((v) => !v)} aria-pressed={asTable} className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium hover:bg-accent">
           <Table2 className="size-4" aria-hidden /> {asTable ? "Show charts" : "View as table"}
@@ -57,7 +57,7 @@ export function MarketSnapshot({ markets }: { markets: MarketSeries[] }) {
         {asTable ? (
           <div className="overflow-x-auto rounded-2xl border">
             <table className="w-full min-w-[640px] text-sm">
-              <caption className="sr-only">{market.name} monthly market data (demo)</caption>
+              <caption className="sr-only">{market.name} monthly market data</caption>
               <thead className="bg-muted/60 text-left text-xs text-muted-foreground">
                 <tr>
                   {["Month", "Median list", "Median sold", "Days on market", "Homes for sale", "Median rent"].map((h) => <th key={h} scope="col" className="px-3 py-2 font-medium">{h}</th>)}

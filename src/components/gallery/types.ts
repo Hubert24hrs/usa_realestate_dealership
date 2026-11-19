@@ -32,9 +32,9 @@ export function creditLine(item: GalleryItem): { text: string; href?: string; vi
     case "UPLOAD":
       return { text: "Photo provided by the lister" };
     case "AI":
-      return { text: "AI-generated image" };
+      return { text: "AI generated image" };
     default:
-      return { text: "Original illustration · CITI VIEW (demo)" };
+      return { text: "Original illustration · CITI VIEW" };
   }
 }
 

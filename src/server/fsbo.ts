@@ -29,7 +29,7 @@ export async function createFsboListing(user: SessionUser, p: FsboPayload) {
   const ids = [...new Set(p.photos.map((ph) => ph.uploadId))];
   if (ids.length !== p.photos.length) throw new FsboError("Each photo can only be used once.");
   const uploads = await db.upload.findMany({ where: { id: { in: ids }, userId: user.id }, select: { id: true, url: true, width: true, height: true } });
-  if (uploads.length !== ids.length) throw new FsboError("Some photos are missing — please upload them again.", 409);
+  if (uploads.length !== ids.length) throw new FsboError("Some photos are missing. Please upload them again.", 409);
   const used = await db.listingMedia.count({ where: { provider: "UPLOAD", providerId: { in: ids.map((id) => `upload:${id}`) } } });
   if (used) throw new FsboError("Some photos are already used on another listing.", 409);
 
@@ -105,7 +105,7 @@ export async function createFsboListing(user: SessionUser, p: FsboPayload) {
     ownerId: user.id,
     brokerageName: ownerLabel,
     listingAgentName: user.name ?? "Owner",
-    attribution: `${ownerLabel} — listed directly by the owner on CITI VIEW.`,
+    attribution: `${ownerLabel}, listed directly by the owner on CITI VIEW.`,
   };
 
   const listing = await db.$transaction(async (tx) => {

@@ -509,7 +509,7 @@ export function SearchMapCore(props: CoreProps) {
 
       {(drawing || pickingCommute) && (
         <p role="status" className="absolute top-14 left-1/2 -translate-x-1/2 rounded-full bg-ink/90 px-3 py-1.5 text-xs font-medium text-background shadow">
-          {pickingCommute ? "Click the map to set your commute destination" : draft.length < 3 ? "Click to add points around your area" : "Click the first point or double-click to finish"}
+          {pickingCommute ? "Click the map to set your commute destination" : draft.length < 3 ? "Click to add points around your area" : "Click the first point or double click to finish"}
         </p>
       )}
 
@@ -528,8 +528,8 @@ function MapLegend({ layer, ppsfQ, commuteMode, onCommuteMode, onPickDestination
         <ul className="mt-2 space-y-1">
           {[
             ["#22c55e", `Under $${ppsfQ[0]}/sqft`],
-            ["#84cc16", `$${ppsfQ[0]}–${ppsfQ[1]}`],
-            ["#f59e0b", `$${ppsfQ[1]}–${ppsfQ[2]}`],
+            ["#84cc16", `$${ppsfQ[0]} to $${ppsfQ[1]}`],
+            ["#f59e0b", `$${ppsfQ[1]} to $${ppsfQ[2]}`],
             ["#dc2626", `Over $${ppsfQ[2]}/sqft`],
           ].map(([c, l]) => (
             <li key={l} className="flex items-center gap-2"><span className="size-3 rounded-full" style={{ background: c }} />{l}</li>
@@ -544,13 +544,13 @@ function MapLegend({ layer, ppsfQ, commuteMode, onCommuteMode, onPickDestination
           </div>
           <div className="flex gap-2">{["#16a34a 15 min", "#ca8a04 30 min", "#ea580c 45 min"].map((s) => { const [c, ...t] = s.split(" "); return <span key={s} className="flex items-center gap-1"><span className="size-2.5 rounded-full" style={{ background: c }} />{t.join(" ")}</span>; })}</div>
           <button type="button" onClick={onPickDestination} className="inline-flex items-center gap-1 font-medium text-primary"><Route className="size-3.5" aria-hidden /> {hasDestination ? "Change destination" : "Set destination"}</button>
-          <p className="text-muted-foreground">Approximate rings at typical speeds — demo estimate.</p>
+          <p className="text-muted-foreground">Approximate rings at typical speeds.</p>
         </div>
       ) : (
         <>
           <div className="mt-2 h-2 rounded-full" style={{ background: `linear-gradient(90deg, ${HEAT_RAMPS[layer as "price"].map(([, c]) => c).join(",")})` }} />
           <div className="mt-1 flex justify-between text-muted-foreground"><span>Lower</span><span>Higher</span></div>
-          {layer !== "price" && <p className="mt-1.5 text-muted-foreground">Illustrative demo data layer — not for decisions.</p>}
+          {layer !== "price" && <p className="mt-1.5 text-muted-foreground">Illustrative data layer. Not for decisions.</p>}
         </>
       )}
     </div>

@@ -92,7 +92,7 @@ export function PlaceHub({ place, data }: { place: ResolvedPlace; data: PlaceHub
         crumbs={crumbs}
         eyebrow="Real estate market"
         title={`${place.label} real estate`}
-        description={summary.length ? `${summary.join(" and ")} on ${site.name}${site.demoMode ? " (demo data)" : ""}.` : `Explore listings and local market data for ${place.label}.`}
+        description={summary.length ? `${summary.join(" and ")} on ${site.name}.` : `Explore listings and local market data for ${place.label}.`}
       >
         <div className="mt-5 flex flex-wrap gap-2">
           <Button asChild><Link href={`/${forSale.vertical}/${place.slug}`}>Homes for sale{forSale.count ? ` (${formatNumber(forSale.count)})` : ""}</Link></Button>
@@ -102,12 +102,12 @@ export function PlaceHub({ place, data }: { place: ResolvedPlace; data: PlaceHub
       </PageHero>
 
       <section aria-labelledby="market-title" className="container-page pt-8">
-        <h2 id="market-title" className="sr-only">Market at a glance</h2>
+        <h2 id="market-title" className="sr-only">Market summary</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {data.stats.medianPrice != null && <ResultStat label="Median list price" value={formatPrice(data.stats.medianPrice)} sub={data.stats.medianPpsf ? `${formatPrice(data.stats.medianPpsf)} per sq ft` : undefined} />}
           {data.stats.medianRent != null && <ResultStat label="Median rent" value={`${formatPrice(data.stats.medianRent)}/mo`} sub={data.city?.rentYoY != null ? `${data.city.rentYoY >= 0 ? "+" : ""}${(data.city.rentYoY * 100).toFixed(1)}% vs. last year` : undefined} />}
           {data.stats.medianDom != null && <ResultStat label="Median days listed" value={data.stats.medianDom} sub={`${data.stats.newThisWeek} new this week`} />}
-          <ResultStat label="Price cuts · 30 days" value={data.stats.priceCuts} sub={<Link href={`/price-reduced-homes/${place.slug}`} className="text-primary hover:underline">See price-reduced homes</Link>} />
+          <ResultStat label="Price cuts · 30 days" value={data.stats.priceCuts} sub={<Link href={`/price-reduced-homes/${place.slug}`} className="text-primary hover:underline">See price reduced homes</Link>} />
         </div>
       </section>
 
@@ -196,7 +196,7 @@ export function PlaceHub({ place, data }: { place: ResolvedPlace; data: PlaceHub
                   </details>
                 ))}
               </div>
-              <p className="mt-2 text-xs text-muted-foreground">Figures update as listings change{site.demoMode ? " and are based on demo data" : ""}. They describe listings on {site.name}, not every home in the area.</p>
+              <p className="mt-2 text-xs text-muted-foreground">Figures update as listings change. They describe listings on {site.name}, not every home in the area.</p>
             </section>
           )}
         </div>
@@ -204,7 +204,7 @@ export function PlaceHub({ place, data }: { place: ResolvedPlace; data: PlaceHub
         <aside className="space-y-8">
           {data.schools.length > 0 && (
             <section aria-labelledby="schools-title" className="rounded-2xl border bg-card p-5">
-              <h2 id="schools-title" className="flex items-center gap-2 font-semibold"><GraduationCap className="size-5 text-muted-foreground" aria-hidden /> Top-rated schools</h2>
+              <h2 id="schools-title" className="flex items-center gap-2 font-semibold"><GraduationCap className="size-5 text-muted-foreground" aria-hidden /> Top rated schools</h2>
               <ul className="mt-3 space-y-3 text-sm">
                 {data.schools.map((s) => (
                   <li key={s.name} className="flex items-start justify-between gap-3">
@@ -216,7 +216,7 @@ export function PlaceHub({ place, data }: { place: ResolvedPlace; data: PlaceHub
                   </li>
                 ))}
               </ul>
-              <p className="mt-3 text-xs text-muted-foreground">Ratings are {site.demoMode ? "demo data" : "a guide only"}. Confirm school assignments with the district.</p>
+              <p className="mt-3 text-xs text-muted-foreground">Ratings are a guide only. Confirm school assignments with the district.</p>
             </section>
           )}
           {data.stateNotice && (

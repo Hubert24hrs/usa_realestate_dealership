@@ -34,11 +34,11 @@ export default async function SettingsPage() {
           <ProfileForm defaults={{ name: user.name ?? "", phone: user.phone ?? "" }} email={user.email} />
         </Card>
 
-        <Card id="sign-in" title="Sign-in methods">
+        <Card id="sign-in" title="Sign in methods">
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><Mail className="size-4 text-muted-foreground" aria-hidden /> Email magic link — {user.email}</li>
+            <li className="flex items-center gap-2"><Mail className="size-4 text-muted-foreground" aria-hidden /> Email magic link: {user.email}</li>
             {providers.has("google") && <li className="flex items-center gap-2"><KeyRound className="size-4 text-muted-foreground" aria-hidden /> Google account linked</li>}
-            {user.isDemo && <li className="text-muted-foreground">This is a shared demo account (one-click sign-in).</li>}
+            {user.isDemo && <li className="text-muted-foreground">This is a shared guest account with one click sign in.</li>}
           </ul>
         </Card>
 
@@ -61,7 +61,7 @@ export default async function SettingsPage() {
         </Card>
 
         <Card id="privacy" title="Privacy & your data" description="Download a copy of your data or delete your account (CCPA / GDPR). We never sell your personal information.">
-          <DataControls isDemo={user.isDemo} />
+          <DataControls isGuest={user.isDemo} />
           <div className="mt-4 border-t pt-4 text-sm">
             <CookiePreferencesButton className="font-medium text-primary underline underline-offset-4">Manage cookie preferences</CookiePreferencesButton>
           </div>

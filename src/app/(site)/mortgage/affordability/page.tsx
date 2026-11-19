@@ -5,7 +5,7 @@ import { defaultRate } from "@/server/rates";
 
 export const metadata: Metadata = {
   title: "How much house can I afford? Home affordability calculator",
-  description: "Find the home price your income supports using lender-style debt-to-income limits, with the full monthly payment broken down.",
+  description: "Find the home price your income supports using lender style debt to income limits, with the full monthly payment broken down.",
   alternates: { canonical: "/mortgage/affordability" },
 };
 
@@ -22,7 +22,7 @@ export default async function AffordabilityPage() {
       <div className="container-page py-10">
         <AffordabilityCalculator defaultRate={rate} />
         <ToolDisclaimer>
-          Estimates only. Lenders also weigh credit, reserves, employment history and the property; automated underwriting can approve higher ratios than shown. Being approved for an amount doesn&apos;t mean it fits your budget — leave room for savings, maintenance and life.
+          Estimates only. Lenders also weigh credit, reserves, employment history and the property; automated underwriting can approve higher ratios than shown. Being approved for an amount doesn&apos;t mean it fits your budget. Leave room for savings, maintenance and everything else.
         </ToolDisclaimer>
       </div>
     </>

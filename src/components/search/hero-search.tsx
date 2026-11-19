@@ -16,9 +16,9 @@ const PLACEHOLDERS: Record<SearchMode, string> = {
   buy: "City, neighborhood, ZIP, address, school or MLS #",
   rent: "Where do you want to rent? City, neighborhood or ZIP",
   new: "Find new construction by city or ZIP",
-  sold: "See what homes sold for — city, ZIP or address",
-  commercial: "Office, retail or industrial — city or ZIP",
-  land: "Land, ranches and farms — county, city or state",
+  sold: "Sold homes by city, ZIP or address",
+  commercial: "Office, retail or industrial space by city or ZIP",
+  land: "Land, ranches and farms by county, city or state",
 };
 
 export function HeroSearch() {

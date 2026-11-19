@@ -6,7 +6,7 @@ const money = z.coerce.number().min(0, "Can't be negative").max(10_000_000, "Tha
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Pick a date");
 
 export const LEASE_TERMS = [6, 9, 12, 15, 18, 24] as const;
-export const EMPLOYMENT_STATUS = ["Employed", "Self-employed", "Student", "Retired", "Other"] as const;
+export const EMPLOYMENT_STATUS = ["Employed", "Self employed", "Student", "Retired", "Other"] as const;
 
 export const HomeStepSchema = z.object({
   unitId: z.string().regex(/^[a-z0-9]{10,40}$/i).nullable().optional(),
@@ -36,7 +36,7 @@ export const EmploymentSchema = z.object({
   otherIncome: money.optional(),
   otherIncomeSource: z.string().trim().max(120).optional().or(z.literal("")),
 }).superRefine((v, ctx) => {
-  if ((v.status === "Employed" || v.status === "Self-employed") && !v.employer?.trim()) {
+  if ((v.status === "Employed" || v.status === "Self employed") && !v.employer?.trim()) {
     ctx.addIssue({ code: "custom", path: ["employer"], message: v.status === "Employed" ? "Enter your employer" : "Enter your business name" });
   }
 });

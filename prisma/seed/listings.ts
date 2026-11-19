@@ -147,7 +147,7 @@ export interface MaterialisedListing {
 const DAY = 86_400_000;
 const BUILDERS = ["Cedarline Homes", "Northpoint Builders", "Brightwater Homes", "Stonefield Residential", "Lumen Homebuilders"];
 const COMMUNITY_PREFIX = ["The", "Residences at", "The Lofts at", "Parkside at"];
-const INTERIOR = ["Hardwood floors", "Walk-in closet", "Kitchen island", "Recessed lighting", "Open floor plan", "Smart thermostat", "Built-in shelving", "Pantry", "Laundry room", "Vaulted ceilings", "Home office", "Skylights"];
+const INTERIOR = ["Hardwood floors", "Walk in closet", "Kitchen island", "Recessed lighting", "Open floor plan", "Smart thermostat", "Built in shelving", "Pantry", "Laundry room", "Vaulted ceilings", "Home office", "Skylights"];
 const EXTERIOR = ["Covered patio", "Fenced yard", "Deck", "Sprinkler system", "Mature trees", "Outdoor kitchen", "Garden beds", "Front porch", "EV charger", "Solar panels"];
 const APPLIANCES = ["Refrigerator", "Dishwasher", "Gas range", "Microwave", "Washer", "Dryer", "Wine fridge", "Double oven"];
 const COMMUNITY = ["Pool", "Fitness center", "Package lockers", "Dog park", "Coworking lounge", "EV charging", "Rooftop deck", "Controlled access", "Bike storage", "Clubhouse"];
@@ -237,8 +237,8 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
     crimeIndex: r.int(12, 68),
     noiseLevel: clamp(Math.round(hood.walk * 0.6 + r.int(-10, 15)), 5, 95),
     ...risks,
-    mlsNumber: `DEMO-${(240000 + index * 137).toString()}`,
-    attribution: "Demo MLS · data illustrative",
+    mlsNumber: `CV${(240000 + index * 137).toString()}`,
+    attribution: "Sample listing · data illustrative",
   };
 
   let floorPlanParams: MaterialisedListing["floorPlanParams"] = {};
@@ -319,16 +319,16 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
         petRent: pets ? r.pick([25, 35, 40, 50]) : null,
         petPolicy: pets
           ? `${dogs ? "Cats and dogs" : "Cats"} welcome, up to 2 pets. Assistance animals are not pets and are never charged pet fees.`
-          : "No pets. Assistance animals are not pets and are welcome with a reasonable-accommodation request.",
+          : "No pets. Assistance animals are not pets and are welcome with a reasonable accommodation request.",
         fees: [
-          { label: "Application fee", amount: appFee, frequency: "one-time" },
-          { label: "Admin fee", amount: r.pick([0, 100, 150, 200]), frequency: "one-time" },
+          { label: "Application fee", amount: appFee, frequency: "one time" },
+          { label: "Admin fee", amount: r.pick([0, 100, 150, 200]), frequency: "one time" },
           { label: "Utilities (est.)", amount: r.int(120, 260), frequency: "monthly" },
         ],
         laundry: t === "CONDO" ? r.pick(["In unit", "On site"]) : "In unit",
         furnished: r.chance(0.12),
         utilitiesIncluded: r.sample(["Water", "Trash", "Sewer", "Internet"], r.int(0, 2)),
-        rentalAmenities: r.sample(["In-unit laundry", "Dishwasher", "Central air", "Private yard", "Garage", "Balcony", "Storage"], 4),
+        rentalAmenities: r.sample(["In unit laundry", "Dishwasher", "Central air", "Private yard", "Garage", "Balcony", "Storage"], 4),
         rentEstimate: rent,
       });
     } else {
@@ -338,11 +338,11 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
     const neighborhoodBlurb = `${hood.name} in ${city.name}`;
     headline =
       spec.category === "RENTAL"
-        ? `${style[0]!.toUpperCase()}${style.slice(1)} ${beds}-bed ${t === "CONDO" ? "condo" : "home"} for rent in ${hood.name}`
+        ? `${style[0]!.toUpperCase()}${style.slice(1)} ${beds} bed ${t === "CONDO" ? "condo" : "home"} for rent in ${hood.name}`
         : spec.newConstruction
           ? `New ${houseStyle} build by ${data.builderName as string} in ${hood.name}`
           : luxury
-            ? `${houseStyle[0]!.toUpperCase()}${houseStyle.slice(1)} estate with ${hasPool ? "pool and " : ""}resort-style living`
+            ? `${houseStyle[0]!.toUpperCase()}${houseStyle.slice(1)} estate with ${hasPool ? "pool and " : ""}resort style living`
             : `${style[0]!.toUpperCase()}${style.slice(1)} ${t === "CONDO" ? "condo" : t === "TOWNHOUSE" ? "townhome" : houseStyle} near ${amenityHint[0] ?? hood.name}`;
     description = [
       `${style[0]!.toUpperCase()}${style.slice(1)} ${t === "CONDO" ? "condominium" : t === "TOWNHOUSE" ? "townhome" : `${houseStyle} home`} in ${neighborhoodBlurb} with ${beds} bedrooms, ${data.baths as number} baths and ${sqft.toLocaleString("en-US")} square feet.`,
@@ -352,9 +352,9 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
         : `Outside you'll find ${r.pick(OUTDOOR_FEATURES)}${hasPool ? " plus a private pool" : ""}.`,
       `Nearby: ${hood.highlights.join(", ").toLowerCase()}.`,
       spec.newConstruction ? `Builder warranty included; finishes and completion timing per builder.` : "",
-      spec.foreclosure ? `Bank-owned property sold as-is. Buyer to verify all information; inspections welcome.` : "",
-      spec.fsbo ? `Offered For Sale By Owner — contact the owner directly through CITI VIEW.` : "",
-      `This is a demo listing created for the CITI VIEW platform; all details are illustrative.`,
+      spec.foreclosure ? `Bank owned property sold as is. Buyer to verify all information; inspections welcome.` : "",
+      spec.fsbo ? `Offered For Sale By Owner. Contact the owner directly through CITI VIEW.` : "",
+      `This is a sample listing created for the CITI VIEW platform; all details are illustrative.`,
     ]
       .filter(Boolean)
       .join(" ");
@@ -388,7 +388,7 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
         availableDate: new Date(now.getTime() + r.int(-5, 60) * DAY),
         isAvailable: r.chance(0.85),
         floor: r.int(1, 5),
-        features: r.sample(["Balcony", "Corner unit", "Walk-in closet", "Island kitchen", "Courtyard view", "Upgraded finishes"], 2),
+        features: r.sample(["Balcony", "Corner unit", "Walk in closet", "Island kitchen", "Courtyard view", "Upgraded finishes"], 2),
       });
     }
     const rents = units.map((u) => u.rent as number);
@@ -410,8 +410,8 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
       petRent: r.pick([25, 35, 45]),
       petPolicy: "Up to 2 pets per home; breed and weight limits per community insurance. Assistance animals are not pets and are never charged pet fees or rent.",
       fees: [
-        { label: "Application fee", amount: 50, frequency: "one-time" },
-        { label: "Admin fee", amount: 150, frequency: "one-time" },
+        { label: "Application fee", amount: 50, frequency: "one time" },
+        { label: "Admin fee", amount: 150, frequency: "one time" },
         { label: "Garage parking", amount: r.pick([50, 75, 100]), frequency: "monthly" },
         { label: "Trash & pest", amount: r.pick([20, 25, 35]), frequency: "monthly" },
       ],
@@ -433,7 +433,7 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
       utilitiesIncluded: ["Trash"],
     });
     headline = `${name}: ${hood.name} apartments with ${(data.rentalAmenities as string[]).slice(0, 2).join(" & ").toLowerCase()}`;
-    description = `${name} offers studio to three-bedroom apartments in ${hood.name}, ${city.name}. Homes feature ${r.pick(KITCHEN_FEATURES)}s, in-unit laundry and ${r.pick(["wide-plank floors", "oversized windows", "private balconies"])}. Residents enjoy ${(data.rentalAmenities as string[]).slice(0, 4).join(", ").toLowerCase()}. Professionally managed with online applications, e-sign leases and online rent payment. Demo community created for CITI VIEW; pricing and availability are illustrative.`;
+    description = `${name} offers studio to three bedroom apartments in ${hood.name}, ${city.name}. Homes feature ${r.pick(KITCHEN_FEATURES)}s, in unit laundry and ${r.pick(["wide plank floors", "oversized windows", "private balconies"])}. Residents enjoy ${(data.rentalAmenities as string[]).slice(0, 4).join(", ").toLowerCase()}. Professionally managed with online applications, electronic lease signing and online rent payment. Sample community created for CITI VIEW; pricing and availability are illustrative.`;
     floorPlanParams = { b: 2, ba: 2, sf: 1080, k: "condo" };
   }
 
@@ -452,7 +452,7 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
       yearBuilt: r.int(1962, 2022),
       stories: v === "industrial" ? 1 : v === "retail" ? r.int(1, 2) : r.int(3, 14),
       buildingClass,
-      zoning: v === "industrial" ? r.pick(["I-1 Light Industrial", "M-1"]) : v === "retail" ? r.pick(["C-2 General Commercial", "CS"]) : r.pick(["MU-2 Mixed Use", "CBD", "O-2 Office"]),
+      zoning: v === "industrial" ? r.pick(["I1 Light Industrial", "M1"]) : v === "retail" ? r.pick(["C2 General Commercial", "CS"]) : r.pick(["MU2 Mixed Use", "CBD", "O2 Office"]),
       occupancyPct: occupancy,
       parkingRatio: Number(r.float(1, 4.5).toFixed(1)),
       ceilingHeight: v === "industrial" ? r.int(24, 36) : r.int(9, 14),
@@ -479,9 +479,9 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
           rate,
           rateType: "/SF/YR",
           leaseType,
-          term: r.pick(["3–5 years", "3–10 years", "5–10 years", "Negotiable"]),
+          term: r.pick(["3 to 5 years", "3 to 10 years", "5 to 10 years", "Negotiable"]),
           availableDate: new Date(now.getTime() + r.int(0, 120) * DAY),
-          condition: r.pick(["Full build-out", "Second-generation", "Shell", "Move-in ready"]),
+          condition: r.pick(["Full buildout", "Second generation", "Shell", "Move in ready"]),
           isAvailable: true,
         });
       }
@@ -499,12 +499,12 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
         investmentHighlights: r.sample(
           [
             `${occupancy}% leased with staggered expirations`,
-            "Below-market in-place rents with mark-to-market upside",
+            "Rents below market, with upside as leases renew",
             "Corner location with strong traffic counts",
             "Recent roof and HVAC capital improvements",
             "Walkable to transit and dense residential",
-            "Value-add opportunity via unit renovations",
-            "Long-term credit tenant anchoring the asset",
+            "Value add opportunity through unit renovations",
+            "Long term credit tenant anchoring the property",
           ],
           4,
         ),
@@ -512,20 +512,20 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
       documents.push(
         { name: "Offering Memorandum", kind: "OM", requiresNda: true, pages: r.int(28, 64), sizeKb: r.int(4200, 12800) },
         { name: "Rent Roll", kind: "RENT_ROLL", requiresNda: true, pages: r.int(2, 6), sizeKb: r.int(120, 480) },
-        { name: "T-12 Operating Statement", kind: "FINANCIALS", requiresNda: true, pages: r.int(3, 8), sizeKb: r.int(150, 520) },
+        { name: "T12 Operating Statement", kind: "FINANCIALS", requiresNda: true, pages: r.int(3, 8), sizeKb: r.int(150, 520) },
       );
     }
     documents.push(
       { name: "Floor Plans", kind: "FLOOR_PLAN", requiresNda: false, pages: r.int(2, 8), sizeKb: r.int(600, 2400) },
       { name: "Site Plan & Survey", kind: "SURVEY", requiresNda: false, pages: r.int(1, 3), sizeKb: r.int(300, 1400) },
     );
-    const label = v === "multifamily" ? `${r.int(12, 48)}-unit multifamily` : v === "mixed" ? "mixed-use building" : v === "industrial" ? "industrial facility" : v === "retail" ? "retail center" : `Class ${buildingClass} office building`;
-    headline = isLease ? `${label[0]!.toUpperCase()}${label.slice(1)} — space for lease in ${hood.name}` : `${label[0]!.toUpperCase()}${label.slice(1)} investment opportunity in ${hood.name}`;
+    const label = v === "multifamily" ? `${r.int(12, 48)} unit multifamily` : v === "mixed" ? "mixed use building" : v === "industrial" ? "industrial facility" : v === "retail" ? "retail center" : `Class ${buildingClass} office building`;
+    headline = isLease ? `${label[0]!.toUpperCase()}${label.slice(1)} space for lease in ${hood.name}` : `${label[0]!.toUpperCase()}${label.slice(1)} investment opportunity in ${hood.name}`;
     description = `${label[0]!.toUpperCase()}${label.slice(1)} totaling ${buildingSqft.toLocaleString("en-US")} SF in ${hood.name}, ${city.name}. ${
       isLease
         ? `Multiple suites available with flexible terms and ${data.leaseType as string} lease structures.`
-        : `Offered at a ${(data.capRate as number).toFixed(2)}% cap rate on in-place NOI. Execute the NDA to access the offering memorandum, rent roll and financials.`
-    } Zoned ${data.zoning as string}; ${data.parkingSpaces as number} parking spaces. Demo commercial listing created for CITI VIEW; figures are illustrative.`;
+        : `Offered at a ${(data.capRate as number).toFixed(2)}% cap rate on in place NOI. Execute the NDA to access the offering memorandum, rent roll and financials.`
+    } Zoned ${data.zoning as string}; ${data.parkingSpaces as number} parking spaces. Sample commercial listing created for CITI VIEW; figures are illustrative.`;
     floorPlanParams = { k: "commercial", sf: (data.availableSqft as number) ?? buildingSqft };
   }
 
@@ -545,10 +545,10 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
     const ppaBase: Record<string, number> = { "fredericksburg-tx": 13500, "bozeman-mt": 15500, "asheville-nc": 24000, "franklin-tn": 52000 };
     const ppa = Math.round(((ppaBase[spec.citySlug] ?? 12000) * r.float(0.75, 1.3) * (acres < 50 ? 1.35 : 1)) / 100) * 100;
     const price = v === "lot" ? roundTo(r.int(95000, 260000), 5000) : roundTo(acres * ppa, 5000);
-    const water = r.sample(["Seasonal creek", "Spring-fed pond", "River frontage", "Stock tank", "Well", "Year-round creek"], v === "lot" ? 0 : r.int(1, 3));
+    const water = r.sample(["Seasonal creek", "Spring fed pond", "River frontage", "Stock tank", "Well", "Year round creek"], v === "lot" ? 0 : r.int(1, 3));
     const activitiesByVariant: Record<string, string[]> = {
-      ranch: ["Hunting", "Horseback riding", "Fishing", "Off-roading"],
-      hunting: ["Hunting", "Camping", "Off-roading", "Bird watching"],
+      ranch: ["Hunting", "Horseback riding", "Fishing", "Off roading"],
+      hunting: ["Hunting", "Camping", "Off roading", "Bird watching"],
       recreational: ["Camping", "Hiking", "Fishing", "Stargazing", "Boating"],
       timber: ["Hunting", "Hiking", "Camping"],
       farm: ["Horseback riding", "Bird watching"],
@@ -574,30 +574,30 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
       waterFeatures: water,
       hasWaterRights: spec.citySlug === "bozeman-mt" ? r.chance(0.8) : r.chance(0.2),
       hasTimber: v === "timber" || r.chance(0.3),
-      timberDescription: v === "timber" ? r.pick(["Mature mixed hardwoods; last harvested ~20 years ago", "Lodgepole and Douglas fir stands", "Oak-hickory forest with merchantable timber"]) : null,
+      timberDescription: v === "timber" ? r.pick(["Mature mixed hardwoods; last harvested ~20 years ago", "Lodgepole and Douglas fir stands", "Oak and hickory forest with merchantable timber"]) : null,
       soilType: r.pick(["Clay loam", "Sandy loam", "Rocky limestone", "Silt loam", "Gravelly loam"]),
       topography: r.pick(["Rolling", "Gently sloping", "Level to rolling", "Steep wooded slopes", "Hilltop with valley views"]),
       roadFrontageFt: r.int(250, 3200),
       hasMineralRights: spec.citySlug === "fredericksburg-tx" ? r.chance(0.5) : false,
       irrigation: v === "farm" ? r.pick(["Center pivot", "Flood irrigation", "None"]) : null,
-      fencing: v === "lot" ? null : r.pick(["Perimeter fenced", "Cross-fenced pasture", "High-fenced perimeter", "Partially fenced"]),
+      fencing: v === "lot" ? null : r.pick(["Perimeter fenced", "Cross fenced pasture", "High fenced perimeter", "Partially fenced"]),
       improvements: v === "lot" ? [] : r.sample(["Barn", "Water well", "Cabin", "Equipment shed", "Hunting blinds", "Corrals", "Ranch house"], r.int(1, 4)),
       utilities: r.sample(["Electric at road", "Water well", "Septic required", "Fiber internet nearby", "Propane"], 2),
       countyData: {
         apn: `${city.county.slice(0, 2).toUpperCase()}-${r.int(10000, 99999)}-${r.int(100, 999)}`,
         taxDistrict: `${city.county} County`,
         floodZone: water.length && r.chance(0.4) ? "Zone A (partial)" : "Zone X",
-        zoning: v === "lot" ? "R-1 Residential" : "Agricultural",
+        zoning: v === "lot" ? "R1 Residential" : "Agricultural",
         agExemption: v !== "lot" && r.chance(0.7),
         annualTax: Math.round(price * city.taxRate * (v === "lot" ? 1 : 0.2)),
       },
       yearBuilt: null,
     });
     const label = v === "ranch" ? "working ranch" : v === "hunting" ? "hunting property" : v === "timber" ? "timberland tract" : v === "farm" ? "farm" : v === "lot" ? "homesite" : v === "equestrian" ? "equestrian property" : "recreational acreage";
-    headline = `${acres.toLocaleString("en-US")} acres — ${label} near ${city.name}`;
-    description = `${acres.toLocaleString("en-US")}-acre ${label} in ${city.county} County with ${(data.topography as string).toLowerCase()} terrain${water.length ? ` and ${water.join(", ").toLowerCase()}` : ""}. ${
+    headline = `${acres.toLocaleString("en-US")} acre ${label} near ${city.name}`;
+    description = `${acres.toLocaleString("en-US")} acre ${label} in ${city.county} County with ${(data.topography as string).toLowerCase()} terrain${water.length ? ` and ${water.join(", ").toLowerCase()}` : ""}. ${
       (data.improvements as string[]).length ? `Improvements include ${(data.improvements as string[]).join(", ").toLowerCase()}. ` : ""
-    }Ideal for ${(data.activities as string[]).join(", ").toLowerCase()}. ${data.roadFrontageFt as number} ft of road frontage. Demo land listing created for CITI VIEW; acreage, boundaries and county data are illustrative.`;
+    }Ideal for ${(data.activities as string[]).join(", ").toLowerCase()}. ${data.roadFrontageFt as number} ft of road frontage. Sample land listing created for CITI VIEW; acreage, boundaries and county data are illustrative.`;
     floorPlanParams = { a: acres };
   }
 
@@ -608,25 +608,25 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
     const reduction = roundTo(price * r.float(0.02, 0.07), price > 1_000_000 ? 25_000 : 5_000);
     const reducedAt = new Date(listDate.getTime() + Math.max(1, Math.floor(daysListed * r.float(0.3, 0.8))) * DAY);
     Object.assign(data, { originalPrice: price + reduction, priceReduction: reduction, priceReducedAt: reducedAt });
-    priceHistory.push({ date: listDate, event: "LISTED", price: price + reduction, source: "Demo MLS" });
-    priceHistory.push({ date: reducedAt, event: "PRICE_CHANGE", price, source: "Demo MLS" });
+    priceHistory.push({ date: listDate, event: "LISTED", price: price + reduction, source: "MLS" });
+    priceHistory.push({ date: reducedAt, event: "PRICE_CHANGE", price, source: "MLS" });
   } else {
     data.originalPrice = price;
-    priceHistory.push({ date: listDate, event: spec.transactionType === "SALE" ? "LISTED" : "LISTED", price, source: "Demo MLS" });
+    priceHistory.push({ date: listDate, event: spec.transactionType === "SALE" ? "LISTED" : "LISTED", price, source: "MLS" });
   }
   if (spec.status === "PENDING") {
-    priceHistory.push({ date: new Date(now.getTime() - r.int(2, 10) * DAY), event: "PENDING", price, source: "Demo MLS" });
+    priceHistory.push({ date: new Date(now.getTime() - r.int(2, 10) * DAY), event: "PENDING", price, source: "MLS" });
   }
   if (isSold && soldDate) {
     const soldPrice = roundTo(price * r.float(0.96, 1.05), 1000);
     data.soldPrice = soldPrice;
-    priceHistory.push({ date: new Date(soldDate.getTime() - r.int(10, 30) * DAY), event: "PENDING", price, source: "Demo MLS" });
-    priceHistory.push({ date: soldDate, event: "SOLD", price: soldPrice, source: "Demo public record" });
+    priceHistory.push({ date: new Date(soldDate.getTime() - r.int(10, 30) * DAY), event: "PENDING", price, source: "MLS" });
+    priceHistory.push({ date: soldDate, event: "SOLD", price: soldPrice, source: "Public record" });
   }
   if (spec.category === "RESIDENTIAL" && !spec.newConstruction) {
     const yearsAgo = r.int(4, 14);
     const prior = roundTo(price / Math.pow(1.045, yearsAgo), 1000);
-    priceHistory.unshift({ date: new Date(now.getTime() - yearsAgo * 365 * DAY - r.int(0, 200) * DAY), event: "SOLD", price: prior, source: "Demo public record" });
+    priceHistory.unshift({ date: new Date(now.getTime() - yearsAgo * 365 * DAY - r.int(0, 200) * DAY), event: "SOLD", price: prior, source: "Public record" });
   }
   if (isSale && (spec.status === "ACTIVE" || spec.status === "COMING_SOON") && spec.category === "RESIDENTIAL" && r.chance(0.42)) {
     const nextSat = new Date(now);
@@ -670,8 +670,8 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
     hasVideo: r.chance(0.28),
     isFeatured: r.chance(0.18) || Boolean(spec.luxury),
   });
-  if (data.has3dTour) data.virtualTourUrl = "demo-3d-tour";
-  if (data.hasVideo) data.videoUrl = "demo-video";
+  // 3D tour and video slots show the in-app placeholder until a real URL is added.
+  
 
   data.headline = headline;
   data.description = description;

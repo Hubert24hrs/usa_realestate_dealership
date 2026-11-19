@@ -7,12 +7,12 @@ import { getCityMarkets } from "@/server/markets";
 
 export const metadata: Metadata = {
   title: "Post a listing: sell or rent by owner",
-  description: "List your home for sale or rent by owner on CITI VIEW — upload photos, get pricing guidance and publish in minutes.",
+  description: "List your home for sale or rent by owner on CITI VIEW. Upload photos, get pricing guidance and publish in minutes.",
   alternates: { canonical: "/sell/post" },
 };
 
 const TIPS = [
-  { icon: Camera, title: "Photos sell homes", body: "Shoot in daylight with lights on, start with the front exterior, and cover every main room. 8–12 photos is the sweet spot." },
+  { icon: Camera, title: "Photos sell homes", body: "Shoot in daylight with lights on, start with the front exterior, and cover every main room. 8 to 12 photos works best." },
   { icon: Scale, title: "Price with comps", body: "Overpriced listings sit. Check recent sales nearby with the home value tool before you set a price." },
   { icon: ShieldCheck, title: "Describe the home, not the buyer", body: "Fair Housing law forbids preferences about who lives there. Our checker flags risky wording as you type." },
 ];
@@ -28,7 +28,7 @@ export default async function PostListingPage() {
         crumbs={[{ name: "Home", href: "/" }, { name: "Sell", href: "/sell" }, { name: "Post a listing", href: "/sell/post" }]}
         eyebrow="For sale or rent by owner"
         title="Post your home on CITI VIEW"
-        description="Free to list. Add details and photos, review the Fair Housing check, and publish — your listing appears in search right away."
+        description="Free to list. Add details and photos, review the Fair Housing check, and publish. Your listing appears in search right away."
       />
       <div className="container-page grid gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_300px]">
         <FsboWizard cities={cities} />

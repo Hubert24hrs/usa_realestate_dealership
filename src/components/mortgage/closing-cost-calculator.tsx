@@ -68,7 +68,7 @@ export function ClosingCostCalculator({ defaultRate, initialState }: { defaultRa
           <NumberField label="Earnest money paid" kind="money" value={earnest} onChange={setEarnest} max={10_000_000} />
           <NumberField label="Seller credits" kind="money" value={sellerCredit} onChange={setSellerCredit} max={10_000_000} />
         </div>
-        <NumberField label="Closing day of month" value={closingDay} onChange={(v) => setClosingDay(Math.round(v))} min={1} max={31} decimals={0} help="Prepaid interest runs from closing to month-end." />
+        <NumberField label="Closing day of month" value={closingDay} onChange={(v) => setClosingDay(Math.round(v))} min={1} max={31} decimals={0} help="Prepaid interest runs from closing to month end." />
         <div className="flex items-center justify-between gap-3 rounded-xl border p-3">
           <Label htmlFor="cc-survey" className="font-normal">Include a property survey</Label>
           <Switch id="cc-survey" checked={survey} onCheckedChange={setSurvey} />

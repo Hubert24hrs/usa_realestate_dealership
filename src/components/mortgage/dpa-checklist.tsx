@@ -23,14 +23,14 @@ export function DpaChecklist() {
     score >= max - 1
       ? "You match the profile most programs are built for. Ask a participating lender which programs you can combine."
       : score >= 5
-        ? "Many programs could fit. Income limits and owner-occupancy are usually the deciding rules — a lender can check them for you."
+        ? "Many programs could fit. Income limits and owner occupancy are usually the deciding rules. A lender can check them for you."
         : score > 0
-          ? "Some programs may still fit — several cities and employers run programs without first-time-buyer rules."
+          ? "Some programs may still fit. Several cities and employers run programs without first time buyer rules."
           : "Check the boxes that apply to see how you line up with typical program rules.";
 
   return (
     <div className="rounded-3xl border bg-card p-5 sm:p-6">
-      <h2 className="font-semibold">Could I qualify? A quick self-check</h2>
+      <h2 className="font-semibold">Could I qualify? A quick quick check</h2>
       <ul className="mt-4 space-y-2">
         {ITEMS.map((i) => (
           <li key={i.key}>
@@ -43,7 +43,7 @@ export function DpaChecklist() {
       </ul>
       <p role="status" className="mt-4 rounded-xl bg-surface p-3 text-sm">{message}</p>
       <p className="mt-3 text-xs text-muted-foreground">
-        A self-check, not an eligibility decision. <Link href="/mortgage/preapproval" className="font-medium text-primary hover:underline">Ask a partner lender</Link> about programs where you&apos;re buying.
+        A quick check, not an eligibility decision. <Link href="/mortgage/preapproval" className="font-medium text-primary hover:underline">Ask a partner lender</Link> about programs where you&apos;re buying.
       </p>
     </div>
   );

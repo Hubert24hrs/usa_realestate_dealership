@@ -85,7 +85,7 @@ function BasicsStep({ defaults, onNext }: { defaults?: Basics; onNext: (v: Basic
           name="mode"
           render={({ field }) => (
             <div role="radiogroup" className="grid gap-3 sm:grid-cols-2">
-              {([["sale", "Sell it myself", "For sale by owner — no listing agent", Home], ["rent", "Rent it out", "For rent by owner — find a tenant", KeyRound]] as const).map(([value, title, sub, Icon]) => (
+              {([["sale", "Sell it myself", "For sale by owner, without a listing agent", Home], ["rent", "Rent it out", "For rent by owner, to find a tenant", KeyRound]] as const).map(([value, title, sub, Icon]) => (
                 <button
                   key={value}
                   type="button"
@@ -222,7 +222,7 @@ function DetailsStep({ mode, defaults, rentDefaults, onNext, onBack }: { mode: B
               />
             ))}
           </div>
-          <p className="text-xs text-muted-foreground">Assistance animals aren&apos;t pets — they must be allowed even where pets aren&apos;t, without pet fees.</p>
+          <p className="text-xs text-muted-foreground">Assistance animals aren&apos;t pets. They must be allowed even where pets aren&apos;t, without pet fees.</p>
         </fieldset>
       )}
       <Nav onBack={onBack} />
@@ -238,7 +238,7 @@ function PhotosStep({ initial, onNext, onBack }: { initial: UploadedPhoto[]; onN
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        if (!photos.length) return setError("Add at least one photo — listings with 8 or more photos get the most views.");
+        if (!photos.length) return setError("Add at least one photo. Listings with 8 or more photos get the most views.");
         if (photos.some((p) => p.alt.trim().length < 3)) return setError("Give every photo a short description.");
         onNext(photos);
       }}
@@ -267,13 +267,13 @@ function CopyStep({ mode, details, city, defaults, onNext, onBack }: { mode: Bas
       : null;
   return (
     <form onSubmit={handleSubmit(onNext)} noValidate className="space-y-5">
-      <Field id="fs-price" label={rent ? "Monthly rent ($)" : "Asking price ($)"} error={e.price?.message} hint={guide ? <>{guide.label} — about {formatMoney(guide.low)}–{formatMoney(guide.high)} for your home. {!rent && <Link href="/home-value" className="font-medium text-primary hover:underline">Get a full estimate</Link>}</> : undefined}>
+      <Field id="fs-price" label={rent ? "Monthly rent ($)" : "Asking price ($)"} error={e.price?.message} hint={guide ? <>{guide.label}: about {formatMoney(guide.low)} to {formatMoney(guide.high)} for your home. {!rent && <Link href="/home-value" className="font-medium text-primary hover:underline">Get a full estimate</Link>}</> : undefined}>
         <Input type="number" min={0} {...inv("fs-price", e.price)} {...register("price")} />
       </Field>
       <Field id="fs-head" label="Headline" error={e.headline?.message} hint="e.g. “Renovated craftsman with a big backyard and new roof”">
         <Input maxLength={90} {...inv("fs-head", e.headline)} {...register("headline")} />
       </Field>
-      <Field id="fs-desc" label="Description" error={e.description?.message} hint="Describe the home and neighborhood features — not who should live there.">
+      <Field id="fs-desc" label="Description" error={e.description?.message} hint="Describe the home and neighborhood features, not who should live there.">
         <Textarea rows={7} maxLength={5000} {...inv("fs-desc", e.description)} {...register("description")} />
       </Field>
       {findings.length > 0 ? (
@@ -282,7 +282,7 @@ function CopyStep({ mode, details, city, defaults, onNext, onBack }: { mode: Bas
           <ul className="space-y-1.5">
             {findings.map((f) => (
               <li key={f.phrase}>
-                <span className={cn("font-medium", f.severity === "block" && "text-destructive")}>“{f.phrase}”</span> — {f.reason}
+                <span className={cn("font-medium", f.severity === "block" && "text-destructive")}>“{f.phrase}”</span>: {f.reason}
                 {f.suggestion && <span className="text-muted-foreground"> {f.suggestion}</span>}
                 {f.severity === "block" && <span className="ml-1 rounded bg-destructive/10 px-1.5 text-xs font-semibold text-destructive">Must fix</span>}
               </li>

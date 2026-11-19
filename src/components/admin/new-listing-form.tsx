@@ -49,7 +49,7 @@ export function NewListingForm({ cities }: { cities: Array<{ slug: string; name:
     const res = await api<{ id: string }>("/api/admin/listings", { method: "POST", json: parsed.data });
     setBusy(false);
     if (!res.ok) return toast.error(apiError(res));
-    toast.success("Draft created — add photos, then publish");
+    toast.success("Draft created. Add photos, then publish");
     router.push(`/admin/listings/${res.data.id}`);
   };
 
@@ -99,7 +99,7 @@ export function NewListingForm({ cities }: { cities: Array<{ slug: string; name:
       {findings.length > 0 && (
         <div role="status" className="space-y-1.5 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
           {findings.map((f, i) => (
-            <p key={i} className="flex gap-2"><AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber-600" aria-hidden /><span><strong>“{f.phrase}”</strong> — {f.reason}</span></p>
+            <p key={i} className="flex gap-2"><AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber-600" aria-hidden /><span><strong>“{f.phrase}”</strong>: {f.reason}</span></p>
           ))}
         </div>
       )}

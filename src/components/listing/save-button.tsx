@@ -78,7 +78,7 @@ export function SaveButton({ listingId, label, className, size = "md" }: { listi
       if (res.status === 401) {
         setSaved(!next);
         toast("Sign in to save homes", {
-          description: "Saved homes sync across devices and power price-drop alerts.",
+          description: "Saved homes sync across devices and power price drop alerts.",
           action: { label: "Sign in", onClick: () => (window.location.href = `/sign-in?callbackUrl=${encodeURIComponent(window.location.pathname + window.location.search)}`) },
         });
         return;

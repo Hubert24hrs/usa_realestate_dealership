@@ -26,7 +26,7 @@ export function ConsentPreferences({ initial, gpc, onSave, onClose }: { initial:
           <DialogDescription>Choose which optional cookies CITI VIEW may use. You can change this any time from the footer.</DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-2">
-          <PreferenceRow id="pref-necessary" label="Strictly necessary" description="Sign-in, security, saved preferences. Always on." checked disabled onChange={() => {}} />
+          <PreferenceRow id="pref-necessary" label="Strictly necessary" description="Sign in, security, saved preferences. Always on." checked disabled onChange={() => {}} />
           <PreferenceRow id="pref-analytics" label="Analytics" description="Anonymous usage statistics that help us improve search and listings." checked={analytics} onChange={setAnalytics} />
           <PreferenceRow id="pref-marketing" label="Marketing" description="Personalized ads and remarketing. Disabled while Do Not Sell or Share is on." checked={marketing && !doNotSell} disabled={doNotSell} onChange={setMarketing} />
           <PreferenceRow id="pref-dns" label="Do Not Sell or Share My Personal Information" description={gpc ? "Enabled automatically by your Global Privacy Control signal." : "California (CCPA/CPRA) and other state privacy rights."} checked={doNotSell} disabled={gpc} onChange={setDoNotSell} />

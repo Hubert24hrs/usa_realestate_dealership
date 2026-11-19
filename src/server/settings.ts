@@ -22,11 +22,11 @@ export interface SiteSettings {
 
 const DEFAULTS: SiteSettings = {
   idxDisclaimer:
-    "IDX information is provided exclusively for consumers' personal, non-commercial use and may not be used for any purpose other than to identify prospective properties consumers may be interested in purchasing. Information deemed reliable but not guaranteed.",
+    "IDX information is provided exclusively for consumers' personal, noncommercial use and may not be used for any purpose other than to identify prospective properties consumers may be interested in purchasing. Information deemed reliable but not guaranteed.",
   listingDisclaimer: "Listing information is deemed reliable but not guaranteed.",
   fairHousing:
     "We are committed to compliance with all federal, state and local fair housing laws and do not discriminate on the basis of any protected characteristic.",
-  demoBanner: "You're exploring CITI VIEW demo data — listings, agents and statistics are fictional.",
+  demoBanner: "You're browsing sample data. Listings, agents and statistics on CITI VIEW are fictional.",
   brokerage: { name: "CITI VIEW Realty, LLC (placeholder)", licenses: ["License # placeholder"], address: "", phone: "" },
   leadRouting: { strategy: "weighted-round-robin", preferListingAgent: true, slaMinutes: 15 },
 };

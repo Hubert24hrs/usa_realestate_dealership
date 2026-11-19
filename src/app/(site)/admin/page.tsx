@@ -46,7 +46,7 @@ export default async function AdminOverviewPage() {
 
   return (
     <>
-      <AccountPageHeader eyebrow="Admin" title="Marketplace overview" description="Inventory, demand and moderation across CITI VIEW — last 30 days." />
+      <AccountPageHeader eyebrow="Admin" title="Marketplace overview" description="Inventory, demand and moderation across CITI VIEW over the last 30 days." />
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <ResultStat label="Live listings" value={formatNumber(live)} sub={<Link href="/admin/listings?status=DRAFT" className="text-primary hover:underline">{count("DRAFT")} drafts awaiting review</Link>} />
         <ResultStat label="Leads · 30 days" value={formatNumber(leads30.length)} sub={unassigned ? <Link href="/admin/leads?agent=none" className="text-primary hover:underline">{unassigned} went to the concierge queue</Link> : "All routed to agents or owners"} />
@@ -56,15 +56,15 @@ export default async function AdminOverviewPage() {
 
       <section aria-labelledby="growth-title" className="mt-8 rounded-3xl border bg-card p-5">
         <h2 id="growth-title" className="font-semibold">Activity</h2>
-        <p className="mb-3 text-sm text-muted-foreground">New sign-ups, leads and listings per day. {paidAgents} of {totalAgents} agents are on a paid plan.</p>
+        <p className="mb-3 text-sm text-muted-foreground">New signups, leads and listings per day. {paidAgents} of {totalAgents} agents are on a paid plan.</p>
         <DailyChart
           labels={days.map((d) => d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" }))}
           series={[
-            { key: "signups", label: "Sign-ups", values: tally(users30.map((u) => u.createdAt)) },
+            { key: "signups", label: "Signups", values: tally(users30.map((u) => u.createdAt)) },
             { key: "leads", label: "Leads", values: tally(leads30.map((l) => l.createdAt)) },
             { key: "listings", label: "New listings", values: tally(listings30.map((l) => l.createdAt)) },
           ]}
-          caption="Daily sign-ups, leads and new listings over the last 30 days"
+          caption="Daily signups, leads and new listings over the last 30 days"
         />
       </section>
 

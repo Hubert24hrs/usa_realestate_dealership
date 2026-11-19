@@ -10,8 +10,8 @@ import { formatDate } from "@/lib/format";
 import { getRates } from "@/server/rates";
 
 export const metadata: Metadata = {
-  title: "Mortgage calculators, rates and pre-approval",
-  description: "Estimate your payment, compare sample mortgage rates, see how much home you can afford, estimate closing costs, compare renting vs. buying and request a pre-approval.",
+  title: "Mortgage calculators, rates and preapproval",
+  description: "Estimate your payment, compare sample mortgage rates, see how much home you can afford, estimate closing costs, compare renting vs. buying and request a preapproval.",
   alternates: { canonical: "/mortgage" },
 };
 
@@ -21,7 +21,7 @@ export default async function MortgageHubPage() {
   const [{ latest, asOf }, guides] = await Promise.all([
     getRates(),
     db.post.findMany({
-      where: { status: "PUBLISHED", tags: { hasSome: ["Buying", "Mortgage", "First-time buyers"] } },
+      where: { status: "PUBLISHED", tags: { hasSome: ["Buying", "Mortgage", "First time buyers"] } },
       orderBy: { publishedAt: "desc" },
       take: 3,
       select: { slug: true, title: true, excerpt: true, type: true, coverColor: true, readingMinutes: true, publishedAt: true },
@@ -35,7 +35,7 @@ export default async function MortgageHubPage() {
         crumbs={[{ name: "Home", href: "/" }, { name: "Mortgage", href: "/mortgage" }]}
         eyebrow="Mortgage"
         title="Plan the money side of your move"
-        description="Run the numbers before you tour: payment, affordability, closing costs and the rent-vs-buy break-even — then connect with a partner lender."
+        description="Run the numbers before you tour: payment, affordability, closing costs and the rent vs. buy breakeven, then connect with a partner lender."
       >
         <div className="mt-6 grid max-w-3xl gap-3 sm:grid-cols-3">
           {latest.slice(0, 3).map((r) => (
@@ -55,7 +55,7 @@ export default async function MortgageHubPage() {
             </Link>
           ))}
         </div>
-        {asOf && <p className="mt-2 text-xs text-muted-foreground">Sample rates for the week of {formatDate(asOf)} · demo data, not an offer to lend.</p>}
+        {asOf && <p className="mt-2 text-xs text-muted-foreground">Sample rates for the week of {formatDate(asOf)}. Not an offer to lend.</p>}
       </PageHero>
 
       <div className="container-page space-y-12 py-10">
@@ -89,7 +89,7 @@ export default async function MortgageHubPage() {
         )}
 
         <ToolDisclaimer>
-          CITI VIEW is not a lender and does not make credit decisions. Calculators provide estimates for planning only; your actual rate, payment and costs depend on your credit, the property and the lender. Rates shown are sample demo data.
+          CITI VIEW is not a lender and does not make credit decisions. Calculators provide estimates for planning only; your actual rate, payment and costs depend on your credit, the property and the lender. Rates shown are samples.
         </ToolDisclaimer>
       </div>
     </>

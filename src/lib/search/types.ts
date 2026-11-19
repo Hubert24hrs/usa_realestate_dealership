@@ -43,7 +43,6 @@ export interface ListingCardData {
   moveInSpecial: string | null;
   has3dTour: boolean;
   hasVideo: boolean;
-  isDemo: boolean;
   brokerageName: string | null;
   listingAgentName: string | null;
   openHouse: { startsAt: string; endsAt: string; type: "IN_PERSON" | "VIRTUAL" } | null;

@@ -378,8 +378,8 @@
 .dark .mapboxgl-ctrl-group button {
   filter: invert(0.9);
 }
-/* Demo banner dismissed this session (set before first paint by DEMO_BANNER_SCRIPT). */
-html[data-demo-dismissed] [data-demo-banner] {
+/* Site notice dismissed this session (set before first paint by SITE_NOTICE_SCRIPT). */
+html[data-notice-dismissed] [data-site-notice] {
   display: none;
 }
 

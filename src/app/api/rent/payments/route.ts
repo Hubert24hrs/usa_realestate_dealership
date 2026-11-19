@@ -36,7 +36,7 @@ export const POST = withUser(
       kind: "rent",
       referenceId: payment.id,
       amountCents: due.amountCents,
-      description: `Rent for ${periodLabel(due.periodStart)} — ${place}`,
+      description: `Rent for ${periodLabel(due.periodStart)}, ${place}`,
       customerEmail: user.email,
       successPath: "/account/rentals?paid=1",
       cancelPath: "/account/rentals?canceled=1",

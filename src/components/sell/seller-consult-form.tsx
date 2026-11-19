@@ -63,7 +63,7 @@ export function SellerConsultForm({ cities }: { cities: Array<{ slug: string; na
         <div className="space-y-1.5">
           <Label htmlFor="sc-timeline">When do you want to sell?</Label>
           <select id="sc-timeline" name="timeline" className={selectCls} defaultValue="1–3 months">
-            {["ASAP", "1–3 months", "3–6 months", "6+ months", "Just exploring"].map((t) => <option key={t}>{t}</option>)}
+            {["ASAP", "1 to 3 months", "3 to 6 months", "6+ months", "Just exploring"].map((t) => <option key={t}>{t}</option>)}
           </select>
         </div>
       </div>

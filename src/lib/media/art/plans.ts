@@ -56,7 +56,7 @@ function frame(title: string, subtitle: string): string {
   s += `<text x="80" y="80" font-family="ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="700" fill="${INK}">${esc(title)}</text>`;
   s += `<text x="80" y="118" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#475569">${esc(subtitle)}</text>`;
   s += `<g transform="translate(1470 92)"><circle r="38" fill="none" stroke="${INK}" stroke-width="3"/><path d="M0 -30 L12 8 L0 0 L-12 8 Z" fill="${INK}"/><text y="-44" text-anchor="middle" font-family="ui-sans-serif, system-ui" font-size="20" font-weight="700" fill="${INK}">N</text></g>`;
-  s += `<text x="${W - 80}" y="${H - 40}" text-anchor="end" font-family="ui-sans-serif, system-ui" font-size="18" fill="#64748b">Illustrative only · not to scale · CITI VIEW demo</text>`;
+  s += `<text x="${W - 80}" y="${H - 40}" text-anchor="end" font-family="ui-sans-serif, system-ui" font-size="18" fill="#64748b">Illustrative only · not to scale · CITI VIEW</text>`;
   return s;
 }
 
@@ -147,7 +147,7 @@ export function floorPlan(ctx: Ctx, spec: FloorPlanSpec): string {
   if (spec.garage) rooms.push({ x: X + FW, y: Y + FH * 0.3, w: 300, h: FH * 0.7, label: "Garage", kind: "garage" });
 
   const subtitle = `${beds === 0 ? "Studio" : `${beds} bd`} · ${baths} ba · ${sqft.toLocaleString("en-US")} sqft`;
-  let s = frame(spec.kind === "condo" ? "Unit floor plan" : "Floor plan — main level", subtitle);
+  let s = frame(spec.kind === "condo" ? "Unit floor plan" : "Floor plan: main level", subtitle);
   s += drawRooms(rooms, ftPerPx);
   s += `<rect x="${X}" y="${Y}" width="${n(FW)}" height="${FH}" fill="none" stroke="${INK}" stroke-width="14"/>`;
   // doors

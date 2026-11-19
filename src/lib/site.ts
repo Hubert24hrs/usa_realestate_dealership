@@ -1,11 +1,11 @@
 export const site = {
   name: "CITI VIEW",
   legalName: "CITI VIEW REAL ESTATE",
-  tagline: "See every home, city and acre clearly.",
+  tagline: "Homes, rentals, commercial property and land across the USA.",
   description:
-    "Search homes for sale, apartments and houses for rent, new construction, commercial real estate and land across the USA — with maps, schools, market data and tools to plan your move.",
+    "Search homes for sale, apartments and houses for rent, new construction, commercial real estate and land across the USA, with maps, schools, market data and tools to plan your move.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  demoMode: process.env.NEXT_PUBLIC_DEMO_MODE !== "false",
+  demoMode: process.env.NEXT_PUBLIC_SAMPLE_DATA !== "false" && process.env.NEXT_PUBLIC_DEMO_MODE !== "false",
   supportEmail: "support@citiview.example",
 } as const;
 
@@ -24,7 +24,7 @@ export const primaryNav: Array<NavItem & { children?: NavItem[] }> = [
       { label: "New construction", href: "/new-construction", description: "Builder homes and communities" },
       { label: "Open houses", href: "/homes-for-sale?openHouse=1", description: "Tour this weekend" },
       { label: "Recently sold", href: "/sold-homes", description: "What homes actually sold for" },
-      { label: "Buyer's guide", href: "/learn/home-buying-roadmap", description: "From pre-approval to keys" },
+      { label: "Buyer's guide", href: "/learn/home-buying-roadmap", description: "From preapproval to keys" },
     ],
   },
   {
@@ -32,7 +32,7 @@ export const primaryNav: Array<NavItem & { children?: NavItem[] }> = [
     href: "/apartments-for-rent",
     children: [
       { label: "Apartments for rent", href: "/apartments-for-rent", description: "Communities with live availability" },
-      { label: "Houses for rent", href: "/houses-for-rent", description: "Single-family rentals" },
+      { label: "Houses for rent", href: "/houses-for-rent", description: "Single family rentals" },
       { label: "Rent affordability", href: "/rent/affordability", description: "What rent fits your budget" },
       { label: "Renter dashboard", href: "/account/rentals", description: "Applications, lease and payments" },
       { label: "Avoid rental scams", href: "/learn/avoid-rental-scams", description: "Protect your deposit" },
@@ -42,7 +42,7 @@ export const primaryNav: Array<NavItem & { children?: NavItem[] }> = [
     label: "Sell",
     href: "/sell",
     children: [
-      { label: "What's my home worth?", href: "/home-value", description: "Comps-based estimate in seconds" },
+      { label: "What's my home worth?", href: "/home-value", description: "Estimate from comparable sales" },
       { label: "Find a listing agent", href: "/agents?specialty=listing", description: "Compare local experts" },
       { label: "Post a listing (FSBO)", href: "/sell/post", description: "Sell or rent it yourself" },
       { label: "Seller's guide", href: "/learn/selling-your-home", description: "Prep, price, negotiate" },
@@ -58,10 +58,10 @@ export const primaryNav: Array<NavItem & { children?: NavItem[] }> = [
     children: [
       { label: "Mortgage calculator", href: "/mortgage/calculator", description: "Payment with taxes, insurance, HOA, PMI" },
       { label: "Today's rates", href: "/mortgage/rates", description: "Sample rates by loan type" },
-      { label: "Get pre-approved", href: "/mortgage/preapproval", description: "Connect with a partner lender" },
+      { label: "Get preapproved", href: "/mortgage/preapproval", description: "Connect with a partner lender" },
       { label: "Affordability", href: "/mortgage/affordability", description: "How much home can you afford?" },
       { label: "Closing costs", href: "/mortgage/closing-costs", description: "Estimate cash to close" },
-      { label: "Rent vs. buy", href: "/mortgage/rent-vs-buy", description: "Find your break-even year" },
+      { label: "Rent vs. buy", href: "/mortgage/rent-vs-buy", description: "Find your breakeven year" },
     ],
   },
 ];

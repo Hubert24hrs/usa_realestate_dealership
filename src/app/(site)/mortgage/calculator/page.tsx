@@ -38,7 +38,7 @@ export default async function MortgageCalculatorPage({ searchParams }: PageProps
         crumbs={[{ name: "Home", href: "/" }, { name: "Mortgage", href: "/mortgage" }, { name: "Mortgage calculator", href: "/mortgage/calculator" }]}
         eyebrow="Mortgage calculator"
         title="What will my monthly payment be?"
-        description="Your full payment — principal, interest, taxes, insurance, HOA and PMI — plus how your balance falls over time. Share the page link to save your numbers."
+        description="Your full payment (principal, interest, taxes, insurance, HOA and PMI) plus how your balance falls over time. Share the page link to save your numbers."
       />
       <div className="container-page py-10">
         <MortgageCalculator initial={initial} />

@@ -36,7 +36,7 @@ export async function storeImageUpload(file: File, userId: string): Promise<Stor
   if (!(ACCEPTED_TYPES as readonly string[]).includes(file.type)) throw new UploadError("Use a JPEG, PNG, WebP or AVIF photo.", 415);
 
   const since = new Date(Date.now() - 86_400_000);
-  if ((await db.upload.count({ where: { userId, createdAt: { gte: since } } })) >= DAILY_LIMIT) throw new UploadError("Daily upload limit reached — try again tomorrow.", 429);
+  if ((await db.upload.count({ where: { userId, createdAt: { gte: since } } })) >= DAILY_LIMIT) throw new UploadError("Daily upload limit reached. Try again tomorrow.", 429);
 
   const input = Buffer.from(await file.arrayBuffer());
   let meta: Awaited<ReturnType<ReturnType<typeof sharp>["metadata"]>>;

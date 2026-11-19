@@ -8,12 +8,12 @@ import { formatMoney } from "@/lib/format";
 import { getCityMarkets } from "@/server/markets";
 
 export const metadata: Metadata = {
-  title: "Rent trends by city: median rent and year-over-year change",
+  title: "Rent trends by city: median rent and year over year change",
   description: "Track median rent by city over the last two years, compare markets side by side and see where rents are rising or falling.",
   alternates: { canonical: "/rent/trends" },
 };
 
-const pct = (v: number | null) => (v == null ? "—" : `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v * 100).toFixed(1)}%`);
+const pct = (v: number | null) => (v == null ? "N/A" : `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v * 100).toFixed(1)}%`);
 
 function Change({ v }: { v: number | null }) {
   if (v == null || v === 0) return <span className="text-muted-foreground">{pct(v)}</span>;
@@ -39,12 +39,12 @@ export default async function RentTrendsPage() {
         crumbs={[{ name: "Home", href: "/" }, { name: "Rent", href: "/apartments-for-rent" }, { name: "Rent trends", href: "/rent/trends" }]}
         eyebrow="Rent trends"
         title="Where rents are heading"
-        description={`Median asking rent by city${latest ? ` through ${latest}` : ""}, with year-over-year and three-month change. Demo market data.`}
+        description={`Median asking rent by city${latest ? ` through ${latest}` : ""}, with year over year and three month change.`}
       />
       <div className="container-page space-y-10 py-10">
         {byYoY.length > 1 && (
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <ResultStat label="Fastest-rising rent" value={byYoY[0]!.name} sub={`${pct(byYoY[0]!.rentYoY)} year over year`} />
+            <ResultStat label="Fastest rising rent" value={byYoY[0]!.name} sub={`${pct(byYoY[0]!.rentYoY)} year over year`} />
             <ResultStat label="Biggest cooldown" value={byYoY[byYoY.length - 1]!.name} sub={`${pct(byYoY[byYoY.length - 1]!.rentYoY)} year over year`} />
             <ResultStat label="Highest median rent" value={byRent[0]!.name} sub={`${formatMoney(byRent[0]!.medianRent)}/mo`} />
             <ResultStat label="Most affordable" value={byRent[byRent.length - 1]!.name} sub={`${formatMoney(byRent[byRent.length - 1]!.medianRent)}/mo`} />
@@ -61,13 +61,13 @@ export default async function RentTrendsPage() {
           <h2 id="table-title" className="font-display text-2xl font-semibold tracking-tight">All markets</h2>
           <div className="mt-4 overflow-x-auto rounded-3xl border bg-card">
             <table className="w-full min-w-[620px] text-sm">
-              <caption className="sr-only">Median rent and change by city, sorted by year-over-year change</caption>
+              <caption className="sr-only">Median rent and change by city, sorted by year over year change</caption>
               <thead className="bg-muted/60 text-left text-xs text-muted-foreground">
                 <tr>
                   <th scope="col" className="px-4 py-3 font-medium">City</th>
                   <th scope="col" className="px-4 py-3 font-medium">Median rent</th>
-                  <th scope="col" className="px-4 py-3 font-medium">1-year change</th>
-                  <th scope="col" className="px-4 py-3 font-medium">3-month change</th>
+                  <th scope="col" className="px-4 py-3 font-medium">1 year change</th>
+                  <th scope="col" className="px-4 py-3 font-medium">3 month change</th>
                   <th scope="col" className="px-4 py-3 font-medium"><span className="sr-only">Rentals</span></th>
                 </tr>
               </thead>
@@ -87,7 +87,7 @@ export default async function RentTrendsPage() {
             </table>
           </div>
         </section>
-        <ToolDisclaimer>Median asking rents for all unit types, from CITI VIEW demo market data. Real rents vary by neighborhood, unit size and season.</ToolDisclaimer>
+        <ToolDisclaimer>Median asking rents for all unit types, from CITI VIEW market data. Real rents vary by neighborhood, unit size and season.</ToolDisclaimer>
       </div>
     </>
   );

@@ -14,7 +14,7 @@ export const POST = withRole(
     const body = await readJson(request, AdminListingCreateSchema, 16_000);
     if (!body.ok) return body.response;
     const p = body.data;
-    if (hasBlockingFinding(p.description)) return badRequest("The description has Fair Housing issues — describe the property, not who should live there.");
+    if (hasBlockingFinding(p.description)) return badRequest("The description has Fair Housing issues. Describe the property, not who should live there.");
     const city = await db.city.findUnique({ where: { slug: p.citySlug }, select: { id: true, name: true, stateCode: true, county: true, lat: true, lng: true } });
     if (!city) return badRequest("Unknown city");
     const slug = await listingSlug(p.streetAddress, p.unit, city.name, city.stateCode, p.zip);

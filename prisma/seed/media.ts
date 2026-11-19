@@ -79,7 +79,7 @@ export class MediaAssigner {
     this.cursors.set(poolKey, cursor);
     const params = context.variant ? { v: context.variant } : undefined;
     const fallback = generatedProvider.forPool(poolKey, seed, "", params);
-    fallback.alt = `${MEDIA_CATEGORY_LABELS[fallback.category]} — illustration for ${context.label}`;
+    fallback.alt = `${MEDIA_CATEGORY_LABELS[fallback.category]} illustration for ${context.label}`;
     this.used.add(fallback.providerId);
     this.stats.generated++;
     return fallback;
@@ -88,7 +88,7 @@ export class MediaAssigner {
 
 export function altFor(image: ProviderImage, label: string): string {
   const category = MEDIA_CATEGORY_LABELS[image.category];
-  if (image.provider === "GENERATED") return image.alt || `${category} — illustration for ${label}`;
+  if (image.provider === "GENERATED") return image.alt || `${category} illustration for ${label}`;
   if (image.provider === "AI") return image.alt || category;
   const alt = image.alt?.trim() || category;
   return alt.toLowerCase().startsWith(category.toLowerCase()) ? alt : `${category}: ${alt}`;

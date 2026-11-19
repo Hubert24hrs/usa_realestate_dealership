@@ -73,7 +73,7 @@ export class SeedProvider {
               log(`  ${provider.id} "${query}" p${page}: +${added} (${pool.length}/${target})`);
             } catch (error) {
               if (error instanceof ProviderRateLimitError) {
-                log(`  ⚠ ${error.message} — saving progress; re-run later to continue.`);
+                log(`  ⚠ ${error.message}. Saving progress; run again later to continue.`);
                 complete = false;
                 pools[key] = pool;
                 break outer;

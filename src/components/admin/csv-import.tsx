@@ -29,7 +29,7 @@ const EXAMPLE: Record<string, string> = {
   lot_sqft: "6500",
   year_built: "1998",
   headline: "Updated kitchen and a shaded backyard",
-  description: "Single-story home with an open living area, updated kitchen, two-car garage and a large shaded backyard.",
+  description: "Single story home with an open living area, updated kitchen, two car garage and a large shaded backyard.",
   mls_number: "",
 };
 

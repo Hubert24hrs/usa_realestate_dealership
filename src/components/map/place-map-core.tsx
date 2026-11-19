@@ -107,7 +107,7 @@ export function PlaceMapCore({ kit, mapStyle, mapboxAccessToken, center, zoom = 
         <div className="absolute top-3 left-3 flex flex-col gap-1.5 rounded-xl border bg-background/95 p-2.5 text-xs shadow-[var(--shadow-raised)]">
           <label className="flex items-center gap-2"><input type="checkbox" checked={hillshade} onChange={(e) => setHillshade(e.target.checked)} /> Topography (hillshade)</label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={soil} onChange={(e) => setSoil(e.target.checked)} /> Soil survey (USDA SSURGO)</label>
-          {soil && <span className="max-w-48 text-muted-foreground">External public service — tiles may load slowly or be unavailable.</span>}
+          {soil && <span className="max-w-48 text-muted-foreground">External public service. Tiles may load slowly or be unavailable.</span>}
         </div>
       )}
     </div>

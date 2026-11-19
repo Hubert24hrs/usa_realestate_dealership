@@ -59,7 +59,7 @@ export function buildPdf(title: string, sections: Array<{ heading?: string; body
       y -= l.size + 4;
     }
     stream += "ET\n";
-    stream += `BT /F1 8 Tf 1 0 0 1 56 30 Tm (${escapePdf("CITI VIEW demo document - illustrative only, not an offer. Equal Housing Opportunity.")}) Tj ET\n`;
+    stream += `BT /F1 8 Tf 1 0 0 1 56 30 Tm (${escapePdf("CITI VIEW sample document. Illustrative only, not an offer. Equal Housing Opportunity.")}) Tj ET\n`;
     const content = add(`<< /Length ${stream.length} >>\nstream\n${stream}endstream`);
     pageIds.push(add(`<< /Type /Page /Parent ${pagesObj} 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 ${font} 0 R /F2 ${fontBold} 0 R >> >> /Contents ${content} 0 R >>`));
   }

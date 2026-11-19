@@ -26,11 +26,11 @@ export const DATA_LAYERS: Array<{ id: DataLayer; label: string; description: str
   { id: "none", label: "None", description: "Listings only" },
   { id: "price", label: "Price heatmap", description: "Where listing prices concentrate" },
   { id: "ppsf", label: "Price per sq ft", description: "Listings colored by $/sqft" },
-  { id: "commute", label: "Commute time", description: "Drive-time rings from a destination" },
-  { id: "walk", label: "Walkability", description: "Demo walk score surface" },
-  { id: "flood", label: "Flood risk", description: "Demo flood-risk surface" },
-  { id: "crime", label: "Crime", description: "Demo reported-crime density" },
-  { id: "noise", label: "Noise", description: "Demo ambient noise levels" },
+  { id: "commute", label: "Commute time", description: "Drive time rings from a destination" },
+  { id: "walk", label: "Walkability", description: "Walkability by area" },
+  { id: "flood", label: "Flood risk", description: "Flood risk by area" },
+  { id: "crime", label: "Crime", description: "Reported crime density" },
+  { id: "noise", label: "Noise", description: "Ambient noise levels" },
 ];
 
 export const HEAT_RAMPS: Record<"price" | "walk" | "flood" | "crime" | "noise", Array<[number, string]>> = {

@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Switch } from "@/components/ui/switch";
 import { EqualHousingLogo } from "@/components/compliance/equal-housing";
-import { DemoBadge } from "@/components/compliance/demo-banner";
+import { SampleBadge } from "@/components/compliance/site-notice";
 import { LogoMark } from "@/components/brand/logo";
 import { ListingImage } from "@/components/media/listing-image";
 import { db } from "@/lib/db";
@@ -64,12 +64,12 @@ export default async function StyleguidePage() {
       <section aria-labelledby="sg-type" className="space-y-3">
         <h2 id="sg-type" className="mb-4 font-display text-2xl font-semibold">Typography</h2>
         <p className="eyebrow">Eyebrow · Plus Jakarta Sans 600</p>
-        <p className="font-display text-display-xl font-semibold">Display XL — Fraunces</p>
-        <p className="font-display text-display-lg font-semibold">Display L — city views</p>
-        <p className="font-display text-display-md font-semibold">Display M — neighborhood guides</p>
-        <p className="text-xl font-semibold">Title — $1,250,000 · 4 bd · 3 ba</p>
-        <p className="max-w-prose text-base text-muted-foreground">Body — Plus Jakarta Sans keeps dense listing data legible at small sizes, with tabular numerals for prices.</p>
-        <p className="text-sm text-muted-foreground">Small — 12 days on market · Listing courtesy of Demo Brokerage</p>
+        <p className="font-display text-display-xl font-semibold">Display XL: Fraunces</p>
+        <p className="font-display text-display-lg font-semibold">Display L: city views</p>
+        <p className="font-display text-display-md font-semibold">Display M: neighborhood guides</p>
+        <p className="text-xl font-semibold">Title: $1,250,000 · 4 bd · 3 ba</p>
+        <p className="max-w-prose text-base text-muted-foreground">Body: Plus Jakarta Sans keeps dense listing data legible at small sizes, with tabular numerals for prices.</p>
+        <p className="text-sm text-muted-foreground">Small: 12 days on market · Listing courtesy of Skyline &amp; Stone Realty</p>
       </section>
 
       <section aria-labelledby="sg-components" className="space-y-6">
@@ -88,7 +88,7 @@ export default async function StyleguidePage() {
           <Badge variant="outline">3D tour</Badge>
           <Badge className="bg-success text-success-foreground">Price cut $15K</Badge>
           <Badge className="bg-copper-500 text-white">Coming soon</Badge>
-          <DemoBadge />
+          <SampleBadge />
         </div>
         <div className="grid max-w-xl gap-4">
           <div className="grid gap-2">

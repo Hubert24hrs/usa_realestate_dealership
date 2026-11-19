@@ -141,7 +141,7 @@ export function PostEditor({ id, initial, cities }: { id?: string; initial: Post
                   <div role="status" className="mb-4 space-y-1 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
                     <p className="font-medium">Fair Housing language check (advisory for articles)</p>
                     {preview.fairHousing.map((f, i) => (
-                      <p key={i} className="flex gap-2"><AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber-600" aria-hidden /><span><strong>“{f.phrase}”</strong> — {f.reason}</span></p>
+                      <p key={i} className="flex gap-2"><AlertTriangle className="mt-0.5 size-4 shrink-0 text-amber-600" aria-hidden /><span><strong>“{f.phrase}”</strong>: {f.reason}</span></p>
                     ))}
                   </div>
                 )}
@@ -173,7 +173,7 @@ export function PostEditor({ id, initial, cities }: { id?: string; initial: Post
           <div>
             <label htmlFor="post-tags" className="mb-1 block text-sm font-medium">Tags</label>
             <Input id="post-tags" value={tags} onChange={(e) => setTags(e.target.value)} placeholder="buying, mortgage" />
-            <p className="mt-1 text-xs text-muted-foreground">Comma-separated, up to 10.</p>
+            <p className="mt-1 text-xs text-muted-foreground">Comma separated, up to 10.</p>
           </div>
           <div>
             <label htmlFor="post-citySlug" className="mb-1 block text-sm font-medium">Market (optional)</label>

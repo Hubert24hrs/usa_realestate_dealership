@@ -41,7 +41,7 @@ export async function routeLead(input: Pick<LeadInput, "agentId" | "listingId" |
   let citySlug = input.citySlug ?? null;
   if (input.listingId) {
     const listing = await db.listing.findUnique({ where: { id: input.listingId }, select: { agentId: true, ownerId: true, isFsbo: true, agent: { select: { acceptingLeads: true } }, cityRef: { select: { slug: true } } } });
-    if (listing?.isFsbo && listing.ownerId) return { agentId: null, ownerId: listing.ownerId, reason: "For sale by owner — sent to owner" };
+    if (listing?.isFsbo && listing.ownerId) return { agentId: null, ownerId: listing.ownerId, reason: "For sale by owner, sent to the owner" };
     if (listing?.agentId && listing.agent?.acceptingLeads && settings.leadRouting.preferListingAgent) return { agentId: listing.agentId, ownerId: null, reason: "Listing agent" };
     citySlug = listing?.cityRef?.slug ?? citySlug;
   }
@@ -49,7 +49,7 @@ export async function routeLead(input: Pick<LeadInput, "agentId" | "listingId" |
     where: { acceptingLeads: true, ...(citySlug ? { areasServed: { has: citySlug } } : {}) },
     select: { id: true, leadWeight: true, lastLeadAt: true },
   });
-  if (!candidates.length) return { agentId: null, ownerId: null, reason: "No agent available — routed to CITI VIEW concierge" };
+  if (!candidates.length) return { agentId: null, ownerId: null, reason: "No agent available, routed to CITI VIEW concierge" };
   const now = Date.now();
   const weighted = settings.leadRouting.strategy !== "round-robin";
   // Lower score wins: longest since last lead; with weighting, paid plans (leadWeight 2–3) get a head start.
@@ -57,7 +57,7 @@ export async function routeLead(input: Pick<LeadInput, "agentId" | "listingId" |
     .map((c) => ({ ...c, score: (c.lastLeadAt?.getTime() ?? 0) - (weighted ? c.leadWeight : 1) * 6 * 3_600_000 }))
     .sort((a, b) => a.score - b.score)[0]!;
   await db.agent.update({ where: { id: pick.id }, data: { lastLeadAt: new Date(now) } });
-  return { agentId: pick.id, ownerId: null, reason: weighted ? "Weighted round-robin" : "Round-robin" };
+  return { agentId: pick.id, ownerId: null, reason: weighted ? "Weighted round robin" : "Round robin" };
 }
 
 export async function createLead(input: LeadInput) {
@@ -119,7 +119,7 @@ export async function createLead(input: LeadInput) {
   if (recipient) {
     await sendEmail({
       to: recipient,
-      subject: `New ${label.toLowerCase()} — ${where}`,
+      subject: `New ${label.toLowerCase()} for ${where}`,
       html: emailLayout({ title: `New ${label.toLowerCase()}`, intro: `${input.name} sent a ${label.toLowerCase()} through CITI VIEW. Reply within 15 minutes for the best response rate.`, rows, body: input.message ?? undefined, cta: { label: "Open in CITI VIEW", url: `${site.url}/agent/leads` } }),
     });
   }
@@ -127,7 +127,7 @@ export async function createLead(input: LeadInput) {
     to: input.email,
     subject: `We received your ${label.toLowerCase()}`,
     html: emailLayout({
-      title: "Thanks — your request is on its way",
+      title: "Thanks. Your request is on its way",
       intro: agent ? `${agent.name} will follow up shortly about ${where}.` : owner ? `The owner of ${where} will follow up shortly.` : "A CITI VIEW concierge will follow up shortly.",
       rows: rows.slice(0, 5),
       cta: { label: "View the property", url },

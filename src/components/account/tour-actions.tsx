@@ -18,7 +18,7 @@ export function TourActions({ id, open, address }: { id: string; open: boolean; 
     setPending(false);
     if (!r.ok) return toast.error(apiError(r));
     setConfirming(false);
-    toast.success("Tour cancelled — we let the agent know.");
+    toast.success("Tour cancelled. We let the agent know.");
     router.refresh();
   };
   return (
@@ -36,7 +36,7 @@ export function TourActions({ id, open, address }: { id: string; open: boolean; 
           <DialogContent className="sm:max-w-sm">
             <DialogHeader>
               <DialogTitle>Cancel this tour?</DialogTitle>
-              <DialogDescription>{address} — the agent will be notified. You can request a new time from the listing page.</DialogDescription>
+              <DialogDescription>{address}. The agent will be notified. You can request a new time from the listing page.</DialogDescription>
             </DialogHeader>
             <DialogFooter>
               <Button variant="ghost" onClick={() => setConfirming(false)}>Keep tour</Button>

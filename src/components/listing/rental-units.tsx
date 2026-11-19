@@ -53,7 +53,7 @@ export function RentalUnits({ units, applyBase }: { units: UnitRow[]; applyBase:
           </thead>
           <tbody className="tabular-nums">
             {rows.length === 0 ? (
-              <tr><td colSpan={8} className="px-3 py-6 text-center text-muted-foreground">No units match — try another floor plan.</td></tr>
+              <tr><td colSpan={8} className="px-3 py-6 text-center text-muted-foreground">No units match. Try another floor plan.</td></tr>
             ) : (
               rows.map((u) => {
                 const avail = u.availableDate ? new Date(u.availableDate) : null;
@@ -64,7 +64,7 @@ export function RentalUnits({ units, applyBase }: { units: UnitRow[]; applyBase:
                     <td className="px-3 py-2.5">{u.beds === 0 ? "Studio" : `${u.beds} bd`} · {formatBaths(u.baths)} ba</td>
                     <td className="px-3 py-2.5">{formatNumber(u.sqft)}</td>
                     <td className="px-3 py-2.5 font-semibold">${u.rent.toLocaleString("en-US")}</td>
-                    <td className="px-3 py-2.5">{u.deposit ? `$${u.deposit.toLocaleString("en-US")}` : "—"}</td>
+                    <td className="px-3 py-2.5">{u.deposit ? `$${u.deposit.toLocaleString("en-US")}` : "N/A"}</td>
                     <td className="px-3 py-2.5">{!u.isAvailable ? "Leased" : !avail || avail <= today ? "Now" : avail.toLocaleDateString("en-US", { month: "short", day: "numeric" })}</td>
                     <td className="px-3 py-2.5 text-right">
                       {u.isAvailable && <Button asChild size="sm"><Link href={`${applyBase}?unit=${u.id}`}>Apply</Link></Button>}

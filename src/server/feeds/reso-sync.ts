@@ -140,7 +140,7 @@ async function upsert(m: MappedListing, cityId: string | null, neighborhoodId: s
 
 /** Pull Property records (with Media) from the RESO Web API and upsert them as FEED listings. */
 export async function syncResoFeed(opts: FeedSyncOptions = {}): Promise<FeedSyncSummary> {
-  if (!feedConfigured()) throw new Error("RESO feed is not configured — set RESO_API_BASE_URL, RESO_TOKEN_URL, RESO_CLIENT_ID and RESO_CLIENT_SECRET.");
+  if (!feedConfigured()) throw new Error("RESO feed is not configured. Set RESO_API_BASE_URL, RESO_TOKEN_URL, RESO_CLIENT_ID and RESO_CLIENT_SECRET.");
   const c = config();
   const started = new Date();
   const lastRow = opts.full || opts.since !== undefined ? null : await db.siteSetting.findUnique({ where: { key: LAST_SYNC_KEY } });

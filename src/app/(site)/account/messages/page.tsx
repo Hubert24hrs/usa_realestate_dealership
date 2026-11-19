@@ -15,7 +15,7 @@ export default async function MessagesPage({ searchParams }: Props) {
   const conversations = await listConversations(user.id);
   return (
     <>
-      <AccountPageHeader title="Messages" description="Conversations with agents, landlords and co-shoppers. Never send deposits or wire money based on a message — see our scam guidance." />
+      <AccountPageHeader title="Messages" description="Conversations with agents, landlords and shopping partners. Never send deposits or wire money based on a message. See our scam guidance." />
       <MessagesInbox
         initial={conversations.map((conv) => ({ ...conv, others: conv.others.map((o) => ({ id: o.id, name: o.name, role: o.role })) }))}
         initialId={c && ID_RE.test(c) ? c : null}

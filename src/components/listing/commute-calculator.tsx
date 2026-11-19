@@ -49,7 +49,7 @@ export function CommuteCalculator({ origin, destinations }: { origin: { lat: num
           </li>
         ))}
       </ul>
-      <p className="text-xs text-muted-foreground">Typical-conditions estimate from straight-line distance — demo, not live traffic or transit schedules.</p>
+      <p className="text-xs text-muted-foreground">Estimate for typical conditions based on straight line distance. Not live traffic or transit schedules.</p>
     </div>
   );
 }

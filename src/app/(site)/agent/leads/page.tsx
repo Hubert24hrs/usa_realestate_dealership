@@ -37,7 +37,7 @@ export default async function AgentLeadsPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <AccountPageHeader title="Leads" description="Every inquiry routed to you. Reply fast — speed is the biggest driver of conversion." />
+      <AccountPageHeader title="Leads" description="Every inquiry routed to you. Reply fast. Speed is the biggest driver of conversion." />
       <nav aria-label="Filter by status" className="mb-5 flex flex-wrap gap-1.5">
         {[undefined, ...LEAD_STATUSES].map((s) => (
           <Link

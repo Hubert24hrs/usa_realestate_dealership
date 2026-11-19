@@ -27,7 +27,7 @@ export default async function MlsDataPage() {
       </ul>
       <p>
         We don&apos;t copy listings, photos or descriptions from other real estate websites. Listing photos are provided by the listing broker or owner under license.
-        {site.demoMode ? " In demo mode, listing photos are original AI-generated illustrations created for this platform and credited as such, and all listing data is fictional." : ""}
+        {site.demoMode ? " While the site runs on sample data, listing photos are original AI generated illustrations created for this platform and credited as such, and all listing data is fictional." : ""}
       </p>
 
       <h2 id="idx-disclaimer">IDX disclaimer</h2>
@@ -36,13 +36,13 @@ export default async function MlsDataPage() {
 
       <h2 id="use">How you may use listing data</h2>
       <p>
-        IDX information is for your personal, non-commercial use in identifying properties you may be interested in buying or renting. It may not be reproduced,
+        IDX information is for your personal, noncommercial use in identifying properties you may be interested in buying or renting. It may not be reproduced,
         redistributed, scraped or used for any other purpose. See our <Link href="/legal/terms#acceptable-use">acceptable use rules</Link>.
       </p>
 
       <h2 id="estimates">Estimates and statistics</h2>
       <p>
-        Home value estimates, rent estimates, price-per-square-foot figures and market trends are calculated by {site.name} from comparable listings and sales. Home value
+        Home value estimates, rent estimates, price per square foot figures and market trends are calculated by {site.name} from comparable listings and sales. Home value
         estimates come with a range and a confidence level. None of these figures is an appraisal, and they shouldn&apos;t be the basis for a loan or purchase decision.
       </p>
 

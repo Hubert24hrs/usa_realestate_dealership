@@ -74,7 +74,7 @@ export function PriceFilter({ filters, onChange }: { filters: SearchFilters; onC
     setMax(filters.price?.max?.toString() ?? "");
   }, [filters.price]);
   const label = filters.price?.min != null || filters.price?.max != null
-    ? `${filters.price?.min != null ? fmtPreset(filters.mode, filters.price.min) : "Any"} – ${filters.price?.max != null ? fmtPreset(filters.mode, filters.price.max) : "Any"}`
+    ? `${filters.price?.min != null ? fmtPreset(filters.mode, filters.price.min) : "Any"} to ${filters.price?.max != null ? fmtPreset(filters.mode, filters.price.max) : "Any"}`
     : filters.mode === "rent" ? "Rent" : "Price";
   const apply = () => {
     const a = min ? Number(min) : undefined;
@@ -279,7 +279,7 @@ export function MoreFiltersSheet({ filters, onApply }: { filters: SearchFilters;
       <SheetContent side="right" className="flex w-full flex-col gap-0 p-0 sm:max-w-md">
         <SheetHeader className="border-b px-5 py-4">
           <SheetTitle>Filters</SheetTitle>
-          <SheetDescription>Every filter describes the property — never the people who live nearby.</SheetDescription>
+          <SheetDescription>Every filter describes the property, never the people who live nearby.</SheetDescription>
         </SheetHeader>
         <div className="flex-1 space-y-5 overflow-y-auto px-5 py-5">
           {(mode === "buy" || mode === "new") && (

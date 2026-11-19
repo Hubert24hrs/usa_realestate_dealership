@@ -16,8 +16,8 @@ export const POST = withUser<{ id: string }>(
     const app = await db.rentalApplication.findUnique({ where: { id: params.id }, select: { id: true, userId: true, status: true } });
     if (!app || app.userId !== user.id) return notFound();
     if (!["SUBMITTED", "UNDER_REVIEW"].includes(app.status)) return Response.json({ error: "Only submitted applications can be approved." }, { status: 409 });
-    const result = await decideApplication(app.id, "APPROVED", "Approved (simulated in demo mode).");
+    const result = await decideApplication(app.id, "APPROVED", "Approved (simulated approval).");
     return Response.json({ ok: true, leaseId: result?.leaseId ?? null });
   },
-  { limit: 10, bucket: "rent-demo-approve" },
+  { limit: 10, bucket: "rent-simulate-approval" },
 );

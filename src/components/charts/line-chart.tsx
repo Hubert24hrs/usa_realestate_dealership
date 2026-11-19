@@ -215,7 +215,7 @@ export function LineChart({
                     <span aria-hidden className="inline-block size-2 rounded-full" style={{ background: s.color }} />
                     {s.label}
                   </span>
-                  <span className="font-medium tabular-nums">{s.values[active] != null ? format(s.values[active]!) : "—"}</span>
+                  <span className="font-medium tabular-nums">{s.values[active] != null ? format(s.values[active]!) : "N/A"}</span>
                 </li>
               ))}
             </ul>
@@ -237,7 +237,7 @@ export function LineChart({
               {labels.map((l, i) => (
                 <tr key={`${l}-${i}`} className="border-t">
                   <th scope="row" className="px-3 py-1.5 text-left font-medium">{l}</th>
-                  {series.map((s) => <td key={s.key} className="px-3 py-1.5">{s.values[i] != null ? format(s.values[i]!) : "—"}</td>)}
+                  {series.map((s) => <td key={s.key} className="px-3 py-1.5">{s.values[i] != null ? format(s.values[i]!) : "N/A"}</td>)}
                 </tr>
               ))}
             </tbody>

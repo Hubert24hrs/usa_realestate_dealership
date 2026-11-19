@@ -57,7 +57,7 @@ export class PexelsProvider implements ImageProvider {
         photographer: photo.photographer,
         photographerUrl: photo.photographer_url,
         sourceUrl: photo.url,
-        license: "Pexels License — free to use, attribution appreciated",
+        license: "Pexels License (free to use, attribution appreciated)",
       } satisfies ProviderImage;
     });
   }

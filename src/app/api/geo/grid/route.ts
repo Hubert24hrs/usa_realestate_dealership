@@ -64,5 +64,5 @@ export async function GET(request: Request) {
       if (v > 0.04) points.push([Number(lng.toFixed(4)), Number(lat.toFixed(4)), Number(v.toFixed(3))]);
     }
   }
-  return Response.json({ metric, demo: true, points }, { headers: { "Cache-Control": "public, max-age=600, s-maxage=3600" } });
+  return Response.json({ metric, illustrative: true, points }, { headers: { "Cache-Control": "public, max-age=600, s-maxage=3600" } });
 }

@@ -69,7 +69,7 @@ export default async function JoinCollectionPage({ params }: Props) {
         ) : (
           <>
             <FolderHeart className="mx-auto size-10 text-copper-600" aria-hidden />
-            <p className="eyebrow mt-4">Co-shopping invitation</p>
+            <p className="eyebrow mt-4">Shopping together invitation</p>
             <h1 className="mt-2 font-display text-2xl font-semibold">Join “{invite.collection.name}”</h1>
             <p className="mt-2 text-sm text-muted-foreground">
               {invite.collection.owner.name ?? "A CITI VIEW member"} invited you as {invite.role === "VIEWER" ? "a viewer" : "an editor"} · {pluralize(invite.collection._count.items, "home")}

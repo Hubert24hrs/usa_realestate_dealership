@@ -23,7 +23,7 @@ ${rows ? `<table role="presentation" width="100%" style="border-top:1px solid #e
 ${opts.body ? `<p style="margin:0 0 16px;color:#40455c;font-size:14px;line-height:1.55;white-space:pre-line">${esc(opts.body)}</p>` : ""}
 ${opts.cta ? `<a href="${esc(opts.cta.url)}" style="display:inline-block;background:#2c3aa3;color:#ffffff;text-decoration:none;padding:11px 18px;border-radius:10px;font-weight:600;font-size:14px">${esc(opts.cta.label)}</a>` : ""}
 </td></tr>
-<tr><td style="padding:16px 24px;background:#f8f9fc;color:#8a8fa3;font-size:11px;line-height:1.5">${esc(opts.footnote ?? "This message relates to demo data on the CITI VIEW platform.")}<br>Equal Housing Opportunity · ${esc(site.url)}</td></tr>
+<tr><td style="padding:16px 24px;background:#f8f9fc;color:#8a8fa3;font-size:11px;line-height:1.5">${esc(opts.footnote ?? "This message relates to sample data on the CITI VIEW platform.")}<br>Equal Housing Opportunity · ${esc(site.url)}</td></tr>
 </table></td></tr></table></body></html>`;
 }
 

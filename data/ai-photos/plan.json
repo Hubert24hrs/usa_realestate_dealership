@@ -12,7 +12,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a two-story home with Austin limestone, fiber-cement siding and a two-car garage in Austin, Texas, live oak trees and native drought-tolerant landscaping. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: two-story home with Austin limestone, fiber-cement siding and a two-car garage"
+   "alt": "Front of the home: two story home with Austin limestone, fiber cement siding and a two car garage"
   },
   {
    "slot": 1,
@@ -32,7 +32,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a modern farmhouse-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 3,
@@ -102,7 +102,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a brand-new white-painted brick farmhouse with black shutters in Nashville, Tennessee, magnolia and dogwood trees and a green lawn. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: brand-new white-painted brick farmhouse with black shutters"
+   "alt": "Front of the home: brand new white painted brick farmhouse with black shutters"
   },
   {
    "slot": 10,
@@ -162,7 +162,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a Southern transitional-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 16,
@@ -212,7 +212,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with navy lower cabinets, white uppers and a marble-look island in a Scandinavian modern-style home in Raleigh, North Carolina, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island"
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island"
   },
   {
    "slot": 21,
@@ -282,7 +282,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in Miami, Florida, royal palms and lush tropical landscaping. late-afternoon sun, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 28,
@@ -302,7 +302,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a Mediterranean-style condo in Miami, Florida, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 30,
@@ -312,7 +312,7 @@
    "category": "DINING_ROOM",
    "scene": "dining-room",
    "prompt": "Professional real estate listing photo, photorealistic: dining nook with a built-in banquette by a bay window in a Mediterranean-style condo in Miami, Florida, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Dining nook with a built-in banquette by a bay window"
+   "alt": "Dining nook with a built in banquette by a bay window"
   },
   {
    "slot": 31,
@@ -362,7 +362,7 @@
    "category": "VIEW",
    "scene": "view",
    "prompt": "Professional real estate listing photo, photorealistic: view of Biscayne Bay and the Miami skyline through floor-to-ceiling windows of a condo in Miami, Florida. late-afternoon sun, high detail. No people, no text, no watermark.",
-   "alt": "View of Biscayne Bay and the Miami skyline through floor-to-ceiling windows"
+   "alt": "View of Biscayne Bay and the Miami skyline through floor to ceiling windows"
   },
   {
    "slot": 36,
@@ -372,7 +372,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a red-brick colonial with white trim in Raleigh, North Carolina, loblolly pines, dogwoods and a green lawn. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: red-brick colonial with white trim"
+   "alt": "Front of the home: red brick colonial with white trim"
   },
   {
    "slot": 37,
@@ -462,7 +462,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in Miami, Florida, royal palms and lush tropical landscaping. soft morning light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 46,
@@ -472,7 +472,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa, windows framing Biscayne Bay and the Miami skyline in a coastal contemporary-style condo in Miami, Florida, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 47,
@@ -482,7 +482,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a coastal contemporary-style condo in Miami, Florida, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 48,
@@ -552,7 +552,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a high-rise residential tower with floor-to-ceiling windows in Seattle, Washington, Douglas firs, ferns and a moss-green lawn. soft overcast daylight, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows"
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows"
   },
   {
    "slot": 55,
@@ -622,7 +622,7 @@
    "category": "AMENITY",
    "scene": "amenity",
    "prompt": "Professional real estate listing photo, photorealistic: resort-style apartment swimming pool with cabanas at a condominium building in Seattle, Washington. Wide-angle, natural light, clean and inviting. No people, no text, no watermark.",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas"
+   "alt": "Amenity: resort style apartment swimming pool with cabanas"
   },
   {
    "slot": 62,
@@ -642,7 +642,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in Seattle, Washington, Douglas firs, ferns and a moss-green lawn. soft overcast daylight, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 64,
@@ -652,7 +652,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa, windows framing Puget Sound and the Olympic Mountains in a craftsman-style condo in Seattle, Washington, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 65,
@@ -692,7 +692,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a craftsman-style condo in Seattle, Washington, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 69,
@@ -712,7 +712,7 @@
    "category": "VIEW",
    "scene": "view",
    "prompt": "Professional real estate listing photo, photorealistic: view of Puget Sound and the Olympic Mountains through floor-to-ceiling windows of a condo in Seattle, Washington. soft overcast daylight, high detail. No people, no text, no watermark.",
-   "alt": "View of Puget Sound and the Olympic Mountains through floor-to-ceiling windows"
+   "alt": "View of Puget Sound and the Olympic Mountains through floor to ceiling windows"
   },
   {
    "slot": 71,
@@ -722,7 +722,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass in Scottsdale, Arizona, saguaro cacti, palo verde trees and desert landscaping. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass"
+   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor to ceiling glass"
   },
   {
    "slot": 72,
@@ -742,7 +742,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: marble-clad kitchen with a statement range hood and paneled appliances in a Spanish revival-style home in Scottsdale, Arizona, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Marble-clad kitchen with a statement range hood and paneled appliances"
+   "alt": "Marble clad kitchen with a statement range hood and paneled appliances"
   },
   {
    "slot": 74,
@@ -782,7 +782,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a Spanish revival-style home in Scottsdale, Arizona, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 78,
@@ -792,7 +792,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a Spanish revival-style home in Scottsdale, Arizona, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 79,
@@ -822,7 +822,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a two-story traditional brick home with a gabled roof in Nashville, Tennessee, magnolia and dogwood trees and a green lawn. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: two-story traditional brick home with a gabled roof"
+   "alt": "Front of the home: two story traditional brick home with a gabled roof"
   },
   {
    "slot": 82,
@@ -852,7 +852,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a warm traditional-style home in Nashville, Tennessee, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 85,
@@ -962,7 +962,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a Southern transitional-style home in Atlanta, Georgia, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 96,
@@ -992,7 +992,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a Southern transitional-style home in Atlanta, Georgia, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 99,
@@ -1012,7 +1012,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in Seattle, Washington, Douglas firs, ferns and a moss-green lawn. soft overcast daylight, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 101,
@@ -1042,7 +1042,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows, with a view of Puget Sound and the Olympic Mountains in a Scandinavian-style condo in Seattle, Washington, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 104,
@@ -1062,7 +1062,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a Scandinavian-style condo in Seattle, Washington, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 106,
@@ -1092,7 +1092,7 @@
    "category": "VIEW",
    "scene": "view",
    "prompt": "Professional real estate listing photo, photorealistic: view of Puget Sound and the Olympic Mountains through floor-to-ceiling windows of a condo in Seattle, Washington. soft overcast daylight, high detail. No people, no text, no watermark.",
-   "alt": "View of Puget Sound and the Olympic Mountains through floor-to-ceiling windows"
+   "alt": "View of Puget Sound and the Olympic Mountains through floor to ceiling windows"
   },
   {
    "slot": 109,
@@ -1122,7 +1122,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a Spanish revival-style home in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 112,
@@ -1162,7 +1162,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a Spanish revival-style home in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 116,
@@ -1182,7 +1182,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a Spanish revival-style home in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 118,
@@ -1312,7 +1312,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa in a transitional-style townhome in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 131,
@@ -1322,7 +1322,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a transitional-style townhome in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 132,
@@ -1342,7 +1342,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a transitional-style townhome in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 134,
@@ -1372,7 +1372,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a transitional-style townhome in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 137,
@@ -1412,7 +1412,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: open-concept living room with a sectional sofa and a view into the kitchen in a coastal casual-style home in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen"
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen"
   },
   {
    "slot": 141,
@@ -1452,7 +1452,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a coastal casual-style home in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 145,
@@ -1462,7 +1462,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a coastal casual-style home in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 146,
@@ -1472,7 +1472,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a coastal casual-style home in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 147,
@@ -1492,7 +1492,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a garden-style apartment community with landscaped grounds in Atlanta, Georgia, towering hardwoods, azaleas and a green lawn. clear midday sky, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: garden-style apartment community with landscaped grounds"
+   "alt": "Building exterior: garden style apartment community with landscaped grounds"
   },
   {
    "slot": 149,
@@ -1512,7 +1512,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a Southern transitional-style apartment in Atlanta, Georgia, modern apartment finishes, vinyl plank floors and white cabinets. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 151,
@@ -1612,7 +1612,7 @@
    "category": "WATER",
    "scene": "water",
    "prompt": "Professional real estate listing photo, photorealistic: spring-fed creek with clear water over rocks in Blue Ridge mountain hardwood forest with long views, near Asheville, North Carolina. soft morning light, wide landscape view, high detail. No people, no text, no watermark.",
-   "alt": "Spring-fed creek with clear water over rocks"
+   "alt": "Spring fed creek with clear water over rocks"
   },
   {
    "slot": 161,
@@ -1662,7 +1662,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a craftsman-style mountain home in Bozeman, Montana, native grasses, aspens and the Bridger Mountains. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: craftsman-style mountain home"
+   "alt": "Front of the home: Craftsman style mountain home"
   },
   {
    "slot": 166,
@@ -1742,7 +1742,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a two-story brick colonial with black shutters in Charlotte, North Carolina, tall pines, azaleas and a manicured lawn. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: two-story brick colonial with black shutters"
+   "alt": "Front of the home: two story brick colonial with black shutters"
   },
   {
    "slot": 174,
@@ -1802,7 +1802,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a coastal casual-style home in Charlotte, North Carolina, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 180,
@@ -1822,7 +1822,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a coastal casual-style home in Charlotte, North Carolina, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 182,
@@ -1832,7 +1832,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a coastal casual-style home in Charlotte, North Carolina, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 183,
@@ -1852,7 +1852,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-townhome",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a row of modern three-story fiber-cement and limestone townhomes with private garages in Austin, Texas, live oak trees and native drought-tolerant landscaping. late-afternoon sun, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front exterior: modern fiber-cement and limestone townhomes"
+   "alt": "Front exterior: modern fiber cement and limestone townhomes"
   },
   {
    "slot": 185,
@@ -1932,7 +1932,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a mountain-modern home with a stone base, timber accents and big windows in Denver, Colorado, mature trees, a green lawn and perennial beds. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: mountain-modern home with a stone base, timber accents and big windows"
+   "alt": "Front of the home: mountain modern home with a stone base, timber accents and big windows"
   },
   {
    "slot": 193,
@@ -2042,7 +2042,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a garden-style apartment community with landscaped grounds in Denver, Colorado, mature trees, a green lawn and perennial beds. soft morning light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: garden-style apartment community with landscaped grounds"
+   "alt": "Building exterior: garden style apartment community with landscaped grounds"
   },
   {
    "slot": 204,
@@ -2052,7 +2052,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a urban contemporary-style apartment in Denver, Colorado, modern apartment finishes, vinyl plank floors and white cabinets. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 205,
@@ -2082,7 +2082,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a urban contemporary-style apartment in Denver, Colorado, modern apartment finishes, vinyl plank floors and white cabinets. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 208,
@@ -2132,7 +2132,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a coastal casual-style townhome in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 213,
@@ -2202,7 +2202,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a high-rise residential tower with floor-to-ceiling windows in Seattle, Washington, Douglas firs, ferns and a moss-green lawn. soft overcast daylight, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows"
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows"
   },
   {
    "slot": 220,
@@ -2222,7 +2222,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a Japandi-style condo in Seattle, Washington, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 222,
@@ -2242,7 +2242,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a Japandi-style condo in Seattle, Washington, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 224,
@@ -2282,7 +2282,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a red-brick colonial with white trim in Raleigh, North Carolina, loblolly pines, dogwoods and a green lawn. late-afternoon sun, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: red-brick colonial with white trim"
+   "alt": "Front of the home: red brick colonial with white trim"
   },
   {
    "slot": 228,
@@ -2312,7 +2312,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a modern farmhouse-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 231,
@@ -2342,7 +2342,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a modern farmhouse-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 234,
@@ -2352,7 +2352,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a modern farmhouse-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 235,
@@ -2382,7 +2382,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa, windows framing the Denver skyline with the Rocky Mountains beyond in a updated craftsman-style townhome in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 238,
@@ -2422,7 +2422,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a updated craftsman-style townhome in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 242,
@@ -2432,7 +2432,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a updated craftsman-style townhome in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 243,
@@ -2462,7 +2462,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a boutique four-story condo building with brick and metal in Chicago, Illinois, parkway trees and a small front garden. golden-hour light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: boutique four-story condo building with brick and metal"
+   "alt": "Building exterior: boutique four story condo building with brick and metal"
   },
   {
    "slot": 246,
@@ -2472,7 +2472,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a urban loft-style condo in Chicago, Illinois, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 247,
@@ -2482,7 +2482,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with navy lower cabinets, white uppers and a marble-look island in a urban loft-style condo in Chicago, Illinois, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island"
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island"
   },
   {
    "slot": 248,
@@ -2562,7 +2562,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a Scandinavian-style home in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 256,
@@ -2572,7 +2572,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with navy lower cabinets, white uppers and a marble-look island in a Scandinavian-style home in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island"
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island"
   },
   {
    "slot": 257,
@@ -2622,7 +2622,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a Scandinavian-style home in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 262,
@@ -2662,7 +2662,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a two-story home with Austin limestone, fiber-cement siding and a two-car garage in Austin, Texas, live oak trees and native drought-tolerant landscaping. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: two-story home with Austin limestone, fiber-cement siding and a two-car garage"
+   "alt": "Front of the home: two story home with Austin limestone, fiber cement siding and a two car garage"
   },
   {
    "slot": 266,
@@ -2802,7 +2802,7 @@
    "category": "RETAIL_SPACE",
    "scene": "retail-space",
    "prompt": "Professional real estate listing photo, photorealistic: restaurant-ready retail space with an open ceiling in Denver, Colorado. Wide-angle, bright and empty. No people, no logos or readable signage, no text, no watermark.",
-   "alt": "Restaurant-ready retail space with an open ceiling"
+   "alt": "Restaurant ready retail space with an open ceiling"
   },
   {
    "slot": 280,
@@ -2912,7 +2912,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a single-story ranch with stucco walls and a tile roof in Scottsdale, Arizona, saguaro cacti, palo verde trees and desert landscaping. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: single-story ranch with stucco walls and a tile roof"
+   "alt": "Front of the home: single story ranch with stucco walls and a tile roof"
   },
   {
    "slot": 291,
@@ -2972,7 +2972,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a warm minimalist-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 297,
@@ -3082,7 +3082,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a eclectic-style home in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 308,
@@ -3092,7 +3092,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a eclectic-style home in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 309,
@@ -3202,7 +3202,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a board-and-batten cottage with a tin roof in Fredericksburg, Texas, live oaks, wildflowers and rolling Hill Country. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: board-and-batten cottage with a tin roof"
+   "alt": "Front of the home: board and batten cottage with a tin roof"
   },
   {
    "slot": 320,
@@ -3252,7 +3252,7 @@
    "category": "WATER",
    "scene": "water",
    "prompt": "Professional real estate listing photo, photorealistic: spring-fed creek with clear water over rocks in rolling Texas Hill Country with live oaks, limestone and wildflowers, near Fredericksburg, Texas. clear midday sky, wide landscape view, high detail. No people, no text, no watermark.",
-   "alt": "Spring-fed creek with clear water over rocks"
+   "alt": "Spring fed creek with clear water over rocks"
   },
   {
    "slot": 325,
@@ -3292,7 +3292,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass in Scottsdale, Arizona, saguaro cacti, palo verde trees and desert landscaping. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass"
+   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor to ceiling glass"
   },
   {
    "slot": 329,
@@ -3302,7 +3302,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa, windows framing the McDowell Mountains glowing at sunset over the desert in a warm minimalist-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 330,
@@ -3332,7 +3332,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a warm minimalist-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 333,
@@ -3352,7 +3352,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a warm minimalist-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 335,
@@ -3382,7 +3382,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a high-rise residential tower with floor-to-ceiling windows in Miami, Florida, royal palms and lush tropical landscaping. golden-hour light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows"
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows"
   },
   {
    "slot": 338,
@@ -3392,7 +3392,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves, windows framing Biscayne Bay and the Miami skyline in a Mediterranean-style condo in Miami, Florida, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 339,
@@ -3402,7 +3402,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a Mediterranean-style condo in Miami, Florida, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 340,
@@ -3412,7 +3412,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows, with a view of Biscayne Bay and the Miami skyline in a Mediterranean-style condo in Miami, Florida, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 341,
@@ -3432,7 +3432,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a Mediterranean-style condo in Miami, Florida, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 343,
@@ -3452,7 +3452,7 @@
    "category": "VIEW",
    "scene": "view",
    "prompt": "Professional real estate listing photo, photorealistic: view of Biscayne Bay and the Miami skyline through floor-to-ceiling windows of a condo in Miami, Florida. golden-hour light, high detail. No people, no text, no watermark.",
-   "alt": "View of Biscayne Bay and the Miami skyline through floor-to-ceiling windows"
+   "alt": "View of Biscayne Bay and the Miami skyline through floor to ceiling windows"
   },
   {
    "slot": 345,
@@ -3532,7 +3532,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a Scandinavian modern-style townhome in Denver, Colorado, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 353,
@@ -3552,7 +3552,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in San Diego, California, palms, succulents and bougainvillea. golden-hour light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 355,
@@ -3642,7 +3642,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a Key West-style home with a metal roof and shutters in Miami, Florida, royal palms and lush tropical landscaping. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: Key West-style home with a metal roof and shutters"
+   "alt": "Front of the home: Key West style home with a metal roof and shutters"
   },
   {
    "slot": 364,
@@ -3702,7 +3702,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a coastal contemporary-style home in Miami, Florida, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 370,
@@ -3762,7 +3762,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a Scandinavian modern-style home in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 376,
@@ -3872,7 +3872,7 @@
    "category": "RETAIL_SPACE",
    "scene": "retail-space",
    "prompt": "Professional real estate listing photo, photorealistic: restaurant-ready retail space with an open ceiling in Miami, Florida. Wide-angle, bright and empty. No people, no logos or readable signage, no text, no watermark.",
-   "alt": "Restaurant-ready retail space with an open ceiling"
+   "alt": "Restaurant ready retail space with an open ceiling"
   },
   {
    "slot": 387,
@@ -3912,7 +3912,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a classic brick two-flat with a bay window in Chicago, Illinois, parkway trees and a small front garden. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: classic brick two-flat with a bay window"
+   "alt": "Front of the home: classic brick two flat with a bay window"
   },
   {
    "slot": 391,
@@ -3932,7 +3932,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: open-concept living room with a sectional sofa and a view into the kitchen in a Scandinavian-style home in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen"
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen"
   },
   {
    "slot": 393,
@@ -3952,7 +3952,7 @@
    "category": "DINING_ROOM",
    "scene": "dining-room",
    "prompt": "Professional real estate listing photo, photorealistic: dining nook with a built-in banquette by a bay window in a Scandinavian-style home in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Dining nook with a built-in banquette by a bay window"
+   "alt": "Dining nook with a built in banquette by a bay window"
   },
   {
    "slot": 395,
@@ -4002,7 +4002,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a Scandinavian-style home in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 400,
@@ -4032,7 +4032,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a modern traditional-style home in Atlanta, Georgia, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 403,
@@ -4042,7 +4042,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a modern traditional-style home in Atlanta, Georgia, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 404,
@@ -4082,7 +4082,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a modern traditional-style home in Atlanta, Georgia, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 408,
@@ -4132,7 +4132,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a Southern transitional-style townhome in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 413,
@@ -4172,7 +4172,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a Southern transitional-style townhome in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 417,
@@ -4222,7 +4222,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa in a modern farmhouse-style home in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 422,
@@ -4232,7 +4232,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a modern farmhouse-style home in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 423,
@@ -4262,7 +4262,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a modern farmhouse-style home in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 426,
@@ -4322,7 +4322,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a Spanish revival-style townhome in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 432,
@@ -4362,7 +4362,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a Spanish revival-style townhome in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 436,
@@ -4392,7 +4392,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-commercial",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a mixed-use building with ground-floor retail and apartments above in San Diego, California. late-afternoon sun, eye-level wide-angle, straight verticals. No people, no readable signage or logos, no text, no watermark.",
-   "alt": "Property exterior: mixed-use building with ground-floor retail and apartments above"
+   "alt": "Property exterior: mixed use building with ground floor retail and apartments above"
   },
   {
    "slot": 439,
@@ -4442,7 +4442,7 @@
    "category": "RETAIL_SPACE",
    "scene": "retail-space",
    "prompt": "Professional real estate listing photo, photorealistic: restaurant-ready retail space with an open ceiling in San Diego, California. Wide-angle, bright and empty. No people, no logos or readable signage, no text, no watermark.",
-   "alt": "Restaurant-ready retail space with an open ceiling"
+   "alt": "Restaurant ready retail space with an open ceiling"
   },
   {
    "slot": 444,
@@ -4452,7 +4452,7 @@
    "category": "VIEW",
    "scene": "view",
    "prompt": "Professional real estate listing photo, photorealistic: view of the Pacific Ocean at sunset through floor-to-ceiling windows of a home in San Diego, California. late-afternoon sun, high detail. No people, no text, no watermark.",
-   "alt": "View of the Pacific Ocean at sunset through floor-to-ceiling windows"
+   "alt": "View of the Pacific Ocean at sunset through floor to ceiling windows"
   },
   {
    "slot": 445,
@@ -4562,7 +4562,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in San Diego, California, palms, succulents and bougainvillea. clear midday sky, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 456,
@@ -4582,7 +4582,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with sage-green cabinets, a butcher-block island and open shelving in a airy modern-style condo in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with sage-green cabinets, a butcher-block island and open shelving"
+   "alt": "Kitchen with sage green cabinets, a butcher block island and open shelving"
   },
   {
    "slot": 458,
@@ -4602,7 +4602,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a airy modern-style condo in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 460,
@@ -4652,7 +4652,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: open-concept living room with a sectional sofa and a view into the kitchen in a Scandinavian modern-style townhome in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen"
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen"
   },
   {
    "slot": 465,
@@ -4662,7 +4662,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a Scandinavian modern-style townhome in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 466,
@@ -4722,7 +4722,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a mid-century modern ranch with clerestory windows and a carport in Austin, Texas, live oak trees and native drought-tolerant landscaping. late-afternoon sun, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: mid-century modern ranch with clerestory windows and a carport"
+   "alt": "Front of the home: midcentury modern ranch with clerestory windows and a carport"
   },
   {
    "slot": 472,
@@ -4752,7 +4752,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a Hill Country contemporary-style home in Austin, Texas, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 475,
@@ -4802,7 +4802,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a Hill Country contemporary-style home in Austin, Texas, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 480,
@@ -4832,7 +4832,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a brand-new two-story home with Austin limestone, fiber-cement siding and a two-car garage in Austin, Texas, live oak trees and native drought-tolerant landscaping. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: brand-new two-story home with Austin limestone, fiber-cement siding and a two-car garage"
+   "alt": "Front of the home: brand new two story home with Austin limestone, fiber cement siding and a two car garage"
   },
   {
    "slot": 483,
@@ -4842,7 +4842,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa in a mid-century modern-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 484,
@@ -4852,7 +4852,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with navy lower cabinets, white uppers and a marble-look island in a mid-century modern-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island"
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island"
   },
   {
    "slot": 485,
@@ -4882,7 +4882,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a mid-century modern-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 488,
@@ -4892,7 +4892,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a mid-century modern-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 489,
@@ -4922,7 +4922,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a high-rise residential tower with floor-to-ceiling windows in Chicago, Illinois, parkway trees and a small front garden. clear midday sky, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows"
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows"
   },
   {
    "slot": 492,
@@ -5002,7 +5002,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a contemporary mid-rise apartment building with a leasing office in Nashville, Tennessee, magnolia and dogwood trees and a green lawn. soft morning light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: contemporary mid-rise apartment building with a leasing office"
+   "alt": "Building exterior: contemporary mid rise apartment building with a leasing office"
   },
   {
    "slot": 500,
@@ -5012,7 +5012,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a warm traditional-style apartment in Nashville, Tennessee, modern apartment finishes, vinyl plank floors and white cabinets. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 501,
@@ -5092,7 +5092,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in Chicago, Illinois, parkway trees and a small front garden. late-afternoon sun, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 509,
@@ -5112,7 +5112,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a contemporary-style condo in Chicago, Illinois, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 511,
@@ -5142,7 +5142,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a contemporary-style condo in Chicago, Illinois, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 514,
@@ -5162,7 +5162,7 @@
    "category": "VIEW",
    "scene": "view",
    "prompt": "Professional real estate listing photo, photorealistic: view of the Chicago skyline and Lake Michigan through floor-to-ceiling windows of a condo in Chicago, Illinois. late-afternoon sun, high detail. No people, no text, no watermark.",
-   "alt": "View of the Chicago skyline and Lake Michigan through floor-to-ceiling windows"
+   "alt": "View of the Chicago skyline and Lake Michigan through floor to ceiling windows"
   },
   {
    "slot": 516,
@@ -5172,7 +5172,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in Miami, Florida, royal palms and lush tropical landscaping. golden-hour light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 517,
@@ -5182,7 +5182,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: open-concept living room with a sectional sofa and a view into the kitchen, windows framing Biscayne Bay and the Miami skyline in a Mediterranean-style condo in Miami, Florida, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen"
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen"
   },
   {
    "slot": 518,
@@ -5202,7 +5202,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows, with a view of Biscayne Bay and the Miami skyline in a Mediterranean-style condo in Miami, Florida, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 520,
@@ -5252,7 +5252,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a Tudor-style brick home with a steep gable in Charlotte, North Carolina, tall pines, azaleas and a manicured lawn. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: Tudor-style brick home with a steep gable"
+   "alt": "Front of the home: Tudor style brick home with a steep gable"
   },
   {
    "slot": 525,
@@ -5272,7 +5272,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with navy lower cabinets, white uppers and a marble-look island in a classic traditional-style home in Charlotte, North Carolina, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island"
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island"
   },
   {
    "slot": 527,
@@ -5292,7 +5292,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a classic traditional-style home in Charlotte, North Carolina, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 529,
@@ -5312,7 +5312,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a classic traditional-style home in Charlotte, North Carolina, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 531,
@@ -5352,7 +5352,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: open-concept living room with a sectional sofa and a view into the kitchen in a warm minimalist-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen"
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen"
   },
   {
    "slot": 535,
@@ -5362,7 +5362,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a warm minimalist-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 536,
@@ -5412,7 +5412,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a warm minimalist-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 541,
@@ -5462,7 +5462,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: marble-clad kitchen with a statement range hood and paneled appliances in a classic vintage with crown molding-style home in Chicago, Illinois, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Marble-clad kitchen with a statement range hood and paneled appliances"
+   "alt": "Marble clad kitchen with a statement range hood and paneled appliances"
   },
   {
    "slot": 546,
@@ -5482,7 +5482,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a classic vintage with crown molding-style home in Chicago, Illinois, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 548,
@@ -5522,7 +5522,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a boutique four-story condo building with brick and metal in San Diego, California, palms, succulents and bougainvillea. late-afternoon sun, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: boutique four-story condo building with brick and metal"
+   "alt": "Building exterior: boutique four story condo building with brick and metal"
   },
   {
    "slot": 552,
@@ -5572,7 +5572,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a coastal California-style condo in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 557,
@@ -5592,7 +5592,7 @@
    "category": "AMENITY",
    "scene": "amenity",
    "prompt": "Professional real estate listing photo, photorealistic: resort-style apartment swimming pool with cabanas at a condominium building in San Diego, California. Wide-angle, natural light, clean and inviting. No people, no text, no watermark.",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas"
+   "alt": "Amenity: resort style apartment swimming pool with cabanas"
   },
   {
    "slot": 559,
@@ -5622,7 +5622,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves, windows framing the Midtown Atlanta skyline in a classic-style townhome in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 562,
@@ -5632,7 +5632,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a classic-style townhome in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 563,
@@ -5702,7 +5702,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a Mediterranean revival villa with a barrel-tile roof in Miami, Florida, royal palms and lush tropical landscaping. late-afternoon sun, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: Mediterranean revival villa with a barrel-tile roof"
+   "alt": "Front of the home: Mediterranean revival villa with a barrel tile roof"
   },
   {
    "slot": 570,
@@ -5732,7 +5732,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a tropical modern-style home in Miami, Florida, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 573,
@@ -5812,7 +5812,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a classic red-brick Denver Square with a covered front porch in Denver, Colorado, mature trees, a green lawn and perennial beds. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: classic red-brick Denver Square with a covered front porch"
+   "alt": "Front of the home: classic red brick Denver Square with a covered front porch"
   },
   {
    "slot": 581,
@@ -5852,7 +5852,7 @@
    "category": "DINING_ROOM",
    "scene": "dining-room",
    "prompt": "Professional real estate listing photo, photorealistic: dining nook with a built-in banquette by a bay window in a Scandinavian modern-style home in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Dining nook with a built-in banquette by a bay window"
+   "alt": "Dining nook with a built in banquette by a bay window"
   },
   {
    "slot": 585,
@@ -5892,7 +5892,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a Scandinavian modern-style home in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 589,
@@ -5912,7 +5912,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a white-painted brick farmhouse with black shutters in Nashville, Tennessee, magnolia and dogwood trees and a green lawn. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: white-painted brick farmhouse with black shutters"
+   "alt": "Front of the home: white painted brick farmhouse with black shutters"
   },
   {
    "slot": 591,
@@ -5932,7 +5932,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a modern farmhouse-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 593,
@@ -5942,7 +5942,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a modern farmhouse-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 594,
@@ -5972,7 +5972,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a modern farmhouse-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 597,
@@ -5982,7 +5982,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a modern farmhouse-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 598,
@@ -6002,7 +6002,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-commercial",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a mixed-use building with ground-floor retail and apartments above in Nashville, Tennessee. soft morning light, eye-level wide-angle, straight verticals. No people, no readable signage or logos, no text, no watermark.",
-   "alt": "Property exterior: mixed-use building with ground-floor retail and apartments above"
+   "alt": "Property exterior: mixed use building with ground floor retail and apartments above"
   },
   {
    "slot": 600,
@@ -6022,7 +6022,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: marble-clad kitchen with a statement range hood and paneled appliances in a warm traditional-style home in Nashville, Tennessee, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Marble-clad kitchen with a statement range hood and paneled appliances"
+   "alt": "Marble clad kitchen with a statement range hood and paneled appliances"
   },
   {
    "slot": 602,
@@ -6032,7 +6032,7 @@
    "category": "OFFICE",
    "scene": "office",
    "prompt": "Professional real estate listing photo, photorealistic: glass-walled conference room with a long table in a modern office building in Nashville, Tennessee. Wide-angle, natural light, unoccupied and tidy. No people, no text, no watermark.",
-   "alt": "Glass-walled conference room with a long table"
+   "alt": "Glass walled conference room with a long table"
   },
   {
    "slot": 603,
@@ -6162,7 +6162,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a red-brick colonial with white trim in Raleigh, North Carolina, loblolly pines, dogwoods and a green lawn. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: red-brick colonial with white trim"
+   "alt": "Front of the home: red brick colonial with white trim"
   },
   {
    "slot": 616,
@@ -6172,7 +6172,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa in a modern farmhouse-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 617,
@@ -6192,7 +6192,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a modern farmhouse-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 619,
@@ -6232,7 +6232,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a modern farmhouse-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 623,
@@ -6262,7 +6262,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a brand-new new traditional home with a rocking-chair front porch in Raleigh, North Carolina, loblolly pines, dogwoods and a green lawn. late-afternoon sun, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: brand-new new traditional home with a rocking-chair front porch"
+   "alt": "Front of the home: brand new new traditional home with a rocking chair front porch"
   },
   {
    "slot": 626,
@@ -6292,7 +6292,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a classic Southern-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 629,
@@ -6302,7 +6302,7 @@
    "category": "DINING_ROOM",
    "scene": "dining-room",
    "prompt": "Professional real estate listing photo, photorealistic: dining nook with a built-in banquette by a bay window in a classic Southern-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Dining nook with a built-in banquette by a bay window"
+   "alt": "Dining nook with a built in banquette by a bay window"
   },
   {
    "slot": 630,
@@ -6322,7 +6322,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a classic Southern-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 632,
@@ -6342,7 +6342,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a classic Southern-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 634,
@@ -6352,7 +6352,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a classic Southern-style home in Raleigh, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 635,
@@ -6372,7 +6372,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a high-rise residential tower with floor-to-ceiling windows in San Diego, California, palms, succulents and bougainvillea. clear midday sky, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows"
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows"
   },
   {
    "slot": 637,
@@ -6392,7 +6392,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a airy modern-style condo in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 639,
@@ -6452,7 +6452,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a updated brick ranch with a low-pitched roof and a front lawn in Denver, Colorado, mature trees, a green lawn and perennial beds. late-afternoon sun, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: updated brick ranch with a low-pitched roof and a front lawn"
+   "alt": "Front of the home: updated brick ranch with a low pitched roof and a front lawn"
   },
   {
    "slot": 645,
@@ -6472,7 +6472,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa in a updated craftsman-style home in Denver, Colorado, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 647,
@@ -6502,7 +6502,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a updated craftsman-style home in Denver, Colorado, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 650,
@@ -6522,7 +6522,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a updated craftsman-style home in Denver, Colorado, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 652,
@@ -6572,7 +6572,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a modern farmhouse-style townhome in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 657,
@@ -6582,7 +6582,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a modern farmhouse-style townhome in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 658,
@@ -6602,7 +6602,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a modern farmhouse-style townhome in Charlotte, North Carolina, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 660,
@@ -6642,7 +6642,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a contemporary mid-rise apartment building with a leasing office in Austin, Texas, live oak trees and native drought-tolerant landscaping. late-afternoon sun, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: contemporary mid-rise apartment building with a leasing office"
+   "alt": "Building exterior: contemporary mid rise apartment building with a leasing office"
   },
   {
    "slot": 664,
@@ -6652,7 +6652,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a mid-century modern-style apartment in Austin, Texas, modern apartment finishes, vinyl plank floors and white cabinets. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 665,
@@ -6702,7 +6702,7 @@
    "category": "AMENITY",
    "scene": "amenity",
    "prompt": "Professional real estate listing photo, photorealistic: resort-style apartment swimming pool with cabanas at a modern apartment community in Austin, Texas. Wide-angle, natural light, clean and inviting. No people, no text, no watermark.",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas"
+   "alt": "Amenity: resort style apartment swimming pool with cabanas"
   },
   {
    "slot": 670,
@@ -6722,7 +6722,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a mid-century modern home with a low-slung roofline in San Diego, California, palms, succulents and bougainvillea. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: mid-century modern home with a low-slung roofline"
+   "alt": "Front of the home: midcentury modern home with a low slung roofline"
   },
   {
    "slot": 672,
@@ -6742,7 +6742,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa, windows framing the Pacific Ocean at sunset in a airy modern-style home in San Diego, California, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 674,
@@ -6762,7 +6762,7 @@
    "category": "DINING_ROOM",
    "scene": "dining-room",
    "prompt": "Professional real estate listing photo, photorealistic: dining nook with a built-in banquette by a bay window in a airy modern-style home in San Diego, California, luxury finishes, natural stone, custom millwork and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Dining nook with a built-in banquette by a bay window"
+   "alt": "Dining nook with a built in banquette by a bay window"
   },
   {
    "slot": 676,
@@ -6832,7 +6832,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a side-by-side duplex with two front entries in Chicago, Illinois, parkway trees and a small front garden. golden-hour light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: side-by-side duplex with two front entries"
+   "alt": "Front of the home: side by side duplex with two front entries"
   },
   {
    "slot": 683,
@@ -6852,7 +6852,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: open-concept living room with a sectional sofa and a view into the kitchen in a classic vintage with crown molding-style home in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen"
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen"
   },
   {
    "slot": 685,
@@ -7012,7 +7012,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a two-story brick colonial with black shutters in Charlotte, North Carolina, tall pines, azaleas and a manicured lawn. late-afternoon sun, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: two-story brick colonial with black shutters"
+   "alt": "Front of the home: two story brick colonial with black shutters"
   },
   {
    "slot": 701,
@@ -7042,7 +7042,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with warm wood cabinets in a U-shape with a breakfast bar in a Southern transitional-style home in Charlotte, North Carolina, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar"
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar"
   },
   {
    "slot": 704,
@@ -7052,7 +7052,7 @@
    "category": "DINING_ROOM",
    "scene": "dining-room",
    "prompt": "Professional real estate listing photo, photorealistic: dining nook with a built-in banquette by a bay window in a Southern transitional-style home in Charlotte, North Carolina, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Dining nook with a built-in banquette by a bay window"
+   "alt": "Dining nook with a built in banquette by a bay window"
   },
   {
    "slot": 705,
@@ -7062,7 +7062,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a Southern transitional-style home in Charlotte, North Carolina, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 706,
@@ -7142,7 +7142,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: living room with a stone fireplace and built-in bookshelves in a eclectic-style home in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Living room with a stone fireplace and built-in bookshelves"
+   "alt": "Living room with a stone fireplace and built in bookshelves"
   },
   {
    "slot": 714,
@@ -7182,7 +7182,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a eclectic-style home in Atlanta, Georgia, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 718,
@@ -7212,7 +7212,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-commercial",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a four-story Class A office building with a glass curtain wall and a landscaped entry in Austin, Texas. golden-hour light, eye-level wide-angle, straight verticals. No people, no readable signage or logos, no text, no watermark.",
-   "alt": "Property exterior: four-story Class A office building with a glass curtain wall and a landscaped entry"
+   "alt": "Property exterior: four story Class A office building with a glass curtain wall and a landscaped entry"
   },
   {
    "slot": 721,
@@ -7222,7 +7222,7 @@
    "category": "OFFICE",
    "scene": "office",
    "prompt": "Professional real estate listing photo, photorealistic: glass-walled conference room with a long table in a modern office building in Austin, Texas. Wide-angle, natural light, unoccupied and tidy. No people, no text, no watermark.",
-   "alt": "Glass-walled conference room with a long table"
+   "alt": "Glass walled conference room with a long table"
   },
   {
    "slot": 722,
@@ -7242,7 +7242,7 @@
    "category": "OFFICE",
    "scene": "office",
    "prompt": "Professional real estate listing photo, photorealistic: open-plan office with workstations and an exposed ceiling in a modern office building in Austin, Texas. Wide-angle, natural light, unoccupied and tidy. No people, no text, no watermark.",
-   "alt": "Open-plan office with workstations and an exposed ceiling"
+   "alt": "Open plan office with workstations and an exposed ceiling"
   },
   {
    "slot": 724,
@@ -7292,7 +7292,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a boutique four-story condo building with brick and metal in Miami, Florida, royal palms and lush tropical landscaping. golden-hour light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: boutique four-story condo building with brick and metal"
+   "alt": "Building exterior: boutique four story condo building with brick and metal"
   },
   {
    "slot": 729,
@@ -7312,7 +7312,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a tropical modern-style condo in Miami, Florida, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 731,
@@ -7462,7 +7462,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-townhome",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a row of modern three-story fiber-cement and limestone townhomes with private garages in Austin, Texas, live oak trees and native drought-tolerant landscaping. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front exterior: modern fiber-cement and limestone townhomes"
+   "alt": "Front exterior: modern fiber cement and limestone townhomes"
   },
   {
    "slot": 746,
@@ -7512,7 +7512,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a warm minimalist-style townhome in Austin, Texas, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 751,
@@ -7522,7 +7522,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a warm minimalist-style townhome in Austin, Texas, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 752,
@@ -7592,7 +7592,7 @@
    "category": "WATER",
    "scene": "water",
    "prompt": "Professional real estate listing photo, photorealistic: spring-fed creek with clear water over rocks in rolling Middle Tennessee horse country with white fences, near Franklin, Tennessee. golden-hour light, wide landscape view, high detail. No people, no text, no watermark.",
-   "alt": "Spring-fed creek with clear water over rocks"
+   "alt": "Spring fed creek with clear water over rocks"
   },
   {
    "slot": 759,
@@ -7652,7 +7652,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a Spanish revival-style home in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 765,
@@ -7672,7 +7672,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows, with a view of the Pacific Ocean at sunset in a Spanish revival-style home in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 767,
@@ -7702,7 +7702,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a Spanish revival-style home in San Diego, California, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 770,
@@ -7732,7 +7732,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a two-story traditional brick home with a gabled roof in Nashville, Tennessee, magnolia and dogwood trees and a green lawn. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: two-story traditional brick home with a gabled roof"
+   "alt": "Front of the home: two story traditional brick home with a gabled roof"
   },
   {
    "slot": 773,
@@ -7762,7 +7762,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with navy lower cabinets, white uppers and a marble-look island in a eclectic vintage-modern-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island"
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island"
   },
   {
    "slot": 776,
@@ -7802,7 +7802,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a eclectic vintage-modern-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 780,
@@ -7812,7 +7812,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a eclectic vintage-modern-style home in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 781,
@@ -7862,7 +7862,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a Hill Country contemporary-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 786,
@@ -7872,7 +7872,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a Hill Country contemporary-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 787,
@@ -7892,7 +7892,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a Hill Country contemporary-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 789,
@@ -7902,7 +7902,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a Hill Country contemporary-style home in Austin, Texas, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 790,
@@ -8022,7 +8022,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a modern three-story home with dark metal panels and warm wood siding in Denver, Colorado, mature trees, a green lawn and perennial beds. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: modern three-story home with dark metal panels and warm wood siding"
+   "alt": "Front of the home: modern three story home with dark metal panels and warm wood siding"
   },
   {
    "slot": 802,
@@ -8082,7 +8082,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a Scandinavian modern-style home in Denver, Colorado, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 808,
@@ -8132,7 +8132,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a updated mid-century home with wide eaves and cedar accents in Seattle, Washington, Douglas firs, ferns and a moss-green lawn. soft overcast daylight, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: updated mid-century home with wide eaves and cedar accents"
+   "alt": "Front of the home: updated midcentury home with wide eaves and cedar accents"
   },
   {
    "slot": 813,
@@ -8162,7 +8162,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a Pacific Northwest modern-style home in Seattle, Washington, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 816,
@@ -8362,7 +8362,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a urban contemporary-style townhome in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 836,
@@ -8372,7 +8372,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a urban contemporary-style townhome in Denver, Colorado, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 837,
@@ -8422,7 +8422,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a Southern transitional-style townhome in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 842,
@@ -8462,7 +8462,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a Southern transitional-style townhome in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 846,
@@ -8472,7 +8472,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a Southern transitional-style townhome in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 847,
@@ -8492,7 +8492,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a brand-new desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass in Scottsdale, Arizona, saguaro cacti, palo verde trees and desert landscaping. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: brand-new desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass"
+   "alt": "Front of the home: brand new desert contemporary home with smooth stucco, a flat roof and floor to ceiling glass"
   },
   {
    "slot": 849,
@@ -8562,7 +8562,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bathroom with a freestanding tub and a walk-in glass shower in a Southwest modern-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower"
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower"
   },
   {
    "slot": 856,
@@ -8572,7 +8572,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a Southwest modern-style home in Scottsdale, Arizona, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 857,
@@ -8592,7 +8592,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-commercial",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a four-story Class A office building with a glass curtain wall and a landscaped entry in Seattle, Washington. soft overcast daylight, eye-level wide-angle, straight verticals. No people, no readable signage or logos, no text, no watermark.",
-   "alt": "Property exterior: four-story Class A office building with a glass curtain wall and a landscaped entry"
+   "alt": "Property exterior: four story Class A office building with a glass curtain wall and a landscaped entry"
   },
   {
    "slot": 859,
@@ -8602,7 +8602,7 @@
    "category": "OFFICE",
    "scene": "office",
    "prompt": "Professional real estate listing photo, photorealistic: glass-walled conference room with a long table in a modern office building in Seattle, Washington. Wide-angle, natural light, unoccupied and tidy. No people, no text, no watermark.",
-   "alt": "Glass-walled conference room with a long table"
+   "alt": "Glass walled conference room with a long table"
   },
   {
    "slot": 860,
@@ -8622,7 +8622,7 @@
    "category": "OFFICE",
    "scene": "office",
    "prompt": "Professional real estate listing photo, photorealistic: open-plan office with workstations and an exposed ceiling in a modern office building in Seattle, Washington. Wide-angle, natural light, unoccupied and tidy. No people, no text, no watermark.",
-   "alt": "Open-plan office with workstations and an exposed ceiling"
+   "alt": "Open plan office with workstations and an exposed ceiling"
   },
   {
    "slot": 862,
@@ -8672,7 +8672,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern mid-rise condominium building with glass balconies in Chicago, Illinois, parkway trees and a small front garden. clear midday sky, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies"
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies"
   },
   {
    "slot": 867,
@@ -8682,7 +8682,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa, windows framing the Chicago skyline and Lake Michigan in a urban loft-style condo in Chicago, Illinois, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 868,
@@ -8752,7 +8752,7 @@
    "category": "VIEW",
    "scene": "view",
    "prompt": "Professional real estate listing photo, photorealistic: view of the Chicago skyline and Lake Michigan through floor-to-ceiling windows of a condo in Chicago, Illinois. clear midday sky, high detail. No people, no text, no watermark.",
-   "alt": "View of the Chicago skyline and Lake Michigan through floor-to-ceiling windows"
+   "alt": "View of the Chicago skyline and Lake Michigan through floor to ceiling windows"
   },
   {
    "slot": 875,
@@ -8762,7 +8762,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-commercial",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern tilt-up industrial warehouse with loading docks and a truck court in Atlanta, Georgia. soft morning light, eye-level wide-angle, straight verticals. No people, no readable signage or logos, no text, no watermark.",
-   "alt": "Property exterior: modern tilt-up industrial warehouse with loading docks and a truck court"
+   "alt": "Property exterior: modern tilt up industrial warehouse with loading docks and a truck court"
   },
   {
    "slot": 876,
@@ -8772,7 +8772,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-commercial",
    "prompt": "Professional real estate listing photo, photorealistic: truck court with dock-high doors and trailer parking at a modern tilt-up industrial warehouse in Atlanta, Georgia. soft morning light, eye-level wide-angle, straight verticals. No people, no readable signage or logos, no text, no watermark.",
-   "alt": "Property exterior: truck court with dock-high doors and trailer parking at a modern tilt-up industrial warehouse"
+   "alt": "Property exterior: truck court with dock high doors and trailer parking at a modern tilt up industrial warehouse"
   },
   {
    "slot": 877,
@@ -8792,7 +8792,7 @@
    "category": "WAREHOUSE",
    "scene": "warehouse",
    "prompt": "Professional real estate listing photo, photorealistic: high-bay warehouse interior with a polished concrete floor and tall clear height in Atlanta, Georgia. Wide-angle, even lighting, empty and clean. No people, no text, no watermark.",
-   "alt": "High-bay warehouse interior with a polished concrete floor and tall clear height"
+   "alt": "High bay warehouse interior with a polished concrete floor and tall clear height"
   },
   {
    "slot": 879,
@@ -8802,7 +8802,7 @@
    "category": "WAREHOUSE",
    "scene": "warehouse",
    "prompt": "Professional real estate listing photo, photorealistic: warehouse loading docks with roll-up doors in Atlanta, Georgia. Wide-angle, even lighting, empty and clean. No people, no text, no watermark.",
-   "alt": "Warehouse loading docks with roll-up doors"
+   "alt": "Warehouse loading docks with roll up doors"
   },
   {
    "slot": 880,
@@ -8812,7 +8812,7 @@
    "category": "WAREHOUSE",
    "scene": "warehouse",
    "prompt": "Professional real estate listing photo, photorealistic: light-industrial flex space with an office mezzanine in Atlanta, Georgia. Wide-angle, even lighting, empty and clean. No people, no text, no watermark.",
-   "alt": "Light-industrial flex space with an office mezzanine"
+   "alt": "Light industrial flex space with an office mezzanine"
   },
   {
    "slot": 881,
@@ -8832,7 +8832,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a tall-and-skinny modern home with board-and-batten siding in Nashville, Tennessee, magnolia and dogwood trees and a green lawn. soft morning light, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: tall-and-skinny modern home with board-and-batten siding"
+   "alt": "Front of the home: tall and narrow modern home with board and batten siding"
   },
   {
    "slot": 883,
@@ -8842,7 +8842,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa in a Southern transitional-style home in Nashville, Tennessee, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 884,
@@ -8852,7 +8852,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with sage-green cabinets, a butcher-block island and open shelving in a Southern transitional-style home in Nashville, Tennessee, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with sage-green cabinets, a butcher-block island and open shelving"
+   "alt": "Kitchen with sage green cabinets, a butcher block island and open shelving"
   },
   {
    "slot": 885,
@@ -8902,7 +8902,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: spa-like bathroom with a double vanity and large-format stone tile in a Southern transitional-style home in Nashville, Tennessee, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile"
+   "alt": "Spa style bathroom with a double vanity and large format stone tile"
   },
   {
    "slot": 890,
@@ -8912,7 +8912,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a Southern transitional-style home in Nashville, Tennessee, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 891,
@@ -8942,7 +8942,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-commercial",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a modern tilt-up industrial warehouse with loading docks and a truck court in Charlotte, North Carolina. clear midday sky, eye-level wide-angle, straight verticals. No people, no readable signage or logos, no text, no watermark.",
-   "alt": "Property exterior: modern tilt-up industrial warehouse with loading docks and a truck court"
+   "alt": "Property exterior: modern tilt up industrial warehouse with loading docks and a truck court"
   },
   {
    "slot": 894,
@@ -8972,7 +8972,7 @@
    "category": "WAREHOUSE",
    "scene": "warehouse",
    "prompt": "Professional real estate listing photo, photorealistic: light-industrial flex space with an office mezzanine in Charlotte, North Carolina. Wide-angle, even lighting, empty and clean. No people, no text, no watermark.",
-   "alt": "Light-industrial flex space with an office mezzanine"
+   "alt": "Light industrial flex space with an office mezzanine"
   },
   {
    "slot": 897,
@@ -8982,7 +8982,7 @@
    "category": "WAREHOUSE",
    "scene": "warehouse",
    "prompt": "Professional real estate listing photo, photorealistic: high-bay warehouse interior with a polished concrete floor and tall clear height in Charlotte, North Carolina. Wide-angle, even lighting, empty and clean. No people, no text, no watermark.",
-   "alt": "High-bay warehouse interior with a polished concrete floor and tall clear height"
+   "alt": "High bay warehouse interior with a polished concrete floor and tall clear height"
   },
   {
    "slot": 898,
@@ -8992,7 +8992,7 @@
    "category": "WAREHOUSE",
    "scene": "warehouse",
    "prompt": "Professional real estate listing photo, photorealistic: warehouse loading docks with roll-up doors in Charlotte, North Carolina. Wide-angle, even lighting, empty and clean. No people, no text, no watermark.",
-   "alt": "Warehouse loading docks with roll-up doors"
+   "alt": "Warehouse loading docks with roll up doors"
   },
   {
    "slot": 899,
@@ -9012,7 +9012,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-house",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a mid-century modern ranch with clerestory windows and a carport in Austin, Texas, live oak trees and native drought-tolerant landscaping. clear midday sky, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front of the home: mid-century modern ranch with clerestory windows and a carport"
+   "alt": "Front of the home: midcentury modern ranch with clerestory windows and a carport"
   },
   {
    "slot": 901,
@@ -9082,7 +9082,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: updated bathroom with a walk-in shower and matte black fixtures in a mid-century modern-style home in Austin, Texas, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures"
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures"
   },
   {
    "slot": 908,
@@ -9112,7 +9112,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a high-rise residential tower with floor-to-ceiling windows in Chicago, Illinois, parkway trees and a small front garden. golden-hour light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows"
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows"
   },
   {
    "slot": 911,
@@ -9132,7 +9132,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with flat-panel walnut cabinets and a long quartz island in a urban loft-style condo in Chicago, Illinois, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island"
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island"
   },
   {
    "slot": 913,
@@ -9172,7 +9172,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a urban loft-style condo in Chicago, Illinois, clean, modestly updated finishes. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 917,
@@ -9212,7 +9212,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: bright living room with floor-to-ceiling windows and a modular sofa in a Southern transitional-style townhome in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa"
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa"
   },
   {
    "slot": 921,
@@ -9242,7 +9242,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a Southern transitional-style townhome in Nashville, Tennessee, updated finishes, quartz counters and wood floors. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 924,
@@ -9312,7 +9312,7 @@
    "category": "LIVING_ROOM",
    "scene": "living-room",
    "prompt": "Professional real estate listing photo, photorealistic: open-concept living room with a sectional sofa and a view into the kitchen in a Scandinavian-style home in Seattle, Washington, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen"
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen"
   },
   {
    "slot": 931,
@@ -9352,7 +9352,7 @@
    "category": "BEDROOM",
    "scene": "bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: cozy bedroom with a daybed and built-in shelves in a Scandinavian-style home in Seattle, Washington, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Cozy bedroom with a daybed and built-in shelves"
+   "alt": "Cozy bedroom with a daybed and built in shelves"
   },
   {
    "slot": 935,
@@ -9392,7 +9392,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-townhome",
    "prompt": "Professional real estate listing photo, photorealistic: front exterior of a row of modern three-story dark fiber-cement and cedar townhomes with private garages in Seattle, Washington, Douglas firs, ferns and a moss-green lawn. soft overcast daylight, eye-level wide-angle, crisp HDR. No people, no cars, no text, no watermark.",
-   "alt": "Front exterior: modern dark fiber-cement and cedar townhomes"
+   "alt": "Front exterior: modern dark fiber cement and cedar townhomes"
   },
   {
    "slot": 939,
@@ -9412,7 +9412,7 @@
    "category": "KITCHEN",
    "scene": "kitchen",
    "prompt": "Professional real estate listing photo, photorealistic: kitchen with two-tone gray and white cabinets with a granite peninsula in a Scandinavian-style townhome in Seattle, Washington, high-end finishes, quartz, hardwood floors and designer lighting. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula"
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula"
   },
   {
    "slot": 941,
@@ -9472,7 +9472,7 @@
    "category": "EXTERIOR",
    "scene": "exterior-building",
    "prompt": "Professional real estate listing photo, photorealistic: exterior of a contemporary mid-rise apartment building with a leasing office in Charlotte, North Carolina, tall pines, azaleas and a manicured lawn. soft morning light, eye-level wide-angle, straight verticals. No people, no readable signage, no text, no watermark.",
-   "alt": "Building exterior: contemporary mid-rise apartment building with a leasing office"
+   "alt": "Building exterior: contemporary mid rise apartment building with a leasing office"
   },
   {
    "slot": 947,
@@ -9502,7 +9502,7 @@
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom",
    "prompt": "Professional real estate listing photo, photorealistic: primary bedroom with a wood-paneled accent wall and large windows in a modern farmhouse-style apartment in Charlotte, North Carolina, modern apartment finishes, vinyl plank floors and white cabinets. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows"
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows"
   },
   {
    "slot": 950,
@@ -9512,7 +9512,7 @@
    "category": "BATHROOM",
    "scene": "bathroom",
    "prompt": "Professional real estate listing photo, photorealistic: hall bathroom with a tub-shower combo and white subway tile in a modern farmhouse-style apartment in Charlotte, North Carolina, modern apartment finishes, vinyl plank floors and white cabinets. Wide-angle, natural daylight, staged and uncluttered, straight verticals. No people, no text, no watermark.",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile"
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile"
   },
   {
    "slot": 951,
@@ -9532,7 +9532,7 @@
    "category": "AMENITY",
    "scene": "amenity",
    "prompt": "Professional real estate listing photo, photorealistic: resort-style apartment swimming pool with cabanas at a modern apartment community in Charlotte, North Carolina. Wide-angle, natural light, clean and inviting. No people, no text, no watermark.",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas"
+   "alt": "Amenity: resort style apartment swimming pool with cabanas"
   },
   {
    "slot": 953,

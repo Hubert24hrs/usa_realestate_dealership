@@ -52,7 +52,7 @@ export default async function AdminAgentsPage({ searchParams }: PageProps) {
       <AccountPageHeader
         eyebrow="Admin"
         title="Agents & lead routing"
-        description="Leads go to the listing agent first, then to agents serving the city by weighted round-robin. Weight 0 keeps an agent in the directory without new routed leads. Plan changes here are comps: they don't touch Stripe billing."
+        description="Leads go to the listing agent first, then to agents serving the city by weighted round robin. Weight 0 keeps an agent in the directory without new routed leads. Plan changes here are comps: they don't touch Stripe billing."
       />
       <AutoSubmitForm action="/admin/agents" className="mb-5 flex flex-wrap items-end gap-2 rounded-2xl border bg-card p-3">
         <div className="relative min-w-56 flex-1">

@@ -59,7 +59,7 @@ export async function disablePush(): Promise<void> {
 export const PUSH_STATE_HINT: Record<PushState | "error", string> = {
   enabled: "Push notifications are on for this browser.",
   disabled: "Push notifications are off for this browser.",
-  denied: "Notifications are blocked for this site — allow them in your browser's site settings.",
+  denied: "Notifications are blocked for this site. Allow them in your browser's site settings.",
   unsupported: "This browser doesn't support push notifications. Email alerts still work.",
   unconfigured: "Push isn't configured on this server yet (add VAPID keys). Email alerts still work.",
   error: "Couldn't turn on push notifications. Please try again.",

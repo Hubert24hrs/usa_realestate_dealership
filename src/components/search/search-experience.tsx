@@ -216,7 +216,7 @@ export function SearchExperience({ vertical, initialFilters, initialResult, head
                 <div>
                   <h1 id="results-heading" className="font-display text-2xl font-semibold tracking-tight sm:text-[1.75rem]">{heading}</h1>
                   <p className="mt-1 text-sm text-muted-foreground" aria-live="polite">
-                    {isFetching ? "Updating…" : count === 0 ? `No ${plural}` : `${count.toLocaleString("en-US")} ${count === 1 ? singular : plural}${result.pageCount > 1 ? ` · showing ${firstIndex}–${lastIndex}` : ""}`}
+                    {isFetching ? "Updating…" : count === 0 ? `No ${plural}` : `${count.toLocaleString("en-US")} ${count === 1 ? singular : plural}${result.pageCount > 1 ? ` · showing ${firstIndex} to ${lastIndex}` : ""}`}
                   </p>
                 </div>
                 <SortSelect filters={filters} onChange={update} />

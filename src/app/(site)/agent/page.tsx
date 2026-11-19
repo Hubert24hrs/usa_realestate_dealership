@@ -45,7 +45,7 @@ export default async function AgentOverviewPage() {
 
   return (
     <>
-      <AccountPageHeader title={`Welcome back${scope.agent ? `, ${scope.agent.name.split(" ")[0]}` : ""}`} description="Your listings, leads and tours at a glance — last 30 days." />
+      <AccountPageHeader title={`Welcome back${scope.agent ? `, ${scope.agent.name.split(" ")[0]}` : ""}`} description="Your listings, leads and tours over the last 30 days." />
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <ResultStat label="New leads · 30 days" value={leads30.length} sub={<Link href="/agent/leads" className="text-primary hover:underline">Open lead inbox</Link>} />
         <ResultStat label="Listing views · 30 days" value={sum(views).toLocaleString("en-US")} sub={`${active} active listing${active === 1 ? "" : "s"}`} />

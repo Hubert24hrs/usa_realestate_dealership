@@ -34,7 +34,7 @@ export const PATCH = withRole<{ id: string }>(
     });
     if (reassigned && agent?.userId) {
       await db.notification.create({
-        data: { userId: agent.userId, type: "LEAD", title: "New lead assigned to you", body: `${lead.name} — reassigned by CITI VIEW staff.`, url: "/agent/leads" },
+        data: { userId: agent.userId, type: "LEAD", title: "New lead assigned to you", body: `${lead.name} was reassigned to you by CITI VIEW staff.`, url: "/agent/leads" },
       });
     }
     return Response.json({ ok: true });

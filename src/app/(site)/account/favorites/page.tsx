@@ -77,7 +77,7 @@ export default async function FavoritesPage({ searchParams }: Props) {
         </>
       ) : (
         <EmptyState icon={Heart} title="No saved homes yet" action={<Button asChild><Link href="/homes-for-sale">Start browsing</Link></Button>}>
-          Tap the heart on any listing to save it. Saved homes sync across your devices and power price-drop alerts.
+          Tap the heart on any listing to save it. Saved homes sync across your devices and power price drop alerts.
         </EmptyState>
       )}
     </>

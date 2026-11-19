@@ -36,7 +36,7 @@ export const AdminListingCreateSchema = z.object({
   streetAddress: z.string().trim().min(3).max(120),
   unit: z.string().trim().max(20).optional().or(z.literal("")),
   citySlug: z.string().regex(/^[a-z0-9-]{2,60}$/, "Choose a city"),
-  zip: z.string().trim().regex(/^\d{5}$/, "5-digit ZIP"),
+  zip: z.string().trim().regex(/^\d{5}$/, "5 digit ZIP"),
   price: z.coerce.number().int().min(100).max(1_000_000_000),
   description: z.string().trim().min(20).max(10_000),
 });
@@ -46,8 +46,8 @@ export const ImportRowSchema = z.object({
   street_address: z.string().trim().min(3).max(120),
   unit: z.string().trim().max(20).optional().default(""),
   city: z.string().trim().min(2).max(80),
-  state: z.string().trim().regex(/^[A-Za-z]{2}$/, "2-letter state").transform((s) => s.toUpperCase()),
-  zip: z.string().trim().regex(/^\d{5}$/, "5-digit ZIP"),
+  state: z.string().trim().regex(/^[A-Za-z]{2}$/, "2 letter state").transform((s) => s.toUpperCase()),
+  zip: z.string().trim().regex(/^\d{5}$/, "5 digit ZIP"),
   category: z.preprocess((v) => String(v ?? "").trim().toUpperCase() || "RESIDENTIAL", z.enum(CATEGORIES)),
   transaction_type: z.preprocess((v) => String(v ?? "").trim().toUpperCase() || "SALE", z.enum(TRANSACTIONS)),
   property_type: z.preprocess((v) => String(v ?? "").trim().toUpperCase().replace(/[\s-]+/g, "_") || "SINGLE_FAMILY", z.enum(PROPERTY_TYPES)),
@@ -100,8 +100,8 @@ export const PlaceUpdateSchema = z.discriminatedUnion("kind", [
 
 const text = (min: number, max: number) => z.string().trim().min(min).max(max);
 export const ROUTING_STRATEGIES = [
-  ["weighted-round-robin", "Weighted round-robin (paid plans get priority)"],
-  ["round-robin", "Plain round-robin (equal turns)"],
+  ["weighted-round-robin", "Weighted round robin (paid plans get priority)"],
+  ["round-robin", "Plain round robin (equal turns)"],
 ] as const;
 
 /** One setting per request; keys mirror SiteSetting rows. */

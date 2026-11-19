@@ -44,7 +44,7 @@ const COLUMNS: Array<{ title: string; links: Array<[string, string]> }> = [
     links: [
       ["Mortgage calculator", "/mortgage/calculator"],
       ["Today's rates", "/mortgage/rates"],
-      ["Get pre-approved", "/mortgage/preapproval"],
+      ["Get preapproved", "/mortgage/preapproval"],
       ["Closing costs", "/mortgage/closing-costs"],
       ["Down payment assistance", "/mortgage/down-payment-assistance"],
       ["Glossary", "/learn/glossary"],
@@ -72,7 +72,7 @@ export async function SiteFooter() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_3fr]">
           <div className="space-y-4">
             <Logo />
-            <p className="max-w-xs text-sm text-muted-foreground">{site.tagline} Homes, rentals, new builds, commercial space and land — all on one map.</p>
+            <p className="max-w-xs text-sm text-muted-foreground">{site.tagline} Homes, rentals, new builds, commercial space and land on one map.</p>
             <EqualHousingStatement text={settings.fairHousing} className="max-w-sm" />
           </div>
           <nav aria-label="Footer" className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
@@ -120,7 +120,7 @@ export async function SiteFooter() {
             </p>
           </div>
           <details className="group self-start rounded-xl border bg-background/60 p-4">
-            <summary className="cursor-pointer text-sm font-semibold text-foreground marker:text-muted-foreground">State-specific notices &amp; licensing disclosures</summary>
+            <summary className="cursor-pointer text-sm font-semibold text-foreground marker:text-muted-foreground">State specific notices &amp; licensing disclosures</summary>
             <ul className="mt-3 max-h-64 space-y-2 overflow-y-auto pr-2">
               {notices.map((n) => (
                 <li key={n.code}>
@@ -132,7 +132,7 @@ export async function SiteFooter() {
         </div>
 
         <div className="mt-8 flex flex-col gap-4 border-t pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {year} {site.legalName}. All rights reserved.{site.demoMode ? " Listing data on this site is demo data." : ""}</p>
+          <p>© {year} {site.legalName}. All rights reserved.{site.demoMode ? " Listings and agents on this site are fictional samples." : ""}</p>
           <ul className="flex flex-wrap gap-x-4 gap-y-2">
             <li><Link href="/legal/terms" className="hover:text-foreground">Terms of use</Link></li>
             <li><Link href="/legal/privacy" className="hover:text-foreground">Privacy policy</Link></li>

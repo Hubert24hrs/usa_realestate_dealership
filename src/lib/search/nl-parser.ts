@@ -58,7 +58,7 @@ export function parseNaturalLanguage(input: string, defaultMode: SearchMode = "b
     text = text.replace(PROTECTED, " ").replace(/\s+/g, " ");
   }
   if (/\b(safe|safest|low[- ]crime)\b/.test(text)) {
-    notices.push("Safety isn't a search filter. Turn on the crime map layer to review demo crime data for any area.");
+    notices.push("Safety isn't a search filter. Turn on the crime map layer to review crime data for any area.");
     text = text.replace(/\b(safe|safest|low[- ]crime)\b/g, " ");
   }
 
@@ -163,7 +163,7 @@ export function parseNaturalLanguage(input: string, defaultMode: SearchMode = "b
     const suffix = mode === "rent" ? "/mo" : "";
     chips.push({
       key: "price",
-      label: range.min != null && range.max != null ? `${fmt(range.min)}–${fmt(range.max)}${suffix}` : range.max != null ? `Under ${fmt(range.max)}${suffix}` : `Over ${fmt(range.min!)}${suffix}`,
+      label: range.min != null && range.max != null ? `${fmt(range.min)} to ${fmt(range.max)}${suffix}` : range.max != null ? `Under ${fmt(range.max)}${suffix}` : `Over ${fmt(range.min!)}${suffix}`,
     });
   }
 
@@ -173,7 +173,7 @@ export function parseNaturalLanguage(input: string, defaultMode: SearchMode = "b
     [/\b(single[- ]family|houses?|detached)\b/, "SINGLE_FAMILY", "House"],
     [/\bcondos?\b|\bcondominiums?\b/, "CONDO", "Condo"],
     [/\b(town ?(?:house|home)s?|row ?houses?)\b/, "TOWNHOUSE", "Townhome"],
-    [/\b(multi[- ]?family|duplex|triplex|fourplex|quadplex)\b/, "MULTI_FAMILY", "Multi-family"],
+    [/\b(multi[- ]?family|duplex|triplex|fourplex|quadplex)\b/, "MULTI_FAMILY", "Multifamily"],
     [/\b(manufactured|mobile home)\b/, "MANUFACTURED", "Manufactured"],
     [/\boffice\b/, "OFFICE", "Office"],
     [/\b(retail|storefront|shop space)\b/, "RETAIL", "Retail"],
@@ -246,7 +246,7 @@ export function parseNaturalLanguage(input: string, defaultMode: SearchMode = "b
     chips.push({ key: "schoolRatingMin", label: `Schools ${f.schoolRatingMin}+/10` });
   } else if (/\b(top|best|great|excellent|highly rated|top[- ]rated)\s+schools?\b/.test(text)) {
     f.schoolRatingMin = 8;
-    chips.push({ key: "schoolRatingMin", label: "Top-rated schools (8+)" });
+    chips.push({ key: "schoolRatingMin", label: "Top rated schools (8+)" });
   } else if (/\bgood schools?\b|\bschool district\b/.test(text)) {
     f.schoolRatingMin = 7;
     chips.push({ key: "schoolRatingMin", label: "Good schools (7+)" });
@@ -264,7 +264,7 @@ export function parseNaturalLanguage(input: string, defaultMode: SearchMode = "b
     chips.push({ key: "yearBuiltMax", label: `Built before ${before[1]}` });
   } else if (/\bhistoric\b/.test(text)) {
     f.yearBuilt = { max: 1950 };
-    chips.push({ key: "yearBuiltMax", label: "Historic (pre-1950)" });
+    chips.push({ key: "yearBuiltMax", label: "Historic (pre 1950)" });
   }
 
   // 9. Land specifics
@@ -276,7 +276,7 @@ export function parseNaturalLanguage(input: string, defaultMode: SearchMode = "b
       [/\bcamping\b/, "Camping"],
       [/\bhiking\b/, "Hiking"],
       [/\b(horses?|horseback|equestrian)\b/, "Horseback riding"],
-      [/\b(atv|off[- ]road(?:ing)?)\b/, "Off-roading"],
+      [/\b(atv|off[- ]road(?:ing)?)\b/, "Off roading"],
       [/\bboating\b/, "Boating"],
     ];
     for (const [re, label] of act) if (re.test(text)) activities.push(label);

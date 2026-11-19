@@ -207,7 +207,7 @@ function Thread({ conversation, onBack, onRead }: { conversation: ConversationVi
               void send();
             }
           }}
-          placeholder="Write a message — Enter to send, Shift+Enter for a new line"
+          placeholder="Write a message (Enter to send, Shift+Enter for a new line)"
           className="max-h-40 min-h-10 resize-none"
         />
         <Button type="submit" size="icon-lg" disabled={!draft.trim() || sending} aria-label="Send message">

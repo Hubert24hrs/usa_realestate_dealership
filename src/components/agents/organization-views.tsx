@@ -11,8 +11,8 @@ import type { getOrganization, listOrganizations } from "@/server/agents";
 
 type OrgType = "BROKERAGE" | "PROPERTY_MANAGEMENT";
 const COPY = {
-  BROKERAGE: { base: "/brokerages", plural: "Brokerages", singular: "Brokerage", lede: "Local and regional brokerages on CITI VIEW — their agents, listings and the markets they serve." },
-  PROPERTY_MANAGEMENT: { base: "/property-managers", plural: "Property managers", singular: "Property manager", lede: "Companies that lease and manage CITI VIEW rentals — apartment communities, single-family homes and more." },
+  BROKERAGE: { base: "/brokerages", plural: "Brokerages", singular: "Brokerage", lede: "Local and regional brokerages on CITI VIEW, with their agents, listings and the markets they serve." },
+  PROPERTY_MANAGEMENT: { base: "/property-managers", plural: "Property managers", singular: "Property manager", lede: "Companies that lease and manage CITI VIEW rentals, including apartment communities and single family homes." },
 } as const;
 
 type OrgList = Awaited<ReturnType<typeof listOrganizations>>;
@@ -39,15 +39,15 @@ export function OrganizationDirectory({ type, orgs, cityNames }: { type: OrgType
                   {type === "BROKERAGE" ? (
                     <>
                       <div><dt className="text-[0.7rem] text-muted-foreground">Agents</dt><dd className="font-semibold tabular-nums">{o._count.agents}</dd></div>
-                      <div><dt className="text-[0.7rem] text-muted-foreground">Offices</dt><dd className="font-semibold tabular-nums">{o.officeCount ?? "—"}</dd></div>
+                      <div><dt className="text-[0.7rem] text-muted-foreground">Offices</dt><dd className="font-semibold tabular-nums">{o.officeCount ?? "N/A"}</dd></div>
                     </>
                   ) : (
                     <>
-                      <div><dt className="text-[0.7rem] text-muted-foreground">Units</dt><dd className="font-semibold tabular-nums">{o.unitsManaged?.toLocaleString("en-US") ?? "—"}</dd></div>
+                      <div><dt className="text-[0.7rem] text-muted-foreground">Units</dt><dd className="font-semibold tabular-nums">{o.unitsManaged?.toLocaleString("en-US") ?? "N/A"}</dd></div>
                       <div><dt className="text-[0.7rem] text-muted-foreground">Listings</dt><dd className="font-semibold tabular-nums">{o._count.listings}</dd></div>
                     </>
                   )}
-                  <div><dt className="text-[0.7rem] text-muted-foreground">Founded</dt><dd className="font-semibold tabular-nums">{o.foundedYear ?? "—"}</dd></div>
+                  <div><dt className="text-[0.7rem] text-muted-foreground">Founded</dt><dd className="font-semibold tabular-nums">{o.foundedYear ?? "N/A"}</dd></div>
                 </dl>
                 <p className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground">
                   <MapPin className="size-3.5" aria-hidden />
@@ -59,7 +59,7 @@ export function OrganizationDirectory({ type, orgs, cityNames }: { type: OrgType
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-xs text-muted-foreground">{site.demoMode ? "All companies on this demo site are fictional. " : ""}Licensing information is provided by each company.</p>
+        <p className="mt-6 text-xs text-muted-foreground">{site.demoMode ? "All companies on this site are fictional samples. " : ""}Licensing information is provided by each company.</p>
       </div>
     </>
   );
@@ -107,8 +107,8 @@ export function OrganizationProfile({ type, data, cityNames }: { type: OrgType; 
 
       <dl className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
         {(type === "BROKERAGE"
-          ? [["Agents", String(agents.length)], ["Active listings", String(listingCount)], ["Offices", org.officeCount != null ? String(org.officeCount) : "—"], ["Founded", org.foundedYear ? String(org.foundedYear) : "—"]]
-          : [["Units managed", org.unitsManaged?.toLocaleString("en-US") ?? "—"], ["Active listings", String(listingCount)], ["Leasing team", String(agents.length)], ["Founded", org.foundedYear ? String(org.foundedYear) : "—"]]
+          ? [["Agents", String(agents.length)], ["Active listings", String(listingCount)], ["Offices", org.officeCount != null ? String(org.officeCount) : "N/A"], ["Founded", org.foundedYear ? String(org.foundedYear) : "N/A"]]
+          : [["Units managed", org.unitsManaged?.toLocaleString("en-US") ?? "N/A"], ["Active listings", String(listingCount)], ["Leasing team", String(agents.length)], ["Founded", org.foundedYear ? String(org.foundedYear) : "N/A"]]
         ).map(([k, v]) => (
           <div key={k} className="rounded-2xl border bg-card p-4">
             <dt className="text-xs text-muted-foreground">{k}</dt>
@@ -157,7 +157,7 @@ export function OrganizationProfile({ type, data, cityNames }: { type: OrgType; 
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">{org.services.map((s) => <li key={s}>{s}</li>)}</ul>
             </div>
           )}
-          <p className="text-xs text-muted-foreground">{site.demoMode ? "Demo company: fictional, for illustration. " : ""}Equal Housing Opportunity.</p>
+          <p className="text-xs text-muted-foreground">{site.demoMode ? "Sample company: fictional, for illustration. " : ""}Equal Housing Opportunity.</p>
         </aside>
       </div>
     </div>

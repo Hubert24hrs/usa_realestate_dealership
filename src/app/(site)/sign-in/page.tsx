@@ -4,7 +4,7 @@ import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { AuthError } from "next-auth";
 import { ArrowRight, FlaskConical, Mail } from "lucide-react";
-import { DEMO_ACCOUNTS, googleEnabled, signIn } from "@/auth";
+import { GUEST_ACCOUNTS, googleEnabled, signIn } from "@/auth";
 import { LogoMark } from "@/components/brand/logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -36,14 +36,14 @@ async function emailSignIn(formData: FormData) {
   }
 }
 
-async function demoSignIn(formData: FormData) {
+async function guestSignIn(formData: FormData) {
   "use server";
   const callbackUrl = safeCallback(formData.get("callbackUrl"), "");
   const email = String(formData.get("email") ?? "");
   if (!(await guard())) redirect("/sign-in?error=RateLimited");
   const target = callbackUrl || (email.startsWith("agent") ? "/agent" : email.startsWith("admin") ? "/admin" : email.startsWith("renter") ? "/account/rentals" : email.startsWith("manager") ? "/agent" : "/account");
   try {
-    await signIn("demo", { email, redirectTo: target });
+    await signIn("guest", { email, redirectTo: target });
   } catch (error) {
     if (error instanceof AuthError) redirect("/sign-in?error=CredentialsSignin");
     throw error;
@@ -57,11 +57,11 @@ async function googleSignIn(formData: FormData) {
 
 const ERRORS: Record<string, string> = {
   InvalidEmail: "Enter a valid email address.",
-  RateLimited: "Too many sign-in attempts. Please wait a few minutes.",
-  EmailSignin: "We couldn't send the sign-in email. Please try again.",
-  CredentialsSignin: "That demo account isn't available.",
-  OAuthAccountNotLinked: "This email is already linked to another sign-in method. Use the method you used before.",
-  Verification: "That sign-in link has expired or was already used. Request a new one.",
+  RateLimited: "Too many sign in attempts. Please wait a few minutes.",
+  EmailSignin: "We couldn't send the sign in email. Please try again.",
+  CredentialsSignin: "That guest account isn't available.",
+  OAuthAccountNotLinked: "This email is already linked to another sign in method. Use the method you used before.",
+  Verification: "That sign in link has expired or was already used. Request a new one.",
 };
 
 export default async function SignInPage({ searchParams }: Props) {
@@ -73,7 +73,7 @@ export default async function SignInPage({ searchParams }: Props) {
       <div className="mx-auto w-full max-w-md">
         <LogoMark className="size-12" />
         <h1 className="mt-5 font-display text-display-md font-semibold">Sign in or create an account</h1>
-        <p className="mt-2 text-muted-foreground">Save homes, get alerts, schedule tours and message agents — free.</p>
+        <p className="mt-2 text-muted-foreground">Save homes, get alerts, schedule tours and message agents for free.</p>
         {error && (
           <p role="alert" className="mt-5 rounded-xl border border-destructive/30 bg-destructive/5 p-3 text-sm text-destructive">
             {ERRORS[error] ?? "Something went wrong signing you in. Please try again."}
@@ -86,7 +86,7 @@ export default async function SignInPage({ searchParams }: Props) {
             <Input id="email" name="email" type="email" autoComplete="email" required placeholder="you@example.com" className="h-11" />
           </div>
           <Button type="submit" size="lg" className="h-11 w-full text-base">
-            <Mail className="size-4" aria-hidden /> Email me a sign-in link
+            <Mail className="size-4" aria-hidden /> Email me a sign in link
           </Button>
         </form>
         {googleEnabled && (
@@ -104,13 +104,13 @@ export default async function SignInPage({ searchParams }: Props) {
       </div>
 
       {site.demoMode && (
-        <section aria-labelledby="demo-title" className="mx-auto w-full max-w-md rounded-3xl border bg-surface p-6">
-          <h2 id="demo-title" className="flex items-center gap-2 font-semibold"><FlaskConical className="size-4 text-copper-600" aria-hidden /> Explore with a demo account</h2>
-          <p className="mt-1 text-sm text-muted-foreground">Each role comes with seeded data. No password needed — demo mode only.</p>
+        <section aria-labelledby="guest-title" className="mx-auto w-full max-w-md rounded-3xl border bg-surface p-6">
+          <h2 id="guest-title" className="flex items-center gap-2 font-semibold"><FlaskConical className="size-4 text-copper-600" aria-hidden /> Explore with a guest account</h2>
+          <p className="mt-1 text-sm text-muted-foreground">Each role comes with sample data. No password needed.</p>
           <ul className="mt-4 space-y-2">
-            {DEMO_ACCOUNTS.map((a) => (
+            {GUEST_ACCOUNTS.map((a) => (
               <li key={a.email}>
-                <form action={demoSignIn}>
+                <form action={guestSignIn}>
                   <input type="hidden" name="email" value={a.email} />
                   <input type="hidden" name="callbackUrl" value={rawCallback ? callbackUrl : ""} />
                   <button type="submit" className="group flex w-full items-center gap-3 rounded-2xl border bg-card p-3 text-left transition-colors hover:border-primary/50">

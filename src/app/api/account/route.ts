@@ -11,7 +11,7 @@ const Profile = z.object({
     .string()
     .trim()
     .max(30)
-    .regex(/^[0-9+().\-\s]*$/, "Use digits and + ( ) - only")
+    .regex(/^[0-9+().\-\s]*$/, "Enter a valid phone number")
     .optional(),
 });
 
@@ -34,7 +34,7 @@ export const DELETE = withUser(
     if (!parsed.ok) return badRequest('Type "DELETE" to confirm.');
     const record = await db.user.findUnique({ where: { id: user.id }, select: { isDemo: true } });
     if (!record) return Response.json({ ok: true });
-    if (record.isDemo) return badRequest("Demo accounts are shared by everyone trying CITI VIEW, so they can't be deleted.");
+    if (record.isDemo) return badRequest("Guest accounts are shared by everyone trying CITI VIEW, so they can't be deleted.");
     const anonymous = { name: "Deleted user", email: "deleted-user@citiview.invalid", phone: null, message: null };
     await db.$transaction([
       db.lead.updateMany({ where: { userId: user.id }, data: anonymous }),

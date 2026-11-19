@@ -45,7 +45,7 @@ export function PersonalRails({ fallback }: { fallback: ListingCardData[] }) {
       <ListingRail
         id="for-you"
         title="Homes for you"
-        subtitle={pref ? "Picked from the homes you've been browsing" : "Featured homes across our markets — browse a few to personalize this row"}
+        subtitle={pref ? "Picked from the homes you've been browsing" : "Featured homes across our markets. Browse a few to personalize this row"}
         href={forYouFilters ? buildSearchHref(forYouFilters) : "/homes-for-sale"}
         listings={forYouList}
         loading={Boolean(forYouFilters) && forYou.isLoading}

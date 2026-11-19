@@ -56,7 +56,7 @@ export default async function ToursPage() {
                 <span className={cn("rounded-full px-2.5 py-1 text-xs font-medium", STATUS_STYLE[t.status])}>{STATUS_LABEL[t.status]}</span>
               </div>
               <p className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
-                <span className="flex items-center gap-1.5">{t.type === "VIDEO" ? <Video className="size-4" aria-hidden /> : <CalendarCheck className="size-4" aria-hidden />} {t.type === "VIDEO" ? "Video tour" : "In-person tour"}</span>
+                <span className="flex items-center gap-1.5">{t.type === "VIDEO" ? <Video className="size-4" aria-hidden /> : <CalendarCheck className="size-4" aria-hidden />} {t.type === "VIDEO" ? "Video tour" : "In person tour"}</span>
                 {t.agent && (
                   <span>
                     with <Link href={`/agents/${t.agent.slug}`} className="text-foreground hover:underline">{t.agent.name}</Link>
@@ -95,7 +95,7 @@ export default async function ToursPage() {
         </div>
       ) : (
         <EmptyState icon={CalendarCheck} title="No tours yet" action={<Button asChild><Link href="/homes-for-sale?openHouse=1">Find open houses</Link></Button>}>
-          Request an in-person or video tour from any listing&apos;s contact card.
+          Request an in person or video tour from any listing&apos;s contact card.
         </EmptyState>
       )}
     </>

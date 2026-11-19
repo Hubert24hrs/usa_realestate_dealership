@@ -23,7 +23,7 @@ export const POST = withRole<{ id: string }>(
     if (!listing) return notFound();
     const ids = [...new Set(body.data.photos.map((p) => p.uploadId))];
     const uploads = await db.upload.findMany({ where: { id: { in: ids }, userId: user.id }, select: { id: true, url: true, width: true, height: true } });
-    if (uploads.length !== ids.length) return badRequest("Some uploads are missing — upload them again.");
+    if (uploads.length !== ids.length) return badRequest("Some uploads are missing. Upload them again.");
     if (await db.listingMedia.count({ where: { provider: "UPLOAD", providerId: { in: ids.map((id) => `upload:${id}`) } } })) return badRequest("Some photos are already attached to a listing.");
     const byId = new Map(uploads.map((u) => [u.id, u]));
     let order = (listing.media[0]?.sortOrder ?? -1) + 1;

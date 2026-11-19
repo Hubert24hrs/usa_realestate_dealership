@@ -16,18 +16,18 @@ function usd(value: number, decimals: 0 | 2): string {
 }
 
 export function formatPrice(value: number | null | undefined): string {
-  if (value == null || Number.isNaN(value)) return "—";
+  if (value == null || Number.isNaN(value)) return "N/A";
   return usd(value, 0);
 }
 
 export function formatMoney(value: number | null | undefined, cents = false): string {
-  if (value == null || Number.isNaN(value)) return "—";
+  if (value == null || Number.isNaN(value)) return "N/A";
   return usd(value, cents ? 2 : 0);
 }
 
 /** $1.25M · $850K · $2,450 */
 export function formatCompactPrice(value: number | null | undefined): string {
-  if (value == null || Number.isNaN(value)) return "—";
+  if (value == null || Number.isNaN(value)) return "N/A";
   const abs = Math.abs(value);
   if (abs >= 1_000_000) {
     const m = value / 1_000_000;
@@ -38,30 +38,30 @@ export function formatCompactPrice(value: number | null | undefined): string {
 }
 
 export function formatNumber(value: number | null | undefined): string {
-  if (value == null || Number.isNaN(value)) return "—";
+  if (value == null || Number.isNaN(value)) return "N/A";
   const r = roundAway(value);
   return `${value < 0 ? "-" : ""}${group(String(Math.abs(r)))}`;
 }
 
 export function formatPercent(value: number | null | undefined, digits = 1): string {
-  if (value == null || Number.isNaN(value)) return "—";
+  if (value == null || Number.isNaN(value)) return "N/A";
   return `${value.toFixed(digits)}%`;
 }
 
 export function formatBaths(value: number | null | undefined): string {
-  if (value == null) return "—";
+  if (value == null) return "N/A";
   return Number.isInteger(value) ? String(value) : value.toFixed(1);
 }
 
 export function formatAcres(value: number | null | undefined): string {
-  if (value == null) return "—";
+  if (value == null) return "N/A";
   return `${value >= 10 ? group(String(Math.round(value))) : value.toFixed(2).replace(/0$/, "")} acres`;
 }
 
 export function formatLot(lotSqft: number | null | undefined, lotAcres?: number | null): string {
   if (lotAcres && lotAcres >= 0.5) return formatAcres(lotAcres);
   if (lotSqft) return `${formatNumber(lotSqft)} sqft lot`;
-  return "—";
+  return "N/A";
 }
 
 export function daysSince(date: Date | string | null | undefined, now: Date = new Date()): number {
@@ -87,7 +87,7 @@ const timeFmt = lazy(() => new Intl.DateTimeFormat("en-US", { hour: "numeric", m
 const weekdayFmt = lazy(() => new Intl.DateTimeFormat("en-US", { weekday: "short" }));
 
 export function formatDate(date: Date | string | null | undefined): string {
-  if (!date) return "—";
+  if (!date) return "N/A";
   return dateFmt().format(typeof date === "string" ? new Date(date) : date);
 }
 

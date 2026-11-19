@@ -36,19 +36,19 @@ export default async function ComparePage({ searchParams }: Props) {
   const facts: Array<[string, (l: (typeof listings)[number]) => string]> = [
     ["Price", (l) => (l.transactionType === "RENT" ? `${formatPrice(l.price)}/mo` : formatPrice(l.status === "SOLD" ? l.soldPrice ?? l.price : l.price))],
     ["Type", (l) => PROPERTY_TYPE_LABELS[l.propertyType]],
-    ["Beds", (l) => (l.beds == null ? "—" : l.beds === 0 ? "Studio" : String(l.beds))],
+    ["Beds", (l) => (l.beds == null ? "N/A" : l.beds === 0 ? "Studio" : String(l.beds))],
     ["Baths", (l) => formatBaths(l.baths)],
     ["Square feet", (l) => formatNumber(l.sqft)],
-    ["Price / sqft", (l) => (l.pricePerSqft ? `$${formatNumber(l.pricePerSqft)}` : "—")],
-    ["Lot", (l) => (l.lotAcres ? formatAcres(l.lotAcres) : l.lotSqft ? `${formatNumber(l.lotSqft)} sqft` : "—")],
-    ["Year built", (l) => (l.yearBuilt ? String(l.yearBuilt) : "—")],
+    ["Price / sqft", (l) => (l.pricePerSqft ? `$${formatNumber(l.pricePerSqft)}` : "N/A")],
+    ["Lot", (l) => (l.lotAcres ? formatAcres(l.lotAcres) : l.lotSqft ? `${formatNumber(l.lotSqft)} sqft` : "N/A")],
+    ["Year built", (l) => (l.yearBuilt ? String(l.yearBuilt) : "N/A")],
     ["HOA", (l) => (l.hoaFee ? `${formatMoney(l.hoaFee)}/mo` : "None")],
-    ["Property tax", (l) => (l.propertyTaxAnnual ? `${formatPrice(l.propertyTaxAnnual)}/yr` : "—")],
-    ["Garage", (l) => (l.garageSpaces ? `${l.garageSpaces} spaces` : "—")],
+    ["Property tax", (l) => (l.propertyTaxAnnual ? `${formatPrice(l.propertyTaxAnnual)}/yr` : "N/A")],
+    ["Garage", (l) => (l.garageSpaces ? `${l.garageSpaces} spaces` : "N/A")],
     ["Pool", (l) => (l.hasPool ? "Yes" : "No")],
-    ["Nearest school", (l) => (l.schools[0] ? `${l.schools[0].school.name} (${l.schools[0].school.rating}/10)` : "—")],
-    ["Walkability", (l) => (l.walkScore != null ? `${l.walkScore}/100` : "—")],
-    ["Flood risk", (l) => (l.floodRisk != null ? `${l.floodRisk}/10` : "—")],
+    ["Nearest school", (l) => (l.schools[0] ? `${l.schools[0].school.name} (${l.schools[0].school.rating}/10)` : "N/A")],
+    ["Walkability", (l) => (l.walkScore != null ? `${l.walkScore}/100` : "N/A")],
+    ["Flood risk", (l) => (l.floodRisk != null ? `${l.floodRisk}/10` : "N/A")],
     ["Days on market", (l) => (l.status === "SOLD" ? "Sold" : String(daysSince(l.listDate)))],
   ];
 
@@ -57,7 +57,7 @@ export default async function ComparePage({ searchParams }: Props) {
       <h1 className="font-display text-display-md font-semibold">Compare {listings.length} homes</h1>
       <div className="mt-6 overflow-x-auto rounded-2xl border">
         <table className="w-full min-w-[720px] text-sm">
-          <caption className="sr-only">Side-by-side comparison</caption>
+          <caption className="sr-only">Side by side comparison</caption>
           <thead>
             <tr>
               <th scope="col" className="w-40 bg-muted/50 p-3 text-left text-xs font-medium text-muted-foreground">Home</th>
@@ -84,7 +84,7 @@ export default async function ComparePage({ searchParams }: Props) {
           </tbody>
         </table>
       </div>
-      <p className="mt-3 text-xs text-muted-foreground">Demo listing data — verify details with the listing agent.</p>
+      <p className="mt-3 text-xs text-muted-foreground">Listing details can change. Confirm them with the listing agent.</p>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default async function CollectionsPage() {
     <>
       <AccountPageHeader
         title="Collections"
-        description="Group homes into shortlists and shop together — invite a partner, family or your agent to add homes and leave shared notes."
+        description="Group homes into shortlists and shop together. Invite a partner, family or your agent to add homes and leave shared notes."
         actions={<NewCollectionButton />}
       />
       {collections.length ? (

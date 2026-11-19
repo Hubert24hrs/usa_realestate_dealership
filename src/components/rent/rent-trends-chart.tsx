@@ -71,7 +71,7 @@ export function RentTrendsChart({ cities, initial }: { cities: TrendCity[]; init
         format={(v) => `${formatMoney(v)}/mo`}
         axisFormat={(v) => `$${(v / 1000).toFixed(v % 1000 ? 1 : 0)}K`}
         ariaLabel="Median monthly rent by city"
-        caption="Median monthly rent by city and month (demo data)"
+        caption="Median monthly rent by city and month"
       />
     </div>
   );

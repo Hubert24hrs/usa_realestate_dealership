@@ -20,7 +20,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     }
   }
   const l = doc.listing;
-  const pdf = buildPdf(`${doc.name} — ${formatAddressLine(l)}`, [
+  const pdf = buildPdf(`${doc.name}: ${formatAddressLine(l)}`, [
     { heading: "Property overview", body: `${l.headline ?? ""}\n${l.description}` },
     {
       heading: "Key facts",
@@ -36,7 +36,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
         .filter(Boolean)
         .join("\n"),
     },
-    { heading: "Notice", body: "This is a generated demo document for the CITI VIEW platform. All figures are illustrative and must not be relied upon. Confidential — distribution limited to parties who executed the confidentiality agreement." },
+    { heading: "Notice", body: "This is a generated sample document for the CITI VIEW platform. All figures are illustrative and must not be relied upon. Confidential: distribution limited to parties who executed the confidentiality agreement." },
   ]);
   return new Response(pdf as BodyInit, {
     headers: {

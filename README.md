@@ -2,7 +2,7 @@
 
 A U.S. real estate marketplace for homes for sale, rentals, new construction, commercial property and land. Shoppers search on a map, save homes, tour, apply for rentals and pay rent; owners list for sale or rent; agents and property managers work leads and applications; staff run the marketplace from an admin CMS.
 
-> **Demo data.** Out of the box, every listing, agent, review, rate and statistic is fictional. Listing photos are original AI-generated illustrations made for this project and credited as such, or come from official free-to-use APIs with attribution. Nothing is scraped or hotlinked from Zillow, Redfin, Realtor.com or any other site. Real listings come only from a licensed MLS/IDX feed (see [Connecting a licensed MLS / IDX feed](#connecting-a-licensed-mls--idx-feed)).
+> **Sample data.** Out of the box, every listing, agent, review, rate and statistic is fictional. Listing photos are original AI-generated illustrations made for this project and credited as such, or come from official free-to-use APIs with attribution. Nothing is scraped or hotlinked from Zillow, Redfin, Realtor.com or any other site. Real listings come only from a licensed MLS/IDX feed (see [Connecting a licensed MLS / IDX feed](#connecting-a-licensed-mls--idx-feed)).
 
 ## Contents
 
@@ -45,11 +45,11 @@ npm install
 cp .env.example .env.local      # then set AUTH_SECRET:  npx auth secret
 npm run db:start                # PostgreSQL on :54329, data in .data/ (keep this terminal open)
 npm run db:push                 # create the tables
-npm run db:seed                 # demo listings, photos, agents, schools, rentals, posts…
+npm run db:seed                 # sample listings, photos, agents, schools, rentals, posts…
 npm run dev                     # http://localhost:3000
 ```
 
-With demo mode on, `/sign-in` offers one-click demo accounts: home buyer, renter, FSBO seller, agent, property manager and admin. Emails go to the dev outbox at `/dev/outbox` until you add a Resend key; payments use a built-in simulated checkout until you add Stripe test keys.
+With sample data on, `/sign-in` offers one click guest accounts: home buyer, renter, FSBO seller, agent, property manager and admin. Emails go to the dev outbox at `/dev/outbox` until you add a Resend key; payments use a built-in simulated checkout until you add Stripe test keys.
 
 To preview a production build (faster, and what the end-to-end tests use):
 
@@ -68,13 +68,13 @@ Copy `.env.example` to `.env.local`. Only the database URLs and `AUTH_SECRET` ar
 | `AUTH_SECRET` | Always | `npx auth secret` |
 | `AUTH_TRUST_HOST` | Always | `true` behind Vercel or any proxy |
 | `NEXT_PUBLIC_SITE_URL` | Always | Canonical origin, used for canonical URLs, sitemaps, emails and Stripe redirects |
-| `NEXT_PUBLIC_DEMO_MODE` | Always | `true` shows demo banners, one-click demo sign-in and template notices; set `false` in production |
-| `NOINDEX` | Optional | `true` serves a disallow-all `robots.txt` (use for public demos and staging); Vercel preview deployments are blocked automatically |
+| `NEXT_PUBLIC_SAMPLE_DATA` | Always | `true` shows the sample data notice, one click guest sign in and template notices; set `false` in production (the older `NEXT_PUBLIC_DEMO_MODE` name still works) |
+| `NOINDEX` | Optional | `true` serves a disallow-all `robots.txt` (use for public previews and staging); Vercel preview deployments are blocked automatically |
 | `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET` | Google sign-in | Redirect URI: `https://<domain>/api/auth/callback/google` |
 | `RESEND_API_KEY`, `EMAIL_FROM` | Email | Use a sender on a domain verified in Resend |
 | `NEXT_PUBLIC_MAPBOX_TOKEN` | Optional | Without it, maps use MapLibre with free OpenFreeMap tiles |
 | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Payments | Test keys in development. Without them, a simulated checkout is used |
-| `STRIPE_PRICE_AGENT_PRO`, `STRIPE_PRICE_AGENT_PREMIER` | Agent plans | Recurring monthly Price IDs ($49 and $149 in the demo copy) |
+| `STRIPE_PRICE_AGENT_PRO`, `STRIPE_PRICE_AGENT_PREMIER` | Agent plans | Recurring monthly Price IDs ($49 and $149 in the sample copy) |
 | `UPLOAD_DRIVER`, `BLOB_READ_WRITE_TOKEN` | Photo uploads | `local` stores files in `.data/uploads` (dev/self-host only); use `vercel-blob` on Vercel |
 | `NEXT_PUBLIC_IMAGE_CDN` | Optional | `cloudinary:<cloud>` or an imgix base URL for uploaded and feed photos |
 | `SEARCH_PROVIDER` + `TYPESENSE_*` | Optional | `postgres` (default) or `typesense`; run `npm run search:sync` after imports |
@@ -102,7 +102,7 @@ npm run check:links      # crawls internal links and reports anything that isn't
 
 Notes:
 
-- End-to-end tests expect the demo seed (`npm run db:seed`) and demo mode on. Point them at another environment with `E2E_BASE_URL=https://staging.example.com npm run test:e2e`.
+- End-to-end tests expect the sample seed (`npm run db:seed`) and sample data on. Point them at another environment with `E2E_BASE_URL=https://staging.example.com npm run test:e2e`.
 - If Playwright's bundled browser isn't installed, run `npx playwright install chromium`, or use an installed browser with `PW_CHANNEL=chrome` (or `msedge`).
 
 ## Deploying to Vercel
@@ -110,10 +110,10 @@ Notes:
 1. **Database.** Create a PostgreSQL database with PostGIS available, such as Neon, Supabase or Vercel Postgres. Use the pooled connection string for `DATABASE_URL` and the direct one for `DIRECT_URL`.
 2. **Project.** Import the GitHub repository into Vercel (framework: Next.js). The build command `npm run build` runs `prisma generate && next build`.
 3. **Environment variables.** Set everything from the table above for Production (and Preview, if you use it). At minimum set `AUTH_SECRET`, `AUTH_TRUST_HOST=true`, `NEXT_PUBLIC_SITE_URL=https://<your-domain>`, `UPLOAD_DRIVER=vercel-blob` and `CRON_SECRET`.
-   - **Public demo:** keep `NEXT_PUBLIC_DEMO_MODE=true` and set `NOINDEX=true`, so fictional listings never reach search engines.
-   - **Real launch:** set `NEXT_PUBLIC_DEMO_MODE=false`, configure Resend, Stripe live keys and the MLS feed, and don't seed demo data.
+   - **Public preview:** keep `NEXT_PUBLIC_SAMPLE_DATA=true` and set `NOINDEX=true`, so fictional listings never reach search engines.
+   - **Real launch:** set `NEXT_PUBLIC_SAMPLE_DATA=false`, configure Resend, Stripe live keys and the MLS feed, and don't seed sample data.
 4. **Blob storage.** In Vercel → Storage, create a Blob store and connect it to the project; that sets `BLOB_READ_WRITE_TOKEN`.
-5. **Schema.** From your machine, with the production `DATABASE_URL`/`DIRECT_URL` exported, run `npx prisma db push` (or adopt migrations with `npm run db:migrate` and use `npm run db:deploy` in CI), then `npm run db:postgis`. Seed only demo or staging databases: `npm run db:seed` deletes and recreates data.
+5. **Schema.** From your machine, with the production `DATABASE_URL`/`DIRECT_URL` exported, run `npx prisma db push` (or adopt migrations with `npm run db:migrate` and use `npm run db:deploy` in CI), then `npm run db:postgis`. Seed only preview or staging databases: `npm run db:seed` deletes and recreates data.
 6. **Stripe.** Create the two recurring Prices for agent plans. Then add a webhook endpoint at `https://<your-domain>/api/stripe/webhook` for these events, and put its signing secret in `STRIPE_WEBHOOK_SECRET`:
    - `checkout.session.completed`
    - `checkout.session.async_payment_succeeded`
@@ -121,7 +121,7 @@ Notes:
    - `customer.subscription.deleted`
 7. **Cron jobs.** `vercel.json` schedules saved-search alerts (daily, 13:00 UTC) and the MLS feed sync (daily, 10:30 UTC). The Hobby plan allows one run per day. On Pro, run `/api/cron/feed-sync` every 15–60 minutes, since most MLSs require IDX data to be refreshed at least every 12 hours.
 8. **Domain and SEO.** Add your domain, make `NEXT_PUBLIC_SITE_URL` match it exactly, and submit `https://<your-domain>/sitemap.xml` in Google Search Console.
-9. **Check the deployment.** Run `E2E_BASE_URL=https://<staging-domain> npm run test:e2e` against a staging deployment that has demo data, and `node scripts/check-links.mjs https://<your-domain>`.
+9. **Check the deployment.** Run `E2E_BASE_URL=https://<staging-domain> npm run test:e2e` against a staging deployment that has sample data, and `node scripts/check-links.mjs https://<your-domain>`.
 
 ## Connecting a licensed MLS / IDX feed
 
@@ -168,7 +168,7 @@ After that, `/api/cron/feed-sync` keeps the data current: it's an incremental sy
 - **Full syncs.** Feed listings missing from a full sync are taken off market.
 - **Markets.** Listings attach to existing markets (cities and neighborhoods). Cities that aren't set up yet are reported, so you can add them with their coordinates and copy (edit copy in **Admin → Places**).
 
-When you go live with real data, set `NEXT_PUBLIC_DEMO_MODE=false`, don't run the demo seed, and if you use Typesense, run `npm run search:sync` after large imports.
+When you go live with real data, set `NEXT_PUBLIC_SAMPLE_DATA=false`, don't run the sample seed, and if you use Typesense, run `npm run search:sync` after large imports.
 
 ## Compliance checklist before launch
 
@@ -195,7 +195,7 @@ src/
                       RESO mapping, markdown sanitizing
   server/             server-only data access: search providers, listings, leads, rentals, billing,
                       payments, uploads/storage, place hubs, sitemaps, feeds
-prisma/               schema, seed (demo data), PostGIS SQL
+prisma/               schema, seed (sample data), PostGIS SQL
 scripts/              db, media, feed sync, alerts, search sync, link checker, prod preview
 tests/unit, tests/e2e Vitest and Playwright suites
 ```
@@ -208,7 +208,7 @@ tests/unit, tests/e2e Vitest and Playwright suites
 | `npm run build` / `start` | Production build / server |
 | `npm run db:start` | Local embedded PostgreSQL (data in `.data/`, git-ignored) |
 | `npm run db:push` / `db:migrate` / `db:deploy` | Sync the Prisma schema / create a migration / apply migrations |
-| `npm run db:seed` / `db:reset` | Seed demo data / reset and reseed |
+| `npm run db:seed` / `db:reset` | Seed sample data / reset and reseed |
 | `npm run db:postgis` | Apply the PostGIS layer (when the server supports it) |
 | `npm run feed:sync` | Import from the licensed RESO Web API feed |
 | `npm run alerts:run` | Send saved-search and price-drop alerts once |

@@ -35,13 +35,13 @@ export default async function AdminSettingsPage() {
             <TextSetting settingKey="compliance.fairHousing" label="Fair Housing statement" help="Shown in the footer next to the Equal Housing Opportunity logo." value={settings.fairHousing} />
           </div>
         </Card>
-        <Card id="state-notices" title="State notices" description="State-specific consumer notices (for example Texas IABS or the New York Standardized Operating Procedures).">
+        <Card id="state-notices" title="State notices" description="State specific consumer notices (for example Texas IABS or the New York Standardized Operating Procedures).">
           <StateNotices states={states} />
         </Card>
         <Card id="routing" title="Lead routing" description="How inquiries reach agents. FSBO inquiries always go straight to the owner.">
           <RoutingSetting value={settings.leadRouting} />
         </Card>
-        <Card id="demo" title="Demo banner" description="Shown site-wide while demo mode is on (set NEXT_PUBLIC_DEMO_MODE=false to turn it off in production).">
+        <Card id="notice" title="Site notice" description="Shown sitewide while the site runs on sample data. Set NEXT_PUBLIC_SAMPLE_DATA=false to turn it off in production.">
           <TextSetting settingKey="site.demoBanner" label="Banner text" value={settings.demoBanner} rows={2} />
         </Card>
       </div>

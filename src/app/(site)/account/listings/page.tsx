@@ -40,7 +40,7 @@ export default async function MyListingsPage() {
       <>
         <AccountPageHeader title="My listings" description="Homes you've posted for sale or rent by owner." />
         <EmptyState icon={Home} title="You haven't posted a listing" action={<Button asChild><Link href="/sell/post">Post a listing</Link></Button>}>
-          Sell or rent your home yourself — add photos, set a price and publish in minutes.
+          Sell or rent your home yourself. Add photos, set a price and publish in minutes.
         </EmptyState>
       </>
     );
@@ -88,9 +88,9 @@ export default async function MyListingsPage() {
             ))}
           </ul>
         ) : (
-          <p className="rounded-3xl border border-dashed p-6 text-sm text-muted-foreground">No inquiries yet. Signed-in buyers can also message you directly — those conversations appear in Messages.</p>
+          <p className="rounded-3xl border border-dashed p-6 text-sm text-muted-foreground">No inquiries yet. Signed in buyers can also message you directly. Those conversations appear in Messages.</p>
         )}
-        <p className="mt-4 text-xs text-muted-foreground">Respond to every inquiry the same way, regardless of who is asking — fair housing law applies to owners too.</p>
+        <p className="mt-4 text-xs text-muted-foreground">Respond to every inquiry the same way, regardless of who is asking. Fair housing law applies to owners too.</p>
       </section>
     </>
   );

@@ -36,10 +36,10 @@ export const GET = withUser<{ id: string }>(async ({ user, params }) => {
   const end = new Date(start.getTime() + 45 * 60_000);
   const address = `${tour.listing.streetAddress}${tour.listing.unit ? ` ${tour.listing.unit}` : ""}, ${tour.listing.city}, ${tour.listing.state} ${tour.listing.zip}`;
   const details = [
-    tour.type === "VIDEO" ? "Video tour — your agent will send the call link." : "In-person tour.",
+    tour.type === "VIDEO" ? "Video tour. Your agent will send the call link." : "In person tour.",
     tour.agent ? `Agent: ${tour.agent.name}${tour.agent.phone ? ` · ${tour.agent.phone}` : ""}` : null,
     `Listing: ${site.url}/property/${tour.listing.slug}`,
-    tour.status === "REQUESTED" ? "Status: requested — awaiting confirmation." : `Status: ${tour.status.toLowerCase()}.`,
+    tour.status === "REQUESTED" ? "Status: requested. Awaiting confirmation." : `Status: ${tour.status.toLowerCase()}.`,
   ]
     .filter(Boolean)
     .join("\n");

@@ -76,7 +76,7 @@ export function CollectionSettings({ id, name, description, isOwner, myMemberId 
           <DialogHeader>
             <DialogTitle>{isOwner ? "Delete this collection?" : "Leave this collection?"}</DialogTitle>
             <DialogDescription>
-              {isOwner ? "Co-shoppers lose access and shared notes are removed. Your saved homes stay saved." : "You'll need a new invitation to rejoin."}
+              {isOwner ? "Shopping partners lose access and shared notes are removed. Your saved homes stay saved." : "You'll need a new invitation to rejoin."}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -111,7 +111,7 @@ export function CollectionMembers({ collectionId, isOwner, ownerName, members }:
     const r = await api<{ resent: boolean }>(`/api/collections/${collectionId}/members`, { method: "POST", json: { email, role, isAgent } });
     setPending(null);
     if (!r.ok) return toast.error(apiError(r));
-    toast.success(r.data.resent ? "Invitation re-sent" : "Invitation sent", { description: `We emailed ${email} a link to join.` });
+    toast.success(r.data.resent ? "Invitation sent again" : "Invitation sent", { description: `We emailed ${email} a link to join.` });
     setEmail("");
     setIsAgent(false);
     router.refresh();
@@ -127,7 +127,7 @@ export function CollectionMembers({ collectionId, isOwner, ownerName, members }:
 
   return (
     <section aria-labelledby="members-title" className="rounded-3xl border bg-surface p-5">
-      <h2 id="members-title" className="font-display text-base font-semibold">Co-shoppers</h2>
+      <h2 id="members-title" className="font-display text-base font-semibold">Shopping partners</h2>
       <ul className="mt-3 space-y-2.5">
         <li className="flex items-center gap-3">
           <Avatar label={ownerName} />

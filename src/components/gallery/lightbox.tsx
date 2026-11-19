@@ -82,7 +82,7 @@ export default function Lightbox({ items, extras, open, onOpenChange, startIndex
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent showCloseButton={false} className="flex h-dvh max-h-dvh w-screen max-w-none flex-col gap-0 rounded-none border-0 bg-[#0c0e1a] p-0 text-white sm:max-w-none">
-        <DialogTitle className="sr-only">{extras.title} — photo gallery</DialogTitle>
+        <DialogTitle className="sr-only">{extras.title} photo gallery</DialogTitle>
         <DialogDescription className="sr-only">Use the left and right arrow keys or swipe to browse photos. Press Escape to close.</DialogDescription>
 
         <header className="flex items-center gap-2 border-b border-white/10 px-3 py-2 sm:px-5">
@@ -119,7 +119,7 @@ export default function Lightbox({ items, extras, open, onOpenChange, startIndex
                 {tab === "tour" ? <Box className="mx-auto size-12 text-copper-300" aria-hidden /> : <Film className="mx-auto size-12 text-copper-300" aria-hidden />}
                 <h3 className="mt-3 text-lg font-semibold">{tab === "tour" ? "3D tour slot" : "Video tour slot"}</h3>
                 <p className="mt-2 text-sm text-white/70">
-                  This demo listing reserves a {tab === "tour" ? "Matterport 3D tour" : "video"} embed. Add a {tab === "tour" ? "Matterport model URL (my.matterport.com/show/?m=…)" : "YouTube, Vimeo or MP4 URL"} in the listing editor and it plays here.
+                  This listing reserves a {tab === "tour" ? "Matterport 3D tour" : "video"} embed. Add a {tab === "tour" ? "Matterport model URL (my.matterport.com/show/?m=…)" : "YouTube, Vimeo or MP4 URL"} in the listing editor and it plays here.
                 </p>
               </div>
             )}

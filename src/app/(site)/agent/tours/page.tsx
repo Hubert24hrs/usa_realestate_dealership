@@ -27,7 +27,7 @@ export default async function AgentToursPage() {
   ];
   return (
     <>
-      <AccountPageHeader title="Tours" description="Confirm requests quickly — buyers get an email and a calendar invite when you do." />
+      <AccountPageHeader title="Tours" description="Confirm requests quickly. Buyers get an email and a calendar invite when you do." />
       {tours.length === 0 ? (
         <EmptyState icon={CalendarCheck} title="No tour requests yet">Requests from your listings appear here.</EmptyState>
       ) : (

@@ -11,15 +11,15 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "About CITI VIEW",
-  description: "CITI VIEW helps people search homes, rentals, new construction, commercial property and land across the USA, with honest data and the tools to decide.",
+  description: "CITI VIEW helps people search homes, rentals, new construction, commercial property and land across the USA, with complete listing data and tools for planning a move.",
   alternates: { canonical: "/about" },
 };
 
 const PRINCIPLES = [
-  { icon: Eye, title: "Show the whole picture", body: "Every price change, days on market, taxes, HOA dues, environmental risk and the estimate's range, not just the flattering parts." },
-  { icon: Scale, title: "Fair by design", body: "Listing language checks, factual neighborhood data instead of demographics, and lead routing that never looks at who's asking." },
-  { icon: ShieldCheck, title: "Your data stays yours", body: "We don't sell personal information. Your request goes to the professional you contacted and nobody else." },
-  { icon: Building2, title: "Every kind of property", body: "Homes, apartments, new construction, offices, warehouses, ranches and timberland, searched the same clear way." },
+  { icon: Eye, title: "Full listing history", body: "Every price change, days on market, taxes, HOA dues, environmental risk and the full range of each estimate." },
+  { icon: Scale, title: "Fair housing first", body: "Listing language checks, factual neighborhood data instead of demographics, and lead routing that never looks at who's asking." },
+  { icon: ShieldCheck, title: "Private by default", body: "We don't sell personal information. Your request goes to the professional you contacted and nobody else." },
+  { icon: Building2, title: "All property types", body: "Homes, apartments, new construction, offices, warehouses, ranches and timberland in one search." },
 ];
 
 export default async function AboutPage() {
@@ -38,7 +38,7 @@ export default async function AboutPage() {
   return (
     <>
       <JsonLd data={org} />
-      <PageHero crumbs={[{ name: "Home", href: "/" }, { name: "About", href: "/about" }]} eyebrow="About us" title="See every home, city and acre clearly" description={`${site.name} is a real estate marketplace for buying, renting, selling and investing across the United States.`} />
+      <PageHero crumbs={[{ name: "Home", href: "/" }, { name: "About", href: "/about" }]} eyebrow="About us" title="About CITI VIEW" description={`${site.name} is a real estate marketplace for buying, renting, selling and investing across the United States.`} />
       <div className="container-page py-12">
         <section aria-labelledby="principles" className="max-w-5xl">
           <h2 id="principles" className="font-display text-2xl font-semibold">What we stand for</h2>
@@ -59,7 +59,7 @@ export default async function AboutPage() {
           <ul>
             <li><strong>Agent plans.</strong> Agents can subscribe to Pro or Premier for more lead routing priority and a featured profile. Paid placement is always labelled “Featured”.</li>
             <li><strong>Rental payments and fees.</strong> Property managers use {site.name} to collect applications and rent; application fees are set by the property.</li>
-            <li><strong>Lending partner.</strong> If you ask to get pre-approved, we introduce you to a partner lender. You&apos;re never required to use them.</li>
+            <li><strong>Lending partner.</strong> If you ask to get preapproved, we introduce you to a partner lender. You&apos;re never required to use them.</li>
           </ul>
           <p>We don&apos;t sell personal information. Read the <Link href="/legal/privacy">privacy policy</Link> for the details.</p>
 
@@ -72,7 +72,7 @@ export default async function AboutPage() {
           </p>
           {site.demoMode && (
             <p>
-              <strong>Demo:</strong> this deployment runs on fictional demo data. Listings, agents, reviews and market figures are illustrations of how the platform works.
+              <strong>Sample data:</strong> listings, agents, reviews and market figures on this site are fictional and show how the platform works.
             </p>
           )}
         </section>

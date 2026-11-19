@@ -21,7 +21,7 @@ export const PATCH = withRole<{ id: string }>(
     const listing = await db.listing.findUnique({ where: { id: params.id }, select: { id: true, slug: true, status: true, price: true, originalPrice: true, sqft: true, transactionType: true, _count: { select: { media: true } } } });
     if (!listing) return notFound();
     const p = body.data;
-    if (hasBlockingFinding(`${p.headline ?? ""}\n${p.description ?? ""}`)) return badRequest("The listing copy has Fair Housing issues — describe the property, not who should live there.");
+    if (hasBlockingFinding(`${p.headline ?? ""}\n${p.description ?? ""}`)) return badRequest("The listing copy has Fair Housing issues. Describe the property, not who should live there.");
     if (p.status && p.status !== "DRAFT" && listing.status === "DRAFT" && listing._count.media === 0) return badRequest("Add at least one photo before publishing.");
     if (p.status === "SOLD" && listing.transactionType !== "SALE") return badRequest("Use “Rented” for rentals and leases.");
     if (p.status === "RENTED" && listing.transactionType === "SALE") return badRequest("Use “Sold” for homes for sale.");

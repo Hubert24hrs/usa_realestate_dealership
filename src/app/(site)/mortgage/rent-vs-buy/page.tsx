@@ -5,8 +5,8 @@ import { db } from "@/lib/db";
 import { defaultRate } from "@/server/rates";
 
 export const metadata: Metadata = {
-  title: "Rent vs. buy calculator: find your break-even year",
-  description: "Compare the long-run cost of renting and buying — including appreciation, maintenance, selling costs and investment returns — and see when buying pays off.",
+  title: "Rent vs. buy calculator: find your breakeven year",
+  description: "Compare the long run cost of renting and buying (including appreciation, maintenance, selling costs and investment returns) and see when buying pays off.",
   alternates: { canonical: "/mortgage/rent-vs-buy" },
 };
 
@@ -29,7 +29,7 @@ export default async function RentVsBuyPage() {
       <div className="container-page py-10">
         <RentVsBuyCalculator defaultRate={rate} defaultRent={rent} defaultPrice={price} />
         <ToolDisclaimer>
-          A planning model, not financial advice. Defaults use median demo prices and rents across CITI VIEW markets. Home prices, rents and investment returns are uncertain — try a few scenarios, including flat or falling prices.
+          A planning model, not financial advice. Defaults use median sample prices and rents across CITI VIEW markets. Home prices, rents and investment returns are uncertain. Try a few scenarios, including flat or falling prices.
         </ToolDisclaimer>
       </div>
     </>

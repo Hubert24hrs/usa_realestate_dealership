@@ -39,7 +39,7 @@ export function CommercialDocuments({ listingId, documents, initiallyUnlocked }:
     }
     setUnlocked(true);
     setOpen(false);
-    toast.success("Confidentiality agreement signed — documents unlocked.");
+    toast.success("Confidentiality agreement signed. Documents unlocked.");
   };
 
   return (
@@ -66,7 +66,7 @@ export function CommercialDocuments({ listingId, documents, initiallyUnlocked }:
       {hasLocked && !unlocked && (
         <Button className="mt-3 w-full sm:w-auto" onClick={() => setOpen(true)}><ShieldCheck className="size-4" aria-hidden /> Request offering memorandum</Button>
       )}
-      {unlocked && hasLocked && <p className="mt-3 flex items-center gap-1.5 text-sm text-success"><LockOpen className="size-4" aria-hidden /> NDA on file — confidential documents unlocked for this browser.</p>}
+      {unlocked && hasLocked && <p className="mt-3 flex items-center gap-1.5 text-sm text-success"><LockOpen className="size-4" aria-hidden /> NDA on file. Confidential documents unlocked for this browser.</p>}
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="sm:max-w-lg">
@@ -75,7 +75,7 @@ export function CommercialDocuments({ listingId, documents, initiallyUnlocked }:
             <DialogDescription>Sign to access the offering memorandum, rent roll and financials. The listing broker receives your request.</DialogDescription>
           </DialogHeader>
           <div className="max-h-36 overflow-y-auto rounded-xl border bg-muted/40 p-3 text-xs leading-relaxed text-muted-foreground">
-            You agree to keep all information about this property confidential, to use it solely to evaluate a potential transaction, not to contact tenants, owners or property staff directly, and to return or destroy materials on request. Information is provided as-is without warranty. This demo agreement illustrates the CITI VIEW NDA flow and is not a legal contract.
+            You agree to keep all information about this property confidential, to use it solely to evaluate a potential transaction, not to contact tenants, owners or property staff directly, and to return or destroy materials on request. Information is provided as is without warranty. This sample agreement shows how the CITI VIEW NDA step works and is not a legal contract.
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="space-y-1.5"><Label htmlFor="nda-name">Full name</Label><Input id="nda-name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} autoComplete="name" /></div>

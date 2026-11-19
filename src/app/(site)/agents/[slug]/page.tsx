@@ -92,8 +92,8 @@ export default async function AgentProfilePage({ params }: PageProps) {
           <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {[
               ["Sales · last 12 months", String(a.salesLast12Months)],
-              ["Sales volume", a.salesVolume12Mo ? formatCompactPrice(a.salesVolume12Mo) : "—"],
-              ["Price range", a.priceRangeLow && a.priceRangeHigh ? `${formatCompactPrice(a.priceRangeLow)}–${formatCompactPrice(a.priceRangeHigh)}` : "—"],
+              ["Sales volume", a.salesVolume12Mo ? formatCompactPrice(a.salesVolume12Mo) : "N/A"],
+              ["Price range", a.priceRangeLow && a.priceRangeHigh ? `${formatCompactPrice(a.priceRangeLow)} to ${formatCompactPrice(a.priceRangeHigh)}` : "N/A"],
               ["Active listings", String(activeListings.length)],
             ].map(([k, v]) => (
               <div key={k} className="rounded-2xl border bg-card p-4">
@@ -153,7 +153,7 @@ export default async function AgentProfilePage({ params }: PageProps) {
                         </th>
                         <td className="px-4 py-2 tabular-nums">{formatPrice(s.soldPrice ?? s.price)}{s.transactionType !== "SALE" ? "/mo" : ""}</td>
                         <td className="px-4 py-2 text-muted-foreground">{[s.beds != null ? `${s.beds} bd` : null, s.baths != null ? `${s.baths} ba` : null, s.sqft ? `${s.sqft.toLocaleString("en-US")} sq ft` : null].filter(Boolean).join(" · ")}</td>
-                        <td className="px-4 py-2 text-muted-foreground">{s.soldDate ? formatDate(s.soldDate) : "—"}</td>
+                        <td className="px-4 py-2 text-muted-foreground">{s.soldDate ? formatDate(s.soldDate) : "N/A"}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -212,7 +212,7 @@ export default async function AgentProfilePage({ params }: PageProps) {
               <Phone className="size-4" aria-hidden /> {a.phone}
             </a>
           )}
-          <p className="text-xs text-muted-foreground">{site.demoMode ? "Demo profile: this agent, their brokerage and reviews are fictional. " : ""}Licensed in {a.licenseState ?? "the states shown"}. Equal Housing Opportunity.</p>
+          <p className="text-xs text-muted-foreground">{site.demoMode ? "Sample profile: this agent, their brokerage and reviews are fictional. " : ""}Licensed in {a.licenseState ?? "the states shown"}. Equal Housing Opportunity.</p>
         </aside>
       </div>
     </div>

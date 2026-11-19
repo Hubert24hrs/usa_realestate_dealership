@@ -1,7 +1,7 @@
 {
  "version": 1,
  "model": "gpt_image_2_6",
- "license": "AI-generated image created for CITI VIEW (Higgsfield · GPT Image 2.6). Fictional scene — not a photo of a real property.",
+ "license": "AI generated image created for CITI VIEW (Higgsfield · GPT Image 2.6). Fictional scene, not a photo of a real property.",
  "photos": {
   "asheville-nc-01-0": {
    "url": "/media/photos/asheville-nc-01-0.webp",
@@ -49,7 +49,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQAAsAA4BaJagCdADpJ0sEdLHYAAD9NrjcE4Rw4F73oGuKM9k7zFJ+BvH+88V0c/O/+kEQubAtKSkfSae1sNTZ/QNtmU9rhhKfQtuLAAA=",
    "color": "#282818",
-   "alt": "Spring-fed creek with clear water over rocks",
+   "alt": "Spring fed creek with clear water over rocks",
    "category": "WATER",
    "scene": "water"
   },
@@ -199,7 +199,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJYgCdAYwx27bEvgpBAD94nkygdMPagEIEU9woRlrIkNiNaUE2CgHlX6AiQhaHMmN6IF8eIXxzK9R8gN+z2NWKt1asO+/Xjk/S67HvgAAAA==",
    "color": "#b8a898",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -229,7 +229,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAQCdASoQAAsAA4BaJQBOgBD/a30AAP6XIjZvJ/d3FNM3zKK8tWB2kW/N9usvvqmgpIn6TLKDQyxBsidlABCLGJ9VklW/doI6mag+Mrx11DFAAAA=",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -289,7 +289,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoQAAsAA4BaJQBOgB11HQAA+5rpl6JSAMfxzvCPAy3Fkb3hgXZKnTZi7x98JaTyv6okB6x7b5xpSs2trhPY4AAA",
    "color": "#a89888",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -299,7 +299,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAgCdASoQAAsAA4BaJbACdG1/Dx6vS18mMw/SBAD6CvMn9hzWuRhLB2JsTNhYCPUymSdAAgt5XpZYVCxBaGWLxkq3z2sbPhnDLi0psE6bJlwHBWJ9AZ11FmafatyL3viGBxjdX8AAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -409,7 +409,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJQBOgBeMn9HF34AA/o+qfqVeg2vwHTOjUARuRjkBIpg6odlQHAe1jc31CrBbNikazEp/mPXZJT17KN7qw4tgpQrGCikAAAA=",
    "color": "#989888",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -429,7 +429,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAAsAA4BaJQBOgBTvOGR1AAD+06daoE/didiHUJ+xT8BAuUmn7XMBNOQ2dUJbK2Gt4fFqKzfmR/39L6oXc5B6cDvFE0t6FnEMpGLzvF9EObrqHAAAAA==",
    "color": "#b8a898",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -489,7 +489,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAQCdASoQAAsAA4BaJQBOgBxE4AAA+MEXwRonm/4JES8nPoXYelRQ+6LbrAdNEBMQxN8QGIV+qxi0bfPm72YqFFcwAA==",
    "color": "#a89888",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -499,7 +499,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAsAA4BaJYgCdAD6v6BYAAD+rSNFFe/ApPtp+iEy1f9P2JbWgN0V0grdaFqJoES/8F7yAi/XM3LrB7ugezox73LVEjVZMSQAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -519,7 +519,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAsAA4BaJQBOgCLJByupIAD+lyJCGeeb0neqGKVwOodQFMRHYh6YpECoML3FecJZBuFQ9fP1EpfHJ1N6TF2DaIw0m68yAAA=",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -589,7 +589,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQAAsAA4BaJZACdAdwBR+McBA7XwAA+/zXjaDNSVVYyh0xilIsjCWGfzSECu9TjhiOQBlRNTUcawem0aIiVnqLH7Z/enpQGm0TwAE3hssYTMXlkcjsfFCNvAAAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -619,7 +619,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAsAA4BaJQBOgCB0q+MmzAAA/o1tWkncA+k2spSrzaMMnnzF/UHwMHg4MuLg9Q+46YWYfJo660iEIDuIlkAA",
    "color": "#b8a898",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -719,7 +719,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAsAA4BaJQBOgBU0EI8AAP5lhae9nBV4sDBJDYaRDUhWCByI48wqDYt7P1D1ESCP//CuqD9ud9nomO8THbILIz4AAA==",
    "color": "#b8a898",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -739,7 +739,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAsAA4BaJYwCdADsrr7gAP7EE8PkOh3cSQhgjZml6KAFEU6q5rdDy5hmUgXShtlcpEnc1DXRppydTVzAAA==",
    "color": "#b8a898",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -759,7 +759,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAQCdASoQAAsAA4BaJbACdAEeikiQAP4fu1V3h13ngE4vvYs3jPB8BmtTOioGcEozzE3Vy+8j6aGaVumzko7HQt9hKSo1CpmmFXq8OcAAAA==",
    "color": "#486818",
-   "alt": "Building exterior: garden-style apartment community with landscaped grounds",
+   "alt": "Building exterior: garden style apartment community with landscaped grounds",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -789,7 +789,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAQCdASoQAAsAA4BaJQBOgBAJmkAA/rGifKvHZOy62WvDkBKC2fOmO2TC7Z+nbbPEavbjL8qK0h8eY73X7iJSZIQXEx33De9mAAAA",
    "color": "#b8a898",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -839,7 +839,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAsAA4BaJYwCdAEVzwmQXkWAAOJ02sLGlNBQdu7vjuGYsbEPHjEIzggAPdAFpZXqoSYHqdEMPW8FF1+ZWW+Bvgt9dcq4AAA=",
    "color": "#b8b8b8",
-   "alt": "Property exterior: modern tilt-up industrial warehouse with loading docks and a truck court",
+   "alt": "Property exterior: modern tilt up industrial warehouse with loading docks and a truck court",
    "category": "EXTERIOR",
    "scene": "exterior-commercial"
   },
@@ -859,7 +859,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAsAA4BaJZQC7AEeppeZRAAA/Ssnm2+Bs6wP08Kh01/ae12Ex8aJ/srz67oLSBkvdXClPPEBJb/QTP0g3twA",
    "color": "#a8a898",
-   "alt": "High-bay warehouse interior with a polished concrete floor and tall clear height",
+   "alt": "High bay warehouse interior with a polished concrete floor and tall clear height",
    "category": "WAREHOUSE",
    "scene": "warehouse"
   },
@@ -869,7 +869,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJQBdgMWRuY5OQAD2R0ES7B0aF4Oa0HvfJeiDNMp5FWPqOjLKQRSGHWD/PQgF+MdoRSLn/XNG26csZKhTxThxqeDFmcUAAAA=",
    "color": "#b8b8b8",
-   "alt": "Warehouse loading docks with roll-up doors",
+   "alt": "Warehouse loading docks with roll up doors",
    "category": "WAREHOUSE",
    "scene": "warehouse"
   },
@@ -879,7 +879,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAsAA4BaJZQAAcL9TycAAP48A4bateVgOINiXYEpfkTxWCLWJxtleBPzWQtaaE864m5ayr+CNec0w1xp7CHAAAA=",
    "color": "#a8a898",
-   "alt": "Light-industrial flex space with an office mezzanine",
+   "alt": "Light industrial flex space with an office mezzanine",
    "category": "WAREHOUSE",
    "scene": "warehouse"
   },
@@ -899,7 +899,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAsAA4BaJZQCdAEU1ciAE/AAAP64SpbieWPMLzJUb89mSH4ydW3XyMGyfOfh8fkf67uNVjCw3pyrS1DQOYAA",
    "color": "#989898",
-   "alt": "Property exterior: truck court with dock-high doors and trailer parking at a modern tilt-up industrial warehouse",
+   "alt": "Property exterior: truck court with dock high doors and trailer parking at a modern tilt up industrial warehouse",
    "category": "EXTERIOR",
    "scene": "exterior-commercial"
   },
@@ -1019,7 +1019,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwAgCdASoQAAsAA4BaJagCdAYv1uOwP9eiqRQAAPjleobLBPMvj5PFmvxPy624ZdRLxZ7LCPAcA45JWVv9kHbQ1YXlxm3ZV0O04pmSGDaix8+DCWjFZ20jwN4Kygn+7gAAAA==",
    "color": "#d8c8b8",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -1029,7 +1029,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAsAA4BaJZgCdAYuvTOLFTN6AADifg+eppO4DTlTXze6grdyKyBgshHovG+fTalvkRMUpITNllfznTZWdViwvJimQZZ/P5Xb0TNlq5vAAA==",
    "color": "#b8a898",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -1039,7 +1039,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJZgCdAD0DDeUrUbAAP37vXSCCwwrmOF0LdA54PCzUWRwFnlNqjtB0RywmSNphRShZuiK0JT1NjdyvLYYTkmOoqRFQAAA",
    "color": "#a88868",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -1089,7 +1089,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAsAA4BaJZgCdADiI41jQAD91WeiQRSmP1nDLV+sLU7cro2HrU8hBBMZrFw25md/t/+uG047vcsTu/8borgAAAA=",
    "color": "#b8a888",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -1099,7 +1099,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAsAA4BaJYgCdADNpBUgAAD+Ha3uQ8P9Q2FMbFZrl1bBKdMDciJKCUdINE6L2nN2bQl3DJTf9y9YCd65/h568/VtvWMZWAA=",
    "color": "#686868",
-   "alt": "Front exterior: modern fiber-cement and limestone townhomes",
+   "alt": "Front exterior: modern fiber cement and limestone townhomes",
    "category": "EXTERIOR",
    "scene": "exterior-townhome"
   },
@@ -1139,7 +1139,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJQBOgCGzNoiufLAA/o85mHs57GHHWoHK89W+iYOQiJIzWnnJQIYBjq+NgdudOq/k+MuPTGfIPo3vHHngAA==",
    "color": "#c8b8a8",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -1149,7 +1149,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAQCdASoQAAsAA4BaJZgCdABVCAAA/dnjpJ+4JSLNJ6+o7157YEWn9q54SB6iuFCCZuSzGaiRD35lw5lfioKpX5etOdGnyygntwAA",
    "color": "#c8b8a8",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -1179,7 +1179,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJZgCdAYrw7uhQmAA/qM3RR47smyWv/cK7grzLOqc0svy8WOK2iD535KCduX17l7SD4xpY+nvnDyTQ71uhCq+MJzoG9q5QAA=",
    "color": "#989898",
-   "alt": "Front of the home: mid-century modern ranch with clerestory windows and a carport",
+   "alt": "Front of the home: midcentury modern ranch with clerestory windows and a carport",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -1199,7 +1199,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJZgCdAC3est4SAAA/tBq+Qq45VEd7vjtCDPqdr85PVJO/jta7zWKZ9bswZgSq4y5dHeYJhcc86sUezr2lS73LWkfJTdZAoAAAA==",
    "color": "#683818",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -1249,7 +1249,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAsAA4BaJZACdAD0YIHOnbqDgAD+yDwJJTAPzWZqK8chyBPyzNZFMd7IcWXmu5dW122W8mpd/x9VIE6nwbL6gUk1Gaa5spEgAA==",
    "color": "#b8b8a8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -1289,7 +1289,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAAsAA4BaJQBOgMXhUEnrAAD+gah4Pze2be8QWAMY8iS4wp8YREyeBkEwt3e/yVB6Q2ydLw+mV3knbPPX2zPu2TCue/shjXfJUxHMzUlIofhwAAA=",
    "color": "#88c8f8",
-   "alt": "Front of the home: two-story home with Austin limestone, fiber-cement siding and a two-car garage",
+   "alt": "Front of the home: two story home with Austin limestone, fiber cement siding and a two car garage",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -1299,7 +1299,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJQBOgB02Xf9mPAAA/M/XMMVyD6aPPE3PfWiPm+rD0LmyRiAG7rI66mO9CTJqRmtfqpXGH4mHQX8VhtePHfE97lpD9rJ5zAAAAA==",
    "color": "#c8b8a8",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -1379,7 +1379,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJZgCdACRMMGh4AD+0F7NS00udlMOwjRB+KCqLff2wpJT1aWlSYs0t/sxsYg7AvYH44WSj9ExJ2nZ0NKEiSaenW5TunyqAAA=",
    "color": "#b8a898",
-   "alt": "Front exterior: modern fiber-cement and limestone townhomes",
+   "alt": "Front exterior: modern fiber cement and limestone townhomes",
    "category": "EXTERIOR",
    "scene": "exterior-townhome"
   },
@@ -1459,7 +1459,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAsAA4BaJaACsADiaFKzfG/oAAD9JtnPZzRtwl5zM4G97i0+0VjiDLbOj5y7jJcGuxXWXBiD6hj8XQGpKrvvjMiQXSjQPmCFrggRGblaQoAA",
    "color": "#78b8f8",
-   "alt": "Front of the home: mid-century modern ranch with clerestory windows and a carport",
+   "alt": "Front of the home: midcentury modern ranch with clerestory windows and a carport",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -1549,7 +1549,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJZgCdAED/sB1SkgA/pO/iGNoDe1IkoSddsKpoDC5CrnF0rO258wlZdyMRSqGUzdkTTNZafTLPp7P7xcNYK2kOIhqqAAA",
    "color": "#c8b8a8",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -1559,7 +1559,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAsAA4BaJbACdAYulR9ybfiAAP6ro4vSkqlL/IgVtjLE+DgAZEIhPVPfXVXIvNpBQWRAkRuA2z4EoqTtRUbIrq+BQqeCl67t9E0jjzR+uGnH+ZfvMq+gAAA=",
    "color": "#585848",
-   "alt": "Front of the home: brand-new two-story home with Austin limestone, fiber-cement siding and a two-car garage",
+   "alt": "Front of the home: brand new two story home with Austin limestone, fiber cement siding and a two car garage",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -1569,7 +1569,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAQCdASoQAAsAA4BaJZACdABjxBAA/NixEf+d6o/NPXBPHlMPdUptAMv8oVTuk2E9GDmpmXzBLFXFEs5gbHi+oL3LVnVlRT/nIAAA",
    "color": "#a89888",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -1579,7 +1579,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAsAA4BaJbACdAELZFX6YMSK4kAA4DKMx+1AI2qLKyI2wiUlnmaqZ1I20UDINEw/2qvpPXp1SV1LKMQoOVN1CmYXons4aCnxxWSLWnkBC+IhODtU7gAA",
    "color": "#c8b8a8",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island",
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -1599,7 +1599,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJaACdADwbtj1p0AA/gBHatImsvvYWsNXyNxS9PAZ39ztgOKrDB63rKv6M9Da+X2nihDtQ9XnxufSKGh/SwwnJMdRUiKgAAA=",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -1639,7 +1639,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJagCdAYwSwjzP+wAAP7ESrXoaKWzcGIDWymsSAc0FxaXCSULJx5IDupUnOhrTDHGfCkSd4awiQunJVPIB+L+8CMUXGFE+uwAAA==",
    "color": "#b8a898",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -1649,7 +1649,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQAAsAA4BaJYgCdAYvDWUIPNKQgAD+n8MuLFLew/rjDdxjieBMOwFPmpybGtyOyo6RwBfGDJEidTD5rEfym8Yv0qLhUWcOBGKGr4BgAAA=",
    "color": "#989898",
-   "alt": "Front of the home: two-story home with Austin limestone, fiber-cement siding and a two-car garage",
+   "alt": "Front of the home: two story home with Austin limestone, fiber cement siding and a two car garage",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -1749,7 +1749,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAsAA4BaJYgCdAYt9WOSG8d7QAD+pp9OzGMEWD/8VR1FkQ+L/FOwz0MHyV9YAS62te/TqPJxM+8spwq4kKAuSk6C118XPXni8gP3NygAAA==",
    "color": "#382818",
-   "alt": "Building exterior: contemporary mid-rise apartment building with a leasing office",
+   "alt": "Building exterior: contemporary mid rise apartment building with a leasing office",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -1759,7 +1759,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAQCdASoQAAsAA4BaJbACdADdlo6x6HAA/Br58yRrlBd53+fpvt2ZhrOE4MpK1F2Kla7mZYS8yt3etVm+nt7887btIDRrilHjcBBUXNK27BNoa3AeufCTRnumQloBLohGnFfgAAA=",
    "color": "#e8d8c8",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas",
+   "alt": "Amenity: resort style apartment swimming pool with cabanas",
    "category": "AMENITY",
    "scene": "amenity"
   },
@@ -1769,7 +1769,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwAgCdASoQAAsAA4BaJQBOgMW07MY3pFx6ikdgAP4E7iSPfQtCNNiDh2BFhkqp2sGTcWTy58NL2M/AA889vl5Jdxd1arkv4zOScEc8rzkLu6nBjJGg7d4AAAA=",
    "color": "#b8a898",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -1829,7 +1829,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAsAA4BaJQBOgMYJyV5dPdBIAP6px0dj9HmDsQr8YzSppzt9pwP6e3LR42CqweHc8POmTz0ULkyR7o+M0aLwhb/0r2zs0LJD7IscQHS1FQciTA04XBoAAAA=",
    "color": "#484848",
-   "alt": "Property exterior: four-story Class A office building with a glass curtain wall and a landscaped entry",
+   "alt": "Property exterior: four story Class A office building with a glass curtain wall and a landscaped entry",
    "category": "EXTERIOR",
    "scene": "exterior-commercial"
   },
@@ -1849,7 +1849,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJYwCdAECutu1CQAA/tYoUPwfUjcjFEcbJWYoHlInIVP9b1F5QkQG9XhK0r6iWnJ45/kOn1M1MfOM52NCfCjayPS5IQAA",
    "color": "#988878",
-   "alt": "Glass-walled conference room with a long table",
+   "alt": "Glass walled conference room with a long table",
    "category": "OFFICE",
    "scene": "office"
   },
@@ -1869,7 +1869,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQAAsAA4BaJZACdACR831zEADOAZaKhg0NjZMR6aiUGmkrbWnafejhSySvTUH49hf5TW8J9FKHCiqxVvrJEpD51/BruNJO7vRx3EjAL3Hn2oAA",
    "color": "#a89888",
-   "alt": "Open-plan office with workstations and an exposed ceiling",
+   "alt": "Open plan office with workstations and an exposed ceiling",
    "category": "OFFICE",
    "scene": "office"
   },
@@ -1939,7 +1939,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAsAA4BaJbACdAEPS602j8ZAQADxFEMBoTxOp9SSjGSlmJA5PZ9zz9S6v8JeetVLFLF6WJnAtWZ/+CbLg9GlT6VgldiQAAA=",
    "color": "#786838",
-   "alt": "Front of the home: craftsman-style mountain home",
+   "alt": "Front of the home: Craftsman style mountain home",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -2149,7 +2149,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJbACdADNqTpAAAD+g03X7mrXmR8Hqxolmvr2Lpeu4f5m2Uzs7CR8f6yi3w8g3/OWzzS2OSeXCt8HSqvawn5VQySyMACfcNQAAA==",
    "color": "#485808",
-   "alt": "Front of the home: Tudor-style brick home with a steep gable",
+   "alt": "Front of the home: Tudor style brick home with a steep gable",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -2169,7 +2169,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAsAA4BaJYgCdACZ/UXfBwAA/sRY4bUb73tFZQ8Hn9YoyCcDuiMc+HrzQ1N7olODGzWhfO9C5s9FBDBJd9clXII8X+tVTK4AAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island",
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -2179,7 +2179,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAsAA4BaJZACdAEeVlYfwAAA/sHGiOfLEJyQjlBhwkDrjCrnCV4gfXVDwgZhzaobww7lMtMAwfONgJ2NbW1rMBkGx/ipNiJ3uvi4Y3/LRiQA",
    "color": "#b8a898",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -2189,7 +2189,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJYwCdADvtD64SHugAP6NQLCQPAhQXUkNmtjzoJ/mcoh0WO5kHfizRyk0gFm0P7HnBw82n8CGQr8GpFvWJAAA",
    "color": "#a8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2259,7 +2259,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAsAA4BaJaACdAYuvlbLdjulAAD+x1KQ7CAyc1i82OuL7ehDL8UiHxvTK/2XdxwK1HkxkT5GvsWK+JXjwK3fVId8sKwVeTW2KwfTRJ8oAAAA",
    "color": "#885838",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -2269,7 +2269,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJZgCdADL3R1axAAA/mfMwxut7EexhYpokSSaXo82cyrGhtJ6LbOcZLE+MSOe0svdT4nk/Imi87hZKcWaH4U8anDNH2CXi4Y3thxeAAA=",
    "color": "#c8b8a8",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -2279,7 +2279,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAsAA4BaJYgCdADJstZ7AfMQAP5eywnheShjXe6kAYD7L+nGlJmCvKAOJA8SfOn02t3Xvt79blygNUbUd4AA",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2329,7 +2329,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJbACdAENeo/soIAA9dvrw7UiUfDN9iIi54un+wT6Fo1M0rW1NCd+DI39RkW9fxx6JggyMNG+ga7mQoAAAA==",
    "color": "#587818",
-   "alt": "Front of the home: two-story brick colonial with black shutters",
+   "alt": "Front of the home: two story brick colonial with black shutters",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -2349,7 +2349,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAsAA4BaJaACdAYulQZPuuZWAADie3N2z/airSExD5tnYQ0XPTx9wgKLsM1Jp1+c7sQRiXS2ogrmKjsbFJmfPEU5srGbh8Pr1p5wUkpTdQuQAAA=",
    "color": "#b8a898",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -2359,7 +2359,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJYgCdAE2TNs27OQAAP5lJsOj7nE9Vf/HHmzTJWOfDXexcscCoghohHeb5y/1swdwJLMrC+QQCY25E/FkIAAA",
    "color": "#c8b8a8",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -2419,7 +2419,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAsAA4BaJQBOgB6stSDgAAAA/gguyZ0UQSQU7Lnx59WKlWBJ6rYoAb3oa6HIu4J38A1iasUvA3sJ55oWRfGm3jbtg+HhfEAAAA==",
    "color": "#a89888",
-   "alt": "Dining nook with a built-in banquette by a bay window",
+   "alt": "Dining nook with a built in banquette by a bay window",
    "category": "DINING_ROOM",
    "scene": "dining-room"
   },
@@ -2449,7 +2449,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJZACsAEfnGEzDCGgAP6xAa4rczOLOOPo0u08kEiLOMND4E8xog2oqOYgtZFVw4UH0nuzjPjlQWoulVUEUAAA",
    "color": "#b8a898",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen",
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -2479,7 +2479,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoQAAsAA4BaJYgCdAEf1rIvXiNwAAD+08BpPCQNrkRSCRBwOnJVnedGkt1TlN3RsmaG6HoqNWsVpzI5q3D5wdJIAAA=",
    "color": "#b8b8a8",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2499,7 +2499,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsAA4BaJQBdgB0+MEHk4nAA/tYGZIwV6c2CFnTBaYWpdWtjKyNjxbvBhz0EWspD92byDNdWat8DJVFHNl0AAAA=",
    "color": "#b8b8b8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2509,7 +2509,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJYgCdAECgImJv2AA/sUG21l4MWxLkXtIyqJFsShS625Y76nVRQeA6Y+DspCT34Nvo1UJdyvEnKBKJ9WgAA==",
    "color": "#b8b8a8",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -2549,7 +2549,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJYgCdAEfRLxZp+lgAP6vuo9/5mxhcinpxVfYIkkWttl/kHiSOtfifMBd2yzWf0Lpaz9fXrxb68X34X7TlsU1y/N1zMyJkSAAAA==",
    "color": "#c8c8c8",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -2629,7 +2629,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAsAA4BaJZACdAEf3IVJyqhGgAD+xGTht+0NR8fgET+Hr4ger4/vDVljHCsvQ//zpjRtc+WTGTMZtZD7IDEosxGLL4oguAAAAA==",
    "color": "#c8b8a8",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -2639,7 +2639,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJZACdACj8JxwqgAA4nzDHFitKIxE0Bxj9w0s6U1OxRwSR2wkvA3e9ANlcVqo+c4eLd4Mxbreo25l3hqjN9h0hy1fLKCe3AAAAA==",
    "color": "#c8b8a8",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -2659,7 +2659,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAQCdASoQAAsAA4BaJQBOgBTT8kAA/o+iiVSJfg6+m+FYMqk4eOk5orHyiSkuV2QX7lVLcQxQX91EOx6otPJSHFSDmBiwAAA=",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2719,7 +2719,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoQAAsAA4BaJbACdH8ABs4AAM4eA6sZIUBWthkd4oURcNHDGy93DHPMzkZp9kMFRysZy8gFLtZo8OQlubIBbtw7O/MVBP6HPyLXrUAA",
    "color": "#383838",
-   "alt": "Building exterior: contemporary mid-rise apartment building with a leasing office",
+   "alt": "Building exterior: contemporary mid rise apartment building with a leasing office",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -2729,7 +2729,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAQCdASoQAAsAA4BaJZgCdAYvM+A4AAD+bHmJKdCGiOOT6G69x0XnDtGf0JftiRynQSI6V3N1rI/bwl14U4FeLjb0Vu5axK6cfoJP2rPey2cSMe9mPwJEJD7BSJRYwAA=",
    "color": "#9898a8",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas",
+   "alt": "Amenity: resort style apartment swimming pool with cabanas",
    "category": "AMENITY",
    "scene": "amenity"
   },
@@ -2759,7 +2759,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAQCdASoQAAsAA4BaJYgCdADpm0tgAP61rLil9ZtK8PdYRhQS0PrreuWJXjqnMbPboF9lR0Dhp/cGwsbQO5e355KW3XTa6ooxwpYLiQAAAA==",
    "color": "#b8a8a8",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -2769,7 +2769,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAsAA4BaJQBOgCIj0IrLCAD+tVr/OKoe4o3Me6R5PBLqZ0nUuSZmmRpi4qZ3Y2lJcC4gE7fM+t5aU9OkJAAA",
    "color": "#b8a898",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2799,7 +2799,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJaACdAEekgVVyIAA/NfOrFYFPlNKnYMUOHC95JcVXN6nZnF+uQt/GCmG0skFQmvuwFzcmmdN22Zg+fs4B0QQAAA=",
    "color": "#d8d8d8",
-   "alt": "Property exterior: modern tilt-up industrial warehouse with loading docks and a truck court",
+   "alt": "Property exterior: modern tilt up industrial warehouse with loading docks and a truck court",
    "category": "EXTERIOR",
    "scene": "exterior-commercial"
   },
@@ -2819,7 +2819,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAsAA4BaJZQC7ACmDrvSgADKGoqCo0tni7vjR9DwMfMs9HgXeRPJSa3AbYc2mbRVVJY6LsJF5/GaKO8oCAAA",
    "color": "#a8a898",
-   "alt": "Light-industrial flex space with an office mezzanine",
+   "alt": "Light industrial flex space with an office mezzanine",
    "category": "WAREHOUSE",
    "scene": "warehouse"
   },
@@ -2829,7 +2829,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAsAA4BaJZwAAiyH5LYOIAD76677vhhdjt/4WcF+LXFA13OFMXW3WCrfLOjdnqnyKIznaDYUKKAA",
    "color": "#a8a8a8",
-   "alt": "High-bay warehouse interior with a polished concrete floor and tall clear height",
+   "alt": "High bay warehouse interior with a polished concrete floor and tall clear height",
    "category": "WAREHOUSE",
    "scene": "warehouse"
   },
@@ -2839,7 +2839,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAsAA4BaJQBYdhLwjXiAAM3yvtWTgnrTKCj1QEge4rvIfQHE6wvfJ1uTHEZTMCmtyVr9up/KmQyPwJuLAi1nAAA=",
    "color": "#c8c8c8",
-   "alt": "Warehouse loading docks with roll-up doors",
+   "alt": "Warehouse loading docks with roll up doors",
    "category": "WAREHOUSE",
    "scene": "warehouse"
   },
@@ -2869,7 +2869,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAsAA4BaJbACdADOmSaTsXAAAMwikxUKJkWHPqOMnv44rDMFVymbZ/7mOSHMIN+AGxSL1n1kex6EyNSLpJVXobhEI8VDQAA=",
    "color": "#486818",
-   "alt": "Front of the home: two-story brick colonial with black shutters",
+   "alt": "Front of the home: two story brick colonial with black shutters",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -2909,7 +2909,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAsAA4BaJYwCdADdmY++oAD+taCZRZ00zUHBWTNgIxywdE4aUb5AQLVLAdQc6IMAAA==",
    "color": "#b8b8b8",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2939,7 +2939,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJYwCdAEffP77TJPQAP6yBQBca8KffJkofJdFWE5yUhpZ9q1ddcKK9VX6U9wgzqzxG+rArPHvOa/LFIIXleAA",
    "color": "#b8b8b8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -2959,7 +2959,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAsAA4BaJQBOgBKvBRHAAP6PkCHyJ+QlhIpVs7YHLPxGFCVzmBL53woej4GhGcUL4csmhdiCd7NvCUlXOKM2YNgoIdggAAA=",
    "color": "#c8b8b8",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -2989,7 +2989,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAsAA4BaJZACdADDR9gDrOgAAP3jW4Za/J83TT5Q33khsU6b5zuF/h0pBF7DWED6z0hy+VuIl03mIZKjDeo+C5BXp11tnvqeIxRNqC4kAAAA",
    "color": "#b8a898",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -2999,7 +2999,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJYgCdADv1TTgdUAA/mAWU/V90BEt4E9Vs1TqVv4wb0ug8yr8lW5P9B6Nt5ul+VXbJwEEVJxM+64Kc8IhsW+eGQTiRtfo33WAAA==",
    "color": "#c8b8b8",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island",
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -3019,7 +3019,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAsAA4BaJYgCdAEOAM0yDb8AAP6voBRIWJikzAK5eO7GUdAlPQ9BOxMavBav74LKJrtnbuokSkm0H1S/wG/AAAA=",
    "color": "#c8b8a8",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -3089,7 +3089,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAQCdASoQAAsAA4BaJQBOgA4L3p/AAP1RwVbU7B5sNQxC/wwWERqBkeO3TPtNVVWAnLOUXibni6uwqmav38o0sepLr/g4GnLkNWUKPCXAAxTGEPnVbTOAYAA=",
    "color": "#181808",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows",
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -3169,7 +3169,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAsAA4BaJYgCdADp9RhUMY8xIAD+fCBpDgbuBZPOSrONDrCMQ2rTACKzDXOEofJECTNaz3NrX2fKYUD/SulznFg5GgtzYAA=",
    "color": "#382818",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -3189,7 +3189,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJbACdAYullVLrljzgAD+yMx4Ie4wVN/XPONQfyFrNQn9VOuyRMxmZjmzEviCShMuSMd3ao7963PfEDou2f0+Lx/EB6KbP3LsBQz67AAAAA==",
    "color": "#d8d8d8",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -3209,7 +3209,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAsAA4BaJYwCsAC18owAAP5pqHLxd0PUXxt9qdbCYj3QKJ8VlEa7efGHT8sgRTKksbMSM7rXyNgzxc0QO4M4uZAfYrlQAAA=",
    "color": "#989888",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -3219,7 +3219,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJYgCdAD6m9jnikG7AAD33NNY75rKvuEiTzP0r7uzOQiXsVMmgf2R8i+qTHYJtbinIKPAyoPjQz0b3Hzst7eJ8TEaWwH/VAxgomjGyQAAAA==",
    "color": "#78a8e8",
-   "alt": "View of the Chicago skyline and Lake Michigan through floor-to-ceiling windows",
+   "alt": "View of the Chicago skyline and Lake Michigan through floor to ceiling windows",
    "category": "VIEW",
    "scene": "view"
   },
@@ -3249,7 +3249,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJaACdADicJSTL1MAAP7Rr8wBpwrJSbHD04RlVsMxKRDXmO1iyQlbbVKDynma3mVxy9JMLSCzfGGFqjMuEZFk64W1yARV3CgAAA==",
    "color": "#382818",
-   "alt": "Front of the home: classic brick two-flat with a bay window",
+   "alt": "Front of the home: classic brick two flat with a bay window",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -3259,7 +3259,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAsAA4BaJQBOgCP/+0wPaB+cAAD+jhsEOI6Ib55kcFuGPsTaWoFARFrITE0ntEeaFZIZ6uKdyRklpIHib43MNaWmFGFyD8IgAA==",
    "color": "#b8a898",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen",
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -3319,7 +3319,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAsAA4BaJYgCdAEfkhSiheAAAP7T2LM7YN8Bdgup71sskyBXgiZ9AcrZVmWtDC4e1GYQoS2hz3240U9cIxPb6F8bD2gAAAA=",
    "color": "#b8a898",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -3339,7 +3339,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJZgCdADRd2GEAAD+tWVAiXYws+t2/5ovLl2qnM813gxn/4ETnWcWMIg34UZAIgcEeteWKIcNxu0sXfx3RsRijISif9LgvPoAAA==",
    "color": "#b8a898",
-   "alt": "Dining nook with a built-in banquette by a bay window",
+   "alt": "Dining nook with a built in banquette by a bay window",
    "category": "DINING_ROOM",
    "scene": "dining-room"
   },
@@ -3359,7 +3359,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJZgCdAEClPRCqmFAAP6/xtBoZJ0xy4rjPSOXaooFD67VRpCBL8OcFBpqtS5dB9iJhsiRxUG+uUmLaBCSCRv77dcLa4a5TbTIAA==",
    "color": "#080808",
-   "alt": "Building exterior: boutique four-story condo building with brick and metal",
+   "alt": "Building exterior: boutique four story condo building with brick and metal",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -3369,7 +3369,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAsAA4BaJYgCdAEX5Q9byoNHwAD89MuvQ6tRNokqDGCGU3rk1YUJIUwnawFAfY1cH1HLbw1f05fei18oFkAtRFMOCWP75QYxYRLBA6rYPJPrD2S7YAAA",
    "color": "#a89888",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -3379,7 +3379,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAsAA4BaJZACsIExguBKkayYAP7EaxJMtIk1OKyVechaqAdyZK4O4Ph3oXA+939mf/iwuSox6sV0tnJXcbflumQeOSMGgPYU1/YcL02RG/hRsKl9qJmQwtdCgAAA",
    "color": "#a89888",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island",
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -3449,7 +3449,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAsAA4BaJYgC7ACwkb5bAAD+P9b/4zlCYcv3UsS9r1lxJQHDRKKmv/2N2AUfS0dTxyZKHXXJRvA9/5V5Wv4kPVduA2zS9IAAAA==",
    "color": "#282818",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -3459,7 +3459,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQAAsAA4BaJZACdH8AGMCr8hUVOYdAAP5mgIjDCjhRzfZIrn2Iic4YPJwI2gA3RGxnBe3zpE4ksC4KtI8RJfCu3qoZ1yhfeXFsXNyjWuD4AA==",
    "color": "#a89888",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -3499,7 +3499,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJbACdACg+PcyXkAA+LLOvykPJFdyr8twpnoEu4/1k+MJgSNK7wpa/NGuDwN6dg8cGb3K4Zvq7Jc4LBztrrCZGa3YmmGBoWRkTFoAAAA=",
    "color": "#58a8f8",
-   "alt": "View of the Chicago skyline and Lake Michigan through floor-to-ceiling windows",
+   "alt": "View of the Chicago skyline and Lake Michigan through floor to ceiling windows",
    "category": "VIEW",
    "scene": "view"
   },
@@ -3569,7 +3569,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAsAA4BaJQBOgB6uje0Z6AAA/MwTDJsJ680s4QCCGnj4n5khD1Qy6boRXHY56PXDCOgqM/1CKTOT9H0qdgAA",
    "color": "#a89888",
-   "alt": "Marble-clad kitchen with a statement range hood and paneled appliances",
+   "alt": "Marble clad kitchen with a statement range hood and paneled appliances",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -3589,7 +3589,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAsAA4BaJQBOgB9HpO4rdxAA/dWu4xk8zsxPB2D4BVY4eBuwERQb1qvkHkVKKsO1cwU/N3tf7se1wAA=",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -3619,7 +3619,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAsAA4BaJbACdAYuRya16kYUAAD+v4fYJ8BtJf+3q2rrmZT2klN6cpJ47Tx8kct0a3S/MHZ2m7ArAClGjs1vSOdTdhlec+uLm5n0CVX+wAAA",
    "color": "#382818",
-   "alt": "Front of the home: side-by-side duplex with two front entries",
+   "alt": "Front of the home: side by side duplex with two front entries",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -3629,7 +3629,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJYgCdAEK3yAkiEAA/sjhWZNnL0PaSh/XLgbQRzs255H8HgsB2Vf2QESaMaU6IXCKzjUoEcIwowJlnv2oAA==",
    "color": "#b8a898",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen",
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -3709,7 +3709,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJbACdAC9885+3meAAP7BoZt5jQpfazX9ekqneKa/8y8194R/Fr14SJEh8jajoDfNj7pR4Z9asdNYJbD6ArE+9388rySUMEAAAA==",
    "color": "#988888",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows",
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -3729,7 +3729,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAsAA4BaJYgCdH8AEVcR0ELQAP6pxC6TmUoH7kmZYZzNmjzx6oFmjuj/R9Awby52HNs39QBNNqG+2kLfr8++hcdGM+ETZaqjejS62POlkagA",
    "color": "#a89888",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -3749,7 +3749,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAsAA4BaJZQCdAEesR0Sb/D1EAD8j3/APWnr/mi8TY73v5VyVk+LW0ZU5xfRGgc0DltqrrYQG+6ELvPFdPJkBGrAAA==",
    "color": "#b8b8b8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -3799,7 +3799,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAQCdASoQAAsAA4BaJbACdABp8fAAAP5yLSea+nPQSafQ89swXKWXT7nhIDesFvL8ZRE5Yb/7aig7m7brYy5omGacBlaO3yBi3mpoMyXIvZOgnyZ/aguBAAA=",
    "color": "#080808",
-   "alt": "Front of the home: mountain-modern home with a stone base, timber accents and big windows",
+   "alt": "Front of the home: mountain modern home with a stone base, timber accents and big windows",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -3979,7 +3979,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAsAA4BaJYgCdADwU1mmAAD+s7c1fe+9Sk95lzyfEidR755NNoQe3k3wCz3slubG/ccelPNgD6Fd+J30M1vP55KAAA==",
    "color": "#b8a898",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -3999,7 +3999,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJbACdAEfW/Ai2AAA/r+HuGpTHsItUMJd459MlTBlbry74unJRZi9pX8tvHbJLerlpwKSTbB5CA/WEIeN8Pmq05EHRQAA",
    "color": "#384858",
-   "alt": "Front of the home: modern three-story home with dark metal panels and warm wood siding",
+   "alt": "Front of the home: modern three story home with dark metal panels and warm wood siding",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -4079,7 +4079,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJZACdAEenQkKxgAA/pcl3CZrxHAQ3EhON5/SFNjOYObXiXuwfJatJXv48DKxoas12wtlajFLwpD/DAAAAA==",
    "color": "#a89888",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -4109,7 +4109,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAsAA4BaJbACdAEHL1MrgAD+wVJSA54YLV2MmQq3KHKQabWcTKRxMwFNn3g1oBl036O7JDxn2yV/Qw89eqYzPBsIFbwZmJAAAA==",
    "color": "#485808",
-   "alt": "Front of the home: classic red-brick Denver Square with a covered front porch",
+   "alt": "Front of the home: classic red brick Denver Square with a covered front porch",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -4149,7 +4149,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAsAA4BaJYgCdAC9wk95gAD+jzt7DFcIfT/UMhnNmj177cRSgm7LZQiBGzv0K1Avz2N+N/i2BB1JEh88b59bZ2CAAA==",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -4169,7 +4169,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJaACdADgyshMfAAA/sQC1KIKIqyPgvQhspUdWpBy2kcprtvoWXnZPy5k1SzXoo48dCmgDswI35Qw0bXXkulUAAA=",
    "color": "#c8b8a8",
-   "alt": "Dining nook with a built-in banquette by a bay window",
+   "alt": "Dining nook with a built in banquette by a bay window",
    "category": "DINING_ROOM",
    "scene": "dining-room"
   },
@@ -4249,7 +4249,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJQBOgB4NGMvEFKAA/moQlKWzaYALigb0ITju5ct2p//puFvFYfJ84XY5ciTBuY9IChAxyb+XN4sTP4HevVt78m4uQAAA",
    "color": "#988878",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -4259,7 +4259,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJQBOgB94zF2B1AAA/OiMgK/A/gxqv3IQ2enOLO6p55eBUa8JtyHp4kqVRp4/NE5NGDnueaKZ+dvgdL5Cx6wAAAA=",
    "color": "#a89888",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -4309,7 +4309,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoQAAsAA4BaJQBOgB31sPV+8AAA/o4dlkVDY5HNLUarHsu20yqx+fr5GjYHPwrKcXXcmGhHC7lrr7AYLWsN5nsgi/Henow6G+Q5qKsPi07yXy3H73ZkAAAA",
    "color": "#c8b8a8",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -4399,7 +4399,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJbACdAB5Zqz7AAD+g4aVV2ffCnq/gavLmLr5miEtjeRL8tF52dYg/yr51To9ELtrZqH5vMNNNTkZeuG4gLD8pwTvvz8AAAA=",
    "color": "#486818",
-   "alt": "Front of the home: updated brick ranch with a low-pitched roof and a front lawn",
+   "alt": "Front of the home: updated brick ranch with a low pitched roof and a front lawn",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -4409,7 +4409,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoQAAsAA4BaJZgCdABs7ElAAPXRpf/mTCykwLfh+r4ShpXHnbV9PeaCzhSVkg8ySm76m4F1N/dOShS5gCkdmR0JITUNiYbxgCcXDMykWh5c1gAA",
    "color": "#c8b8a8",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -4429,7 +4429,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoQAAsAA4BaJZACdAYubVYCTmJ6iIAA4BlaOdO0dKRRTSTOq2C5o1Qiw/1NkLPmHgk58EDw1/DC7DA+v3MInDOE8a9eEfoIEadGotXoizSHQH5LNym6j4wAAAA=",
    "color": "#c8b8a8",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -4479,7 +4479,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJYgCdAEP8lsFQADOPXdIb2QSqSr+pIOjnuj5ZSil8veSWQN15d095cuWYGOEeRoV4YsMqkO4ExZTFTIEHCcD9JdDPWyd+sAAAA==",
    "color": "#c8b8a8",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -4509,7 +4509,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAsAA4BaJZACdAEPdL27WqG1rAD+BAc0HKobVs22spXSLaDmngQkLTYTpyvZWHXdACEmHyssZz0XUgJ9BG43TWRhSqX5xwyfEiIAijdsosQAAAA=",
    "color": "#c8b8a8",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -4539,7 +4539,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJQBOgMYY5cKpeOyQAP4DzghLPFfEj+vTYn0m0NlPVAMahRYjNW1N7HHguJMEdPZfbCOcBQiGxCIn2pEMD2mnQK5QGfgwwMOAAA==",
    "color": "#a89888",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -4579,7 +4579,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAsAA4BaJQBOgCLJACe95G7TAAD+acaysPLAj3vl4U+XoTipB0tnCGKj6oVZOcS4H/s9tkLWx4gIiIfvwhf8M827HGtW98pYzJGKGr4BgAAA",
    "color": "#b8a898",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -4589,7 +4589,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoQAAsAA4BaJaACw7DDRS1AAP6IajLnkJ2KUabCTyHJGyLnIp1i6wmQBpnlW81yIVveK3WYWM0ByqSlK2VUD+zKMzkBKdPXn0h3psXnYi6sAAAA",
    "color": "#c8d8e8",
-   "alt": "Building exterior: garden-style apartment community with landscaped grounds",
+   "alt": "Building exterior: garden style apartment community with landscaped grounds",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -4609,7 +4609,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAsAA4BaJQBOgBwc08T4ocAA/eL/T4VhTT5kcLe7t0jm8wNMchcRlc9H8iMfaxNrmTKuZnBVhb4Eh+yXEs/+J/gGnYSThV8nxBUcNCsnsIAA",
    "color": "#b8a898",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -4639,7 +4639,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoQAAsAA4BaJQBOgCPgW5MgmeOcAAD97VtN1+mpiiYLXWJAx8tWQyo47TY+/T4obEB9LF0ngmdRV+wtFFk/CquzdSIAAA==",
    "color": "#b8b8a8",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -4689,7 +4689,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAsAA4BaJQBWAB9xt/ZrIOAA/r5+922wgprZhd20phwndr0ZdRYTDQsOIehYv+6Gz1Fj6vtxAnZx1nP0SkKEehpBbquvMoAAAA==",
    "color": "#a89888",
-   "alt": "Restaurant-ready retail space with an open ceiling",
+   "alt": "Restaurant ready retail space with an open ceiling",
    "category": "RETAIL_SPACE",
    "scene": "retail-space"
   },
@@ -4799,7 +4799,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJbACdAD0ZCmoyuAA/oINvwN+d7uLQLd2iXk515npnSylclFqOFvZEBjCmfz1sbi0iQijrKPVJj4gi30H2wDEdcm30jHAAAA=",
    "color": "#382818",
-   "alt": "Spring-fed creek with clear water over rocks",
+   "alt": "Spring fed creek with clear water over rocks",
    "category": "WATER",
    "scene": "water"
   },
@@ -4959,7 +4959,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQAAsAA4BaJbACsACkAcLcAAD+oTCbVxGgW/3Ln5kLoGLK52jfHtsslQsNEWV585aXLZBKcs9mASKi0cbNU8AfztV7A/GcCnutMdTTsJrWhxcz4g1aAAAA",
    "color": "#78b8f8",
-   "alt": "Front of the home: board-and-batten cottage with a tin roof",
+   "alt": "Front of the home: board and batten cottage with a tin roof",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -4969,7 +4969,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAsAA4BaJaACdAEQ/ZhfcJn2AAD+qdWVtJ1XxymZeHT2af4dOZMykkg1RbkZab/jc2tDdZR6YbGExBO5NqDM0H3PlYusIWkzuu6BdEwgAA==",
    "color": "#282818",
-   "alt": "Spring-fed creek with clear water over rocks",
+   "alt": "Spring fed creek with clear water over rocks",
    "category": "WATER",
    "scene": "water"
   },
@@ -5169,7 +5169,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAsAA4BaJbACdAYvDGJ0tNEAAPhXYlqIQLQfZ7NWlrLbK8o2LclBlTP6gKhnzHaCyX6h4kYnTXWfDOq1V5hXSrEUjw/2pv9ckq1rfYb0IJz3GtcfFq0AAAA=",
    "color": "#c8b8a8",
-   "alt": "Front of the home: Mediterranean revival villa with a barrel-tile roof",
+   "alt": "Front of the home: Mediterranean revival villa with a barrel tile roof",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -5189,7 +5189,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQAAsAA4BaJaACdADddywwAAD+n8Wpudvc3sY5qAWfyGQkX5QfMIZ02LNObeKhhS6ryUAbJb3e5+b26zxxhT3kh2SerbfxLi4kC118+leVgAAA",
    "color": "#b8a898",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -5279,7 +5279,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAQCdASoQAAsAA4BaJagCdAC8zbXSAADOOyzuoxM87axFM1/PapAb9mJfrhcTKYqyYuHml/dzQUY0edwH8TS/PEjWHcSlAfCH0a3rSesVUs310k+rAUQPiHqwNepnEAAAAA==",
    "color": "#282808",
-   "alt": "Building exterior: boutique four-story condo building with brick and metal",
+   "alt": "Building exterior: boutique four story condo building with brick and metal",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -5299,7 +5299,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAsAA4BaJZACdAEVtVrsaEpxQAD+t2TwnR4KK1lakE+k+ri4NbZC5eQ04oxoMMkk8OLh7VPD46Rwk/HHZZ+ITWnSRFSaTN5AAA==",
    "color": "#c8b8a8",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -5369,7 +5369,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAgCdASoQAAsAA4BaJQBdgO4FvpSvco7Py+AAAP2pAYQPszx5d/kShh4NuCBJ8CMGGEG+5Lr8Rsquc9yQ1k+o/7le1kSRAcli1+O2cNVDjVnH4tluBuozppbcAA==",
    "color": "#182808",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -5379,7 +5379,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsAA4BaJYgCdADpr+QlfZgA/mWWybP6h9kRE8IPuKLpsQPtF6JXwDZK42Iy6T81kC9WK+JntHTMxn6yq9hcAAA=",
    "color": "#a89888",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -5389,7 +5389,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJYgCdADO+a7cZxYAAP6fxamz82ptb0L9UBJwFoTqr5xxX+E5dAQNUv1N9R4B9hljae7/jpOxGziOZ1CFqtzgFct8+GzDHIgAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -5459,7 +5459,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAgCdASoQAAsAA4BaJZgCdH8GJ/gdLDa5/V3WgAD7lstlMlJJZGVc2Vbon3GvlJBzCgK7sAzoJ8Xnnt8Alm5NDi5H7RIcaEGWTKbRZBoNDjuZQn6o8gODmjgD0d3iTO3DL0yZD0AAAA==",
    "color": "#182808",
-   "alt": "Front of the home: Key West-style home with a metal roof and shutters",
+   "alt": "Front of the home: Key West style home with a metal roof and shutters",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -5539,7 +5539,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAsAA4BaJZACdAEM1htWGAAA/sUL4bU62Y8oy/OBlbeE39cbkrJvZE3dt8R4xZl66+ZcPbIXwAAA",
    "color": "#c8b8a8",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -5559,7 +5559,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoQAAsAA4BaJZgCdAEWtTaUfY6FTYAA4nFeOfscERlmwC2btpzEHfPZXK78s1lAY1q2uRYM7lYUfACk+4ScPnQoZsDI49uK4U7QQ6sv5HZQ2fmTafdeqC+AAAA=",
    "color": "#181808",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows",
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -5569,7 +5569,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJaACdADJ2e8t/fuAAPa+gqddgF3O+TYxpjHkp+XRCpX57d0HBAK9EDqyVa1miPAoSOsvxp7lyRGkaJBTpibP6fyWgAAA",
    "color": "#b89888",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -5579,7 +5579,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJYgCdADhO7wgAAD+0+jJ/aypWzQt2jEw5wJkLlwmKWnDLfMNgjgUQd7H4TUKAZcStd9IyO6xX+7YjUfZt4Hk1qSJCGcJBUAAAA==",
    "color": "#b8a8a8",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -5589,7 +5589,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJZACdADMJjlNrHbQAPv2nRXwU3GgY5Y5QkKVRx4fEHjqTkxB1NCm9e3s09cDkxyORGXL26GtDJIud9UL0CkfaCNw3iEJIAAAAA==",
    "color": "#c8b8a8",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -5599,7 +5599,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJYgCdADwMiXv1EgAAPcyzItibVW2FYTX1zGa2ew7rU3fO1u7m8Y47UdL5UtEBgm8FTXXYvetGNHb9j4rggAA",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -5609,7 +5609,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAsAA4BaJZgCdAEPdyj+PnpAAOJ3zj1UKId9EiIqgfgcgbU3241xVOsyiR3hgbDHNUNWlaJtjpW53lUqi6ikKFa+zod22WOgqrbN3zOVm2vGB0AAAA==",
    "color": "#a87858",
-   "alt": "View of Biscayne Bay and the Miami skyline through floor-to-ceiling windows",
+   "alt": "View of Biscayne Bay and the Miami skyline through floor to ceiling windows",
    "category": "VIEW",
    "scene": "view"
   },
@@ -5639,7 +5639,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAsAA4BaJYgC7ADdfD/jbC/wAP4njJV8JaGkahezFxPBbGhMvjc1JzqrpaSvJqOr8xLuTDZgbGdAsX1kka+N3NkaR+p7wI1AdvbHCkGEx/WL3wAAAA==",
    "color": "#080808",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -5659,7 +5659,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAsAA4BaJYgCdAED5ueE/qgA/rO9DXNwOIc7dyvLmG+4FmjFQ7jR+2p1SIqA2gckCB7NXTSal4vKWrlKAFV8nc6k1h52zftsSP5lX+GwoAAA",
    "color": "#c8b8a8",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -5689,7 +5689,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAsAA4BaJZACdAEWZeOE40usUAD42cLeoa4GY2TAGyNVX98EgFR8Swkp759KKIOnn0ky9/bO9u2b1V5qvaNmKdx/FJR3P3WXKY2/36VYiBmAAAA=",
    "color": "#a88868",
-   "alt": "View of Biscayne Bay and the Miami skyline through floor-to-ceiling windows",
+   "alt": "View of Biscayne Bay and the Miami skyline through floor to ceiling windows",
    "category": "VIEW",
    "scene": "view"
   },
@@ -5709,7 +5709,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJQBOgCFInO5hoYAA/mkRtup5Albm7NBieVjFHuRGGn9rHOiUHI6Lo25MMM0WnpW+AbOOvBpL0cUhwn1Xb9PF8AA=",
    "color": "#b8a898",
-   "alt": "Dining nook with a built-in banquette by a bay window",
+   "alt": "Dining nook with a built in banquette by a bay window",
    "category": "DINING_ROOM",
    "scene": "dining-room"
   },
@@ -5729,7 +5729,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJaACdADxKiijOjgAAP6F8belrJGpywgY45ONSKQuJsRl6ST5iS3nkD7/4TRs4BBwU7O25asD3WbKh9Riz6Fmjl9X1QT4/6SrPMkgAAA=",
    "color": "#181808",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -5739,7 +5739,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJYgCdAC8kDfFKOjoAPxoKNEXNjY28VVP9nz6ioCx4CZvgMwmKQiLEXxcH6h3KTIPx0czuDOw6+IhB4u0RDIKkHZdo685QAA=",
    "color": "#a88868",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen",
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -5759,7 +5759,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAsAA4BaJZgCdAD6PsEy7glWEAD9sPl1o7LLFs8OLbN1W2dsFUcu7kw1fqeKDJNQaZWYJQRUZ22VVP60Er3fsgXEYwG6RfZRxkOvRIAAAA==",
    "color": "#b8a898",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -5819,7 +5819,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAsAA4BaJYwC7AC9oX4DjKAAy/0j3OVC6+6lQFEEHRFbjpwbxA1WKetWIv0T130ScrCYRwo+kqD4AAA=",
    "color": "#989898",
-   "alt": "Restaurant-ready retail space with an open ceiling",
+   "alt": "Restaurant ready retail space with an open ceiling",
    "category": "RETAIL_SPACE",
    "scene": "retail-space"
   },
@@ -5879,7 +5879,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAsAA4BaJbACdABsEfxQAAD+41PA2/PihVsUfsyYefbnK3HB70gUAS7QGiNDmp8doqGVsdhFsjei4oDbbRVDuvy71vccPaAVI0AA",
    "color": "#68a8f8",
-   "alt": "Front of the home: two-story traditional brick home with a gabled roof",
+   "alt": "Front of the home: two story traditional brick home with a gabled roof",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -5899,7 +5899,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsAA4BaJZACdAC2p8DsChAA/q+hH4vMZbyt0EizbXn2ahkdpylWWk+CcDda0p3IWDImtow25AG6rSIk5eTKoAA=",
    "color": "#b8a898",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -5979,7 +5979,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAsAA4BaJYgCdACHn2QAAP6YE5EQcBRpTY+cP92plO+rTkD0IdYnI8NHfXbYmPYjFQ/sossYRi+R/H1OqUEMJrIroa5VAAA=",
    "color": "#b8a898",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -5999,7 +5999,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJZACdAEGmPUlwAD9+hsw14Y7UoMaW4ny7ww4d3f9YhU7Owsbq1XcADfR1FbC24cki9gk/o4b0Itg7m3GuBgqCxPdUWoAAAA=",
    "color": "#b8a898",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -6059,7 +6059,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAsAA4BaJbACdAEXXIdRYlYAAP7Qn261J+GITIPaqpiFLoCbmSl4EzU2tqs7QfNTjVuI0tKI3OxOlTgiAWbGaSExye+R9hIPiAC0jxNEL7rVWQAAAA==",
    "color": "#c8c8c8",
-   "alt": "Front of the home: tall-and-skinny modern home with board-and-batten siding",
+   "alt": "Front of the home: tall and narrow modern home with board and batten siding",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -6069,7 +6069,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAsAA4BaJZgCdAB5S9R4AP6PqURqCpZwiCKO1R28jgCCgvvn8Y+gAmQs0AgoNXL0aHcxaELm9SqqzGE1XDDEOY80AAAA",
    "color": "#c8b8a8",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -6079,7 +6079,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJQBOgCICSP4MvjtAAPz48yJFaB+qQhYpIAcJzFXrZNTnaR7aUb10XMQGWAdoUeOM36in7y5FS2osc9wZVaLSIdNQngAA",
    "color": "#b8a898",
-   "alt": "Kitchen with sage-green cabinets, a butcher-block island and open shelving",
+   "alt": "Kitchen with sage green cabinets, a butcher block island and open shelving",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6099,7 +6099,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAsAA4BaJQBOgtQBabungAD+r+QSuLYszHzpryZZN3TgYSJs8sEd0lExhEigNe6Ibot0QCtIb6Iw11MLWOAAAAA=",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6149,7 +6149,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAsAA4BaJQBOgB7DR0Wa1sAA/raYXk9Dg8W3GLs499faWfb4e80+Z6kUNpI7dymQWOy0bGNs5Zjfrh+y8OmJ3VUBAAAA",
    "color": "#c8b8b8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6169,7 +6169,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAsAA4BaJbAC7AYuvTAOGVncAAD+wj7w7tnCoY/qiB6Kh1g+NMsK5Ko3sIQ3hrglqhXwYZWg2pEkQbrW52y6EXRYxgjF52VXAAAA",
    "color": "#485828",
-   "alt": "Front of the home: white-painted brick farmhouse with black shutters",
+   "alt": "Front of the home: white painted brick farmhouse with black shutters",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -6179,7 +6179,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJQBOgBKgWbHGAAD8jlIjRoh2YoFS/vAN9a76Cuu1RCBfBdG3LCNR+zNZ0LILzUHoLYYPP4TsjnBAtgCrY7mxtIhBCZ8gAAA=",
    "color": "#b8a898",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -6189,7 +6189,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoQAAsAA4BaJYgCdAYty/LjCEAA4m1sr/kcAM7BW1WnmAlQCcu7GHyeq/eIS+l6JMNiKOh5RtrPtOeRAJAkuovnroqEUmlT44Zqtz4Yaxq9aaJ5nvxO/PdBy0AAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6209,7 +6209,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAsAA4BaJZACdACEfnhRAAD+r6CGyyqEzU52UK+3FZJHbR54+vAglP1NYvet1UCR09ufFwyFHqpIAAA=",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6249,7 +6249,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAQCdASoQAAsAA4BaJZACdADxqYAA/o+IP+GSnevCPVpKTXmHzsdAK+iLY+3sSOjs+9CzQ6Oo7AhfomWIKRegsRizQscwIAA=",
    "color": "#b8a898",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6279,7 +6279,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAsAA4BaJYgCdACqJo4loAD+ZM0knKmnkvFGBBlVnlhrPxY+IAl3CHqxHiJWdUJXXmR8jTusWWalJJHywRmFBEcaAAAA",
    "color": "#c8b8a8",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6299,7 +6299,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAsAA4BaJQBOgCGr57kLwAAA/rDVNN4p5VGxamodQ+3N3Y99sdY/73ZMylbX33so43Qmn/b6mVwuYDSR++LhON4YsAAA",
    "color": "#a89888",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6309,7 +6309,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAsAA4BaJYgCdADPtQjDlgAA/sdpni2JcocqHiZvSAObPRG+Piig9EsmkwFAM14YZuJWKuCQLiMUUA/IvoAA",
    "color": "#c8b8a8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6349,7 +6349,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJbAC7AECpqr023ogAP7ZZhrkkFi/gb3zGIhJ8mDoNJcIr/HzGdDbyh2nhWBl7iMuyivzWU+5xQTpUMMvAAAA",
    "color": "#68a8f8",
-   "alt": "Front of the home: two-story traditional brick home with a gabled roof",
+   "alt": "Front of the home: two story traditional brick home with a gabled roof",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -6369,7 +6369,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJYgCdAC4LQNbrxAA/go7NCQgG5zC9A3x24m9E9WAJhOpKKNKvHFy/xJ0IzxTOsfHy2ZdXrRE8GR2gR6aLDTy0Fm8ygbDGlXXUhrFYAA=",
    "color": "#b8a898",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island",
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6389,7 +6389,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJQBOgBMvtLQfgAD+VcUGdqx4RZLN1JD2ADMu28Ixqu3WO7nE3nzwYUV35z+mwPeRwZRqnHD2roU50fuIGIkretF4D8ovAAA=",
    "color": "#a89888",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6409,7 +6409,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJQBOgMXrxtPhJG7agAD+VcYnQpD1pwkPZxBRsFPTfGDxS7luWc+wU0VMHXstD8ROfPTXQZTSZ46H6V9oi8Rr9/NfetMa/kz+LZs8kloAAA==",
    "color": "#b8a898",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6449,7 +6449,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAsAA4BaJbACdAEfTdwfMsAA/tDOUEL4Ri7ec6dxvGHH0yXNvLa6iSkbUPYQCFAS17xE3w5aQOoxR05pjI3OpWOtzUG6BGMJr7RpRLRAAAAA",
    "color": "#c8b8a8",
-   "alt": "Front of the home: brand-new white-painted brick farmhouse with black shutters",
+   "alt": "Front of the home: brand new white painted brick farmhouse with black shutters",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -6489,7 +6489,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJQBOgB4nFwyaZdgA/sRhlZGcyCCSPJxK2Xpt04uLSsEuXnzi+0VTaAPmFpbQ6xnTRX79gYYYr/AEYoeCWrCAAAA=",
    "color": "#c8b8a8",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6539,7 +6539,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAsAA4BaJYgCdAD1dFsLauhCAAD+5b1o58gD6TS8YKsth6e5KalorwD1p5dNGhqCREoQiJ7A0Pp1n4tZiZOfmE93xKjYmILBY1lyn0QUO4AA",
    "color": "#a8a8a8",
-   "alt": "Building exterior: contemporary mid-rise apartment building with a leasing office",
+   "alt": "Building exterior: contemporary mid rise apartment building with a leasing office",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -6559,7 +6559,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJQBOgB2hOK08YAAA/dU71SJHZhRvzdAN2dz03QZbKDDyVTerGN6lJnVQ2XPUHJsIrl/HPJknydo0The/AskUwVjIsDAAAAA=",
    "color": "#a89888",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -6629,7 +6629,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAsAA4BaJQBOgB4iV6wEgAD+6Kfw9n5YLDp37nQf8NU0P/xRmTqCHUt7X18KUA0H4hVmLHCOWVMQyOXwmGWKuYB9/dGQvovL+34AAAA=",
    "color": "#c8d8f8",
-   "alt": "Property exterior: mixed-use building with ground-floor retail and apartments above",
+   "alt": "Property exterior: mixed use building with ground floor retail and apartments above",
    "category": "EXTERIOR",
    "scene": "exterior-commercial"
   },
@@ -6669,7 +6669,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJQBOgCHw7v6ysiAA/ZhcNz2yhW74CC4mYJ0IrRlU7Fr9WL/zo2zHDvN7ig7Ut7UTioQtRu+rSLhSwwAAAA==",
    "color": "#887868",
-   "alt": "Glass-walled conference room with a long table",
+   "alt": "Glass walled conference room with a long table",
    "category": "OFFICE",
    "scene": "office"
   },
@@ -6699,7 +6699,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJQBOgMXmoDzJk4AA/l9fQmtQ4LtJ8MkykVlV+X2m+zDumWT2bydlzPytO77o74WEf5flZnE4rs1FTTCroU2+LW2IdHUUVzAAAA==",
    "color": "#b8a898",
-   "alt": "Marble-clad kitchen with a statement range hood and paneled appliances",
+   "alt": "Marble clad kitchen with a statement range hood and paneled appliances",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6729,7 +6729,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAsAA4BaJZACdACeEUBegAD+4hpR5feUJswEhMm95PIaMJ7RySTWfffQcTbgYf3j6Jg6zTT6npmeygBDMjuOsfbsAAAA",
    "color": "#c8c8b8",
-   "alt": "Kitchen with navy lower cabinets, white uppers and a marble-look island",
+   "alt": "Kitchen with navy lower cabinets, white uppers and a marble look island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6809,7 +6809,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQAQCdASoQAAsAA4BaJYgCdABf5EgA/pQ2UwZkg+b5IFSIbj2DUdd76zEM2x5ReQKQpE2jkKH+dREGnRCxexB8qnf/qdfVkF1zXunDFDRtUvN+UAA=",
    "color": "#b8a898",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -6819,7 +6819,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAsAA4BaJbACdAD2OXQGUgeYAAD+twfy9/00q/OCy5YCiFO14GIMJY7HWJQSgn6gC8KEmOVjeLf7SsFwpIrRgZHk8Z5DRq3ov43n9HAAAA==",
    "color": "#885838",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6829,7 +6829,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJQBOgCPg3GOHIpAAAPv3eJwrNi1woI9/phi0cgKZiPwWc2GCihhf+X2SkPi+JFTk4yOxP4PQrGA8JwwppQFpGqQn6sJAAAA=",
    "color": "#b8a898",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -6869,7 +6869,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAsAA4BaJQBOgB4mGA2cnJAA/q/95oMnBWGGbHpq1RVe29u8YSJ/wNGifdsr10ABICiTuT+rTREqGVgAAA==",
    "color": "#b8a898",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6889,7 +6889,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAQCdASoQAAsAA4BaJbACdABp64AA9WwXWBMKbXX99ZT9rTkW7mtM734nLn7cyV8kiljo+x7ti3wwLQbiEuXi9GY4oC/oAAA=",
    "color": "#486818",
-   "alt": "Front of the home: red-brick colonial with white trim",
+   "alt": "Front of the home: red brick colonial with white trim",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -6909,7 +6909,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAsAA4BaJZACdAELT/wgVx4AAP60AG4Tf/jiyNrhtHPA3OlkEC1cTZYP8aEwD9d8RWeHjRI6dphwQizTdWMF0szyfrug7BAAAA==",
    "color": "#c8b8a8",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -6929,7 +6929,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJQBOgCHPnK6dnBAA/sTlVc0Xj9qtA5flFuQmHgrMPZo6Bp/iByHMlMQvn9TCwXSPVXJ8l6ry1iii0ieFh4PAAAA=",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -6959,7 +6959,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAsAA4BaJYgCdAEO8pBC04AgAP38Tl3A+DtUNMV58vGvgjLyK8y6enq87FrBBv4iBpTwhpYzaaE9alJ5QGstD4cAAA==",
    "color": "#b8a898",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -6979,7 +6979,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAsAA4BaJbACdABz3vVwAPqJBA693RotXb9SFXmcSqwxnfOGBUISgXr+gD/qnoTkWEsqRcwapGJbz1frKQOyAAA=",
    "color": "#587828",
-   "alt": "Front of the home: red-brick colonial with white trim",
+   "alt": "Front of the home: red brick colonial with white trim",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -6989,7 +6989,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAsAA4BaJZACdADZ+7QAAP6wHzX+fjya2/PwiTQ4S3yAPSwEVigC2PD9AE8P1ZR1HY8c7aOUC+b7QXAAAA==",
    "color": "#c8c8b8",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -7009,7 +7009,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAsAA4BaJZACdAD2PjHHmk5mAAD+0+SzMY1Y1yEA3zyv25pY1OxsggiwWnxWmDv1HP/undMs/vBH6ym8hVI3t9jAohqCITpSWgAA",
    "color": "#c8b8a8",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -7069,7 +7069,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAgCdASoQAAsAA4BaJYgCdAEf/m18VVSnQAD+luo+FjuoUiiyDGXUieH182MNBMTOG/gGVgUgtq1fTJoKweBF0VO7fJjgAAA=",
    "color": "#b8a898",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -7089,7 +7089,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAsAA4BaJQBOgBSDf5WgAAD+yMhbYMB4j3oD9heIiLD/OEizh+LeQCrMoXkX6Tigm9h5xkt483ONRD9XWcn6zqzvYiAA",
    "color": "#b8a898",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen",
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -7099,7 +7099,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJYgCdAEURd7IPEAA/tPlxx4ic4CRMbIoFhT7AuQwFosMVFvUzrDBjHvPOyzrvBBz7GCnpPr967ChkPiqm3kAAAA=",
    "color": "#b8a898",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -7159,7 +7159,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAsAA4BaJbACdAC5L7GAAPVrLvN+IKEDx00pHJrtsnjHh1ZYGnTYid1bWYaVWFhgJ5yZCujHzLdeTzci3F2N99kQmcPOCAA=",
    "color": "#88b8f8",
-   "alt": "Front of the home: red-brick colonial with white trim",
+   "alt": "Front of the home: red brick colonial with white trim",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -7249,7 +7249,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAsAA4BaJbACdAYvXUCnAWOEAPiovHnNiy/ygu8ThrMxdHCKmHHBLIRfdB5iFep5DnztC2k7EVNSjELccUuXgcemRTA+7vjCa+FZN5ESwAAA",
    "color": "#c8c8c8",
-   "alt": "Front of the home: brand-new new traditional home with a rocking-chair front porch",
+   "alt": "Front of the home: brand new new traditional home with a rocking chair front porch",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -7269,7 +7269,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwAgCdASoQAAsAA4BaJagCdAEeu5DyT2zewAD5cfGZ0S+8riTVB53/b+mXR7VQgmGUWX4vMu5d0fnTTNUy5OStm9J7b6n2c0zM5lubxDBcqYoCLu1M9+FyMJqwLwRzNlV6rdoMUAA=",
    "color": "#c8b8a8",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -7289,7 +7289,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJQBOgBxv4LcxKmOgAP6POnJ9mv4mA646+m5tI+Qb7i4alMLs6RFxDXUGvwsOHGSe162DJGupsObvZeBKsAAA",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -7309,7 +7309,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAsAA4BaJZgCdAD2JUg8ecgAAPlbdjLdnSDOcm/ZTMwmhGHBmNul3SaDwA+UtVFVODCculZh2pFui0jbdQH1UAA=",
    "color": "#b8a898",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -7329,7 +7329,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJYgCdAEOeGaOwwAA/sOYCKBcQxKxNeXfeltQnKpYyNeAn/1tX9xzbUyNhYmWHFT43tOMHHmd+IxRQMIo+IkAAAA=",
    "color": "#b8a898",
-   "alt": "Dining nook with a built-in banquette by a bay window",
+   "alt": "Dining nook with a built in banquette by a bay window",
    "category": "DINING_ROOM",
    "scene": "dining-room"
   },
@@ -7339,7 +7339,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAsAA4BaJQBOgB6XH/2H7HQAAP7VpRHL8clQjOToQOCK6pCD48HOPuJEcttlI2XQpMi/v2rh5TufFpR7gI3fAAA=",
    "color": "#c8b8a8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -7369,7 +7369,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAAsAA4BaJZACdACzCxu9QAD+YL0zjjuOseQq+tozLbJttW+R2Rc4KAt+0rt0Rhe6QXhJZSDaRQNPn0V6Sv6Sautt/XmDedVf8xhNWBcFqK1ugAA=",
    "color": "#c8a888",
-   "alt": "Living room with a stone fireplace and built-in bookshelves",
+   "alt": "Living room with a stone fireplace and built in bookshelves",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -7419,7 +7419,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoQAAsAA4BaJQBOgB4HtXuVogAA/dTpR+UpgQ3uHmdPNNdiO97SmX9R1eriQcWc3ohq2dUbjG3yi6iG7+X6ChRXNQNxX1jLXFyQVEZuYEJu5vB1+eygGO8AAAA=",
    "color": "#c8b8a8",
-   "alt": "Updated bathroom with a walk-in shower and matte black fixtures",
+   "alt": "Updated bathroom with a walk in shower and matte black fixtures",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -7439,7 +7439,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQAAsAA4BaJZACdAYuRqaIjsKJ5gAA/lqFae6sQc/OIYskpfdkj/FZnhsvmcphQ5/UjzlGv9+rXiTOyhsSI06fPPCkVDsbvUq/6PvNv73LE6X2PgtAAA==",
    "color": "#b8a898",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -7469,7 +7469,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJagCdAD8EUkdQWBQAP10lOX2xHtCqOUS4IRBu9sp/6LJ2NOIxi7GztcWhX3+hoHz37WAdRnorxE2Y+SCbUvbSQtw0iuqlJIzzqciMAA=",
    "color": "#5898f8",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows",
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -7489,7 +7489,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAsAA4BaJYgCdAD1esHSz6FAAPz7NBxgHL8wBako/DoMTs6LXL7lF/sy38CxvOI4tSdvSc/gllnvlh2QsHy+eRcAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -7549,7 +7549,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwAgCdASoQAAsAA4BaJYgCdAYwxTV1TftBAAD5cxs0GeNOfWs0etbFL4PtaDOQ7sccfJU7u7eNd4GmL92r7CNkiy48BhhIL9MDf5bWcytoc+Y5iRCOKsgAAAA=",
    "color": "#b8a898",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -7659,7 +7659,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAwAgCdASoQAAsAA4BaJQBOgCHhGE31R+dwgAD+s2JZkdWsIHPnb57XMF9bkZl5WxZLvuRcI2doPcpINpyhdUZkR3s+Ov1fgHP3hBMuisIw0Zy1YQAAAA==",
    "color": "#c8b8a8",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -7669,7 +7669,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAsAA4BaJZACdAD0B2/GgADzjtEepVruh8XZcihL6O1NvbEXtaT4AmgnfH24jezAyWUsau0ONe3SAEXlRdYdgNiULtl0NAAAAA==",
    "color": "#b89888",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -7679,7 +7679,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAsAA4BaJYgCdAYuvBPuYTcgAPjXSebunFbEVqZpeEXkNoqOQKdmXfd1GLuLADO0Xattjdk/XLysCPdTIW3OGkbmh6NtFjUhwvS2UAwIAAAA",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -7749,7 +7749,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQAAsAA4BaJYgCdAYwxRhzaLnvAAD8MompJp9+y5UaFXuTMA3+jn4+0ggyIvKi1u4yACQmznKqo6HnE8YJ226IVXrz/DWPFy19jO8GMzCNNogmSIUPqxjofoHEYAAA",
    "color": "#281808",
-   "alt": "Building exterior: boutique four-story condo building with brick and metal",
+   "alt": "Building exterior: boutique four story condo building with brick and metal",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -7789,7 +7789,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJYgCdACVAdBbAAAA/pS0pa3voOYTB6FZzj+GtXPoh3MFVpjC+3NV0vrEVeje4dVu8+LHASTFJWTCYsAAAA==",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -7809,7 +7809,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAAsAA4BaJbACdH8ADRXNIADONqIAwLwS051SlUgt8cHI/H9VEckIq/wuaOSsjW4gROJDvP+oeMooUxs2KK7HVEoRD3bTxh0IJdNSbQnRW2D+fTrwAA==",
    "color": "#c8a898",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas",
+   "alt": "Amenity: resort style apartment swimming pool with cabanas",
    "category": "AMENITY",
    "scene": "amenity"
   },
@@ -7839,7 +7839,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACQAgCdASoQAAsAA4BaJQBOgO4FwHYCy+8mHQ0oAADOBv0d2XLkPVtBSLN43Vo99unazYUYGFDYTMXNE95DM9LAKOgpMgCWyWsqe5te56kq3amB6uU+/h4DmFuimPpZRJksAA==",
    "color": "#c8c8c8",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -7859,7 +7859,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAsAA4BaJZACdAEPWh66mqggAP7F2pBh2NtHB5+/whWRzkel+wTNxuMCLdk87WnHMsV+wUbUPtnzaTV0LFifG1GM6ZQCkXAAAA==",
    "color": "#c8c8b8",
-   "alt": "Kitchen with sage-green cabinets, a butcher-block island and open shelving",
+   "alt": "Kitchen with sage green cabinets, a butcher block island and open shelving",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -7879,7 +7879,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJYgCdAD6DLWaUSAA/q+ljhOBxdlC6WhuS+bDRosdhCGLCt7ZA+3kgaKx4+sDbi8vLH8eV/yxhY3dllcAAA==",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -7919,7 +7919,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAsAA4BaJaACdADSR3jMDMAA+RIibVXBSnQhJhYDkd7+GErpPJ+QplO1E3aUlU3mRis4Vymb/YqoEikozCY3arsgttcB3ISRbsAk0GUDIBOSpkAAAA==",
    "color": "#c8c8d8",
-   "alt": "Front of the home: mid-century modern home with a low-slung roofline",
+   "alt": "Front of the home: midcentury modern home with a low slung roofline",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -7929,7 +7929,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAAsAA4BaJZACdAEUdC87uAD81aSCTqAfiAWyFeiihc72JAdpSDBU2LO5gC7xVyBfmVZdzrqu11PFDZOCyvVkIlDnufUjWitwC+RiKAjAGP/vzwAAAA==",
    "color": "#b89878",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -8009,7 +8009,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQAAsAA4BaJZACdADDqFfS4AD+CNZcVTRW0mis0P/UUQwjniV080ISghna3mgBORcxLNJ6Pw7KbkpqyQGjSOxHewJdHBFiQYpXQYWxkRxvYAAA",
    "color": "#c8b8a8",
-   "alt": "Dining nook with a built-in banquette by a bay window",
+   "alt": "Dining nook with a built in banquette by a bay window",
    "category": "DINING_ROOM",
    "scene": "dining-room"
   },
@@ -8029,7 +8029,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAsAA4BaJZACdAEYBBlRCOBEDAAA/kQ5JMfpMgZGhlrd3Gg3yAmqnlPhJfxRssJiSK0ozJkAhunAhGWMwGzIDADgdhVBeRLo8w4aJmE8RkJGlkHT5wAA",
    "color": "#484848",
-   "alt": "Property exterior: mixed-use building with ground-floor retail and apartments above",
+   "alt": "Property exterior: mixed use building with ground floor retail and apartments above",
    "category": "EXTERIOR",
    "scene": "exterior-commercial"
   },
@@ -8049,7 +8049,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAsAA4BaJQBWAB01yRsAAAD+o04DSUFv/a30Cz16uy2eeilshtaMW4BrEuOOshgkgg8Ml8gUBlQbCTNsRojyk4uceKQAAAA=",
    "color": "#b8a898",
-   "alt": "Restaurant-ready retail space with an open ceiling",
+   "alt": "Restaurant ready retail space with an open ceiling",
    "category": "RETAIL_SPACE",
    "scene": "retail-space"
   },
@@ -8089,7 +8089,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAsAA4BaJZgCdADQ6LC1xcAA/hlhhsXzOsBFf0h9eoDBzK49Kg2zmXR85gtUqQvosIztWVzfxcKdyXhMRii9RUXuaSsK8KRRV64E1ruwAAAA",
    "color": "#986848",
-   "alt": "View of the Pacific Ocean at sunset through floor-to-ceiling windows",
+   "alt": "View of the Pacific Ocean at sunset through floor to ceiling windows",
    "category": "VIEW",
    "scene": "view"
   },
@@ -8109,7 +8109,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAsAA4BaJbACdADcUlATgAAAzc9v+k+snjRMZhhuZ+DMAC39DHEhOniVtRPeK2sMWMZ9v7RSPonirlPG2eL2dXeTp6wX4Y7IEs3UYoTCFzAA",
    "color": "#484848",
-   "alt": "Front of the home: single-story ranch with stucco walls and a tile roof",
+   "alt": "Front of the home: single story ranch with stucco walls and a tile roof",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -8189,7 +8189,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAsAA4BaJZACdACJoJ9EAAD+kY3DG2frD/3VCcij8riaL+7a2+drDrNvgYnlQ8vT1QSmhoNrt0267yShmltHa8pUgf29xEIAAA==",
    "color": "#a89878",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -8389,7 +8389,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJYgCdAEKEotBVAAA4Cg8rAEno+5lipLko8uFwGIG/Pd36RhcjSRAVwBWjVvZOkkYT+RBimy9H9bSqtEOYFhhE6oWoK+gAAA=",
    "color": "#c8b8a8",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen",
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -8399,7 +8399,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwAgCdASoQAAsAA4BaJYgCdAYsZnlGNDwey4eAAPxmaOYd2cwAvhUewXGMmfmeTcKXQ2saLGs2gMvVZ4xM6BmM/guhsKRLAryMyKV2v9er+tD2mpPAAheAxGKKAibsDAAAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -8459,7 +8459,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAsAA4BaJaACdABz/NWYAP7T5RnbnoSGzDrxI/1JhkyIxDxQ1xvkTgLRVlW5ZUJp68MUby4+B686rYvMsnGtsW6RhRPwAAA=",
    "color": "#c8b8a8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -8499,7 +8499,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAsAA4BaJYgCdAYwTgfyLIKEEAAA/q2Kdbt4SF3c/qDU1sUqHgo/QySqUiGWaxUPkCF2FEALQWOiuRqAXXy56cx4A1EAuv841Xjt/O27jCaRgCm52JAA",
    "color": "#b89888",
-   "alt": "Kitchen with flat-panel walnut cabinets and a long quartz island",
+   "alt": "Kitchen with flat panel walnut cabinets and a long quartz island",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -8519,7 +8519,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAgCdASoQAAsAA4BaJYgCdAYvXnEUvIrqJSWAAPzVM7u5RX7HyqKbPCTrCnTJjt6ZHJpDPOv0o/kszb6Ve8egnmZJzbnokgXNna5wBTg2cSvf0l0uQ2Ca024AAA==",
    "color": "#b89888",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -8569,7 +8569,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJbACdADhU5AmoAAA2/uASzbNTMa/aXoemBy3wCQI54H8HXbBwpcqhnzr1bY2FFwntMb8bFwfOjLCr1O5jLfMEqaLmAAA",
    "color": "#c8d8f8",
-   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass",
+   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor to ceiling glass",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -8579,7 +8579,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJaACdAD2CMkt21wAAM3syMvtagHPfxTWEaQIV3vskDjbgIFsCqx4+ySu32QPuv0ZOsCNFfnobDCgKG0j5KvXAmuzuwAA",
    "color": "#b88868",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -8609,7 +8609,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoQAAsAA4BaJZACdAC3L1AAAP5a3Z1srPW7KPS/xJTsbveOr7UTkXOSx0ztnkYdgnrtXta6nbLz0IA5iEo3ViWkNjCasC4Jv2coAAAA",
    "color": "#b89878",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -8639,7 +8639,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJZACdAEK+JFXDjwAAP5lmoCXgYYRSQClPWMZxnMeDKM0CgrWw3zVWm7ykEcfFIDjYWYqArxhMgrKr+/PAAAA",
    "color": "#c8a898",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -8659,7 +8659,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAsAA4BaJaACdAELAdt78CAA+QShbBSSKuVmA0CKreh2eXXwnnon2EoYz+3MSo7P9Ux76vhN5PCwktVQ3Wd3wicAfyqgwaoAAA==",
    "color": "#a89898",
-   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass",
+   "alt": "Front of the home: desert contemporary home with smooth stucco, a flat roof and floor to ceiling glass",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -8679,7 +8679,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJYgCdAD6/FPf8nbgAP5g5NyQD7WsHHPYenHvR39+WZY0V6RqmKxzOF2pOlU4YHK8IZjogaN0uXKlP0EYzFDRqGF7HwWgAAA=",
    "color": "#482818",
-   "alt": "Marble-clad kitchen with a statement range hood and paneled appliances",
+   "alt": "Marble clad kitchen with a statement range hood and paneled appliances",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -8699,7 +8699,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAAsAA4BaJYgCdADs4OQQcAD86dIpP04UHoKWoFvH2UAB12MzWR9ssmXNIUUjKgPQuiHfvaPDVxNhFnTK6zxJ94NIOxIZMkgoJjCaSdDXim1AAAA=",
    "color": "#b8a888",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -8749,7 +8749,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJYgCdAD5JxQmARIAAPfcsy+PE9Rxm9CJdvQhNej3VI5MeJ+gN6u7zywsuhSduO+eiz2BZL82FIKi+PM2ZgmPRpkWoK+gAAA=",
    "color": "#b8a888",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -8759,7 +8759,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJZACdAEPTCWj8psAAPxn50rbrow+jqJs0ZPSp6aEhzGGNDni0Q8VHqXpKrEhoUzQMPhoL4p4I1EMGzS/gFeZI1CTIUAA",
    "color": "#b8d8f8",
-   "alt": "Front of the home: brand-new desert contemporary home with smooth stucco, a flat roof and floor-to-ceiling glass",
+   "alt": "Front of the home: brand new desert contemporary home with smooth stucco, a flat roof and floor to ceiling glass",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -8799,7 +8799,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAsAA4BaJZACdADzHQQMAAD42AtFw0Shpnx2DcHIU3dY9A1+HwvukOLF9j3EhaXFR3UKfBSR563iwLK6S6XIXZQDTwAA",
    "color": "#a89878",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -8829,7 +8829,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAsAA4BaJZACdAB2RLvAAAD+yMhYlk1o6DJbpk25IMSCQBFNaP5L9Dg7yFTqDbkfMol1CwppDu37nhXymZJJCsnzOxt8bPygAAAA",
    "color": "#c8b8a8",
-   "alt": "Hall bathroom with a tub-shower combo and white subway tile",
+   "alt": "Hall bathroom with a tub and shower combo and white subway tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -8869,7 +8869,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAsAA4BaJQBOgB58NdiSVwAA/ds4ujQkgCd/+WGiAeGS7rSxvMbXXO8dXQ6Pz5cq25v8P+QMJG2qPZP/nEpzZpqq1Hiz0AAAAA==",
    "color": "#b8a8a8",
-   "alt": "Open-concept living room with a sectional sofa and a view into the kitchen",
+   "alt": "Open concept living room with a sectional sofa and a view into the kitchen",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -8919,7 +8919,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAsAA4BaJQBOgMXDuy9OIAD+mh4qGWFG6RmUMQldHJ2wKJbQpKHQVdmTgUKv17EyhLHiLzvwK8YIEtm4ZXA5jPSjvYEdMwAAAA==",
    "color": "#b8a898",
-   "alt": "Cozy bedroom with a daybed and built-in shelves",
+   "alt": "Cozy bedroom with a daybed and built in shelves",
    "category": "BEDROOM",
    "scene": "bedroom"
   },
@@ -8959,7 +8959,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAsAA4BaJbAAAwFoxMTiIQAA/tFTbLCzlTt6ZwHk9cDrAErAPrg3/hblpX5WMCUOqL8cYr35E7Ypm/MLICMi39xvQsnK6eQaR8D98ZY470HRQKAAAA==",
    "color": "#282818",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -8969,7 +8969,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABQAgCdASoQAAsAA4BaJZgCdAYvXt7B4vr7oAAAzh99AufiKsuZ0eKWUVq4Gw8cKXcuINeX6nJWTTdCki6huYLM8zy4AW+TvGBr3EJ24E/od2h5nyLM/wNFxqfkgEApVFzfTxoAAAA=",
    "color": "#b8a898",
-   "alt": "Bright living room with floor-to-ceiling windows and a modular sofa",
+   "alt": "Bright living room with floor to ceiling windows and a modular sofa",
    "category": "LIVING_ROOM",
    "scene": "living-room"
   },
@@ -8999,7 +8999,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAsAA4BaJZgCdADwOTNpUAAA4nR1Zq75iyd4M0lCJupy9/xtOGHPHjWOZ1fm9rbH/mCGxG+O0USyCj8280v/wzSTNzivX4+LLGE1XDFFTHAAAAA=",
    "color": "#b89888",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -9009,7 +9009,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAsAA4BaJYwCdAEU8uac29HfgAD9/NXiweSxvCGGYA4DiwbtGMnSqTn1r1m5AeRYdxsMnKZR7+nSSH8u4pqk/rANLTnFDvE0RVpXHR1ETvAA",
    "color": "#787868",
-   "alt": "View of Puget Sound and the Olympic Mountains through floor-to-ceiling windows",
+   "alt": "View of Puget Sound and the Olympic Mountains through floor to ceiling windows",
    "category": "VIEW",
    "scene": "view"
   },
@@ -9039,7 +9039,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAQCdASoQAAsAA4BaJbAAAiF6QRQA/s26TD2oE+KOE4jxoLFKXqMImSHzWzyVtofYLlvVzUJ9LzfH+IJW0JxUd9+8NFWk/rNWHX+oJcgAAA==",
    "color": "#282818",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows",
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -9059,7 +9059,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAsAA4BaJZgCdAD1kWZ2wAkAAPj77EOA2bqoBqaYk85TRuYOcFgC9LWNgoSHu9M2uPVIg8fgT6MJEZ/tWvrgXP6Fnj6dId6a9Z2UUvHtwAAA",
    "color": "#b8a898",
-   "alt": "Kitchen with warm wood cabinets in a U-shape with a breakfast bar",
+   "alt": "Kitchen with warm wood cabinets in a U shaped with a breakfast bar",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -9079,7 +9079,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJZgCdAEKPuHWapQA/plxHSM9igaq8cYq56YeaCnetQxpa3C5owX1yLY0Op9e+QsjEzcfQ14yhrTequ/qi/liY9m9y8mVQAA=",
    "color": "#b8a898",
-   "alt": "Primary bathroom with a freestanding tub and a walk-in glass shower",
+   "alt": "Primary bathroom with a freestanding tub and a walk in glass shower",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -9119,7 +9119,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAsAA4BaJbACw7EfIzVNQADOHwgTXRzgS1Aqxwq29PIm9m1l7yUu8qs5i2wFQVBckddww9gtJpNnRo893ScXF+coJ1XAAAA=",
    "color": "#181808",
-   "alt": "Front of the home: updated mid-century home with wide eaves and cedar accents",
+   "alt": "Front of the home: updated midcentury home with wide eaves and cedar accents",
    "category": "EXTERIOR",
    "scene": "exterior-house"
   },
@@ -9139,7 +9139,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAsAA4BaJZgCdACo53fBEAD8+uR/I7mGm5Xy08R5ZUbz8MBirU6XQrZNDob55c5rT7Ly2koP7ayZDz3S8Dx25dWQiZgVgyeU3vCE4KoAAA==",
    "color": "#b8a898",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },
@@ -9209,7 +9209,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAsAA4BaJbAAAq5rYqDAAP7SZfQvbQDc+bx+h2u/9VtLAVgnuUbD9WuXAVXGOSyhVtVOi5EylRCE5O/9+fFa6Hi8LgAA",
    "color": "#383828",
-   "alt": "Building exterior: modern mid-rise condominium building with glass balconies",
+   "alt": "Building exterior: modern mid rise condominium building with glass balconies",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -9239,7 +9239,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJYgCdAEfjdhj34AAAN/BgnrJDdmuLJ/4pVbkTmQVC46KELnkysOm8jAmXAHjLLnJNk7/x7ytDc1gkbFyCzAeCva+CNgAAAA=",
    "color": "#b8a898",
-   "alt": "Primary bedroom with a wood-paneled accent wall and large windows",
+   "alt": "Primary bedroom with a wood paneled accent wall and large windows",
    "category": "PRIMARY_BEDROOM",
    "scene": "primary-bedroom"
   },
@@ -9249,7 +9249,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQAgCdASoQAAsAA4BaJZgCdAD1rdt/B8xE4AAA/q/gECSiuXKQMf+21Gzz0ZPYXC3NF7JoA7pfnHzlqzJteIyVyvJjIiXMLUjV9PfF1ODgAA==",
    "color": "#b8a898",
-   "alt": "Spa-like bathroom with a double vanity and large-format stone tile",
+   "alt": "Spa style bathroom with a double vanity and large format stone tile",
    "category": "BATHROOM",
    "scene": "bathroom"
   },
@@ -9259,7 +9259,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAsAA4BaJYwCsAD2L03aeUAA+TIoCnpcFTac1vWtKjvIirB0LPrZj6VGpHHQUNDUdPvGlykGPraL6jwj3A82RJE0YfL4Ai0rkEBRvAA=",
    "color": "#a8b8c8",
-   "alt": "View of Puget Sound and the Olympic Mountains through floor-to-ceiling windows",
+   "alt": "View of Puget Sound and the Olympic Mountains through floor to ceiling windows",
    "category": "VIEW",
    "scene": "view"
   },
@@ -9299,7 +9299,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJagC7ADRk4+U9bnwAP5NGhpUqXhFz2Q/v6NvoFXm/eLDLF94oD3df+5CjEkDvHoFdlsYNCZLJPZ47KqzynZsg924u5SVgAA=",
    "color": "#282818",
-   "alt": "Building exterior: high-rise residential tower with floor-to-ceiling windows",
+   "alt": "Building exterior: high rise residential tower with floor to ceiling windows",
    "category": "EXTERIOR",
    "scene": "exterior-building"
   },
@@ -9369,7 +9369,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQAAsAA4BaJQBOgBmaaOdWAAD+CSqeXP0JbS27nyeUpdzFZAl+QUlL/X5cqJbrFZ0gH51v9+RNjWNX7g9bFO1cZF4in3SyXQPeFj/86cNsijyt3HV96gAA",
    "color": "#c8d8e8",
-   "alt": "Amenity: resort-style apartment swimming pool with cabanas",
+   "alt": "Amenity: resort style apartment swimming pool with cabanas",
    "category": "AMENITY",
    "scene": "amenity"
   },
@@ -9389,7 +9389,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAsAA4BaJYwCdAYuRavl9KzwQADxBJvW2A+tYAfN4Q4a+OQKx7RSrfzeNid8f0fAR0UOsG6WgRECO77IFn535uI+33hasF5JmoAA",
    "color": "#8898a8",
-   "alt": "Property exterior: four-story Class A office building with a glass curtain wall and a landscaped entry",
+   "alt": "Property exterior: four story Class A office building with a glass curtain wall and a landscaped entry",
    "category": "EXTERIOR",
    "scene": "exterior-commercial"
   },
@@ -9409,7 +9409,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJYwCdAD6HXswGWAA+3Jyn/V20dcydJf2jvIMAEpUPJmKGhIbQYrJxd2po0l4u+61HPjzzyTIBmoYe/nMxF0XIAA=",
    "color": "#a8a898",
-   "alt": "Glass-walled conference room with a long table",
+   "alt": "Glass walled conference room with a long table",
    "category": "OFFICE",
    "scene": "office"
   },
@@ -9429,7 +9429,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAsAA4BaJZQC7AEfxFA222GAAOA3elaEVkpUrw1LAp7ogzgWIK4b3ax4uAuLXUNSgRKzsFUI99XF7qPcNV6AVWNeoSXJsL+B7OD4AAA=",
    "color": "#786858",
-   "alt": "Open-plan office with workstations and an exposed ceiling",
+   "alt": "Open plan office with workstations and an exposed ceiling",
    "category": "OFFICE",
    "scene": "office"
   },
@@ -9469,7 +9469,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJbACdADmYKyC3DToAP7bzXyrTuchogDYoat+ANzhyK60CIFasb7PMG2Y3KbDudkfkUw62FjB9LeQaivP2Gmx3T1bxNrgB5gAAA==",
    "color": "#383838",
-   "alt": "Front exterior: modern dark fiber-cement and cedar townhomes",
+   "alt": "Front exterior: modern dark fiber cement and cedar townhomes",
    "category": "EXTERIOR",
    "scene": "exterior-townhome"
   },
@@ -9489,7 +9489,7 @@
    "height": 688,
    "blurDataUrl": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAsAA4BaJYgCdADtfPpAAP5n035Jm0iQoONRmEyNvWbG/P21zcJyRTcoy2Ty0AOOqAH+R+elTwwsDDgQQtPwAAA=",
    "color": "#c8b8b8",
-   "alt": "Kitchen with two-tone gray and white cabinets with a granite peninsula",
+   "alt": "Kitchen with two tone gray and white cabinets with a granite peninsula",
    "category": "KITCHEN",
    "scene": "kitchen"
   },

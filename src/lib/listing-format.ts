@@ -10,7 +10,7 @@ export function displayPrice(l: PriceInput, compact = false): string {
   if (l.status === "SOLD" && l.soldPrice) return `${fmt(l.soldPrice)}`;
   if (l.transactionType === "LEASE" && l.leaseRate) return `$${l.leaseRate.toFixed(2).replace(/\.00$/, "")}/SF/yr`;
   if (l.transactionType === "RENT") {
-    if (l.priceMax && l.priceMax !== l.price) return `${formatPrice(l.price)}–${formatPrice(l.priceMax)}/mo`;
+    if (l.priceMax && l.priceMax !== l.price) return `${formatPrice(l.price)} to ${formatPrice(l.priceMax)}/mo`;
     return `${formatPrice(l.price)}/mo`;
   }
   return fmt(l.price);
@@ -31,7 +31,7 @@ export function factsLine(l: ListingCardData): string[] {
     const min = l.beds ?? 0;
     const max = l.bedsMax ?? min;
     const label = (b: number) => (b === 0 ? "Studio" : `${b} bd`);
-    return [min === max ? label(min) : `${label(min)}–${max} bd`, "Apartment community"];
+    return [min === max ? label(min) : `${label(min)} to ${max} bd`, "Apartment community"];
   }
   return [
     l.beds != null ? `${l.beds === 0 ? "Studio" : `${l.beds} bd`}` : "",
@@ -84,5 +84,5 @@ export function listingBadges(l: ListingCardData, now = new Date()): Badge[] {
 export function attribution(l: Pick<ListingCardData, "isFsbo" | "brokerageName" | "listingAgentName">): string {
   if (l.isFsbo) return "Listed by owner";
   if (l.brokerageName) return `Listing courtesy of ${l.brokerageName}`;
-  return "Demo MLS";
+  return "Listed on the MLS";
 }
