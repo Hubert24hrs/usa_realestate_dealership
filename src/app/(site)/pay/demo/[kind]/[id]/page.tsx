@@ -5,6 +5,7 @@ import { FlaskConical, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { db } from "@/lib/db";
 import { formatMoney } from "@/lib/format";
+import { type PlanKey, PLANS } from "@/lib/plans";
 import { completeDemoPayment } from "@/server/actions/payments";
 import { requireUser } from "@/server/auth-helpers";
 import { PAYMENT_KINDS, type PaymentKind, stripeEnabled } from "@/server/payments";
@@ -27,6 +28,12 @@ export default async function DemoCheckoutPage({ params }: PageProps) {
     if (p.status === "PAID") redirect("/account/rentals?paid=1");
     const l = p.lease.listing;
     item = { title: `Rent for ${periodLabel(p.periodStart)}`, detail: `${l.communityName ?? l.streetAddress}, ${l.city}, ${l.state}`, amountCents: p.amountCents, back: "/account/rentals?canceled=1" };
+  } else if (kind === "agent_plan") {
+    const p = await db.purchase.findUnique({ where: { id } });
+    if (!p || p.userId !== user.id || !p.kind.startsWith("agent_plan:")) notFound();
+    if (p.status === "PAID") redirect("/agent/billing?upgraded=1");
+    const plan = PLANS[(p.kind.split(":")[1] ?? "PRO") as PlanKey] ?? PLANS.PRO;
+    item = { title: `CITI VIEW ${plan.name} plan`, detail: "Monthly subscription for agents · first month", amountCents: p.amountCents, back: "/pro?canceled=1" };
   } else {
     const a = await db.rentalApplication.findUnique({ where: { id }, include: { listing: { select: { slug: true, communityName: true, streetAddress: true, city: true, state: true } } } });
     if (!a || a.userId !== user.id) notFound();

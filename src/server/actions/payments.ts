@@ -19,5 +19,5 @@ export async function completeDemoPayment(formData: FormData) {
   if (!user) redirect(`/sign-in?callbackUrl=${encodeURIComponent(`/pay/demo/${kind}/${id}`)}`);
   if ((await paymentOwner(kind, id)) !== user.id) redirect("/account/rentals");
   await fulfillPayment(kind, id, { method: "demo" });
-  redirect(kind === "rent" ? "/account/rentals?paid=1" : "/account/rentals?submitted=1");
+  redirect(kind === "rent" ? "/account/rentals?paid=1" : kind === "agent_plan" ? "/agent/billing?upgraded=1" : "/account/rentals?submitted=1");
 }

@@ -51,12 +51,13 @@ export async function routeLead(input: Pick<LeadInput, "agentId" | "listingId" |
   });
   if (!candidates.length) return { agentId: null, ownerId: null, reason: "No agent available — routed to CITI VIEW concierge" };
   const now = Date.now();
-  // Lower score wins: time since last lead, boosted by plan weight.
+  const weighted = settings.leadRouting.strategy !== "round-robin";
+  // Lower score wins: longest since last lead; with weighting, paid plans (leadWeight 2–3) get a head start.
   const pick = candidates
-    .map((c) => ({ ...c, score: (c.lastLeadAt?.getTime() ?? 0) - c.leadWeight * 6 * 3_600_000 }))
+    .map((c) => ({ ...c, score: (c.lastLeadAt?.getTime() ?? 0) - (weighted ? c.leadWeight : 1) * 6 * 3_600_000 }))
     .sort((a, b) => a.score - b.score)[0]!;
   await db.agent.update({ where: { id: pick.id }, data: { lastLeadAt: new Date(now) } });
-  return { agentId: pick.id, ownerId: null, reason: `Weighted round-robin (${settings.leadRouting.strategy})` };
+  return { agentId: pick.id, ownerId: null, reason: weighted ? "Weighted round-robin" : "Round-robin" };
 }
 
 export async function createLead(input: LeadInput) {

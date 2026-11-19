@@ -11,18 +11,11 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import { AddToCollectionButton } from "@/components/account/collection-dialogs";
+import { REPORT_REASON_LABELS } from "@/lib/domain";
 import { pushRecent, type RecentEntry } from "@/lib/recent";
 import { SaveButton } from "./save-button";
 
-const REASONS: Array<[string, string]> = [
-  ["INACCURATE_INFO", "Incorrect information"],
-  ["SCAM_OR_FRAUD", "Possible scam or fraud"],
-  ["DISCRIMINATORY_LANGUAGE", "Discriminatory language"],
-  ["NO_LONGER_AVAILABLE", "No longer available"],
-  ["DUPLICATE", "Duplicate listing"],
-  ["INAPPROPRIATE_MEDIA", "Inappropriate photos"],
-  ["OTHER", "Something else"],
-];
+const REASONS = Object.entries(REPORT_REASON_LABELS);
 
 export function ListingActions({ listingId, title }: { listingId: string; title: string }) {
   const share = async () => {

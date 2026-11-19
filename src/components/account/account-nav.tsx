@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bell, BellRing, CalendarCheck, FolderHeart, Heart, History, Inbox, KeyRound, LayoutDashboard, NotebookPen, Settings, type LucideIcon } from "lucide-react";
+import { Bell, BellRing, CalendarCheck, FolderHeart, Heart, History, Home, Inbox, KeyRound, LayoutDashboard, NotebookPen, Settings, type LucideIcon } from "lucide-react";
 import { useMe } from "@/hooks/use-me";
 import { cn } from "@/lib/utils";
 
@@ -26,6 +26,7 @@ const ITEMS: Item[] = [
   { href: "/account/messages", label: "Messages", icon: Inbox, badge: "messages" },
   { href: "/account/notifications", label: "Notifications", icon: Bell, badge: "notifications" },
   { href: "/account/rentals", label: "Rentals", icon: KeyRound },
+  { href: "/account/listings", label: "My listings", icon: Home },
   { href: "/account/settings", label: "Settings", icon: Settings },
 ];
 

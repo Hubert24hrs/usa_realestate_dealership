@@ -1,6 +1,7 @@
 import "server-only";
 import { limitRequest, tooManyRequests } from "@/lib/security/rate-limit";
 import { forbidden, isSameOrigin } from "@/lib/security/request";
+import type { AppRole } from "@/auth";
 import { getSessionUser, type SessionUser, unauthorized } from "./auth-helpers";
 
 type Ctx<P> = { params: Promise<P> };
@@ -24,6 +25,20 @@ export function withUser<P = Record<string, string>>(
     return handler({ request, user, params: ctx?.params ? await ctx.params : ({} as P) });
   };
 }
+
+/** Like `withUser`, restricted to the given roles (admins always pass). */
+export function withRole<P = Record<string, string>>(
+  roles: AppRole[],
+  handler: (args: { request: Request; user: SessionUser; params: P }) => Promise<Response>,
+  opts: { limit?: number; windowMs?: number; bucket?: string } = {},
+) {
+  return withUser<P>(async (args) => {
+    if (args.user.role !== "ADMIN" && !roles.includes(args.user.role)) return Response.json({ error: "Not allowed" }, { status: 403 });
+    return handler(args);
+  }, opts);
+}
+
+export const PRO_ROLES: AppRole[] = ["AGENT", "BROKER", "PROPERTY_MANAGER"];
 
 export const ID_RE = /^[a-z0-9]{10,40}$/i;
 export const notFound = () => Response.json({ error: "Not found" }, { status: 404 });

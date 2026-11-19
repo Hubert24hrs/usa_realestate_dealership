@@ -1,6 +1,8 @@
 import "server-only";
 import { randomBytes } from "node:crypto";
 import { db } from "@/lib/db";
+import { site } from "@/lib/site";
+import { emailLayout, sendEmail } from "./email";
 
 export type CollectionAccess = "OWNER" | "EDITOR" | "VIEWER";
 
@@ -21,6 +23,50 @@ export async function getCollectionAccess(collectionId: string, userId: string) 
 export const canEdit = (access: CollectionAccess) => access !== "VIEWER";
 
 export const newInviteToken = () => randomBytes(24).toString("base64url");
+
+export class InviteError extends Error {}
+
+/**
+ * Invite (or re-invite) someone to a collection by email and notify them. The caller must
+ * already have checked that `inviter` owns the collection.
+ */
+export async function inviteMember(opts: {
+  collection: { id: string; name: string };
+  inviter: { name: string | null; email: string | null };
+  email: string;
+  role: "EDITOR" | "VIEWER";
+  isAgent?: boolean;
+}) {
+  const email = opts.email.trim().toLowerCase();
+  if (email === opts.inviter.email?.toLowerCase()) throw new InviteError("That's your own email — you already own this collection.");
+  const existing = await db.collectionMember.findUnique({ where: { collectionId_email: { collectionId: opts.collection.id, email } } });
+  if (!existing && (await db.collectionMember.count({ where: { collectionId: opts.collection.id } })) >= 10) throw new InviteError("A collection can have up to 10 co-shoppers.");
+  const member = existing
+    ? await db.collectionMember.update({ where: { id: existing.id }, data: { role: opts.role, isAgent: opts.isAgent ?? existing.isAgent } })
+    : await db.collectionMember.create({ data: { collectionId: opts.collection.id, email, role: opts.role, isAgent: opts.isAgent ?? false, inviteToken: newInviteToken() } });
+
+  if (!member.acceptedAt) {
+    const inviter = opts.inviter.name ?? "A CITI VIEW member";
+    const url = `${site.url}/collections/join/${member.inviteToken}`;
+    await sendEmail({
+      to: email,
+      subject: `${inviter} invited you to “${opts.collection.name}” on CITI VIEW`,
+      html: emailLayout({
+        title: opts.isAgent ? "A client wants to shop with you" : "Shop for homes together",
+        intro: `${inviter} invited you to the collection “${opts.collection.name}”. Save homes side by side, leave shared notes and plan tours together.`,
+        rows: [["Your access", opts.role === "VIEWER" ? "Can view" : "Can add homes and notes"]],
+        cta: { label: "Open the collection", url },
+        footnote: "Not expecting this? You can ignore this email — nothing happens unless you accept.",
+      }),
+      text: `${inviter} invited you to "${opts.collection.name}" on CITI VIEW: ${url}`,
+    });
+    const invitee = await db.user.findUnique({ where: { email }, select: { id: true } });
+    if (invitee) {
+      await db.notification.create({ data: { userId: invitee.id, type: "COLLECTION", title: `${inviter} invited you to “${opts.collection.name}”`, url: `/collections/join/${member.inviteToken}` } });
+    }
+  }
+  return { member, resent: Boolean(existing) };
+}
 
 /** Owner plus accepted members, minus the actor — who hears about activity in a shared collection. */
 export async function collectionAudience(collectionId: string, exceptUserId: string): Promise<string[]> {

@@ -3,6 +3,7 @@ import type { ApplicationStatus, LeaseStatus, PaymentStatus } from "@prisma/clie
 import { db } from "@/lib/db";
 import { formatDate, formatMoney } from "@/lib/format";
 import { site } from "@/lib/site";
+import { fulfillAgentPlan } from "./billing";
 import { emailLayout, sendEmail } from "./email";
 import { type PaymentKind, paidSession } from "./payments";
 import { pushToUser } from "./push";
@@ -262,6 +263,7 @@ export async function signLease(leaseId: string, tenantId: string, signatureName
 /** Who a payment reference belongs to (for ownership checks). */
 export async function paymentOwner(kind: PaymentKind, referenceId: string): Promise<string | null> {
   if (kind === "rent") return (await db.rentPayment.findUnique({ where: { id: referenceId }, select: { userId: true } }))?.userId ?? null;
+  if (kind === "agent_plan") return (await db.purchase.findUnique({ where: { id: referenceId }, select: { userId: true } }))?.userId ?? null;
   return (await db.rentalApplication.findUnique({ where: { id: referenceId }, select: { userId: true } }))?.userId ?? null;
 }
 
@@ -269,12 +271,16 @@ export async function paymentOwner(kind: PaymentKind, referenceId: string): Prom
 export async function confirmCheckout(sessionId: string, userId: string): Promise<boolean> {
   const s = await paidSession(sessionId).catch(() => null);
   if (!s || (await paymentOwner(s.kind, s.referenceId)) !== userId) return false;
-  await fulfillPayment(s.kind, s.referenceId, { method: "card", sessionId: s.sessionId });
+  await fulfillPayment(s.kind, s.referenceId, { method: "card", sessionId: s.sessionId, subscriptionId: s.subscriptionId });
   return true;
 }
 
 /** Idempotent: safe to call from the webhook, the success redirect and the simulated checkout. */
-export async function fulfillPayment(kind: PaymentKind, referenceId: string, opts: { method: string; sessionId?: string | null }) {
+export async function fulfillPayment(kind: PaymentKind, referenceId: string, opts: { method: string; sessionId?: string | null; subscriptionId?: string | null }) {
+  if (kind === "agent_plan") {
+    await fulfillAgentPlan(referenceId, opts);
+    return;
+  }
   if (kind === "application_fee") {
     await markSubmitted(referenceId, { feePaid: true, sessionId: opts.sessionId });
     return;

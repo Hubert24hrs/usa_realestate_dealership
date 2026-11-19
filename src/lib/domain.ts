@@ -200,3 +200,17 @@ export const LEAD_TYPE_LABELS: Record<string, string> = {
   OM_REQUEST: "OM request",
   RENTAL_INQUIRY: "Rental inquiry",
 };
+
+export const REPORT_REASON_LABELS: Record<string, string> = {
+  INACCURATE_INFO: "Incorrect information",
+  SCAM_OR_FRAUD: "Possible scam or fraud",
+  DISCRIMINATORY_LANGUAGE: "Discriminatory language",
+  NO_LONGER_AVAILABLE: "No longer available",
+  DUPLICATE: "Duplicate listing",
+  INAPPROPRIATE_MEDIA: "Inappropriate photos",
+  OTHER: "Something else",
+};
+
+/** Lead pipeline, in order. Lives here (not in a "use client" module) so server pages can use it too. */
+export const LEAD_STATUSES = ["NEW", "CONTACTED", "QUALIFIED", "NURTURE", "CLOSED", "LOST"] as const;
+export type LeadStatusKey = (typeof LEAD_STATUSES)[number];

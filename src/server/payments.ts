@@ -6,8 +6,8 @@ import { site } from "@/lib/site";
  * Payments: Stripe Checkout when STRIPE_SECRET_KEY is set (use test-mode keys in development),
  * otherwise a clearly labelled simulated checkout so the demo works end to end with no money moving.
  */
-export type PaymentKind = "rent" | "application_fee";
-export const PAYMENT_KINDS: readonly PaymentKind[] = ["rent", "application_fee"];
+export type PaymentKind = "rent" | "application_fee" | "agent_plan";
+export const PAYMENT_KINDS: readonly PaymentKind[] = ["rent", "application_fee", "agent_plan"];
 
 export const stripeEnabled = () => Boolean(process.env.STRIPE_SECRET_KEY);
 
@@ -46,11 +46,12 @@ export async function createCheckout(req: CheckoutRequest): Promise<{ url: strin
 }
 
 /** Look up a completed Checkout session (used on the success redirect so fulfilment never waits on webhooks). */
-export async function paidSession(sessionId: string): Promise<{ kind: PaymentKind; referenceId: string; sessionId: string } | null> {
+export async function paidSession(sessionId: string): Promise<{ kind: PaymentKind; referenceId: string; sessionId: string; subscriptionId: string | null } | null> {
   if (!stripeEnabled() || !/^cs_[A-Za-z0-9_]{8,200}$/.test(sessionId)) return null;
   const s = await stripe().checkout.sessions.retrieve(sessionId);
   const kind = s.metadata?.kind as PaymentKind | undefined;
   const referenceId = s.metadata?.referenceId;
   if (s.payment_status !== "paid" || !kind || !PAYMENT_KINDS.includes(kind) || !referenceId) return null;
-  return { kind, referenceId, sessionId: s.id };
+  const subscriptionId = typeof s.subscription === "string" ? s.subscription : (s.subscription?.id ?? null);
+  return { kind, referenceId, sessionId: s.id, subscriptionId };
 }

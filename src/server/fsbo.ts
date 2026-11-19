@@ -14,7 +14,7 @@ export class FsboError extends Error {
 }
 
 /** Approximate a pin near the city center (deterministic per address) — owners can't geocode here. */
-function approxLocation(seed: string, lat: number, lng: number) {
+export function approxLocation(seed: string, lat: number, lng: number) {
   const h = createHash("sha256").update(seed).digest();
   const dx = (h.readUInt16BE(0) / 65_535 - 0.5) * 0.06;
   const dy = (h.readUInt16BE(2) / 65_535 - 0.5) * 0.06;
