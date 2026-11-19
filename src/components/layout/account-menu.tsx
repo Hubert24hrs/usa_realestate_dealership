@@ -36,7 +36,7 @@ export function AccountMenu() {
       <Button variant="ghost" size="icon-lg" asChild className="relative">
         <Link href="/account/notifications" aria-label={data.unread ? `Notifications, ${data.unread} unread` : "Notifications"}>
           <Bell className="size-[1.1rem]" aria-hidden />
-          {data.unread > 0 && <span className="absolute top-1.5 right-1.5 grid min-w-4 place-items-center rounded-full bg-copper-500 px-1 text-[0.6rem] font-bold text-white">{data.unread > 9 ? "9+" : data.unread}</span>}
+          {data.unread > 0 && <span className="absolute top-1.5 right-1.5 grid min-w-4 place-items-center rounded-full bg-copper-700 px-1 text-[0.6rem] font-bold text-white dark:bg-copper-500 dark:text-copper-50">{data.unread > 9 ? "9+" : data.unread}</span>}
         </Link>
       </Button>
       <DropdownMenu>

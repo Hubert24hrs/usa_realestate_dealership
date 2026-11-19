@@ -91,9 +91,9 @@ export function AddToCollectionButton({ listingId, className, variant = "outline
                     disabled={viewOnly || busy === c.id}
                     onClick={() => toggle(c)}
                     aria-pressed={Boolean(c.containsListing)}
-                    className={cn("flex w-full items-center gap-3 rounded-xl border p-3 text-left transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-60", c.containsListing && "border-brand-600/60 bg-brand-50/60 dark:bg-brand-950/40")}
+                    className={cn("flex w-full items-center gap-3 rounded-xl border p-3 text-left transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-60", c.containsListing && "border-brand-600/60 bg-brand-50/60 dark:bg-brand-100/40")}
                   >
-                    <span className={cn("grid size-6 shrink-0 place-items-center rounded-md border", c.containsListing && "border-brand-700 bg-brand-700 text-white dark:border-brand-500 dark:bg-brand-500 dark:text-brand-950")}>
+                    <span className={cn("grid size-6 shrink-0 place-items-center rounded-md border", c.containsListing && "border-brand-700 bg-brand-700 text-white dark:border-brand-500 dark:bg-brand-500 dark:text-brand-50")}>
                       {busy === c.id ? <Loader2 className="size-3.5 animate-spin" aria-hidden /> : c.containsListing ? <Check className="size-3.5" aria-hidden /> : null}
                     </span>
                     <span className="min-w-0 flex-1">

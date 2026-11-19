@@ -61,13 +61,13 @@ export function AccountNav() {
                 className={cn(
                   // `relative` keeps the absolutely-positioned sr-only badge text inside the scrolling row.
                   "relative flex items-center gap-2.5 rounded-full px-3.5 py-2 text-sm font-medium whitespace-nowrap transition-colors lg:rounded-xl",
-                  active ? "bg-brand-700 text-white dark:bg-brand-500 dark:text-brand-950" : "text-muted-foreground hover:bg-muted hover:text-foreground",
+                  active ? "bg-brand-700 text-white dark:bg-brand-500 dark:text-brand-50" : "text-muted-foreground hover:bg-muted hover:text-foreground",
                 )}
               >
                 <item.icon className="size-4" aria-hidden />
                 <span>{item.label}</span>
                 {count > 0 && (
-                  <span className={cn("ml-auto grid min-w-5 place-items-center rounded-full px-1.5 text-[0.65rem] font-bold", active ? "bg-white/90 text-brand-800" : "bg-copper-500 text-white")}>
+                  <span className={cn("ml-auto grid min-w-5 place-items-center rounded-full px-1.5 text-[0.65rem] font-bold", active ? "bg-white/90 text-brand-800" : "bg-copper-700 text-white dark:bg-copper-500 dark:text-copper-50")}>
                     {count > 9 ? "9+" : count}
                     <span className="sr-only"> unread</span>
                   </span>

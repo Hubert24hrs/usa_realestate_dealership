@@ -176,9 +176,9 @@ function Thread({ conversation, onBack, onRead }: { conversation: ConversationVi
         {thread.isLoading && <div className="grid h-full place-items-center"><Loader2 className="size-5 animate-spin text-muted-foreground" aria-label="Loading messages" /></div>}
         {messages.map((m) => (
           <div key={m.id} className={cn("flex", m.mine ? "justify-end" : "justify-start")}>
-            <div className={cn("max-w-[80%] rounded-2xl px-3.5 py-2 text-sm", m.mine ? "rounded-br-md bg-brand-700 text-white dark:bg-brand-500 dark:text-brand-950" : "rounded-bl-md bg-muted", m.pending && "opacity-70")}>
+            <div className={cn("max-w-[80%] rounded-2xl px-3.5 py-2 text-sm", m.mine ? "rounded-br-md bg-brand-700 text-white dark:bg-brand-500 dark:text-brand-50" : "rounded-bl-md bg-muted", m.pending && "opacity-70")}>
               <p className="whitespace-pre-line break-words">{m.body}</p>
-              <p className={cn("mt-1 text-[0.7rem]", m.mine ? "text-white/75 dark:text-brand-950/70" : "text-muted-foreground")}>
+              <p className={cn("mt-1 text-[0.7rem]", m.mine ? "text-white/75 dark:text-brand-100" : "text-muted-foreground")}>
                 {!m.mine && m.sender ? `${m.sender} · ` : ""}
                 <time dateTime={m.createdAt}>{m.pending ? "Sending…" : `${timeAgo(m.createdAt)} · ${formatTime(m.createdAt)}`}</time>
               </p>

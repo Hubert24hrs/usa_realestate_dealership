@@ -16,12 +16,15 @@ export function LogoMark({ className, title }: { className?: string; title?: str
 
 export function Logo({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
-    <Link href="/" className={cn("group inline-flex items-center gap-2.5 rounded-lg", className)} aria-label="CITI VIEW Real Estate — home">
+    // The accessible name is the visible wordmark plus "home" (WCAG 2.5.3 label in name); the icon-only
+    // variant has no visible text, so it carries an aria-label instead.
+    <Link href="/" className={cn("group inline-flex items-center gap-2.5 rounded-lg", className)} aria-label={compact ? "CITI VIEW Real Estate home" : undefined}>
       <LogoMark className="transition-transform duration-300 group-hover:-rotate-3" />
       {!compact && (
         <span className="flex flex-col leading-none whitespace-nowrap">
-          <span className="font-display text-[1.05rem] font-semibold tracking-[0.04em] text-foreground sm:text-[1.15rem]">CITI VIEW</span>
+          <span className="font-display text-[1.05rem] font-semibold tracking-[0.04em] text-foreground sm:text-[1.15rem]">CITI VIEW</span>{" "}
           <span className="mt-0.5 text-[0.55rem] font-semibold tracking-[0.3em] text-muted-foreground sm:text-[0.58rem] sm:tracking-[0.32em]">REAL ESTATE</span>
+          <span className="sr-only"> home</span>
         </span>
       )}
     </Link>

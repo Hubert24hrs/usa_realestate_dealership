@@ -30,7 +30,7 @@ export function ToolCard({ tool, compact = false, headingLevel = "h3" }: { tool:
         compact ? "items-center p-3" : "flex-col p-5",
       )}
     >
-      <span className={cn("grid shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700 dark:bg-brand-900/50 dark:text-brand-200", compact ? "size-9" : "size-11")}>
+      <span className={cn("grid shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700", compact ? "size-9" : "size-11")}>
         <Icon className={compact ? "size-4.5" : "size-5"} aria-hidden />
       </span>
       <span className="min-w-0 flex-1">

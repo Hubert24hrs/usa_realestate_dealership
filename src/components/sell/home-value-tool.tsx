@@ -51,7 +51,7 @@ interface Result {
 }
 
 const selectCls = "h-9 w-full rounded-md border bg-background px-3 text-sm shadow-xs outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50";
-const CONFIDENCE = { high: ["High confidence", "bg-success/15 text-success"], medium: ["Medium confidence", "bg-brand-100 text-brand-800 dark:bg-brand-900 dark:text-brand-200"], low: ["Low confidence", "bg-warning/20 text-warning-foreground dark:text-warning"] } as const;
+const CONFIDENCE = { high: ["High confidence", "bg-success/15 text-success"], medium: ["Medium confidence", "bg-brand-100 text-brand-800"], low: ["Low confidence", "bg-warning/20 text-warning-foreground dark:text-warning"] } as const;
 const STATUS: Record<string, string> = { SOLD: "Sold", ACTIVE: "For sale", PENDING: "Pending", COMING_SOON: "Coming soon" };
 
 function ValuationLead({ result, address, citySlug }: { result: Result; address: string; citySlug: string }) {
@@ -192,7 +192,7 @@ export function HomeValueTool({ cities, initialCity }: { cities: ValueCity[]; in
               <span className={cn("rounded-full px-2.5 py-1 text-xs font-semibold", CONFIDENCE[result.confidence][1])}>{CONFIDENCE[result.confidence][0]}</span>
             </div>
             <div className="mt-6" role="img" aria-label={`Likely range ${formatMoney(result.low)} to ${formatMoney(result.high)}, estimate ${formatMoney(result.value)}`}>
-              <div className="relative h-2 rounded-full bg-gradient-to-r from-brand-200 via-brand-500 to-brand-200 dark:from-brand-900 dark:via-brand-500 dark:to-brand-900">
+              <div className="relative h-2 rounded-full bg-gradient-to-r from-brand-200 via-brand-500 to-brand-200">
                 <span className="absolute top-1/2 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card bg-primary shadow" style={{ left: `${pos}%` }} />
               </div>
               <div className="mt-2 flex justify-between text-xs text-muted-foreground tabular-nums">

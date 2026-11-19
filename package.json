@@ -22,6 +22,7 @@
     "media:verify": "dotenv run -q -f .env.local -- tsx scripts/media-verify.ts",
     "search:sync": "dotenv run -q -f .env.local -- tsx scripts/search-sync.ts",
     "alerts:run": "dotenv run -q -f .env.local -- tsx --conditions=react-server scripts/run-alerts.ts",
+    "check:links": "node scripts/check-links.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
@@ -71,6 +72,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4",

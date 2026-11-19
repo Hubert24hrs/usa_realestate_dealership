@@ -113,9 +113,9 @@ export function MortgageCalculator({ initial }: { initial: MortgageInitial }) {
               segments={[
                 { key: "pi", label: "Principal & interest", value: b.principalAndInterest, color: "var(--series-1)" },
                 { key: "tax", label: "Property taxes", value: b.propertyTax, color: "var(--series-2)" },
-                { key: "ins", label: "Homeowners insurance", value: b.insurance, color: "var(--series-3)", ink: "dark" },
-                { key: "hoa", label: "HOA dues", value: b.hoa, color: "var(--series-4)", ink: "dark" },
-                { key: "pmi", label: "Mortgage insurance (PMI)", value: b.pmi, color: "var(--series-5)", ink: "dark" },
+                { key: "ins", label: "Homeowners insurance", value: b.insurance, color: "var(--series-3)" },
+                { key: "hoa", label: "HOA dues", value: b.hoa, color: "var(--series-4)" },
+                { key: "pmi", label: "Mortgage insurance (PMI)", value: b.pmi, color: "var(--series-5)" },
               ]}
             />
           </div>

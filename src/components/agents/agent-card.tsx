@@ -9,7 +9,7 @@ export function AgentCard({ agent: a, cityNames, headingLevel = "h3" }: { agent:
   return (
     <article className="relative flex h-full flex-col rounded-3xl border bg-card p-5 transition-shadow hover:shadow-[var(--shadow-card)]">
       {a.plan === "PREMIER" && (
-        <span className="absolute top-4 right-4 rounded-full bg-copper-50 px-2 py-0.5 text-[0.7rem] font-semibold text-copper-800 dark:bg-copper-800/30 dark:text-copper-200">Featured</span>
+        <span className="absolute top-4 right-4 rounded-full bg-copper-50 px-2 py-0.5 text-[0.7rem] font-semibold text-copper-800">Featured</span>
       )}
       <div className="flex items-start gap-3 pr-16">
         <AgentAvatar name={a.name} color={a.brandColor} size="lg" />

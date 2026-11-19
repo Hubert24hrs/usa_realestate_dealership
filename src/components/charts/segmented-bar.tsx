@@ -9,8 +9,6 @@ export interface Segment {
   value: number;
   /** CSS color (use the --series-N tokens, in fixed order). */
   color: string;
-  /** Label text color inside the fill (white or near-black by the fill's luminance). */
-  ink?: "light" | "dark";
 }
 
 /**
@@ -38,9 +36,10 @@ export function SegmentedBar({ segments, format, ariaLabel }: { segments: Segmen
               onFocus={() => setActive(s.key)}
               onBlur={() => setActive(null)}
               className={cn("relative flex items-center rounded-[4px] px-2 text-[0.7rem] font-semibold outline-none transition-[filter] focus-visible:ring-2 focus-visible:ring-ring", active === s.key && "brightness-110")}
-              style={{ width: `${share * 100}%`, background: s.color, color: s.ink === "dark" ? "#1a1a19" : "#ffffff" }}
+              style={{ width: `${share * 100}%`, background: s.color }}
             >
-              {showLabel && <span aria-hidden>{Math.round(share * 100)}%</span>}
+              {/* The share sits on a near-opaque surface chip, so it stays legible on any series color in either theme. */}
+              {showLabel && <span aria-hidden className="rounded-[3px] bg-background/90 px-1 leading-4 text-foreground">{Math.round(share * 100)}%</span>}
               {active === s.key && (
                 <span role="status" className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 rounded-lg border bg-popover px-2.5 py-1.5 text-xs whitespace-nowrap text-popover-foreground shadow-[var(--shadow-raised)]">
                   <span className="font-semibold">{format(s.value)}</span> <span className="text-muted-foreground">{s.label} · {Math.round(share * 100)}%</span>

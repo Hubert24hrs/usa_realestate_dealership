@@ -66,7 +66,7 @@ export default async function AgentProfilePage({ params }: PageProps) {
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-center gap-2">
                 <h1 className="font-display text-3xl font-semibold tracking-tight">{a.name}</h1>
-                {a.plan === "PREMIER" && <span className="rounded-full bg-copper-50 px-2 py-0.5 text-xs font-semibold text-copper-800 dark:bg-copper-800/30 dark:text-copper-200">Featured agent</span>}
+                {a.plan === "PREMIER" && <span className="rounded-full bg-copper-50 px-2 py-0.5 text-xs font-semibold text-copper-800">Featured agent</span>}
               </div>
               <p className="mt-1 text-muted-foreground">
                 {a.title ?? "Real estate agent"}

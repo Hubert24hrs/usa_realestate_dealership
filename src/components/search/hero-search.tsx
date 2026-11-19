@@ -39,22 +39,25 @@ export function HeroSearch() {
 
   return (
     <div className="w-full max-w-3xl">
-      <div role="tablist" aria-label="Search type" className="mb-3 flex flex-wrap gap-1">
-        {SEARCH_MODES.map((m) => (
-          <button
-            key={m}
-            role="tab"
-            type="button"
-            aria-selected={mode === m}
-            onClick={() => setMode(m)}
-            className={cn(
-              "rounded-full px-4 py-2 text-sm font-semibold transition-colors",
-              mode === m ? "bg-primary text-primary-foreground shadow-sm" : "bg-background/70 text-foreground/80 hover:bg-background hover:text-foreground",
-            )}
-          >
-            {SEARCH_MODE_LABELS[m]}
-          </button>
-        ))}
+      <div className="mb-3 flex flex-wrap items-center gap-1">
+        {/* A tablist may only contain tabs, so the plain-English toggle sits beside it. */}
+        <div role="tablist" aria-label="Search type" className="flex flex-wrap gap-1">
+          {SEARCH_MODES.map((m) => (
+            <button
+              key={m}
+              role="tab"
+              type="button"
+              aria-selected={mode === m}
+              onClick={() => setMode(m)}
+              className={cn(
+                "rounded-full px-4 py-2 text-sm font-semibold transition-colors",
+                mode === m ? "bg-primary text-primary-foreground shadow-sm" : "bg-background/70 text-foreground/80 hover:bg-background hover:text-foreground",
+              )}
+            >
+              {SEARCH_MODE_LABELS[m]}
+            </button>
+          ))}
+        </div>
         <button
           type="button"
           onClick={() => setAi((v) => !v)}

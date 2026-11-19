@@ -14,7 +14,7 @@ export const metadata: Metadata = { title: "Tours" };
 const STATUS_STYLE: Record<string, string> = {
   REQUESTED: "bg-muted text-foreground",
   CONFIRMED: "bg-success/15 text-success",
-  COMPLETED: "bg-brand-100 text-brand-800 dark:bg-brand-900 dark:text-brand-200",
+  COMPLETED: "bg-brand-100 text-brand-800",
   CANCELLED: "bg-destructive/10 text-destructive",
 };
 const STATUS_LABEL: Record<string, string> = { REQUESTED: "Requested", CONFIRMED: "Confirmed", COMPLETED: "Completed", CANCELLED: "Cancelled" };

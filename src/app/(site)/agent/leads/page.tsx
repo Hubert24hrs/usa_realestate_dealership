@@ -62,7 +62,7 @@ export default async function AgentLeadsPage({ searchParams }: PageProps) {
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
                     <p className="font-semibold">{l.name}</p>
-                    <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-medium text-brand-800 dark:bg-brand-900/50 dark:text-brand-200">{LEAD_TYPE_LABELS[l.type] ?? l.type}</span>
+                    <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-medium text-brand-800">{LEAD_TYPE_LABELS[l.type] ?? l.type}</span>
                     <span className="text-xs text-muted-foreground">{timeAgo(l.createdAt, now)}</span>
                   </div>
                   <p className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-sm">

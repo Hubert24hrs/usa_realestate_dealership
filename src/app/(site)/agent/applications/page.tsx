@@ -13,7 +13,7 @@ import { applicationScope, getProScope } from "@/server/pro";
 export const metadata: Metadata = { title: "Applications" };
 
 const STATUS_STYLE: Record<string, string> = {
-  SUBMITTED: "bg-brand-100 text-brand-800 dark:bg-brand-900 dark:text-brand-200",
+  SUBMITTED: "bg-brand-100 text-brand-800",
   UNDER_REVIEW: "bg-warning/20 text-warning-foreground dark:text-warning",
   APPROVED: "bg-success/15 text-success",
   DENIED: "bg-destructive/10 text-destructive",

@@ -10,11 +10,11 @@ import { Switch } from "@/components/ui/switch";
 import { estimateClosingCosts, STATE_PROFILES, stateProfile } from "@/lib/finance/closing-costs";
 import { formatMoney, formatPercent } from "@/lib/format";
 
-const GROUP_COLOR: Record<string, { color: string; ink?: "dark" }> = {
+const GROUP_COLOR: Record<string, { color: string }> = {
   lender: { color: "var(--series-1)" },
   title: { color: "var(--series-2)" },
-  government: { color: "var(--series-3)", ink: "dark" },
-  prepaids: { color: "var(--series-4)", ink: "dark" },
+  government: { color: "var(--series-3)" },
+  prepaids: { color: "var(--series-4)" },
 };
 
 export function ClosingCostCalculator({ defaultRate, initialState }: { defaultRate: number; initialState: string }) {
@@ -86,7 +86,7 @@ export function ClosingCostCalculator({ defaultRate, initialState }: { defaultRa
           <SegmentedBar
             ariaLabel="Closing costs by category"
             format={(v) => formatMoney(v)}
-            segments={est.groups.map((g) => ({ key: g.key, label: g.label, value: g.total, color: GROUP_COLOR[g.key]!.color, ink: GROUP_COLOR[g.key]!.ink }))}
+            segments={est.groups.map((g) => ({ key: g.key, label: g.label, value: g.total, color: GROUP_COLOR[g.key]!.color }))}
           />
           <div className="mt-6 space-y-6">
             {est.groups.map((g) => (

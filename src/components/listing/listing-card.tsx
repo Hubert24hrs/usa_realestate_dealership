@@ -12,8 +12,8 @@ import { CompareCheckbox } from "./compare";
 import { SaveButton } from "./save-button";
 
 const TONES: Record<Badge["tone"], string> = {
-  brand: "bg-brand-700 text-white dark:bg-brand-500 dark:text-brand-950",
-  copper: "bg-copper-500 text-white dark:text-copper-50",
+  brand: "bg-brand-700 text-white dark:bg-brand-500 dark:text-brand-50",
+  copper: "bg-copper-700 text-white dark:bg-copper-500 dark:text-copper-50",
   success: "bg-success text-success-foreground",
   neutral: "bg-white/95 text-ink dark:bg-black/70 dark:text-white",
   warning: "bg-warning text-warning-foreground",

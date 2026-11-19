@@ -21,11 +21,11 @@ export const getHomeData = unstable_cache(
     const select = cardSelect(now);
     const forSale: Prisma.ListingWhereInput = { category: "RESIDENTIAL", transactionType: "SALE", status: { in: ["ACTIVE", "COMING_SOON"] } };
     const [newest, drops, openHouses, luxury, rentals, rates, posts, agents, hoods, cities, counts] = await Promise.all([
-      db.listing.findMany({ where: forSale, orderBy: { listDate: "desc" }, take: 12, select }),
-      db.listing.findMany({ where: { ...forSale, priceReducedAt: { not: null } }, orderBy: { priceReducedAt: "desc" }, take: 12, select }),
-      db.listing.findMany({ where: { ...forSale, openHouses: { some: { endsAt: { gte: now } } } }, orderBy: { listDate: "desc" }, take: 12, select }),
-      db.listing.findMany({ where: { ...forSale, OR: [{ isLuxury: true }, { price: { gte: 1_250_000 } }] }, orderBy: { price: "desc" }, take: 12, select }),
-      db.listing.findMany({ where: { category: "RENTAL", status: "ACTIVE" }, orderBy: [{ isCommunity: "desc" }, { listDate: "desc" }], take: 12, select }),
+      db.listing.findMany({ where: forSale, orderBy: { listDate: "desc" }, take: 8, select }),
+      db.listing.findMany({ where: { ...forSale, priceReducedAt: { not: null } }, orderBy: { priceReducedAt: "desc" }, take: 8, select }),
+      db.listing.findMany({ where: { ...forSale, openHouses: { some: { endsAt: { gte: now } } } }, orderBy: { listDate: "desc" }, take: 8, select }),
+      db.listing.findMany({ where: { ...forSale, OR: [{ isLuxury: true }, { price: { gte: 1_250_000 } }] }, orderBy: { price: "desc" }, take: 8, select }),
+      db.listing.findMany({ where: { category: "RENTAL", status: "ACTIVE" }, orderBy: [{ isCommunity: "desc" }, { listDate: "desc" }], take: 8, select }),
       db.mortgageRate.findMany({ orderBy: { date: "desc" }, distinct: ["slug"], take: 6 }),
       db.post.findMany({ where: { status: "PUBLISHED" }, orderBy: { publishedAt: "desc" }, take: 6, select: { slug: true, title: true, excerpt: true, type: true, coverColor: true, readingMinutes: true, publishedAt: true, tags: true } }),
       db.agent.findMany({
@@ -91,7 +91,7 @@ export const getHomeData = unstable_cache(
       counts: Object.fromEntries(counts.map((c) => [c.category, c._count._all])) as Record<string, number>,
     };
   },
-  ["home-data-v1"],
+  ["home-data-v2"],
   { revalidate: 300, tags: ["listings"] },
 );
 

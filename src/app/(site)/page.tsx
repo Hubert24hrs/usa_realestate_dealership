@@ -147,7 +147,7 @@ export default async function HomePage() {
             ))}
           </ul>
         </div>
-        <div aria-labelledby="mortgage-title" className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-800 to-brand-950 p-6 text-white">
+        <div aria-labelledby="mortgage-title" className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-800 to-brand-950 p-6 text-white dark:from-[#1b1f45] dark:to-[#0b0d1d]">
           <BadgePercent className="absolute -right-6 -bottom-6 size-40 text-white/5" aria-hidden />
           <p className="text-xs font-semibold tracking-[0.18em] text-copper-300 uppercase">Mortgage</p>
           <h2 id="mortgage-title" className="mt-1 font-display text-[1.6rem] font-semibold">Know your numbers before you tour</h2>
@@ -159,7 +159,7 @@ export default async function HomePage() {
           )}
           <p className="mt-1 text-xs text-white/60">Sample rates for demonstration only — not an offer of credit.</p>
           <div className="mt-6 grid gap-2">
-            <Button asChild size="lg" className="h-11 bg-white text-brand-900 hover:bg-white/90"><Link href="/mortgage/preapproval"><Landmark className="size-4" aria-hidden /> Get pre-approved</Link></Button>
+            <Button asChild size="lg" className="h-11 bg-white text-brand-900 hover:bg-white/90 dark:text-brand-50"><Link href="/mortgage/preapproval"><Landmark className="size-4" aria-hidden /> Get pre-approved</Link></Button>
             <Button asChild size="lg" variant="outline" className="h-11 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"><Link href="/mortgage/calculator"><Calculator className="size-4" aria-hidden /> Mortgage calculator</Link></Button>
             <Link href="/mortgage/rates" className="mt-1 text-center text-sm text-white/80 underline-offset-4 hover:underline">Compare today&apos;s rates</Link>
           </div>

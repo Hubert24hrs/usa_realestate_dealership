@@ -158,7 +158,7 @@
   --accent: oklch(0.948 0.024 274);
   --accent-foreground: var(--brand-800);
   --destructive: oklch(0.565 0.205 27);
-  --success: oklch(0.552 0.13 156);
+  --success: oklch(0.53 0.13 156);
   --success-foreground: oklch(0.99 0.01 156);
   --warning: oklch(0.795 0.15 78);
   --warning-foreground: oklch(0.29 0.06 60);
@@ -377,6 +377,11 @@
 .dark .maplibregl-ctrl-group button,
 .dark .mapboxgl-ctrl-group button {
   filter: invert(0.9);
+}
+/* Attribution links must be distinguishable without color (WCAG 1.4.1). */
+.maplibregl-ctrl.maplibregl-ctrl-attrib a,
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib a {
+  text-decoration: underline !important;
 }
 .cv-popup .maplibregl-popup-content,
 .cv-popup .mapboxgl-popup-content {

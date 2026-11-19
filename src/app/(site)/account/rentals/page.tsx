@@ -15,7 +15,7 @@ export const metadata: Metadata = { title: "Rentals" };
 
 const APP_STATUS: Record<string, [string, string]> = {
   DRAFT: ["Draft", "bg-muted"],
-  SUBMITTED: ["Submitted", "bg-brand-100 text-brand-800 dark:bg-brand-900 dark:text-brand-200"],
+  SUBMITTED: ["Submitted", "bg-brand-100 text-brand-800"],
   UNDER_REVIEW: ["Under review", "bg-warning/20 text-warning-foreground dark:text-warning"],
   APPROVED: ["Approved", "bg-success/15 text-success"],
   DENIED: ["Not approved", "bg-destructive/10 text-destructive"],

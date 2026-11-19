@@ -41,8 +41,8 @@ export function NetProceedsCalculator({ defaultPrice }: { defaultPrice: number }
             segments={[
               { key: "net", label: "You keep", value: Math.max(0, net), color: "var(--series-1)" },
               { key: "payoff", label: "Mortgage payoff", value: payoff, color: "var(--series-2)" },
-              { key: "agents", label: "Agent compensation", value: listing + buyer, color: "var(--series-3)", ink: "dark" },
-              { key: "costs", label: "Closing costs & credits", value: closing + concessions, color: "var(--series-4)", ink: "dark" },
+              { key: "agents", label: "Agent compensation", value: listing + buyer, color: "var(--series-3)" },
+              { key: "costs", label: "Closing costs & credits", value: closing + concessions, color: "var(--series-4)" },
             ]}
           />
           <p className="mt-4 text-xs text-muted-foreground">

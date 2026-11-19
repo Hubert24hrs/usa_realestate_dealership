@@ -96,9 +96,9 @@ export function AffordabilityCalculator({ defaultRate }: { defaultRate: number }
                 segments={[
                   { key: "pi", label: "Principal & interest", value: at.principalAndInterest, color: "var(--series-1)" },
                   { key: "tax", label: "Property taxes", value: at.propertyTax, color: "var(--series-2)" },
-                  { key: "ins", label: "Homeowners insurance", value: at.insurance, color: "var(--series-3)", ink: "dark" },
-                  { key: "hoa", label: "HOA dues", value: at.hoa, color: "var(--series-4)", ink: "dark" },
-                  { key: "pmi", label: "Mortgage insurance (PMI)", value: at.pmi, color: "var(--series-5)", ink: "dark" },
+                  { key: "ins", label: "Homeowners insurance", value: at.insurance, color: "var(--series-3)" },
+                  { key: "hoa", label: "HOA dues", value: at.hoa, color: "var(--series-4)" },
+                  { key: "pmi", label: "Mortgage insurance (PMI)", value: at.pmi, color: "var(--series-5)" },
                 ]}
               />
             </div>

@@ -43,7 +43,7 @@ export default async function SellPage() {
         <ul className="grid gap-4 md:grid-cols-3">
           {PATHS.map(({ icon: Icon, title, body, href, cta }) => (
             <li key={title} className="flex flex-col rounded-3xl border bg-card p-6">
-              <span className="grid size-11 place-items-center rounded-xl bg-brand-50 text-brand-700 dark:bg-brand-900/50 dark:text-brand-200"><Icon className="size-5" aria-hidden /></span>
+              <span className="grid size-11 place-items-center rounded-xl bg-brand-50 text-brand-700"><Icon className="size-5" aria-hidden /></span>
               <h2 className="mt-4 text-lg font-semibold">{title}</h2>
               <p className="mt-1 flex-1 text-sm text-muted-foreground">{body}</p>
               <Link href={href} className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">{cta} <ArrowRight className="size-4" aria-hidden /></Link>

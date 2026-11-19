@@ -88,7 +88,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                 <div className="min-w-0">
                   <p className="font-semibold">
                     {l.name} <span className="font-normal text-muted-foreground">· {LEAD_TYPE_LABELS[l.type] ?? l.type}</span>
-                    {late && <span className="ml-2 rounded-full bg-copper-500/15 px-2 py-0.5 text-xs font-medium text-copper-700 dark:text-copper-300">Past response target</span>}
+                    {late && <span className="ml-2 rounded-full bg-copper-500/15 px-2 py-0.5 text-xs font-medium text-copper-700">Past response target</span>}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     <a href={`mailto:${l.email}`} className="hover:underline">{l.email}</a>{l.phone ? ` · ${l.phone}` : ""} · {timeAgo(l.createdAt, now)}

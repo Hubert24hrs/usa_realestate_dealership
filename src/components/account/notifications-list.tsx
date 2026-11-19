@@ -72,7 +72,7 @@ export function NotificationsList({ items }: { items: NotificationView[] }) {
                 const href = safeHref(n.url);
                 const content = (
                   <>
-                    <span className={cn("grid size-9 shrink-0 place-items-center rounded-full", n.read ? "bg-muted text-muted-foreground" : "bg-copper-100 text-copper-700 dark:bg-copper-500/20 dark:text-copper-300")}>
+                    <span className={cn("grid size-9 shrink-0 place-items-center rounded-full", n.read ? "bg-muted text-muted-foreground" : "bg-copper-100 text-copper-700")}>
                       <Icon className="size-4" aria-hidden />
                     </span>
                     <span className="min-w-0 flex-1">

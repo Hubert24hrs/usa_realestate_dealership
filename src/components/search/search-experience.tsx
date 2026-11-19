@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { motion } from "framer-motion";
+import { MotionConfig, motion } from "framer-motion";
 import { Columns2, List, Map as MapIcon, SearchX, X } from "lucide-react";
 import { ListingCard, ListingCardSkeleton } from "@/components/listing/listing-card";
 import { CompareProvider } from "@/components/listing/compare";
@@ -200,7 +200,7 @@ export function SearchExperience({ vertical, initialFilters, initialResult, head
           </aside>
         )}
         {view === "split" && (
-          <div role="separator" aria-orientation="vertical" aria-label="Resize map" tabIndex={0} onPointerDown={startResize} onKeyDown={(e) => { if (e.key === "ArrowLeft") setMapPct((p) => Math.max(30, p - 3)); if (e.key === "ArrowRight") setMapPct((p) => Math.min(70, p + 3)); }} className="sticky top-[7.75rem] hidden h-[calc(100dvh-7.75rem)] w-1.5 shrink-0 cursor-col-resize bg-border transition-colors hover:bg-primary/40 focus-visible:bg-primary/60 md:block" />
+          <div role="separator" aria-orientation="vertical" aria-label="Resize map" aria-valuenow={Math.round(mapPct)} aria-valuemin={30} aria-valuemax={70} tabIndex={0} onPointerDown={startResize} onKeyDown={(e) => { if (e.key === "ArrowLeft") setMapPct((p) => Math.max(30, p - 3)); if (e.key === "ArrowRight") setMapPct((p) => Math.min(70, p + 3)); }} className="sticky top-[7.75rem] hidden h-[calc(100dvh-7.75rem)] w-1.5 shrink-0 cursor-col-resize bg-border transition-colors hover:bg-primary/40 focus-visible:bg-primary/60 md:block" />
         )}
         <section aria-labelledby="results-heading" className={cn("min-w-0 flex-1 px-4 pt-5 pb-10 lg:px-6", view === "map" && "md:hidden")}>
             <div ref={listTop} className="scroll-mt-32" />
@@ -249,15 +249,17 @@ export function SearchExperience({ vertical, initialFilters, initialResult, head
                 </Button>
               </div>
             ) : (
-              <motion.ul layout className={cn("grid gap-5", view === "list" ? "sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3")}>
-                {isFetching && !data
-                  ? Array.from({ length: 6 }, (_, i) => <li key={i}><ListingCardSkeleton /></li>)
-                  : result.results.map((l, i) => (
-                      <li key={l.id}>
-                        <ListingCard listing={l} priority={i < 2} highlighted={hovered === l.id} onHover={setHovered} />
-                      </li>
-                    ))}
-              </motion.ul>
+              <MotionConfig reducedMotion="user">
+                <motion.ul layout className={cn("grid gap-5", view === "list" ? "sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3")}>
+                  {isFetching && !data
+                    ? Array.from({ length: 6 }, (_, i) => <li key={i}><ListingCardSkeleton /></li>)
+                    : result.results.map((l, i) => (
+                        <li key={l.id}>
+                          <ListingCard listing={l} priority={i < 2} highlighted={hovered === l.id} onHover={setHovered} />
+                        </li>
+                      ))}
+                </motion.ul>
+              </MotionConfig>
             )}
 
             <Pagination

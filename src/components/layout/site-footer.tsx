@@ -132,7 +132,7 @@ export async function SiteFooter() {
         </div>
 
         <div className="mt-8 flex flex-col gap-4 border-t pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {year} {site.legalName}. All rights reserved. Listing data on this site is demo data.</p>
+          <p>© {year} {site.legalName}. All rights reserved.{site.demoMode ? " Listing data on this site is demo data." : ""}</p>
           <ul className="flex flex-wrap gap-x-4 gap-y-2">
             <li><Link href="/legal/terms" className="hover:text-foreground">Terms of use</Link></li>
             <li><Link href="/legal/privacy" className="hover:text-foreground">Privacy policy</Link></li>
@@ -140,6 +140,7 @@ export async function SiteFooter() {
             <li><CookiePreferencesButton className="hover:text-foreground">Do Not Sell or Share My Personal Information</CookiePreferencesButton></li>
             <li><Link href="/legal/fair-housing" className="hover:text-foreground">Fair housing</Link></li>
             <li><Link href="/legal/accessibility" className="hover:text-foreground">Accessibility</Link></li>
+            <li><Link href="/legal/mls-data" className="hover:text-foreground">Listing data &amp; IDX</Link></li>
           </ul>
         </div>
       </div>
