@@ -117,3 +117,17 @@ export function initials(name: string): string {
     .map((part) => part[0]!.toUpperCase())
     .join("");
 }
+
+const relativeFmt = new Intl.RelativeTimeFormat("en-US", { numeric: "auto" });
+
+/** "just now", "5 minutes ago", "yesterday" — falls back to a date beyond a week. */
+export function timeAgo(date: Date | string, now: Date = new Date()): string {
+  const d = typeof date === "string" ? new Date(date) : date;
+  const seconds = (d.getTime() - now.getTime()) / 1000;
+  const abs = Math.abs(seconds);
+  if (abs < 45) return "just now";
+  if (abs < 3600) return relativeFmt.format(Math.round(seconds / 60), "minute");
+  if (abs < 86_400) return relativeFmt.format(Math.round(seconds / 3600), "hour");
+  if (abs < 7 * 86_400) return relativeFmt.format(Math.round(seconds / 86_400), "day");
+  return formatDate(d);
+}

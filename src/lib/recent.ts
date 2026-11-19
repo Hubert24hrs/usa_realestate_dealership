@@ -35,8 +35,11 @@ export function preferenceFromRecent(list: RecentEntry[]): { citySlug: string; m
   const counts = new Map<string, number>();
   for (const e of forSale) counts.set(e.citySlug!, (counts.get(e.citySlug!) ?? 0) + 1);
   const citySlug = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]![0];
-  const inCity = forSale.filter((e) => e.citySlug === citySlug);
-  const mode = inCity[0]!.mode;
+  // Use the visitor's dominant mode in that city, and only that mode's prices — rents and sale prices don't mix.
+  const modeCounts = new Map<RecentEntry["mode"], number>();
+  for (const e of forSale) if (e.citySlug === citySlug) modeCounts.set(e.mode, (modeCounts.get(e.mode) ?? 0) + 1);
+  const mode = [...modeCounts.entries()].sort((a, b) => b[1] - a[1])[0]![0];
+  const inCity = forSale.filter((e) => e.citySlug === citySlug && e.mode === mode);
   const prices = inCity.map((e) => e.price).sort((a, b) => a - b);
   const median = prices[Math.floor(prices.length / 2)]!;
   const beds = inCity.map((e) => e.beds ?? 0).sort((a, b) => a - b);

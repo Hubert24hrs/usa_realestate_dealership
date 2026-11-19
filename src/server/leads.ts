@@ -5,7 +5,11 @@ import { LEAD_TYPE_LABELS } from "@/lib/domain";
 import { formatAddressLine, formatPrice } from "@/lib/format";
 import { site } from "@/lib/site";
 import { emailLayout, sendEmail } from "./email";
+import { findOrCreateConversation } from "./messages";
 import { getSettings } from "./settings";
+
+/** Free-text lead types a signed-in sender can follow up on in their inbox. */
+const CONVERSATION_TYPES = new Set<LeadType>(["ASK_AGENT", "REQUEST_INFO", "CONTACT_AGENT", "RENTAL_INQUIRY", "OFFER_INTEREST"]);
 
 export interface LeadInput {
   type: LeadType;
@@ -131,6 +135,17 @@ export async function createLead(input: LeadInput) {
   if (agent?.userId) {
     await db.notification.create({ data: { userId: agent.userId, type: "LEAD", title: `New ${label.toLowerCase()} from ${input.name}`, body: where, url: "/agent/leads" } });
   }
+  // Signed-in senders can follow up in Messages: mirror the question into a conversation with the agent / owner.
+  const recipientUserId = agent?.userId ?? routing.ownerId;
+  let conversationId: string | null = null;
+  if (input.userId && input.message && recipientUserId && recipientUserId !== input.userId && CONVERSATION_TYPES.has(input.type)) {
+    const now = new Date();
+    const convo = await findOrCreateConversation(input.userId, recipientUserId, { listingId: listing?.id ?? null, subject: listing?.streetAddress ?? label });
+    await db.message.create({ data: { conversationId: convo.id, senderId: input.userId, body: input.message } });
+    await db.conversation.update({ where: { id: convo.id }, data: { updatedAt: now } });
+    await db.conversationParticipant.update({ where: { conversationId_userId: { conversationId: convo.id, userId: input.userId } }, data: { lastReadAt: now } });
+    conversationId = convo.id;
+  }
   await db.analyticsEvent.create({ data: { type: "lead", listingId: listing?.id ?? null, agentId: routing.agentId, userId: input.userId ?? null, data: { leadType: input.type } } });
-  return { lead, routing, agentName: agent?.name ?? (owner ? "the owner" : null) };
+  return { lead, routing, agentName: agent?.name ?? (owner ? "the owner" : null), conversationId };
 }

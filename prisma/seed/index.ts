@@ -540,7 +540,7 @@ async function seedActivity(
 
   await prisma.savedSearch.createMany({
     data: [
-      { userId: buyer.id, name: "Austin · 3+ beds under $750K", filters: { mode: "buy", place: "austin-tx", bedsMin: 3, priceMax: 750000 }, path: "/homes-for-sale/austin-tx?beds=3&price=-750000", frequency: "DAILY", lastCheckedAt: now },
+      { userId: buyer.id, name: "Austin · 3+ beds under $750K", filters: { mode: "buy", place: "austin-tx", bedsMin: 3, price: { max: 750000 } }, path: "/homes-for-sale/austin-tx?beds=3&price=-750000", frequency: "DAILY", lastCheckedAt: now },
       { userId: buyer.id, name: "Denver condos", filters: { mode: "buy", place: "denver-co", homeTypes: ["CONDO"] }, path: "/homes-for-sale/denver-co?type=CONDO", frequency: "WEEKLY", lastCheckedAt: now },
       { userId: renter.id, name: "Austin rentals with pets", filters: { mode: "rent", place: "austin-tx", pets: "dogs" }, path: "/apartments-for-rent/austin-tx?pets=dogs", frequency: "INSTANT", lastCheckedAt: now },
     ],

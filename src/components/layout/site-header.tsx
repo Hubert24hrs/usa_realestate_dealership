@@ -3,6 +3,7 @@ import { Heart } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 import { Button } from "@/components/ui/button";
 import { primaryNav } from "@/lib/site";
+import { AccountMenu } from "./account-menu";
 import { DesktopNav } from "./desktop-nav";
 import { MobileNav } from "./mobile-nav";
 import { ThemeToggle } from "./theme-toggle";
@@ -21,11 +22,7 @@ export function SiteHeader({ accountSlot }: { accountSlot?: React.ReactNode }) {
             </Link>
           </Button>
           <ThemeToggle />
-          {accountSlot ?? (
-            <Button asChild size="lg" className="ml-1.5 px-4">
-              <Link href="/sign-in">Sign in</Link>
-            </Button>
-          )}
+          {accountSlot ?? <AccountMenu />}
         </div>
       </div>
     </header>

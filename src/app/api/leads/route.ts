@@ -27,5 +27,5 @@ export async function POST(request: Request) {
     data: rest as Record<string, unknown>,
     source: source ?? null,
   });
-  return Response.json({ ok: true, leadId: result.lead.id, routedTo: result.agentName });
+  return Response.json({ ok: true, leadId: result.lead.id, routedTo: result.agentName, conversationId: result.conversationId });
 }

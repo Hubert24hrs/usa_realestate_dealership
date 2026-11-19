@@ -4,42 +4,60 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Heart } from "lucide-react";
 import { toast } from "sonner";
+import { useMe } from "@/hooks/use-me";
 import { cn } from "@/lib/utils";
 
-/** Shared, in-memory set of saved listing ids so every heart on the page stays in sync. */
+/** Shared, in-memory set of saved listing ids so every heart on the page stays in sync — scoped to the signed-in user. */
 const listeners = new Set<() => void>();
 let saved: Set<string> | null = null;
+let loadedFor: string | null | undefined;
 let loading: Promise<void> | null = null;
 
-async function loadSaved() {
-  if (saved || loading) return loading ?? undefined;
+const notify = () => listeners.forEach((l) => l());
+
+function loadSaved(userId: string | null) {
+  if (loadedFor === userId && (saved || loading)) return;
+  loadedFor = userId;
+  if (!userId) {
+    saved = new Set();
+    loading = null;
+    notify();
+    return;
+  }
+  saved = null;
   loading = fetch("/api/favorites/ids", { cache: "no-store" })
     .then((r) => (r.ok ? r.json() : { ids: [] }))
     .then((data: { ids?: string[] }) => {
-      saved = new Set(data.ids ?? []);
-      listeners.forEach((l) => l());
+      if (loadedFor === userId) saved = new Set(data.ids ?? []);
     })
     .catch(() => {
-      saved = new Set();
+      if (loadedFor === userId) saved = new Set();
+    })
+    .finally(() => {
+      loading = null;
+      notify();
     });
-  return loading;
 }
 
 export function useIsSaved(id: string): [boolean, (value: boolean) => void] {
   const [, force] = useState(0);
+  const { data: me } = useMe();
+  const userId = me ? (me.user?.id ?? null) : undefined;
   useEffect(() => {
     const listener = () => force((n) => n + 1);
     listeners.add(listener);
-    void loadSaved();
     return () => {
       listeners.delete(listener);
     };
   }, []);
+  useEffect(() => {
+    if (userId !== undefined) loadSaved(userId);
+  }, [userId]);
   const set = (value: boolean) => {
     saved ??= new Set();
     if (value) saved.add(id);
     else saved.delete(id);
-    listeners.forEach((l) => l());
+    notify();
   };
   return [saved?.has(id) ?? false, set];
 }

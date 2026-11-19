@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
+import { enablePush, getPushState, PUSH_STATE_HINT } from "@/lib/push-client";
 import type { SearchFilters } from "@/lib/search/filters";
 
 export function SaveSearchButton({ filters, href, defaultName }: { filters: SearchFilters; href: string; defaultName: string }) {
@@ -22,11 +23,19 @@ export function SaveSearchButton({ filters, href, defaultName }: { filters: Sear
 
   const save = async () => {
     setPending(true);
+    let pushOn = push;
+    if (push && (await getPushState()) !== "enabled") {
+      const result = await enablePush();
+      if (result !== "enabled") {
+        pushOn = false;
+        toast(PUSH_STATE_HINT[result]);
+      }
+    }
     try {
       const res = await fetch("/api/saved-searches", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim() || defaultName, filters, path: href, frequency, emailEnabled: frequency !== "NONE", pushEnabled: push }),
+        body: JSON.stringify({ name: name.trim() || defaultName, filters, path: href, frequency, emailEnabled: frequency !== "NONE", pushEnabled: pushOn }),
       });
       if (res.status === 401) {
         setNeedsAuth(true);

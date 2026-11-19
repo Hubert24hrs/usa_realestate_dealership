@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
+import { AddToCollectionButton } from "@/components/account/collection-dialogs";
 import { pushRecent, type RecentEntry } from "@/lib/recent";
 import { SaveButton } from "./save-button";
 
@@ -40,6 +41,7 @@ export function ListingActions({ listingId, title }: { listingId: string; title:
   return (
     <div className="flex flex-wrap items-center gap-1.5 print:hidden">
       <SaveButton listingId={listingId} label={title} size="lg" className="border bg-background shadow-none" />
+      <AddToCollectionButton listingId={listingId} />
       <Button variant="outline" size="lg" className="h-11 rounded-full" onClick={share}><Share2 className="size-4" aria-hidden /> Share</Button>
       <Button variant="outline" size="lg" className="h-11 rounded-full" onClick={() => window.print()}><Printer className="size-4" aria-hidden /> Print</Button>
       <NotesButton listingId={listingId} />

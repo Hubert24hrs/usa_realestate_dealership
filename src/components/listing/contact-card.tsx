@@ -85,6 +85,7 @@ export function ContactCard({
   const [day, setDay] = useState(days[0]!.toISOString().slice(0, 10));
   const [time, setTime] = useState("10:00 AM");
   const [done, setDone] = useState<string | null>(null);
+  const [conversationId, setConversationId] = useState<string | null>(null);
   const [serverError, setServerError] = useState<string | null>(null);
 
   const form = useForm<FormValues>({ resolver: zodResolver(FormSchema), defaultValues: { name: "", email: "", phone: "", message: "", consent: false, offerAmount: String(price), financing: "Conventional", preApproved: "yes", timeline: "30 days" } });
@@ -105,7 +106,8 @@ export function ContactCard({
       setServerError(err.issues?.[0]?.message ?? err.error ?? "Something went wrong. Please try again.");
       return;
     }
-    const data = (await res.json()) as { routedTo?: string | null };
+    const data = (await res.json()) as { routedTo?: string | null; conversationId?: string | null };
+    setConversationId(data.conversationId ?? null);
     setDone(mode === "TOUR" ? `Tour requested for ${new Date(`${day}T12:00:00`).toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })} at ${time}.` : `Sent! ${data.routedTo ?? "An agent"} will reply soon.`);
   });
 
@@ -118,7 +120,10 @@ export function ContactCard({
           <CheckCircle2 className="mx-auto size-12 text-success" aria-hidden />
           <h2 className="mt-3 text-lg font-semibold">Request sent</h2>
           <p className="mt-1 text-sm text-muted-foreground">{done} We emailed you a confirmation.</p>
-          <Button variant="outline" className="mt-4" onClick={() => { setDone(null); form.reset({ ...form.getValues(), message: "" }); }}>Send another</Button>
+          {conversationId && (
+            <Button asChild className="mt-4 w-full"><Link href={`/account/messages?c=${conversationId}`}>Continue in Messages</Link></Button>
+          )}
+          <Button variant="outline" className="mt-4" onClick={() => { setDone(null); setConversationId(null); form.reset({ ...form.getValues(), message: "" }); }}>Send another</Button>
         </div>
       ) : (
         <>
