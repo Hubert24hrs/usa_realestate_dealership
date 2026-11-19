@@ -14,6 +14,12 @@ const securityHeaders = [
   ...(isProd ? [{ key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" }] : []),
 ];
 
+// Licensed MLS photo CDNs (comma-separated hostnames; wildcards like *.cdn.example.com work). Read at build time.
+const feedMediaHosts = (process.env.RESO_MEDIA_HOSTS ?? "")
+  .split(",")
+  .map((h) => h.trim())
+  .filter((h) => /^[a-z0-9*.-]+$/i.test(h));
+
 const nextConfig: NextConfig = {
   // NEXT_DIST_DIR lets a production build run alongside `next dev` without clobbering .next
   distDir: process.env.NEXT_DIST_DIR || ".next",
@@ -30,6 +36,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.pexels.com" },
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "*.public.blob.vercel-storage.com" },
+      ...feedMediaHosts.map((hostname) => ({ protocol: "https" as const, hostname })),
     ],
   },
   experimental: {

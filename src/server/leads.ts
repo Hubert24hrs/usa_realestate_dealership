@@ -63,7 +63,7 @@ export async function routeLead(input: Pick<LeadInput, "agentId" | "listingId" |
 export async function createLead(input: LeadInput) {
   const routing = await routeLead(input);
   const listing = input.listingId
-    ? await db.listing.findUnique({ where: { id: input.listingId }, select: { id: true, slug: true, streetAddress: true, unit: true, city: true, state: true, zip: true, price: true, transactionType: true } })
+    ? await db.listing.findUnique({ where: { id: input.listingId }, select: { id: true, slug: true, streetAddress: true, unit: true, city: true, state: true, zip: true, hideAddress: true, price: true, transactionType: true } })
     : null;
 
   const lead = await db.lead.create({

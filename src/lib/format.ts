@@ -90,7 +90,10 @@ export function formatAddressLine(l: {
   city: string;
   state: string;
   zip: string;
+  /** Seller/MLS asked for the street address to be withheld (e.g. IDX InternetAddressDisplayYN = false). */
+  hideAddress?: boolean | null;
 }): string {
+  if (l.hideAddress) return `${l.city}, ${l.state} ${l.zip}`;
   return `${l.streetAddress}${l.unit ? ` ${l.unit}` : ""}, ${l.city}, ${l.state} ${l.zip}`;
 }
 

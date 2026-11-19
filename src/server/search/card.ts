@@ -119,7 +119,7 @@ export function toCardData(row: CardRow): ListingCardData {
       ? { startsAt: row.openHouses[0].startsAt.toISOString(), endsAt: row.openHouses[0].endsAt.toISOString(), type: row.openHouses[0].type }
       : null,
     // Only the cover photo needs a blur placeholder; the rest load when someone swipes (keeps RSC payloads small).
-    photos: row.media.map((m, i) => ({ url: m.url, alt: m.alt, blurDataUrl: i === 0 ? m.blurDataUrl : null, color: m.color, category: m.category as MediaCategoryKey })),
+    photos: row.media.map((m, i) => ({ url: m.url, alt: row.hideAddress ? m.alt.split(row.streetAddress).join("this home") : m.alt, blurDataUrl: i === 0 ? m.blurDataUrl : null, color: m.color, category: m.category as MediaCategoryKey })),
     photoCount: row._count.media,
   };
 }

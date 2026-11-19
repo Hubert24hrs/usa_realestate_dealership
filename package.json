@@ -22,6 +22,7 @@
     "media:verify": "dotenv run -q -f .env.local -- tsx scripts/media-verify.ts",
     "search:sync": "dotenv run -q -f .env.local -- tsx scripts/search-sync.ts",
     "alerts:run": "dotenv run -q -f .env.local -- tsx --conditions=react-server scripts/run-alerts.ts",
+    "feed:sync": "dotenv run -q -f .env.local -- tsx --conditions=react-server scripts/feed-sync.ts",
     "check:links": "node scripts/check-links.mjs",
     "test": "vitest run",
     "test:watch": "vitest",

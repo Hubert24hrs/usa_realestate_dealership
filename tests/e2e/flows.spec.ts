@@ -20,6 +20,8 @@ test("mortgage calculator recalculates as inputs change", async ({ page }) => {
 test("a buyer can save a home and find it in their account", async ({ page }) => {
   const href = await firstListingHref(page);
   await signInAs(page, "Home buyer", href);
+  // Let the page hydrate (the heart has no click handler until then) and load saved-home state.
+  await page.waitForLoadState("networkidle");
   const save = page.getByRole("button", { name: /^Save / }).first();
   const unsave = page.getByRole("button", { name: /^Remove .* from saved homes/ }).first();
   // The heart updates optimistically, so wait for the API call before moving on.
@@ -41,6 +43,7 @@ test("a buyer can save a home and find it in their account", async ({ page }) =>
 
   // Clean up.
   await page.goto(href);
+  await page.waitForLoadState("networkidle");
   const cleanup = favoriteCall("DELETE");
   await page.getByRole("button", { name: /^Remove .* from saved homes/ }).first().click();
   expect((await cleanup).ok()).toBe(true);

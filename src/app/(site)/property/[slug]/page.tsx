@@ -32,7 +32,10 @@ import { getSettings } from "@/server/settings";
 type Props = { params: Promise<{ slug: string }> };
 
 function titleOf(l: ListingDetail) {
-  return l.isCommunity && l.communityName ? l.communityName : `${l.streetAddress}${l.unit ? ` ${l.unit}` : ""}`;
+  if (l.isCommunity && l.communityName) return l.communityName;
+  // Withheld addresses never appear in headings, titles or structured data.
+  if (l.hideAddress) return `${PROPERTY_TYPE_LABELS[l.propertyType]} in ${l.city}, ${l.state}`;
+  return `${l.streetAddress}${l.unit ? ` ${l.unit}` : ""}`;
 }
 
 function priceLabel(l: ListingDetail) {
@@ -61,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description: `${l.headline ?? ""}. ${l.description}`.slice(0, 158),
     alternates: { canonical: `/property/${l.slug}` },
-    openGraph: { title, type: "website", url: `${site.url}/property/${l.slug}`, images: photo ? [{ url: photo.url, width: photo.width ?? undefined, height: photo.height ?? undefined, alt: photo.alt }] : undefined },
+    openGraph: { title, type: "website", url: `${site.url}/property/${l.slug}`, images: photo ? [{ url: photo.url, width: photo.width ?? undefined, height: photo.height ?? undefined, alt: l.hideAddress ? photo.alt.split(l.streetAddress).join("this home") : photo.alt }] : undefined },
   };
 }
 
@@ -76,7 +79,9 @@ export default async function PropertyPage({ params }: Props) {
   const city = l.cityRef;
   const hood = l.neighborhood;
   const dom = daysSince(l.listDate);
-  const galleryItems: GalleryItem[] = l.media.map((m) => ({ id: m.id, url: m.url, alt: m.alt, category: m.category as MediaCategoryKey, width: m.width, height: m.height, blurDataUrl: m.blurDataUrl, color: m.color, provider: m.provider as MediaProviderKey, photographer: m.photographer, photographerUrl: m.photographerUrl, sourceUrl: m.sourceUrl }));
+  // Photo descriptions can name the street (feeds, generated floor plans); scrub it when the address is withheld.
+  const altOf = (alt: string) => (l.hideAddress && l.streetAddress ? alt.split(l.streetAddress).join("this home") : alt);
+  const galleryItems: GalleryItem[] = l.media.map((m) => ({ id: m.id, url: m.url, alt: altOf(m.alt), category: m.category as MediaCategoryKey, width: m.width, height: m.height, blurDataUrl: m.blurDataUrl, color: m.color, provider: m.provider as MediaProviderKey, photographer: m.photographer, photographerUrl: m.photographerUrl, sourceUrl: m.sourceUrl }));
   const ndaCookie = jar.get(ndaCookieName(l.id))?.value?.split("|");
   const ndaUnlocked = Boolean(ndaCookie?.[0] && ndaCookie[1] === ndaToken(l.id, ndaCookie[0]));
   const est = variant === "sale" ? paymentBreakdown({ price: l.price, downPayment: l.price * 0.2, ratePct: thirty, termYears: 30, propertyTaxAnnual: l.propertyTaxAnnual ?? l.price * 0.011, insuranceAnnual: l.price * 0.0035, hoaMonthly: l.hoaFee ?? 0 }).total : null;
@@ -124,7 +129,7 @@ export default async function PropertyPage({ params }: Props) {
       },
       mainEntity: {
         "@type": schemaType,
-        address: { "@type": "PostalAddress", streetAddress: l.streetAddress, addressLocality: l.city, addressRegion: l.state, postalCode: l.zip, addressCountry: "US" },
+        address: { "@type": "PostalAddress", ...(l.hideAddress ? {} : { streetAddress: l.streetAddress }), addressLocality: l.city, addressRegion: l.state, postalCode: l.zip, addressCountry: "US" },
         geo: { "@type": "GeoCoordinates", latitude: l.lat, longitude: l.lng },
         ...(l.beds != null ? { numberOfRooms: l.beds } : {}),
         ...(l.sqft ? { floorSize: { "@type": "QuantitativeValue", value: l.sqft, unitCode: "FTK" } } : {}),
