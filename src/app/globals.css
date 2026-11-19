@@ -186,6 +186,13 @@
   --chart-deemph: #7c808d;
   --chart-accent: #5262dc;
   --chart-grid: oklch(0.93 0.006 274);
+  /* Categorical series (fixed order; validated adjacent-pair CVD ΔE ≥ 9.1, normal ΔE ≥ 19.6).
+     Slots 3–5 are < 3:1 on white → always ship visible labels / a table view (relief rule). */
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
 }
 
 .dark {
@@ -254,6 +261,11 @@
   --chart-deemph: #707481;
   --chart-accent: #7788ed;
   --chart-grid: oklch(0.28 0.02 272);
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --series-5: #d55181;
 }
 
 @layer base {

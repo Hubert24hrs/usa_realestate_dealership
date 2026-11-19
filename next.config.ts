@@ -15,6 +15,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // NEXT_DIST_DIR lets a production build run alongside `next dev` without clobbering .next
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   poweredByHeader: false,
   reactStrictMode: true,
   turbopack: { root: projectRoot },

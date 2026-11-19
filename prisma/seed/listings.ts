@@ -181,7 +181,18 @@ export function materialise(spec: ListingSpec, index: number, now: Date): Materi
   const zips = ZIP_BASE[spec.citySlug] ?? ["00000"];
   const zip = zips[spec.hood % zips.length]!;
   const rural = Boolean(city.rural) || spec.category === "LAND";
-  const point = jitterPoint({ lat: hood.lat, lng: hood.lng }, (hood.r ?? 0.008) * (spec.category === "LAND" ? 1 : 0.9), r);
+  // Land sits in an outer ring of its area (away from town centres); everything else jitters within the neighborhood.
+  const point =
+    spec.category === "LAND"
+      ? (() => {
+          const radius = (hood.r ?? 0.08) * r.float(0.55, 1);
+          const angle = r.float(0, Math.PI * 2);
+          return {
+            lat: Number((hood.lat + Math.sin(angle) * radius).toFixed(6)),
+            lng: Number((hood.lng + (Math.cos(angle) * radius) / Math.cos((hood.lat * Math.PI) / 180)).toFixed(6)),
+          };
+        })()
+      : jitterPoint({ lat: hood.lat, lng: hood.lng }, (hood.r ?? 0.008) * 0.9, r);
   const street = streetAddress(r, rural);
   const risks = riskProfile(spec.citySlug, r);
   const priceHistory: MaterialisedListing["priceHistory"] = [];
