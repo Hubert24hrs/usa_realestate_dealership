@@ -52,7 +52,8 @@ export function cardSelect(now = new Date()) {
     listingAgentName: true,
     media: {
       orderBy: { sortOrder: "asc" },
-      take: 12,
+      // Cards carry a handful of photos; the last slide links to the full gallery (photoCount).
+      take: 5,
       select: { url: true, alt: true, blurDataUrl: true, color: true, category: true },
     },
     openHouses: {
@@ -159,3 +160,6 @@ export function toMapPoint(row: Prisma.ListingGetPayload<{ select: typeof pointS
     category: row.category as ListingCategoryKey,
   };
 }
+
+/** Rails show only the cover photo (no in-card carousel), which keeps page payloads and DOM small. */
+export const railCard = (c: ListingCardData): ListingCardData => (c.photos.length > 1 ? { ...c, photos: c.photos.slice(0, 1) } : c);

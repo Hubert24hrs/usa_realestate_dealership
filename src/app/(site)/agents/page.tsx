@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Search } from "lucide-react";
 import { AgentCard } from "@/components/agents/agent-card";
 import { AutoSubmitForm } from "@/components/agents/filter-form";

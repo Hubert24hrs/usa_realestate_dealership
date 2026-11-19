@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { formatDate, formatTime } from "@/lib/format";

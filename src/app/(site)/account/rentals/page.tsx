@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { CheckCircle2, CircleAlert, FileSignature, FileText, KeyRound, Receipt } from "lucide-react";
 import { AccountPageHeader, EmptyState, SectionTitle } from "@/components/account/page-header";
 import { ApplicationActions, PayRentButton } from "@/components/rent/rental-actions";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Building2, ExternalLink, Globe, Mail, MapPin, Phone } from "lucide-react";
 import { AgentAvatar } from "@/components/agents/agent-avatar";
 import { AgentCard } from "@/components/agents/agent-card";

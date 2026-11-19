@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { SegmentedBar } from "@/components/charts/segmented-bar";
 import { NumberField, ResultStat } from "@/components/tools/fields";
 import { Label } from "@/components/ui/label";

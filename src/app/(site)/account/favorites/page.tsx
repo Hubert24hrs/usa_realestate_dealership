@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { FolderHeart, Heart } from "lucide-react";
 import { AddToCollectionButton } from "@/components/account/collection-dialogs";
 import { AccountPageHeader, EmptyState } from "@/components/account/page-header";

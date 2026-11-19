@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { AgentAvatar } from "@/components/agents/agent-avatar";
 import { Stars } from "@/components/agents/stars";
 import type { AgentCardRow } from "@/server/agents";

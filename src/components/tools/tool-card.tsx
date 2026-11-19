@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowRight, BadgeCheck, BookOpen, Calculator, Home, KeyRound, Map, Percent, PiggyBank, Receipt, Scale, TrendingUp, Upload, Wallet } from "lucide-react";
 import type { ToolIcon, ToolLink } from "@/lib/content/tools";
 import { cn } from "@/lib/utils";

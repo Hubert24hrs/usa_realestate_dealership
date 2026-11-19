@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowRight, BellRing, Building, CalendarCheck, Heart, Inbox, KeyRound, ShieldAlert, ShieldCheck } from "lucide-react";
 import { AccountPageHeader, SectionTitle } from "@/components/account/page-header";
 import { ListingCard } from "@/components/listing/listing-card";

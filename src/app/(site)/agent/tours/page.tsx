@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { CalendarCheck, Mail, Phone, Video } from "lucide-react";
 import { AccountPageHeader, EmptyState, SectionTitle } from "@/components/account/page-header";
 import { TourControls } from "@/components/pro/controls";

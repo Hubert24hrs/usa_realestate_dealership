@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { AccountPageHeader, SectionTitle } from "@/components/account/page-header";
 import { ReportControls } from "@/components/admin/controls";
 import { AdminPager } from "@/components/admin/pager";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { usePathname } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { Bell, Building, CalendarCheck, FolderHeart, Heart, Inbox, KeyRound, LayoutDashboard, LogOut, Search, Settings, ShieldCheck } from "lucide-react";

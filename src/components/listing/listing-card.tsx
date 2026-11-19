@@ -1,24 +1,17 @@
 "use client";
 
 import { memo, useCallback, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ChevronLeft, ChevronRight, Images } from "lucide-react";
 import { ListingImage } from "@/components/media/listing-image";
 import { PROPERTY_TYPE_LABELS } from "@/lib/domain";
-import { attribution, daysOnMarketLabel, displayPrice, factsLine, listingBadges, listingTitle, type Badge } from "@/lib/listing-format";
+import { attribution, daysOnMarketLabel, displayPrice, factsLine, listingBadges, listingTitle } from "@/lib/listing-format";
 import type { ListingCardData } from "@/lib/search/types";
 import { cn } from "@/lib/utils";
+import { CARD_CLASS, RAIL_CARD_CLASS, TONES } from "./card-styles";
 import { CompareCheckbox } from "./compare";
 import { SaveButton } from "./save-button";
 
-const TONES: Record<Badge["tone"], string> = {
-  brand: "bg-brand-700 text-white dark:bg-brand-500 dark:text-brand-50",
-  copper: "bg-copper-700 text-white dark:bg-copper-500 dark:text-copper-50",
-  success: "bg-success text-success-foreground",
-  neutral: "bg-white/95 text-ink dark:bg-black/70 dark:text-white",
-  warning: "bg-warning text-warning-foreground",
-  ink: "bg-ink text-background",
-};
 
 interface Props {
   listing: ListingCardData;
@@ -35,6 +28,9 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
   const [activated, setActivated] = useState(false);
   const photos = l.photos.length ? l.photos : [];
   const shown = activated ? photos : photos.slice(0, 1);
+  // Grid cards carry a few photos; a final slide links to the full gallery. Rails show the cover only.
+  const more = variant !== "rail" && l.photoCount > photos.length;
+  const slides = photos.length + (more ? 1 : 0);
   const href = `/property/${l.slug}`;
   const title = listingTitle(l);
   const price = displayPrice(l);
@@ -46,11 +42,11 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
       setActivated(true);
       const el = scroller.current;
       if (!el) return;
-      const next = Math.min(photos.length - 1, Math.max(0, index + dir));
+      const next = Math.min(slides - 1, Math.max(0, index + dir));
       setIndex(next);
       requestAnimationFrame(() => el.scrollTo({ left: next * el.clientWidth, behavior: "smooth" }));
     },
-    [index, photos.length],
+    [index, slides],
   );
 
   const onScroll = () => {
@@ -72,9 +68,9 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
         onHover?.(l.id);
       }}
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-2xl border bg-card text-card-foreground shadow-[var(--shadow-card)] transition-[box-shadow,transform] duration-200 hover:shadow-[var(--shadow-raised)]",
+        CARD_CLASS,
         highlighted && "ring-2 ring-primary",
-        variant === "rail" && "w-[78vw] shrink-0 snap-start sm:w-[300px]",
+        variant === "rail" && RAIL_CARD_CLASS,
       )}
     >
       <div className="relative aspect-[3/2] overflow-hidden bg-muted">
@@ -94,6 +90,13 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
               />
             </div>
           ))}
+          {activated && more && (
+            <div className="relative grid h-full w-full shrink-0 snap-start place-items-center bg-muted" role="group" aria-roledescription="slide" aria-label="More photos">
+              <Link href={href} tabIndex={-1} className="relative z-10 rounded-full bg-background px-4 py-2 text-sm font-semibold shadow">
+                See all {l.photoCount} photos
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between gap-2 p-2.5">
@@ -107,7 +110,8 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
           <SaveButton listingId={l.id} label={title} className="pointer-events-auto relative z-10" />
         </div>
 
-        {photos.length > 1 && (
+        {/* Arrows render once the card is hovered or focused (they follow the Save button in tab order). */}
+        {activated && slides > 1 && (
           <>
             <button
               type="button"
@@ -127,7 +131,7 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
                 e.preventDefault();
                 go(1);
               }}
-              disabled={index >= photos.length - 1}
+              disabled={index >= slides - 1}
               aria-label="Next photo"
               className="absolute top-1/2 right-2 z-10 hidden size-8 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink opacity-0 shadow transition-opacity group-hover:opacity-100 focus-visible:opacity-100 disabled:hidden md:grid dark:bg-black/60 dark:text-white"
             >
@@ -136,7 +140,7 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
           </>
         )}
         <span className="pointer-events-none absolute right-2.5 bottom-2.5 inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[0.7rem] font-medium text-white tabular-nums" aria-hidden>
-          <Images className="size-3" /> {index + 1}/{l.photoCount}
+          <Images className="size-3" /> {Math.min(index + 1, l.photoCount)}/{l.photoCount}
         </span>
       </div>
 

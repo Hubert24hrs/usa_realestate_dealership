@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ClipboardList } from "lucide-react";
 import { AccountPageHeader, EmptyState } from "@/components/account/page-header";
 import { ApplicationControls } from "@/components/pro/controls";

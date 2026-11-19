@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useRouter } from "next/navigation";
 import { CreditCard, FlaskConical, Loader2 } from "lucide-react";
 import { toast } from "sonner";

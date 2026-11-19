@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import type { GlossaryTerm } from "@/lib/content/glossary";

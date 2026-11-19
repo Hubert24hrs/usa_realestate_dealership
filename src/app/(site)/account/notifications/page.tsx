@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Bell } from "lucide-react";
 import { NotificationsList } from "@/components/account/notifications-list";
 import { AccountPageHeader, EmptyState } from "@/components/account/page-header";

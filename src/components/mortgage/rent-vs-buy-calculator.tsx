@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LineChart } from "@/components/charts/line-chart";
 import { NumberField, ResultStat } from "@/components/tools/fields";
 import { Label } from "@/components/ui/label";

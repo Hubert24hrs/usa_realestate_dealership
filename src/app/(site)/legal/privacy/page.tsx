@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LegalDoc } from "@/components/legal/legal-doc";
 import { site } from "@/lib/site";
 import { getSettings } from "@/server/settings";

@@ -3,7 +3,7 @@ import { unstable_cache } from "next/cache";
 import type { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { monthlyPayment } from "@/lib/finance/mortgage";
-import { cardSelect, toCardData } from "./search/card";
+import { cardSelect, railCard, toCardData } from "./search/card";
 
 export const SNAPSHOT_CITIES = ["austin-tx", "denver-co", "nashville-tn", "miami-fl", "seattle-wa", "chicago-il"];
 
@@ -75,11 +75,11 @@ export const getHomeData = unstable_cache(
     const thirty = rates.find((r) => r.slug === "30-year-fixed");
     return {
       rails: {
-        newest: newest.map(toCardData),
-        drops: drops.map(toCardData),
-        openHouses: openHouses.map(toCardData),
-        luxury: luxury.map(toCardData),
-        rentals: rentals.map(toCardData),
+        newest: newest.map(toCardData).map(railCard),
+        drops: drops.map(toCardData).map(railCard),
+        openHouses: openHouses.map(toCardData).map(railCard),
+        luxury: luxury.map(toCardData).map(railCard),
+        rentals: rentals.map(toCardData).map(railCard),
       },
       rates: rates.map((r) => ({ product: r.product, slug: r.slug, rate: r.rate, apr: r.apr, date: r.date.toISOString() })),
       examplePayment: thirty ? Math.round(monthlyPayment(400_000, thirty.rate, 30)) : null,
@@ -91,7 +91,7 @@ export const getHomeData = unstable_cache(
       counts: Object.fromEntries(counts.map((c) => [c.category, c._count._all])) as Record<string, number>,
     };
   },
-  ["home-data-v2"],
+  ["home-data-v3"],
   { revalidate: 300, tags: ["listings"] },
 );
 

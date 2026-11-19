@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LEGAL_PAGES, LEGAL_UPDATED } from "@/components/legal/legal-doc";
 import { PageHero } from "@/components/tools/page-hero";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowLeftRight } from "lucide-react";
 import { NumberField, ResultStat } from "@/components/tools/fields";
 import { Label } from "@/components/ui/label";

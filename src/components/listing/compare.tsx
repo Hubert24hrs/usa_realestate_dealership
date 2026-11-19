@@ -1,11 +1,10 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Scale, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { ListingImage } from "@/components/media/listing-image";
 
 export interface CompareItem {
@@ -83,7 +82,8 @@ export function CompareCheckbox({ item }: { item: CompareItem }) {
       onClick={(e) => e.stopPropagation()}
       className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground"
     >
-      <Checkbox id={id} checked={checked} onCheckedChange={() => compare.toggle(item)} aria-label={`Compare ${item.title}`} />
+      {/* Native checkbox: one per result card, so it must be cheap to hydrate. */}
+      <input id={id} type="checkbox" checked={checked} onChange={() => compare.toggle(item)} aria-label={`Compare ${item.title}`} className="size-4 cursor-pointer accent-primary" />
       Compare
     </label>
   );

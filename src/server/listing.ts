@@ -3,7 +3,7 @@ import { cache } from "react";
 import type { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { haversineMiles } from "@/lib/geo";
-import { cardSelect, toCardData } from "./search/card";
+import { cardSelect, railCard, toCardData } from "./search/card";
 
 export const listingInclude = () => ({
   media: { orderBy: { sortOrder: "asc" } },
@@ -57,8 +57,8 @@ export async function getListingContext(l: ListingDetail) {
     .sort((a, b) => a.miles - b.miles)
     .slice(0, 14);
   return {
-    similar: similarCards.map(toCardData),
-    comps: comps.map((c) => ({ card: toCardData(c), miles: haversineMiles(l, c) })).sort((a, b) => a.miles - b.miles),
+    similar: similarCards.map(toCardData).map(railCard),
+    comps: comps.map((c) => ({ card: railCard(toCardData(c)), miles: haversineMiles(l, c) })).sort((a, b) => a.miles - b.miles),
     amenities: nearby.map((a) => ({ id: a.id, name: a.name, type: a.type, lat: a.lat, lng: a.lng, miles: Number(a.miles.toFixed(2)) })),
   };
 }

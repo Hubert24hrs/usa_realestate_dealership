@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { cn } from "@/lib/utils";
 
 /** CITI VIEW mark: a skyline framed in a viewfinder, with a copper sun. Original artwork. */

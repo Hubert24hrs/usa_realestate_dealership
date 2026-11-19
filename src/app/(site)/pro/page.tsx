@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Check } from "lucide-react";
 import { PlanButton } from "@/components/pro/plan-button";
 import { PageHero } from "@/components/tools/page-hero";

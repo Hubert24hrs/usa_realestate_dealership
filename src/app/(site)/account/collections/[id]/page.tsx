@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, FolderHeart } from "lucide-react";
 import { CollectionItemNote, CollectionMembers, CollectionSettings, type MemberRow } from "@/components/account/collection-manage";

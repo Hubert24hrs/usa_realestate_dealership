@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { CalendarDays, ChevronRight, Gift, PawPrint } from "lucide-react";
 import { HeroGallery } from "@/components/gallery/hero-gallery";
 import type { GalleryItem } from "@/components/gallery/types";
 import { ListingRail } from "@/components/home/rail";
-import { AffordabilityCheck } from "@/components/listing/affordability-check";
+import { StaticListingRail } from "@/components/home/static-rail";
 import { CommercialDocuments } from "@/components/listing/commercial-documents";
-import { CommuteCalculator } from "@/components/listing/commute-calculator";
-import { ContactCard } from "@/components/listing/contact-card";
 import { ListingActions, ViewTracker } from "@/components/listing/listing-actions";
-import { PaymentCalculator } from "@/components/listing/payment-calculator";
 import { RentalUnits } from "@/components/listing/rental-units";
 import { scoreDescriptor, ScoreMeter } from "@/components/listing/score-meter";
 import { EstimatePanel, FactGrid, FeatureList, ListingDisclaimers, PriceHistoryTable, RiskPanel, SchoolList, Section, TaxHistoryTable } from "@/components/listing/sections";
 import { CompareProvider } from "@/components/listing/compare";
-import { PriceHistoryChart } from "@/components/charts/price-history-chart";
+import { DeferUntilVisible } from "@/components/perf/defer-until-visible";
+import { LazyAffordabilityCheck, LazyCommuteCalculator, LazyContactCard, LazyPaymentCalculator, LazyPriceHistoryChart } from "@/components/perf/lazy";
 import { PlaceMap, type PlaceMarker } from "@/components/map/place-map";
 import { db } from "@/lib/db";
 import { PROPERTY_TYPE_LABELS, STATUS_LABELS, type ListingStatusKey, type MediaCategoryKey, type MediaProviderKey } from "@/lib/domain";
@@ -203,6 +201,9 @@ export default async function PropertyPage({ params }: Props) {
     ["neighborhood", "Neighborhood"],
   ] as const;
 
+  const similarTitle = variant === "rent" ? "Similar rentals" : "Similar homes";
+  const similarSubtitle = `Nearby ${variant === "commercial" ? "commercial listings" : variant === "land" ? "land" : "listings"} at a similar price`;
+
   return (
     <CompareProvider>
       <ViewTracker entry={{ id: l.id, citySlug: city?.slug ?? null, price: l.price, beds: l.beds, mode: variant === "rent" ? "rent" : variant === "commercial" ? "commercial" : variant === "land" ? "land" : variant === "sold" ? "sold" : l.isNewConstruction ? "new" : "buy" }} />
@@ -365,7 +366,9 @@ export default async function PropertyPage({ params }: Props) {
 
             {variant === "land" && (
               <Section id="land" title="Land details" subtitle="Topography, soil and county records">
-                <PlaceMap center={{ lat: l.lat, lng: l.lng }} zoom={l.lotAcres && l.lotAcres > 200 ? 13 : 14} markers={[markers[0]!]} parcel={parcel} terrainControls height={420} label="Parcel map with topography and soil layers" />
+                <DeferUntilVisible minHeight={420} fallback={<div className="skeleton-shimmer rounded-2xl" style={{ height: 420 }} aria-hidden />}>
+                  <PlaceMap center={{ lat: l.lat, lng: l.lng }} zoom={l.lotAcres && l.lotAcres > 200 ? 13 : 14} markers={[markers[0]!]} parcel={parcel} terrainControls height={420} label="Parcel map with topography and soil layers" />
+                </DeferUntilVisible>
                 {l.countyData && (
                   <div className="mt-6 overflow-x-auto rounded-2xl border">
                     <table className="w-full text-sm">
@@ -387,7 +390,9 @@ export default async function PropertyPage({ params }: Props) {
 
             {(variant === "sale" || variant === "sold") && (
               <Section id="history" title="Price & tax history">
-                <PriceHistoryChart points={l.priceHistory.map((p) => ({ date: p.date.toISOString(), price: p.price, event: p.event }))} />
+                <DeferUntilVisible minHeight={240} fallback={<div className="skeleton-shimmer rounded-2xl" style={{ height: 240 }} aria-hidden />}>
+                  <LazyPriceHistoryChart points={l.priceHistory.map((p) => ({ date: p.date.toISOString(), price: p.price, event: p.event }))} />
+                </DeferUntilVisible>
                 <div className="mt-5 space-y-5">
                   <PriceHistoryTable rows={l.priceHistory} />
                   <TaxHistoryTable rows={l.taxHistory} />
@@ -404,10 +409,14 @@ export default async function PropertyPage({ params }: Props) {
             {variant === "sale" && (
               <>
                 <Section id="payment" title="Monthly payment" subtitle={`Based on a ${thirty.toFixed(2)}% sample 30-year fixed rate`}>
-                  <PaymentCalculator price={l.price} taxAnnual={l.propertyTaxAnnual} hoaMonthly={l.hoaFee} defaultRate={thirty} />
+                  <DeferUntilVisible minHeight={360} fallback={<div className="skeleton-shimmer rounded-2xl" style={{ height: 360 }} aria-hidden />}>
+                    <LazyPaymentCalculator price={l.price} taxAnnual={l.propertyTaxAnnual} hoaMonthly={l.hoaFee} defaultRate={thirty} />
+                  </DeferUntilVisible>
                 </Section>
                 <Section id="afford" title="Can I afford this home?">
-                  <AffordabilityCheck price={l.price} taxAnnual={l.propertyTaxAnnual} hoaMonthly={l.hoaFee} defaultRate={thirty} />
+                  <DeferUntilVisible minHeight={280} fallback={<div className="skeleton-shimmer rounded-2xl" style={{ height: 280 }} aria-hidden />}>
+                    <LazyAffordabilityCheck price={l.price} taxAnnual={l.propertyTaxAnnual} hoaMonthly={l.hoaFee} defaultRate={thirty} />
+                  </DeferUntilVisible>
                 </Section>
               </>
             )}
@@ -422,7 +431,9 @@ export default async function PropertyPage({ params }: Props) {
               <div className="mt-8 grid gap-8 2xl:grid-cols-2">
                 <div>
                   <h3 className="mb-3 font-semibold">Nearby amenities</h3>
-                  <PlaceMap center={{ lat: l.lat, lng: l.lng }} markers={markers} height={320} label={`Map of amenities near ${title}`} />
+                  <DeferUntilVisible minHeight={320} fallback={<div className="skeleton-shimmer rounded-2xl" style={{ height: 320 }} aria-hidden />}>
+                    <PlaceMap center={{ lat: l.lat, lng: l.lng }} markers={markers} height={320} label={`Map of amenities near ${title}`} />
+                  </DeferUntilVisible>
                   <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm">
                     {context.amenities.slice(0, 8).map((a) => (
                       <li key={a.id} className="flex justify-between gap-2"><span className="truncate">{a.name}</span><span className="shrink-0 text-muted-foreground">{a.miles.toFixed(1)} mi</span></li>
@@ -431,7 +442,9 @@ export default async function PropertyPage({ params }: Props) {
                 </div>
                 <div>
                   <h3 className="mb-3 font-semibold">Commute</h3>
-                  <CommuteCalculator origin={{ lat: l.lat, lng: l.lng }} destinations={destinations} />
+                  <DeferUntilVisible minHeight={220} fallback={<div className="skeleton-shimmer rounded-2xl" style={{ height: 220 }} aria-hidden />}>
+                    <LazyCommuteCalculator origin={{ lat: l.lat, lng: l.lng }} destinations={destinations} />
+                  </DeferUntilVisible>
                 </div>
               </div>
               {variant !== "commercial" && variant !== "land" && (
@@ -451,21 +464,32 @@ export default async function PropertyPage({ params }: Props) {
           </div>
 
           <div className="lg:sticky lg:top-20 lg:self-start print:hidden">
-            <ContactCard
-              listingId={l.id}
-              listingTitle={title}
-              price={l.price}
-              isFsbo={l.isFsbo}
-              variant={variant}
-              applyHref={variant === "rent" ? `/rent/apply/${l.slug}` : undefined}
-              agent={l.agent ? { name: l.agent.name, slug: l.agent.slug, title: l.agent.title, phone: l.agent.phone, brandColor: l.agent.brandColor, organization: l.agent.organization?.name ?? null, licenseNumber: l.agent.licenseNumber, rating: l.agent.rating, reviewCount: l.agent.reviewCount } : null}
-            />
+            {/* On phones the contact card sits below the details, so its form code loads as it scrolls into view. */}
+            <DeferUntilVisible rootMargin="200px" fallback={<div className="skeleton-shimmer rounded-3xl" style={{ height: 560 }} aria-hidden />}>
+              <LazyContactCard
+                listingId={l.id}
+                listingTitle={title}
+                price={l.price}
+                isFsbo={l.isFsbo}
+                variant={variant}
+                applyHref={variant === "rent" ? `/rent/apply/${l.slug}` : undefined}
+                agent={l.agent ? { name: l.agent.name, slug: l.agent.slug, title: l.agent.title, phone: l.agent.phone, brandColor: l.agent.brandColor, organization: l.agent.organization?.name ?? null, licenseNumber: l.agent.licenseNumber, rating: l.agent.rating, reviewCount: l.agent.reviewCount } : null}
+              />
+            </DeferUntilVisible>
           </div>
         </div>
       </div>
 
-      <ListingRail id="similar" title={variant === "rent" ? "Similar rentals" : "Similar homes"} subtitle={`Nearby ${variant === "commercial" ? "commercial listings" : variant === "land" ? "land" : "listings"} at a similar price`} listings={context.similar} />
-      {context.comps.length > 0 && <ListingRail id="comps" title="Nearby recently sold" subtitle="Comparable sales in the area" listings={context.comps.map((c) => c.card)} href={city ? `/sold-homes/${city.slug}` : "/sold-homes"} />}
+      {context.similar.length > 0 && (
+        <DeferUntilVisible fallback={<ListingRail id="similar" title={similarTitle} subtitle={similarSubtitle} listings={[]} loading />}>
+          <StaticListingRail id="similar" title={similarTitle} subtitle={similarSubtitle} listings={context.similar} />
+        </DeferUntilVisible>
+      )}
+      {context.comps.length > 0 && (
+        <DeferUntilVisible fallback={<ListingRail id="comps" title="Nearby recently sold" subtitle="Comparable sales in the area" listings={[]} loading />}>
+          <StaticListingRail id="comps" title="Nearby recently sold" subtitle="Comparable sales in the area" listings={context.comps.map((c) => c.card)} href={city ? `/sold-homes/${city.slug}` : "/sold-homes"} />
+        </DeferUntilVisible>
+      )}
     </CompareProvider>
   );
 }

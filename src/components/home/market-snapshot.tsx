@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowRight, Table2 } from "lucide-react";
 import { StatTile } from "@/components/charts/stat-tile";
 import { formatCompactPrice, formatNumber } from "@/lib/format";

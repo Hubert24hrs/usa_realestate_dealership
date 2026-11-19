@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { redirect } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { AccountPageHeader, SectionTitle } from "@/components/account/page-header";

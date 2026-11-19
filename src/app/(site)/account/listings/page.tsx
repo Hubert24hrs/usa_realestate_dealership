@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Home, Mail } from "lucide-react";
 import { AccountPageHeader, EmptyState, SectionTitle } from "@/components/account/page-header";
 import { ListingImage } from "@/components/media/listing-image";

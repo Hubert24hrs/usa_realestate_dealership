@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { History } from "lucide-react";
 import { AccountPageHeader, EmptyState } from "@/components/account/page-header";
 import { ClearHistoryButton } from "@/components/account/settings-forms";

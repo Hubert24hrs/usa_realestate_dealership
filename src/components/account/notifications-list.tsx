@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useQueryClient } from "@tanstack/react-query";
 import { BellRing, CalendarCheck, CheckCheck, FileText, FolderHeart, Inbox, Info, TrendingDown, UserRound, type LucideIcon } from "lucide-react";
 import { toast } from "sonner";

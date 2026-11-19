@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Scale } from "lucide-react";
 import { ListingImage } from "@/components/media/listing-image";
 import { Button } from "@/components/ui/button";

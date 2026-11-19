@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageHero } from "@/components/tools/page-hero";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";

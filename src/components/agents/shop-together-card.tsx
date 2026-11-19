@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useQuery } from "@tanstack/react-query";
 import { CheckCircle2, FolderHeart, Loader2, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";

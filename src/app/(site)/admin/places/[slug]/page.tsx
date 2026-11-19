@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { AccountPageHeader, SectionTitle } from "@/components/account/page-header";

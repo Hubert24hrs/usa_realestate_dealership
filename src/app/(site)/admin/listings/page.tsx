@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { Prisma } from "@prisma/client";
 import { Plus, Search, Upload } from "lucide-react";
 import { AccountPageHeader } from "@/components/account/page-header";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowLeft } from "lucide-react";
 import { AccountPageHeader } from "@/components/account/page-header";
 import { NewListingForm } from "@/components/admin/new-listing-form";

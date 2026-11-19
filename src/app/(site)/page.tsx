@@ -1,12 +1,13 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowRight, BadgePercent, Building2, Calculator, Home, KeyRound, Landmark, Star, Trees } from "lucide-react";
 import { AgentAvatar } from "@/components/agents/agent-avatar";
 import { SkylineBackdrop } from "@/components/brand/skyline";
 import { PostCard } from "@/components/learn/post-card";
 import { ListingImage } from "@/components/media/listing-image";
-import { MarketSnapshot } from "@/components/home/market-snapshot";
-import { PersonalRails } from "@/components/home/personal-rails";
 import { ListingRail } from "@/components/home/rail";
+import { StaticListingRail } from "@/components/home/static-rail";
+import { DeferUntilVisible } from "@/components/perf/defer-until-visible";
+import { LazyMarketSnapshot, LazyPersonalRails } from "@/components/perf/lazy";
 import { HeroSearch } from "@/components/search/hero-search";
 import { Button } from "@/components/ui/button";
 import { formatCompactPrice } from "@/lib/format";
@@ -40,7 +41,8 @@ export default async function HomePage() {
         <div className="pointer-events-none absolute -top-40 right-[-10%] size-[38rem] rounded-full bg-copper-500/25 blur-3xl" aria-hidden />
         <SkylineBackdrop className="pointer-events-none absolute inset-x-0 bottom-0 h-48 w-full text-brand-300/70 sm:h-64" />
         <div className="container-page relative pt-16 pb-28 sm:pt-24 sm:pb-36">
-          <p className="text-xs font-semibold tracking-[0.18em] text-copper-300 uppercase">Buy · Rent · New builds · Commercial · Land</p>
+          {/* Two lines reserved on phones: the letter-spaced line can wrap differently before the web font loads. */}
+          <p className="min-h-8 text-xs font-semibold tracking-[0.18em] text-copper-300 uppercase sm:min-h-0">Buy · Rent · New builds · Commercial · Land</p>
           <h1 className="mt-4 max-w-3xl font-display text-display-xl font-semibold tracking-tight text-balance">Find the place that fits your next chapter.</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/75">Search every home, rental, building and acre on one map — with schools, commute, price history and the tools to make a confident move.</p>
           <div className="mt-8 text-foreground">
@@ -77,15 +79,28 @@ export default async function HomePage() {
       </section>
 
       <div className="pt-6">
-        <ListingRail id="new" title="New to market" subtitle="The freshest listings across CITI VIEW" href="/homes-for-sale?sort=newest" listings={data.rails.newest} />
-        <PersonalRails fallback={data.rails.luxury.slice(0, 8)} />
-        <ListingRail id="drops" title="Price drops" subtitle="Sellers who just cut their asking price" href="/price-reduced-homes" listings={data.rails.drops} />
-        <ListingRail id="open" title="Open houses this weekend" subtitle="Tour in person or join a virtual open house" href="/open-houses" listings={data.rails.openHouses} />
-        <ListingRail id="luxury" title="Luxury collection" subtitle="Estates, penthouses and design-forward homes" href="/luxury-homes" listings={data.rails.luxury} />
-        <ListingRail id="rentals" title="Featured rentals" subtitle="Apartment communities with live availability and online applications" href="/apartments-for-rent" listings={data.rails.rentals} />
+        <StaticListingRail id="new" title="New to market" subtitle="The freshest listings across CITI VIEW" href="/homes-for-sale?sort=newest" listings={data.rails.newest} />
+        {/* Below the fold: rails mount as they approach the viewport (headings + skeletons render first). */}
+        <DeferUntilVisible>
+          <LazyPersonalRails fallback={data.rails.luxury.slice(0, 8)} />
+        </DeferUntilVisible>
+        <DeferUntilVisible fallback={<ListingRail id="drops" title="Price drops" subtitle="Sellers who just cut their asking price" listings={[]} loading />}>
+          <StaticListingRail id="drops" title="Price drops" subtitle="Sellers who just cut their asking price" href="/price-reduced-homes" listings={data.rails.drops} />
+        </DeferUntilVisible>
+        <DeferUntilVisible fallback={<ListingRail id="open" title="Open houses this weekend" subtitle="Tour in person or join a virtual open house" listings={[]} loading />}>
+          <StaticListingRail id="open" title="Open houses this weekend" subtitle="Tour in person or join a virtual open house" href="/open-houses" listings={data.rails.openHouses} />
+        </DeferUntilVisible>
+        <DeferUntilVisible fallback={<ListingRail id="luxury" title="Luxury collection" subtitle="Estates, penthouses and design-forward homes" listings={[]} loading />}>
+          <StaticListingRail id="luxury" title="Luxury collection" subtitle="Estates, penthouses and design-forward homes" href="/luxury-homes" listings={data.rails.luxury} />
+        </DeferUntilVisible>
+        <DeferUntilVisible fallback={<ListingRail id="rentals" title="Featured rentals" subtitle="Apartment communities with live availability and online applications" listings={[]} loading />}>
+          <StaticListingRail id="rentals" title="Featured rentals" subtitle="Apartment communities with live availability and online applications" href="/apartments-for-rent" listings={data.rails.rentals} />
+        </DeferUntilVisible>
       </div>
 
-      <MarketSnapshot markets={data.markets} />
+      <DeferUntilVisible minHeight={520}>
+        <LazyMarketSnapshot markets={data.markets} />
+      </DeferUntilVisible>
 
       {/* Neighborhood guides */}
       <section aria-labelledby="hoods-title" className="container-page py-12">

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { BookOpen, GraduationCap, MapPinned, Newspaper, PenLine } from "lucide-react";
 import { formatDate } from "@/lib/format";
 

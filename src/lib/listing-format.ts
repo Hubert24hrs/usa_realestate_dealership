@@ -1,5 +1,5 @@
 import { PROPERTY_TYPE_LABELS } from "@/lib/domain";
-import { daysSince, formatAcres, formatBaths, formatCompactPrice, formatNumber, formatPrice } from "@/lib/format";
+import { daysSince, formatAcres, formatBaths, formatCompactPrice, formatDate, formatNumber, formatPrice, formatTime, formatWeekday } from "@/lib/format";
 import type { ListingCardData } from "@/lib/search/types";
 
 type PriceInput = Pick<ListingCardData, "transactionType" | "status" | "price" | "priceMax" | "soldPrice" | "leaseRate" | "category">;
@@ -48,7 +48,7 @@ export function listingTitle(l: Pick<ListingCardData, "isCommunity" | "community
 export function daysOnMarketLabel(l: Pick<ListingCardData, "status" | "listDate" | "soldDate">): string {
   if (l.status === "SOLD" && l.soldDate) {
     const d = new Date(l.soldDate);
-    return `Sold ${d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
+    return `Sold ${formatDate(d)}`;
   }
   if (l.status === "COMING_SOON") return "Coming soon";
   const days = daysSince(l.listDate);
@@ -71,7 +71,7 @@ export function listingBadges(l: ListingCardData, now = new Date()): Badge[] {
   if (l.priceReduction && l.status === "ACTIVE") badges.push({ label: `Price cut ${formatCompactPrice(l.priceReduction)}`, tone: "success" });
   if (l.openHouse) {
     const d = new Date(l.openHouse.startsAt);
-    badges.push({ label: `Open ${d.toLocaleDateString("en-US", { weekday: "short" })} ${d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}`, tone: "neutral" });
+    badges.push({ label: `Open ${formatWeekday(d)} ${formatTime(d)}`, tone: "neutral" });
   }
   if (l.isNewConstruction) badges.push({ label: "New construction", tone: "brand" });
   if (l.isForeclosure) badges.push({ label: "Foreclosure", tone: "warning" });

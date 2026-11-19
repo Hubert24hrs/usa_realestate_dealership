@@ -1,7 +1,9 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowRight, Footprints, GraduationCap, Train, Bike } from "lucide-react";
 import { ListingRail } from "@/components/home/rail";
+import { StaticListingRail } from "@/components/home/static-rail";
 import { PostCard } from "@/components/learn/post-card";
+import { DeferUntilVisible } from "@/components/perf/defer-until-visible";
 import { JsonLd } from "@/components/seo/json-ld";
 import { PageHero } from "@/components/tools/page-hero";
 import { ResultStat } from "@/components/tools/fields";
@@ -123,8 +125,12 @@ export function PlaceHub({ place, data }: { place: ResolvedPlace; data: PlaceHub
         </ul>
       </nav>
 
-      <ListingRail id="hub-sale" title={`Homes for sale in ${short}`} subtitle="Featured and newest listings" href={`/${forSale.vertical}/${place.slug}`} listings={data.featured} />
-      <ListingRail id="hub-rent" title={`Rentals in ${short}`} subtitle="Recently listed apartments and houses" href={`/${rent.vertical}/${place.slug}`} listings={data.rentals} />
+      <StaticListingRail id="hub-sale" title={`Homes for sale in ${short}`} subtitle="Featured and newest listings" href={`/${forSale.vertical}/${place.slug}`} listings={data.featured} />
+      {data.rentals.length > 0 && (
+        <DeferUntilVisible fallback={<ListingRail id="hub-rent" title={`Rentals in ${short}`} subtitle="Recently listed apartments and houses" listings={[]} loading />}>
+          <StaticListingRail id="hub-rent" title={`Rentals in ${short}`} subtitle="Recently listed apartments and houses" href={`/${rent.vertical}/${place.slug}`} listings={data.rentals} />
+        </DeferUntilVisible>
+      )}
 
       <div className="container-page grid gap-10 py-8 lg:grid-cols-[minmax(0,1fr)_340px]">
         <div className="min-w-0 space-y-10">

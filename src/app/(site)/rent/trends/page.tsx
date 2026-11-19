@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { RentTrendsChart } from "@/components/rent/rent-trends-chart";
 import { PageHero, ToolDisclaimer } from "@/components/tools/page-hero";

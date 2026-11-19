@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { AccountPageHeader } from "@/components/account/page-header";
 import { db } from "@/lib/db";
 import { formatNumber, formatPrice } from "@/lib/format";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { db } from "@/lib/db";
 import { formatDate, formatTime } from "@/lib/format";
 import { assertOutboxAccess } from "@/server/outbox";

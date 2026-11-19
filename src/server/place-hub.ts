@@ -6,7 +6,7 @@ import { defaultFilters } from "@/lib/search/filters";
 import type { ListingCardData } from "@/lib/search/types";
 import { MODE_VERTICAL, VERTICAL_BY_SLUG } from "@/lib/search/verticals";
 import { getCityMarkets } from "./markets";
-import { cardSelect, toCardData } from "./search/card";
+import { cardSelect, railCard, toCardData } from "./search/card";
 import { placeWhere, type ResolvedPlace } from "./search/places";
 import { modeWhere } from "./search/where";
 
@@ -145,8 +145,8 @@ async function buildHub(place: HubPlace): Promise<PlaceHubData> {
   return {
     counts,
     stats,
-    featured: featuredRows.map(toCardData),
-    rentals: rentalRows.map(toCardData),
+    featured: featuredRows.map(toCardData).map(railCard),
+    rentals: rentalRows.map(toCardData).map(railCard),
     areas,
     schools,
     posts: sortedPosts,
@@ -156,7 +156,7 @@ async function buildHub(place: HubPlace): Promise<PlaceHubData> {
   };
 }
 
-const cachedHub = unstable_cache(buildHub, ["place-hub-v2"], { revalidate: 1800, tags: ["listings", "markets"] });
+const cachedHub = unstable_cache(buildHub, ["place-hub-v3"], { revalidate: 1800, tags: ["listings", "markets"] });
 
 /** Landing-page data for a state, city or neighborhood (cached; invalidated with listing and market changes). */
 export const getPlaceHub = (place: ResolvedPlace) => cachedHub(toHubPlace(place));

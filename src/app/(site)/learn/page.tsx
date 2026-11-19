@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { PostType } from "@prisma/client";
 import { PostCard, POST_TYPE_LABEL } from "@/components/learn/post-card";
 import { PageHero } from "@/components/tools/page-hero";

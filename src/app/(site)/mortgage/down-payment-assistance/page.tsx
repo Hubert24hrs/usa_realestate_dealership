@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { DpaChecklist } from "@/components/mortgage/dpa-checklist";
 import { PageHero, ToolDisclaimer } from "@/components/tools/page-hero";
 import { Button } from "@/components/ui/button";

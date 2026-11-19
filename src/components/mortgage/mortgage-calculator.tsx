@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ChevronDown } from "lucide-react";
 import { LineChart } from "@/components/charts/line-chart";
 import { SegmentedBar } from "@/components/charts/segmented-bar";

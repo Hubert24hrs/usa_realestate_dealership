@@ -5,6 +5,7 @@
  * example with very new Chrome builds). Needs a running server on :3000 and Google Chrome.
  *
  *   node scripts/lab-vitals.mjs / /homes-for-sale/austin-tx /austin-tx
+ *   CPU_RATE=2.2 node scripts/lab-vitals.mjs /       # calibrated for a slower host CPU
  */
 import { chromium } from "@playwright/test";
 const erfc = (x) => { // Abramowitz-Stegun
@@ -16,16 +17,21 @@ const erfcinv02 = 0.9061938024368232; // erfcinv(0.2)
 const lognormal = (median, p10, v) => { if (v <= 0) return 1; const sigma = (Math.log(median) - Math.log(p10)) / (Math.SQRT2 * erfcinv02); return Math.min(1, Math.max(0, 0.5 * erfc((Math.log(v) - Math.log(median)) / (Math.SQRT2 * sigma)))); };
 const CURVES = { fcp: [3000, 1800, 10], lcp: [4000, 2500, 25], tbt: [600, 200, 30], cls: [0.25, 0.1, 25] };
 const urls = process.argv.slice(2);
+// Lighthouse's 4x assumes a fast host (benchmarkIndex ~1,500-2,000). On slower machines use a lower
+// rate to emulate the same phone, e.g. CPU_RATE=2.2 for benchmarkIndex ~1,000.
+const CPU_RATE = Number(process.env.CPU_RATE || 4);
 const browser = await chromium.launch({ channel: "chrome" });
 for (const path of urls) {
+  // Warm the server (route compile, data caches) so a cold start doesn't skew the first run.
+  await fetch(`http://localhost:3000${path}`).catch(() => {});
   const runs = [];
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < Number(process.env.RUNS || 3); i++) {
     const ctx = await browser.newContext({ viewport: { width: 412, height: 823 }, deviceScaleFactor: 1.75, isMobile: true, hasTouch: true, userAgent: "Mozilla/5.0 (Linux; Android 11; moto g power) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Mobile Safari/537.36" });
     const page = await ctx.newPage();
     const cdp = await ctx.newCDPSession(page);
     await cdp.send("Network.enable");
     await cdp.send("Network.emulateNetworkConditions", { offline: false, latency: 150, downloadThroughput: (1.6 * 1024 * 1024) / 8, uploadThroughput: (750 * 1024) / 8 });
-    await cdp.send("Emulation.setCPUThrottlingRate", { rate: 4 });
+    await cdp.send("Emulation.setCPUThrottlingRate", { rate: CPU_RATE });
     await page.addInitScript(() => {
       const w = window; w.__v = { lcp: 0, cls: 0, long: [] };
       new PerformanceObserver((l) => { for (const e of l.getEntries()) w.__v.lcp = e.startTime; }).observe({ type: "largest-contentful-paint", buffered: true });
@@ -34,7 +40,7 @@ for (const path of urls) {
     });
     await page.goto(`http://localhost:3000${path}`, { waitUntil: "load", timeout: 120_000 });
     await page.waitForTimeout(6000);
-    const m = await page.evaluate(() => { const fcp = performance.getEntriesByName("first-contentful-paint")[0]?.startTime ?? 0; const v = window.__v; const tbt = v.long.filter(([s]) => s >= fcp).reduce((a, [, d]) => a + Math.max(0, d - 50), 0); return { fcp, lcp: v.lcp, cls: v.cls, tbt }; });
+    const m = await page.evaluate(() => { const fcp = performance.getEntriesByName("first-contentful-paint")[0]?.startTime ?? 0; const v = window.__v; const tbt = v.long.filter(([s]) => s >= fcp).reduce((a, [, d]) => a + Math.max(0, d - 50), 0); return { fcp, lcp: Math.max(v.lcp, fcp), cls: v.cls, tbt }; });
     runs.push(m);
     await ctx.close();
   }
@@ -42,6 +48,6 @@ for (const path of urls) {
   const m = { fcp: med("fcp"), lcp: med("lcp"), tbt: med("tbt"), cls: med("cls") };
   let wsum = 0, score = 0;
   for (const [k, [median, p10, w]] of Object.entries(CURVES)) { score += lognormal(median, p10, m[k]) * w; wsum += w; }
-  console.log(`${path.padEnd(48)} est. perf ${Math.round((score / wsum) * 100)}  FCP ${(m.fcp / 1000).toFixed(2)}s  LCP ${(m.lcp / 1000).toFixed(2)}s  TBT ${Math.round(m.tbt)}ms  CLS ${m.cls.toFixed(3)}`);
+  console.log(`${path.padEnd(48)} [${CPU_RATE}x] est. perf ${Math.round((score / wsum) * 100)}  FCP ${(m.fcp / 1000).toFixed(2)}s  LCP ${(m.lcp / 1000).toFixed(2)}s  TBT ${Math.round(m.tbt)}ms  CLS ${m.cls.toFixed(3)}`);
 }
 await browser.close();

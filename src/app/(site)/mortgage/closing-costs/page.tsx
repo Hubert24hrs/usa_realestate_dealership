@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ClosingCostCalculator } from "@/components/mortgage/closing-cost-calculator";
 import { PageHero, ToolDisclaimer } from "@/components/tools/page-hero";
 import { STATE_PROFILES } from "@/lib/finance/closing-costs";

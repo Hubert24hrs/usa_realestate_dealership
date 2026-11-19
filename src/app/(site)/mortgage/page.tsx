@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowDownRight, ArrowRight, ArrowUpRight } from "lucide-react";
 import { PostCard } from "@/components/learn/post-card";
 import { PageHero, ToolDisclaimer } from "@/components/tools/page-hero";

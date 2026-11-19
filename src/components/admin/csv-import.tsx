@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import Papa from "papaparse";
 import { CheckCircle2, Download, FileSpreadsheet, Loader2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";

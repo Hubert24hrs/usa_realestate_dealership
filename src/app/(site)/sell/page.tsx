@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowRight, BadgeDollarSign, Handshake, Home, Upload } from "lucide-react";
 import { NetProceedsCalculator } from "@/components/sell/net-proceeds";
 import { SellerConsultForm } from "@/components/sell/seller-consult-form";

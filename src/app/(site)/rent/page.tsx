@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ArrowRight, Building2, Home, KeyRound, PawPrint } from "lucide-react";
 import { ScamCallout } from "@/components/rent/scam-callout";
 import { PostCard } from "@/components/learn/post-card";

@@ -378,6 +378,46 @@
 .dark .mapboxgl-ctrl-group button {
   filter: invert(0.9);
 }
+/* Demo banner dismissed this session (set before first paint by DEMO_BANNER_SCRIPT). */
+html[data-demo-dismissed] [data-demo-banner] {
+  display: none;
+}
+
+/* Native range slider (components/ui/slider.tsx): filled track up to the value, round thumb. */
+.slider-native::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, var(--primary) var(--slider-pct, 0%), var(--muted) var(--slider-pct, 0%));
+}
+.slider-native::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--ring);
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+}
+.slider-native::-moz-range-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--muted);
+}
+.slider-native::-moz-range-progress {
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--primary);
+}
+.slider-native::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--ring);
+  background: #fff;
+}
+
 /* Attribution links must be distinguishable without color (WCAG 1.4.1). */
 .maplibregl-ctrl.maplibregl-ctrl-attrib a,
 .mapboxgl-ctrl.mapboxgl-ctrl-attrib a {

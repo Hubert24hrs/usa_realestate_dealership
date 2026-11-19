@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { MailCheck } from "lucide-react";
 
 export const metadata: Metadata = { title: "Check your email", robots: { index: false, follow: false } };

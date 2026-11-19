@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Heart } from "lucide-react";
 import { toast } from "sonner";
 import { useMe } from "@/hooks/use-me";

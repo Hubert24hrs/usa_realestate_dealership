@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { redirect } from "next/navigation";
 import { FolderHeart, MailWarning } from "lucide-react";
 import { signOut } from "@/auth";

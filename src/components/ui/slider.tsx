@@ -1,63 +1,39 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "cn"
-import { Slider as SliderPrimitive } from "radix-ui"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
-function Slider({
-  className,
-  defaultValue,
-  value,
-  min = 0,
-  max = 100,
-  // The focusable role="slider" element is the thumb, so it gets the accessible name.
-  "aria-label": ariaLabel,
-  "aria-labelledby": ariaLabelledBy,
-  ...props
-}: React.ComponentProps<typeof SliderPrimitive.Root>) {
-  const _values = React.useMemo(
-    () =>
-      Array.isArray(value)
-        ? value
-        : Array.isArray(defaultValue)
-          ? defaultValue
-          : [min, max],
-    [value, defaultValue, min, max]
-  )
-
-  return (
-    <SliderPrimitive.Root
-      data-slot="slider"
-      defaultValue={defaultValue}
-      value={value}
-      min={min}
-      max={max}
-      className={cn(
-        "relative flex w-full touch-none items-center select-none data-disabled:opacity-50 data-vertical:h-full data-vertical:min-h-40 data-vertical:w-auto data-vertical:flex-col",
-        className
-      )}
-      {...props}
-    >
-      <SliderPrimitive.Track
-        data-slot="slider-track"
-        className="relative grow overflow-hidden rounded-full bg-muted data-horizontal:h-1 data-horizontal:w-full data-vertical:h-full data-vertical:w-1"
-      >
-        <SliderPrimitive.Range
-          data-slot="slider-range"
-          className="absolute bg-primary select-none data-horizontal:h-full data-vertical:w-full"
-        />
-      </SliderPrimitive.Track>
-      {Array.from({ length: _values.length }, (_, index) => (
-        <SliderPrimitive.Thumb
-          data-slot="slider-thumb"
-          key={index}
-          aria-label={ariaLabel}
-          aria-labelledby={ariaLabelledBy}
-          className="relative block size-3 shrink-0 rounded-full border border-ring bg-white ring-ring/50 transition-[color,box-shadow] select-none after:absolute after:-inset-2 hover:ring-3 focus-visible:ring-3 focus-visible:outline-hidden active:ring-3 disabled:pointer-events-none disabled:opacity-50"
-        />
-      ))}
-    </SliderPrimitive.Root>
-  )
+interface SliderProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "value" | "defaultValue" | "onChange" | "type" | "min" | "max" | "step"> {
+  value?: number[];
+  defaultValue?: number[];
+  onValueChange?: (value: number[]) => void;
+  min?: number;
+  max?: number;
+  step?: number;
 }
 
-export { Slider }
+/**
+ * Single-thumb slider built on a native range input: keyboard and screen-reader support come from
+ * the browser, and nothing is measured during hydration (keeps page start-up cheap). Keeps the
+ * array-valued API of the Radix slider it replaces. Styles: `.slider-native` in globals.css.
+ */
+function Slider({ className, style, value, defaultValue, onValueChange, min = 0, max = 100, step = 1, ...props }: SliderProps) {
+  const current = value?.[0] ?? defaultValue?.[0] ?? min;
+  const pct = ((current - min) / Math.max(1e-9, max - min)) * 100;
+  return (
+    <input
+      type="range"
+      data-slot="slider"
+      min={min}
+      max={max}
+      step={step}
+      {...(value ? { value: value[0] } : { defaultValue: defaultValue?.[0] })}
+      onChange={(e) => onValueChange?.([Number(e.target.value)])}
+      className={cn("slider-native block h-5 w-full cursor-pointer appearance-none bg-transparent disabled:cursor-not-allowed disabled:opacity-50", className)}
+      style={{ "--slider-pct": `${pct}%`, ...style } as React.CSSProperties}
+      {...props}
+    />
+  );
+}
+
+export { Slider };

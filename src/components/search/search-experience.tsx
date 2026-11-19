@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { usePathname, useRouter } from "next/navigation";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { MotionConfig, motion } from "framer-motion";
 import { Columns2, List, Map as MapIcon, SearchX, X } from "lucide-react";
 import { ListingCard, ListingCardSkeleton } from "@/components/listing/listing-card";
 import { CompareProvider } from "@/components/listing/compare";
@@ -15,6 +15,7 @@ import { describeFilters } from "@/lib/search/describe";
 import { filtersToQuery, type SearchFilters } from "@/lib/search/filters";
 import type { SearchResult, Suggestion } from "@/lib/search/types";
 import { MODE_VERTICAL, buildSearchHref } from "@/lib/search/verticals";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { BedsBathsFilter, HomeTypeFilter, ModeSelect, MoreFiltersSheet, PriceFilter, SortSelect, type Patch } from "./filter-controls";
 import { LocationSearch } from "./location-search";
@@ -22,6 +23,9 @@ import { Pagination } from "./pagination";
 import { SaveSearchButton } from "./save-search-button";
 
 type View = "split" | "list" | "map";
+
+// The phone map view (map + animated results sheet) loads only when someone taps "Map".
+const MobileMapOverlay = dynamic(() => import("./mobile-map-overlay").then((m) => m.MobileMapOverlay), { ssr: false });
 
 export interface SearchExperienceProps {
   vertical: string;
@@ -54,6 +58,8 @@ export function SearchExperience({ vertical, initialFilters, initialResult, head
   const pathname = usePathname();
   const [filters, setFilters] = useState<SearchFilters>(initialFilters);
   const [view, setView] = useState<View>("split");
+  // Mobile shows the list first; the ~1 MB map bundle loads only when someone opens the map.
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const [mobileMap, setMobileMap] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
   const [searchAsMove, setSearchAsMove] = useState(Boolean(initialFilters.bounds));
@@ -196,7 +202,8 @@ export function SearchExperience({ vertical, initialFilters, initialResult, head
       <div className="flex">
         {view !== "list" && (
           <aside className="sticky top-[7.75rem] hidden h-[calc(100dvh-7.75rem)] shrink-0 md:block" style={{ width: view === "map" ? "100%" : `${mapPct}%` }}>
-            {map}
+            {/* The panel keeps its width from the first paint; the map itself only mounts on desktop widths. */}
+            {isDesktop && map}
           </aside>
         )}
         {view === "split" && (
@@ -249,17 +256,15 @@ export function SearchExperience({ vertical, initialFilters, initialResult, head
                 </Button>
               </div>
             ) : (
-              <MotionConfig reducedMotion="user">
-                <motion.ul layout className={cn("grid gap-5", view === "list" ? "sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3")}>
-                  {isFetching && !data
-                    ? Array.from({ length: 6 }, (_, i) => <li key={i}><ListingCardSkeleton /></li>)
-                    : result.results.map((l, i) => (
-                        <li key={l.id}>
-                          <ListingCard listing={l} priority={i < 2} highlighted={hovered === l.id} onHover={setHovered} />
-                        </li>
-                      ))}
-                </motion.ul>
-              </MotionConfig>
+              <ul className={cn("grid gap-5", view === "list" ? "sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3")}>
+                {isFetching && !data
+                  ? Array.from({ length: 6 }, (_, i) => <li key={i}><ListingCardSkeleton /></li>)
+                  : result.results.map((l, i) => (
+                      <li key={l.id}>
+                        <ListingCard listing={l} priority={i < 2} highlighted={hovered === l.id} onHover={setHovered} />
+                      </li>
+                    ))}
+              </ul>
             )}
 
             <Pagination
@@ -281,31 +286,7 @@ export function SearchExperience({ vertical, initialFilters, initialResult, head
           {mobileMap ? <List className="size-4" aria-hidden /> : <MapIcon className="size-4" aria-hidden />} {mobileMap ? "List" : "Map"}
         </Button>
       </div>
-      {mobileMap && (
-        <div className="fixed inset-x-0 top-16 bottom-0 z-20 md:hidden">
-          {map}
-          <MobileResultsSheet result={result} plural={plural} onHover={setHovered} />
-        </div>
-      )}
+      {mobileMap && <MobileMapOverlay map={map} result={result} plural={plural} onHover={setHovered} />}
     </CompareProvider>
-  );
-}
-
-function MobileResultsSheet({ result, plural, onHover }: { result: SearchResult; plural: string; onHover: (id: string | null) => void }) {
-  const [expanded, setExpanded] = useState(false);
-  return (
-    <div className={cn("absolute inset-x-0 bottom-0 z-10 rounded-t-3xl border-t bg-background shadow-[var(--shadow-float)] transition-[height] duration-300", expanded ? "h-[62%]" : "h-[11.5rem]")}>
-      <button type="button" onClick={() => setExpanded((v) => !v)} className="flex w-full flex-col items-center gap-1 pt-2.5 pb-2" aria-expanded={expanded} aria-label={expanded ? "Collapse results" : "Expand results"}>
-        <span className="h-1.5 w-10 rounded-full bg-border" aria-hidden />
-        <span className="text-sm font-semibold">{result.total.toLocaleString("en-US")} {plural}</span>
-      </button>
-      <ul className={cn("gap-3 px-4 pb-20", expanded ? "grid h-[calc(100%-3.5rem)] overflow-y-auto" : "snap-carousel")}>
-        {result.results.map((l) => (
-          <li key={l.id} className={expanded ? "" : "w-[78vw] shrink-0 snap-center"}>
-            <ListingCard listing={l} onHover={onHover} variant={expanded ? "grid" : "rail"} />
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }

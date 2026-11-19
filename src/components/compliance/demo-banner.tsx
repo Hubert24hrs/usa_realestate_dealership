@@ -1,32 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FlaskConical, X } from "lucide-react";
+import { DEMO_BANNER_KEY } from "./demo-banner-script";
 
-const KEY = "cv_demo_banner_dismissed";
+// Server-rendered so it never pops in and shifts the page; see demo-banner-script.ts for the pre-paint hide.
 
 export function DemoBanner({ text }: { text: string }) {
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    try {
-      setVisible(sessionStorage.getItem(KEY) !== "1");
-    } catch {
-      setVisible(true);
-    }
-  }, []);
-  if (!visible) return null;
+  const [dismissed, setDismissed] = useState(false);
+  if (dismissed) return null;
   return (
-    <div className="relative bg-brand-950 text-[0.8rem] text-white dark:bg-brand-100 dark:text-brand-950">
-      <div className="container-page flex min-h-9 items-center justify-center gap-2 py-1.5 pr-10 text-center">
+    // min-height fits three lines on phones (the fallback font wraps wider), so a font swap never resizes it.
+    <div data-demo-banner className="relative bg-brand-950 text-[0.8rem] text-white dark:bg-brand-100 dark:text-brand-950">
+      <div className="container-page flex min-h-16 items-center justify-center gap-2 py-1.5 pr-10 text-center sm:min-h-9">
         <FlaskConical className="size-3.5 shrink-0 text-copper-300 dark:text-copper-700" aria-hidden />
         <p>{text}</p>
       </div>
       <button
         type="button"
         onClick={() => {
-          setVisible(false);
+          setDismissed(true);
           try {
-            sessionStorage.setItem(KEY, "1");
+            sessionStorage.setItem(DEMO_BANNER_KEY, "1");
           } catch {}
         }}
         className="absolute top-1/2 right-2 -translate-y-1/2 rounded-md p-1.5 opacity-80 hover:bg-white/10 hover:opacity-100"

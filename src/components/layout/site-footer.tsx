@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Logo } from "@/components/brand/logo";
 import { EqualHousingStatement } from "@/components/compliance/equal-housing";
 import { CookiePreferencesButton } from "@/components/compliance/cookie-preferences-button";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Building2, Eye, Scale, ShieldCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
 import { PageHero } from "@/components/tools/page-hero";
