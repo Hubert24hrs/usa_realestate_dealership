@@ -18,7 +18,6 @@ import { EstimatePanel, FactGrid, FeatureList, ListingDisclaimers, PriceHistoryT
 import { CompareProvider } from "@/components/listing/compare";
 import { PriceHistoryChart } from "@/components/charts/price-history-chart";
 import { PlaceMap, type PlaceMarker } from "@/components/map/place-map";
-import { DemoBadge } from "@/components/compliance/demo-banner";
 import { db } from "@/lib/db";
 import { PROPERTY_TYPE_LABELS, STATUS_LABELS, type ListingStatusKey, type MediaCategoryKey, type MediaProviderKey } from "@/lib/domain";
 import { paymentBreakdown } from "@/lib/finance/mortgage";
@@ -225,7 +224,6 @@ export default async function PropertyPage({ params }: Props) {
                 {l.isNewConstruction && <span className="rounded-full bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-800 dark:bg-brand-100 dark:text-brand-900">New construction{l.builderName ? ` · ${l.builderName}` : ""}</span>}
                 {l.isForeclosure && <span className="rounded-full bg-warning/20 px-2.5 py-1 text-xs font-semibold">Foreclosure · sold as-is</span>}
                 {l.isFsbo && <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-semibold">For sale by owner</span>}
-                {l.isDemo && <DemoBadge />}
               </div>
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>

@@ -138,7 +138,6 @@ function ListingCardImpl({ listing: l, priority = false, variant = "grid", highl
         <span className="pointer-events-none absolute right-2.5 bottom-2.5 inline-flex items-center gap-1 rounded-full bg-black/60 px-2 py-0.5 text-[0.7rem] font-medium text-white tabular-nums" aria-hidden>
           <Images className="size-3" /> {index + 1}/{l.photoCount}
         </span>
-        {l.isDemo && <span className="pointer-events-none absolute bottom-2.5 left-2.5 rounded-full bg-black/55 px-2 py-0.5 text-[0.62rem] font-semibold tracking-wide text-white/90 uppercase">Demo</span>}
       </div>
 
       <div className="flex flex-1 flex-col gap-1 p-4">
